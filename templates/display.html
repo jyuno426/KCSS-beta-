@@ -9,10 +9,10 @@
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title> {{name}} </title>
+    <title> Korean Name Finder </title>
 
     <style type="text/css">
-      
+
       body {
       font-family: Helvetica, Arial;
       }
@@ -29,79 +29,111 @@
       a {
       color : blue ;
       }
+
+
+	  button.accordion{
+	  	background-color: #e7e7e7; 
+	  	color: black;
+	    cursor:pointer;
+	    border:none;
+	    outline:none;
+	    width:100%;
+	    text-align:left;
+	    padding:8px;
+	    margin:4px 0;
+	    border-radius:4px;
+	    transition:0.3s;
+	  }
+
+	  button.accordion:hover{
+	    background-color:rgba(255,255,255,0.3);
+	  }
+
+	  button.accordion.active{
+	    background-color:#e7e7e7;
+	    color: black;
+	    border-radius:4px 4px 0 0;
+	    margin:4px 0 0;
+	   }
+
+	  div.panel{
+	    background-color:rgba(255,255,255,0.8);
+	    color:#000;
+	    border-radius:0 0 4px 4px;
+	    overflow:hidden;
+	    opacity:0;
+	    max-height:0;
+	    transition:0.3s;
+	    padding:0 8px;
+	    margin:0;
+	  }
+
+	  div.panel.show{
+	    opacity:1;
+	    max-height:500px;
+	    padding:8px;
+	    margin:2px 0 4px;
+	  }
             
     </style>
   </head>
 
-
-
-
-
-
     <br>
-	<div class="jumbotron text-center">
-	  <div class="header">
-  	    <h2><b>{{ title1 }}</b></h2>
-   	    <h2><b>selected journal(s): {{ title2 }}</b></h2>
- 	    
-  	  </div>
-  	  <br>
-  	  <p> 
-  	    The following data is from <a href="http://dblp.org/">http://dblp.org/</a>.
-  	  </p>
-  	</div>
-    <br>
-
-
-
-
-
-	<div class="card">
-	  <div class="card-header"><h3>Authors with Korean Names</h3></div>
-	  <div class="card-body">
-	    <table class="table">
-	      {% for krname in korean_names %}
-	      <tr>
-	      	<td> <b> {{krname}} </b> </td>
-	      </tr>
-	        {% for paper in dictionary[krname] %}
-	          <tr> <td> &emsp;&emsp;&emsp;- {{ paper }} </td> </tr>
-	        {% endfor %}
-	      {% endfor %}
-	    </table>
+	
+    <h3> &emsp; Authors with Korean Names </h3>
+    <hr />
+    {% for krname in korean_names %}
+	  <button class="accordion">
+	    <b> &emsp; &emsp;{{ krname }}, {{dictionary[krname][1]}} </b>
+	  </button>
+	  <div class="panel">
+	    {% for paper in dictionary[krname][0] %}
+	      <h5> &emsp; &emsp; - &emsp; {{ paper }} </h5>
+	    {% endfor %}
 	  </div>
-	  </div>
-	</div>
+	{% endfor %}
 
 	<br>
 	<br>
 
-	<div class="card">
-	  <div class="card-header"><h3>Authors with non-Korean Names</h3></div>
-	  <div class="card-body">
-	    <table class="table">
-	      {% for nonkrname in non_korean_names %}
-	      <tr>
-	      	<td> <b> {{nonkrname}} </b> </td>
-	      </tr>
-	        {% for paper in dictionary[nonkrname] %}
-	          <tr> <td> &emsp;&emsp;&emsp;- {{ paper }} </td> </tr>
-	        {% endfor %}
-	      {% endfor %}
-	    </table>
-	  </div>
-	  </div>
-	</div>
-    </div>
+	{% if kroption %}
+    <h3> &emsp; Authors with non-Korean Names </h3>
+    {% endif %}
+    <hr />
 
-
+    {% for nonkrname in non_korean_names %}
+	  <button class="accordion">
+	    <b> &emsp; &emsp;{{ nonkrname }}, {{dictionary[nonkrname][1]}}</b>
+	  </button>
+	  <div class="panel">
+	    {% for paper in dictionary[nonkrname][0] %}
+	      <h5> &emsp; &emsp; - &emsp; {{ paper }} </h5>
+	    {% endfor %}
+	  </div>
+	{% endfor %}
 
 
 
 	<div class="jumbotron text-center" style="margin-bottom:0">
-	  <p>KAIST ALGORITHMIC INTELLIGENCE LABORATORY</p>
 	  <address>Contact Information: <a href="mailto:camusian@kaist.ac.kr"> camusian@kaist.ac.kr</a></address>
 	</div>
+
+
+
+
+
+
+	<script>
+	  var accordions = document.querySelectorAll("button.accordion");
+
+	  for (var i = 0; i < accordions.length; i++) {
+	    accordions[i].onclick = function() {
+	      this.classList.toggle("active");
+	      this.nextElementSibling.classList.toggle("show");
+	    };
+	  }
+
+    </script>
   </body>
 
 

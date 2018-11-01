@@ -15,6 +15,10 @@ import numpy as np
 import collections
 from datetime import datetime
 
+
+
+
+
 #############################
 #####  HELPER FUNCTIONS #####
 #############################
@@ -37,8 +41,10 @@ def sort_by_lastname(lst):
         
     return temp
 
-def is_kr_last_name(last_name):
-    return last_name.lower() in kr_last_names
+def predict(name):
+    with graph.as_default():
+        prediction = model.pred(name)
+    return prediction
 
 def is_kr_first_name(first_name):
     first = ''
@@ -56,10 +62,9 @@ def is_kr_first_name(first_name):
 
     return (0 in idx) and (1 not in idx)
 
-def predict(name):
-    with graph.as_default():
-        prediction = model.pred(name)
-    return prediction
+
+def is_kr_last_name(last_name):
+    return last_name.lower() in kr_last_names
 
 def init():
     f = open('./data/kr_last_names.txt', 'r')
@@ -87,7 +92,8 @@ def display(name):
     fromyear = int(name[0:4])
     toyear = int(name[4:8])
     option = int(name[8])
-    journals = name[9:].split('_')[1:-1]
+    kroption = int(name[9])
+    journals = name[10:].split('_')[1:-1]
     title1 = "from " + str(fromyear) + " to " + str(toyear)
     title2 = ", ".join(journals)
     
@@ -106,19 +112,16 @@ def display(name):
                     dictionary = json.load(f)
                     temp = list(dictionary.keys())
                     for author in temp:
-                        tttt = author.split()
-                        _author = tttt[-1] + ', ' + ' '.join(tttt[:-1])
                         try:
-                            big_dictionary[_author] += dictionary[author]
+                            big_dictionary[author][0] += dictionary[author]
+                            big_dictionary[author][1] += len(dictionary[author])
                         except KeyError:
-                            big_dictionary[_author] = dictionary[author]
+                            big_dictionary[author] = [dictionary[author], len(dictionary[author])]
             except FileNotFoundError:
                 pass
 
 
     # big_dictionary available
-             
-    
     
     korean_names = []
     non_korean_names = []
@@ -128,33 +131,34 @@ def display(name):
     for author in big_dictionary.keys():
         temp = author.rfind(" ")
         last = author[temp+1:].lower()
-        first_raw = author[:temp].lower()
+        first = author[:temp].lower()
+        #first = ''
+        #for part in first_raw.split():
+        #    first += normalize(part)
+        
+        if kroption == 0:
+            if last in kr_last_names:
+                if is_kr_first_name(first):
+                    korean_names.append(author)
 
-        if is_kr_last_name(last) and is_kr_first_name(first_raw):
-            korean_names.append(author)
         else:
-            non_korean_names.append(author)
-        # first = ''
-        # for part in first_raw.split():
-        #     first += normalize(part)
-        #
-        # if last in kr_last_names:
-        #     with graph.as_default():
-        #         prediction = model.pred(first)
-        #     if np.argmax(prediction) == 0:
-        #         korean_names.append(author)
-        #     else:
-        #         non_korean_names.append(author)
-        # else:
-        #     non_korean_names.append(author)
-            
+            if last in kr_last_names:
+                #with graph.as_default():
+                #    prediction = model.pred(first)
+                #if np.argmax(prediction) == 0:
+                #    korean_names.append(author)
+                if is_kr_first_name(first):
+                    korean_names.append(author)
+                else:
+                    non_korean_names.append(author)
+            else:
+                non_korean_names.append(author)
+                
     korean_names.sort()
     non_korean_names.sort()
     
     # korean_names = korean_names[:100]
     # non_korean_names = non_korean_names[:100]
-    
-    
     
     # Display options:
     # 0. Default: Alphabetical
@@ -168,26 +172,58 @@ def display(name):
         pass
         
     elif option == 1:
-        kr = [(-len(big_dictionary[x]), x) for x in korean_names]
+        kr = [(-big_dictionary[x][1], x) for x in korean_names]
         kr.sort()
         korean_names = []
         for i in range(len(kr)):
             korean_names.append(kr[i][1])
         
-        nonkr = [(-len(big_dictionary[x]), x) for x in non_korean_names]
+        nonkr = [(-big_dictionary[x][1], x) for x in non_korean_names]
         nonkr.sort()
         non_korean_names = []
         for i in range(len(nonkr)):
             non_korean_names.append(nonkr[i][1])
-
+    
     return render_template('display.html',
                            name = str(name).upper(), 
                            dictionary = big_dictionary,
                            korean_names = korean_names,
                            non_korean_names = non_korean_names,
-                           title1 = title1, title2 = title2)
+                           title1 = title1, title2 = title2,
+                           kroption = kroption)
+
+
+
+'''
+def is_kr_first_name(first_name):
+    first = ''
+    idx = set()
+
+    for part in first_name.split():
+        _part = normalize(part)
+        if len(_part) > 1:
+            idx.add(np.argmax(predict(_part)))
+            first += _part
+    if len(first) > 1:
+        arg = np.argmax(predict(first))
+        if arg == 0: return True
+        idx.add(arg)
+
+    return (0 in idx) and (1 not in idx)
+
+
+def predict(name):
+    with graph.as_default():
+        prediction = model.pred(name)
+    return prediction
+'''
+
+
+
+
 
 if __name__ == '__main__':
+    
     kr_last_names = set()
     model = keras_Model()
     graph = None

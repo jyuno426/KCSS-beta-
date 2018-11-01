@@ -36,10 +36,9 @@
       function myfunction(){
       	var selectedValue1 = document.getElementById("fromyear").value;
       	var selectedValue2 = document.getElementById("toyear").value;
-      	
         var selectedValue3 = document.getElementById("filter").value;
+        var selectedValue4 = document.getElementById("KR").value;
 
-      	var AI = document.getElementsByName("AI");
       	var CV = document.getElementsByName("CV");
       	var ML = document.getElementsByName("ML");
       	var DM = document.getElementsByName("DM");
@@ -56,15 +55,16 @@
           selectedValue3 = 3;
         }
 
-      	var x = "/"+selectedValue1+selectedValue2+selectedValue3+"_";
+        if(selectedValue4 === "KR"){
+          selectedValue4 = 0;
+        }else{
+          selectedValue4 = 1;
+        }
+
+      	var x = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
 
       	var i;
-      	for (i = 0; i < AI.length; i++) { 
-    		if(AI[i].checked === true){
-    			x += AI[i].value;
-    			x += "_";
-				}
-			}
+      	
       	for (i = 0; i < CV.length; i++) { 
     		if(CV[i].checked === true){
     			x += CV[i].value;
@@ -106,27 +106,12 @@
   </head>
 
   <body>
+  <br />
+  <br />
 
-    <br>
-	<div class="jumbotron text-center">
-	  <div class="header">
-  	    <h1><b>Korean Name Identifier</b></h1>
-  	  </div>
-  	  <br>
-  	  <p> This website provides an ML-based Korean name identifier.
-  	    <br>
-  	    <p>We have been inspired to provide a similar service as
-  	    <a href="https://www.csrankings.org"> csrankings.org</a>, 
-  	    <br>
-  	    but with an additional layer of name classification.</p>
-  	  </p>
-  	</div>
-    <br>
-
-
-  
 
   <div class="container">
+
   From: 
   <select id="fromyear">
   	{% for year in years %}
@@ -140,36 +125,29 @@
   	{% endfor %}
   </select>  
   
-  &nbsp Filter: 
+  &nbsp Sorted by: 
   <select id="filter">
     <option> alphabetical </option>
     <option> # papers </option>
     <option> first authors </option>
-    <option> last authors </option>    
+    <option> last authors </option>
   </select>  
+
+  &nbsp Show: 
+  <select id="KR">
+    <option> KR </option>
+    <option> ALL </option>
+  </select> 
 
   &nbsp <button onclick="myfunction()">Submit</button>
 
   </div>
 
   <br>
-
+  <br>
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-      	<h5><b>ARTIFICIAL INTELLIGENCE</b></h5>
-	  	  <table class="table-sm" style="width:100%;">
-		    <tbody>
-		      <tr>
-	   	        <input type="checkbox" name="AI" value="AAAI"> AAAI<br>
-			  </tr>
-			  <tr>
-	   	        <input type="checkbox" name="AI" value="IJCAI"> IJCAI<br>
-	          </tr>
-		    </tbody>
-		  </table>
-		</div>
         
         <div class="col-sm-4">
       	<h5><b>COMPUTER VISION</b></h5>
@@ -189,24 +167,56 @@
 		</div>
 
 		<div class="col-sm-4">
-      	<h5><b>MACHINE LEARNING </b></h5> 
+      <h5><b>MACHINE LEARNING </b></h5> 
 	  	  <table class="table-sm" style="width:100%;">
 		    <tbody>
 		      <tr>
-			    <input type="checkbox" name="ML" value="ICML"> ICML<br>
-			  </tr>
+			    <input type="checkbox" name="ML" value="AISTATS"> AISTATS<br>
+			    </tr>
+		      <tr>
+			    <input type="checkbox" name="ML" value="COLT"> COLT<br>
+		      </tr>
 		      <tr>
 			    <input type="checkbox" name="ML" value="ICLR"> ICLR<br>
 		      </tr>
-		      <tr>
-			    <input type="checkbox" name="ML" value="NIPS"> NIPS<br>
-		      </tr>
+          <tr>
+          <input type="checkbox" name="ML" value="ICML"> ICML<br>
+          </tr>
+          <tr>
+          <input type="checkbox" name="ML" value="NIPS"> NIPS<br>
+          </tr>
+          <tr>
+          <input type="checkbox" name="ML" value="UAI"> UAI<br>
+          </tr>
 
 		    </tbody>
 		  </table>
-		</div>		
+		</div>
+
+    <div class="col-sm-4">
+      <h5><b>DATA MINING</b></h5>
+        <table class="table-sm" style="width:100%;">
+        <tbody>
+          <tr>
+            <input type="checkbox" name="DM" value="CIKM"> CIKM<br>
+          </tr>
+          <tr>
+            <input type="checkbox" name="DM" value="ICDE"> ICDE<br>
+          </tr>
+          <tr>
+            <input type="checkbox" name="DM" value="ICDM"> ICDM<br>
+          </tr>
+          <tr>
+            <input type="checkbox" name="DM" value="KDD"> KDD<br>
+          </tr>                 
+        </tbody>
+      </table>
+    </div>
+
+
 	  </div>
     </div>
+
   <br>
 
 
@@ -216,32 +226,18 @@
 
 
         <div class="col-sm-4">
-      	<h5><b>DATA MINING</b></h5>
-	  	  <table class="table-sm" style="width:100%;">
-		    <tbody>
-		      <tr>
-	   	        <input type="checkbox" name="DM" value="KDD"> KDD<br>
-			  </tr>
-			  
-		    </tbody>
-		  </table>
-		</div>
-
-
-
-        <div class="col-sm-4">
       	<h5><b>NATURAL LANGUAGE PROCESSING</b></h5>
 	  	  <table class="table-sm" style="width:100%;">
 		    <tbody>
 		      <tr>
-	   	        <input type="checkbox" name="NLP" value="ACL"> ACL<br>
-			  </tr>
-			  <tr>
-	   	        <input type="checkbox" name="NLP" value="KDD"> EMNLP<br>
-	          </tr>
-			  <tr>
-	   	        <input type="checkbox" name="NLP" value="KDD"> NAACL<br>
-	          </tr>
+	   	      <input type="checkbox" name="NLP" value="ACL"> ACL<br>
+			    </tr>
+			    <tr>
+	   	      <input type="checkbox" name="NLP" value="EMNLP"> EMNLP<br>
+	        </tr>
+			    <tr>
+	   	      <input type="checkbox" name="NLP" value="NAACL"> NAACL<br>
+	        </tr>
 		    </tbody>
 		  </table>
 		</div>
@@ -251,30 +247,26 @@
 	  	  <table class="table-sm" style="width:100%;">
 		    <tbody>
 		      <tr>
-	   	        <input type="checkbox" name="WIR" value="SIGIR"> SIGIR<br>
-			  </tr>
-			  <tr>
-	   	        <input type="checkbox" name="WIR" value="WWW"> WWW<br>
-	          </tr>      
+	   	      <input type="checkbox" name="WIR" value="SIGIR"> SIGIR<br>
+			    </tr>
+			    <tr>
+	   	      <input type="checkbox" name="WIR" value="WWW"> WWW<br>
+	        </tr>      
 		    </tbody>
 		  </table>
 		</div>
 
 	  </div>
     </div>
-    <br>
-    <br>
-    <br>
-
-
-
-
-
-
+    <br />
+    <br />
 
 	<div class="jumbotron text-center" style="margin-bottom:0">
-	  <p>KAIST ALGORITHMIC INTELLIGENCE LABORATORY</p>
-	  <address>Contact Information: <a href="mailto:camusian@kaist.ac.kr"> camusian@kaist.ac.kr</a></address>
+	  <address>Contact Information:
+      <a href="mailto:jyuno426@kaist.ac.kr"> jyuno426@kaist.ac.kr</a>
+      <br />
+      <a href="mailto:camusian@kaist.ac.kr"> camusian@kaist.ac.kr</a>
+    </address>
 	</div>
   </body>
 
