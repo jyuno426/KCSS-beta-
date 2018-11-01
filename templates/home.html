@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="Find Korean Names!">
+    <meta name="keywords" content="korean names, korean name classifier">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Seunghyun Lee, Junho Han">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title> Korean Name Finder </title>
+
+    <style type="text/css">
+      
+      body {
+      font-family: Helvetica, Arial;
+      }
+
+      table td {
+      vertical-align: top;
+      }
+      
+      td {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      }
+
+      a {
+      color : blue ;
+      }
+            
+    </style>
+
+    <script>
+      function myfunction(){
+      	var selectedValue1 = document.getElementById("fromyear").value;
+      	var selectedValue2 = document.getElementById("toyear").value;
+      	
+        var selectedValue3 = document.getElementById("filter").value;
+
+      	var AI = document.getElementsByName("AI");
+      	var CV = document.getElementsByName("CV");
+      	var ML = document.getElementsByName("ML");
+      	var DM = document.getElementsByName("DM");
+      	var NLP = document.getElementsByName("NLP");
+      	var WIR = document.getElementsByName("WIR");
+
+        if(selectedValue3 === "alphabetical"){
+          selectedValue3 = 0;
+        }else if(selectedValue3 == "# papers"){
+          selectedValue3 = 1;
+        }else if(selectedValue3 == "first authors"){
+          selectedValue3 = 2;
+        }else{
+          selectedValue3 = 3;
+        }
+
+      	var x = "/"+selectedValue1+selectedValue2+selectedValue3+"_";
+
+      	var i;
+      	for (i = 0; i < AI.length; i++) { 
+    		if(AI[i].checked === true){
+    			x += AI[i].value;
+    			x += "_";
+				}
+			}
+      	for (i = 0; i < CV.length; i++) { 
+    		if(CV[i].checked === true){
+    			x += CV[i].value;
+    			x += "_";
+				}
+			}
+      	for (i = 0; i < ML.length; i++) { 
+    		if(ML[i].checked === true){
+    			x += ML[i].value;
+    			x += "_";
+				}
+			}
+      	for (i = 0; i < DM.length; i++) { 
+    		if(DM[i].checked === true){
+    			x += DM[i].value;
+    			x += "_";
+				}
+			}
+      	for (i = 0; i < NLP.length; i++) { 
+    		if(NLP[i].checked === true){
+    			x += NLP[i].value;
+    			x += "_";
+				}
+			}
+      	for (i = 0; i < WIR.length; i++) { 
+    		if(WIR[i].checked === true){
+    			x += WIR[i].value;
+    			x += "_";
+				}
+			}
+      	      	      	      	      	      	
+      	window.location = x;
+      }
+
+    </script>
+
+
+
+  </head>
+
+  <body>
+
+    <br>
+	<div class="jumbotron text-center">
+	  <div class="header">
+  	    <h1><b>Korean Name Identifier</b></h1>
+  	  </div>
+  	  <br>
+  	  <p> This website provides an ML-based Korean name identifier.
+  	    <br>
+  	    <p>We have been inspired to provide a similar service as
+  	    <a href="https://www.csrankings.org"> csrankings.org</a>, 
+  	    <br>
+  	    but with an additional layer of name classification.</p>
+  	  </p>
+  	</div>
+    <br>
+
+
+  
+
+  <div class="container">
+  From: 
+  <select id="fromyear">
+  	{% for year in years %}
+      <option value="{{year}}"> {{year}} </option>
+  	{% endfor %}
+  </select>
+  &nbsp To: 
+  <select id="toyear">
+  	{% for year in years %}
+      <option> {{year}} </option>
+  	{% endfor %}
+  </select>  
+  
+  &nbsp Filter: 
+  <select id="filter">
+    <option> alphabetical </option>
+    <option> # papers </option>
+    <option> first authors </option>
+    <option> last authors </option>    
+  </select>  
+
+  &nbsp <button onclick="myfunction()">Submit</button>
+
+  </div>
+
+  <br>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+      	<h5><b>ARTIFICIAL INTELLIGENCE</b></h5>
+	  	  <table class="table-sm" style="width:100%;">
+		    <tbody>
+		      <tr>
+	   	        <input type="checkbox" name="AI" value="AAAI"> AAAI<br>
+			  </tr>
+			  <tr>
+	   	        <input type="checkbox" name="AI" value="IJCAI"> IJCAI<br>
+	          </tr>
+		    </tbody>
+		  </table>
+		</div>
+        
+        <div class="col-sm-4">
+      	<h5><b>COMPUTER VISION</b></h5>
+	  	  <table class="table-sm" style="width:100%;">
+		    <tbody>
+		      <tr>
+	   	        <input type="checkbox" name="CV" value="CVPR"> CVPR<br>
+			  </tr>
+			  <tr>
+			    <input type="checkbox" name="CV" value="ECCV"> ECCV<br>
+	          </tr>
+			  <tr>
+			    <input type="checkbox" name="CV" value="ICCV"> ICCV<br>
+	          </tr>	          
+		    </tbody>
+		  </table>
+		</div>
+
+		<div class="col-sm-4">
+      	<h5><b>MACHINE LEARNING </b></h5> 
+	  	  <table class="table-sm" style="width:100%;">
+		    <tbody>
+		      <tr>
+			    <input type="checkbox" name="ML" value="ICML"> ICML<br>
+			  </tr>
+		      <tr>
+			    <input type="checkbox" name="ML" value="ICLR"> ICLR<br>
+		      </tr>
+		      <tr>
+			    <input type="checkbox" name="ML" value="NIPS"> NIPS<br>
+		      </tr>
+
+		    </tbody>
+		  </table>
+		</div>		
+	  </div>
+    </div>
+  <br>
+
+
+
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-sm-4">
+      	<h5><b>DATA MINING</b></h5>
+	  	  <table class="table-sm" style="width:100%;">
+		    <tbody>
+		      <tr>
+	   	        <input type="checkbox" name="DM" value="KDD"> KDD<br>
+			  </tr>
+			  
+		    </tbody>
+		  </table>
+		</div>
+
+
+
+        <div class="col-sm-4">
+      	<h5><b>NATURAL LANGUAGE PROCESSING</b></h5>
+	  	  <table class="table-sm" style="width:100%;">
+		    <tbody>
+		      <tr>
+	   	        <input type="checkbox" name="NLP" value="ACL"> ACL<br>
+			  </tr>
+			  <tr>
+	   	        <input type="checkbox" name="NLP" value="KDD"> EMNLP<br>
+	          </tr>
+			  <tr>
+	   	        <input type="checkbox" name="NLP" value="KDD"> NAACL<br>
+	          </tr>
+		    </tbody>
+		  </table>
+		</div>
+        
+        <div class="col-sm-4">
+      	<h5><b>THE WEB &amp; INFORMATION RETRIEVAL</b></h5>
+	  	  <table class="table-sm" style="width:100%;">
+		    <tbody>
+		      <tr>
+	   	        <input type="checkbox" name="WIR" value="SIGIR"> SIGIR<br>
+			  </tr>
+			  <tr>
+	   	        <input type="checkbox" name="WIR" value="WWW"> WWW<br>
+	          </tr>      
+		    </tbody>
+		  </table>
+		</div>
+
+	  </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+	<div class="jumbotron text-center" style="margin-bottom:0">
+	  <p>KAIST ALGORITHMIC INTELLIGENCE LABORATORY</p>
+	  <address>Contact Information: <a href="mailto:camusian@kaist.ac.kr"> camusian@kaist.ac.kr</a></address>
+	</div>
+  </body>
+
+
+
+
+
+
+</html>

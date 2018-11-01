@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="content">
+    <meta name="keywords" content="conference, workshop, computer science, {{ name }}" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Seunghyun Lee, Junho Han">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title> {{name}} </title>
+
+    <style type="text/css">
+      
+      body {
+      font-family: Helvetica, Arial;
+      }
+
+      table td {
+      vertical-align: top;
+      }
+      
+      td {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      }
+
+      a {
+      color : blue ;
+      }
+            
+    </style>
+  </head>
+
+
+
+
+
+
+    <br>
+	<div class="jumbotron text-center">
+	  <div class="header">
+  	    <h2><b>{{ title1 }}</b></h2>
+   	    <h2><b>selected journal(s): {{ title2 }}</b></h2>
+ 	    
+  	  </div>
+  	  <br>
+  	  <p> 
+  	    The following data is from <a href="http://dblp.org/">http://dblp.org/</a>.
+  	  </p>
+  	</div>
+    <br>
+
+
+
+
+
+	<div class="card">
+	  <div class="card-header"><h3>Authors with Korean Names</h3></div>
+	  <div class="card-body">
+	    <table class="table">
+	      {% for krname in korean_names %}
+	      <tr>
+	      	<td> <b> {{krname}} </b> </td>
+	      </tr>
+	        {% for paper in dictionary[krname] %}
+	          <tr> <td> &emsp;&emsp;&emsp;- {{ paper }} </td> </tr>
+	        {% endfor %}
+	      {% endfor %}
+	    </table>
+	  </div>
+	  </div>
+	</div>
+
+	<br>
+	<br>
+
+	<div class="card">
+	  <div class="card-header"><h3>Authors with non-Korean Names</h3></div>
+	  <div class="card-body">
+	    <table class="table">
+	      {% for nonkrname in non_korean_names %}
+	      <tr>
+	      	<td> <b> {{nonkrname}} </b> </td>
+	      </tr>
+	        {% for paper in dictionary[nonkrname] %}
+	          <tr> <td> &emsp;&emsp;&emsp;- {{ paper }} </td> </tr>
+	        {% endfor %}
+	      {% endfor %}
+	    </table>
+	  </div>
+	  </div>
+	</div>
+    </div>
+
+
+
+
+
+	<div class="jumbotron text-center" style="margin-bottom:0">
+	  <p>KAIST ALGORITHMIC INTELLIGENCE LABORATORY</p>
+	  <address>Contact Information: <a href="mailto:camusian@kaist.ac.kr"> camusian@kaist.ac.kr</a></address>
+	</div>
+  </body>
+
+
+
+
+
+
+
+
+
+</html>

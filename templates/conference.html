@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="Choose a conference/workshop">
+    <meta name="keywords" content="conference, workshop, computer science, {{ name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Seunghyun Lee, Junho Han">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title> {{name}} </title>
+
+    <style type="text/css">
+      
+      body {
+      font-family: Helvetica, Arial;
+      }
+
+      table td {
+      vertical-align: top;
+      }
+      
+      td {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      }
+
+      a {
+      color : blue ;
+      }
+            
+    </style>
+  </head>
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+	<div class="jumbotron text-center">
+	  <div class="header">
+  	    <h1><b>{{ name }}</b></h1>
+  	  </div>
+  	  <br>
+  	  <p> 
+  	    The following data is from <a href="http://dblp.org/">http://dblp.org/</a>.
+  	  </p>
+  	</div>
+    <br>
+
+
+    <div class="container">
+      <div class="row">
+	    <div class="table-sm"limi style="width:100%;">
+	      <h2>{{ name }} Conferences</h2>
+	      <br>
+	      <table>
+	        {% for conference in huge_list %}
+	        <tr>
+	          <td><a href="{{conference[3]}}">{{conference[0]}}</a></td>
+	        </tr>
+	        {%endfor%}
+	      </table>
+        </div>
+      </div>
+   	</div>
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+
+
+	<div class="jumbotron text-center" style="margin-bottom:0">
+	  <p>KAIST ALGORITHMIC INTELLIGENCE LABORATORY</p>
+	  <address>Contact Information: <a href="mailto:camusian@kaist.ac.kr"> camusian@kaist.ac.kr</a></address>
+	</div>
+  </body>
+
+
+
+
+
+
+
+
+
+</html>
