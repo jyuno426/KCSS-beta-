@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import unidecode
 
@@ -46,5 +48,4 @@ def dump_list(_list, path):
             f.write(word + '\n')
 
 if __name__=='__main__':
-    print(unidecode.unidecode('Çağlar Gülçehre'))
     pass
