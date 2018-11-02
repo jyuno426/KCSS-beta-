@@ -33,33 +33,17 @@
     </style>
 
     <script>
-      function myfunction(){
+      function myFunction(){
       	var selectedValue1 = document.getElementById("fromyear").value;
       	var selectedValue2 = document.getElementById("toyear").value;
-        var selectedValue3 = document.getElementById("filter").value;
-        var selectedValue4 = document.getElementById("KR").value;
+        var selectedValue3 = document.getElementById("filter").selectedIndex;
+        var selectedValue4 = document.getElementById("KR").selectedIndex;
 
       	var CV = document.getElementsByName("CV");
       	var ML = document.getElementsByName("ML");
       	var DM = document.getElementsByName("DM");
       	var NLP = document.getElementsByName("NLP");
       	var WIR = document.getElementsByName("WIR");
-
-        if(selectedValue3 === "alphabetical"){
-          selectedValue3 = 0;
-        }else if(selectedValue3 == "# papers"){
-          selectedValue3 = 1;
-        }else if(selectedValue3 == "first authors"){
-          selectedValue3 = 2;
-        }else{
-          selectedValue3 = 3;
-        }
-
-        if(selectedValue4 === "KR"){
-          selectedValue4 = 0;
-        }else{
-          selectedValue4 = 1;
-        }
 
       	var x = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
 
@@ -135,12 +119,15 @@
   </head>
 
   <body>
+	<div class="jumbotron text-center">
+	  <div class="header">
+  	    <h1><b>AIPeopleSearch</b></h1>
+  	  </div>
+  	</div>
   <br />
   <br />
-
 
   <div class="container">
-
   From: 
   <select id="fromyear">
   	{% for year in years %}
@@ -157,8 +144,8 @@
   
   &nbsp Filter:
   <select id="filter">
-    <option> alphabetical </option>
-    <option> sort by # papers </option>
+    <option> sort alphabetically </option>
+    <option> sort by # of papers </option>
     <option> only first author </option>
     <option> only last author </option>
   </select>  
@@ -169,7 +156,7 @@
     <option> all </option>
   </select>
 
-  &nbsp <button onclick="myfunction()" style="font-size : 13px">Submit</button>
+  &nbsp <button onclick="myFunction()" style="font-size : 13px">Submit</button>
 
   </div>
 
@@ -308,12 +295,12 @@
   <br />
   <br />
 
-	<div class="jumbotron text-center" style="margin-bottom:0">
+	<div class="jumbotron text-center">
         <address>
-            Made by
-            이승현 (<a href="mailto:camusian@kaist.ac.kr">camusian@kaist.ac.kr</a>),
-            한준호 (<a href="mailto:jyuno426@kaist.ac.kr">jyuno426@kaist.ac.kr</a>),
-            신진우 (<a href="mailto:jinwoos@kaist.ac.kr">jinwoos@kaist.ac.kr</a>),
+            made by
+            이승현(<a href="mailto:camusian@kaist.ac.kr">camusian@kaist.ac.kr</a>),
+            한준호(<a href="mailto:jyuno426@kaist.ac.kr">jyuno426@kaist.ac.kr</a>),
+            신진우(<a href="mailto:jinwoos@kaist.ac.kr">jinwoos@kaist.ac.kr</a>),
             Korean Advanced Institute of Science and Technology
         </address>
 	</div>
