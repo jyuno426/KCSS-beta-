@@ -82,7 +82,7 @@ app = Flask(__name__) # placeholder for current module
 @app.route('/')
 def home():
     currentYear = datetime.now().year
-    return render_template('home.html', years = [x for x in range(1980,currentYear+1)])
+    return render_template('home.html', years = [x for x in range(2008,currentYear+1)])
 
 
 @app.route('/')
@@ -108,7 +108,7 @@ def display(name):
                     temp = "_by_last.json"
                 else:
                     temp = "_by_every.json"
-                with open("./dblp/"+journal+"/"+journal+str(x)+ temp,'r') as f:
+                with open("./dblp/"+journal.upper()+"/"+journal.lower()+str(x)+ temp,'r') as f:
                     dictionary = json.load(f)
                     temp = list(dictionary.keys())
                     for author in temp:
@@ -127,7 +127,8 @@ def display(name):
     non_korean_names = []
     
     # Do classification
-    
+
+    print(len(big_dictionary.keys()))
     for author in big_dictionary.keys():
         temp = author.rfind(" ")
         last = author[temp+1:].lower()
@@ -153,7 +154,7 @@ def display(name):
                     non_korean_names.append(author)
             else:
                 non_korean_names.append(author)
-                
+
     korean_names.sort()
     non_korean_names.sort()
     

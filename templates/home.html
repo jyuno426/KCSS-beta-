@@ -99,6 +99,35 @@
       	window.location = x;
       }
 
+      function check(name) {
+        var checkboxes;
+        if (name == 'all') {
+          checkboxes = document.getElementsByTagName('input');
+        } else {
+          checkboxes = document.getElementsByName(name);
+        }
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].type == 'checkbox') {
+            checkboxes[i].checked = true;
+          }
+        }
+      }
+
+      function uncheck(name) {
+        var checkboxes;
+        if (name == 'all') {
+          checkboxes = document.getElementsByTagName('input');
+        } else {
+          checkboxes = document.getElementsByName(name);
+        }
+        for (var i = 0; i < checkboxes.length; i++) {
+          console.log(i)
+          if (checkboxes[i].type == 'checkbox') {
+            checkboxes[i].checked = false;
+          }
+        }
+      }
+
     </script>
 
 
@@ -120,73 +149,82 @@
   </select>
   &nbsp To: 
   <select id="toyear">
-  	{% for year in years %}
+  	{% for year in years[:-1] %}
       <option> {{year}} </option>
   	{% endfor %}
+      <option selected="selected"> {{years[-1]}} </option>
   </select>  
   
-  &nbsp Sorted by: 
+  &nbsp Filter:
   <select id="filter">
     <option> alphabetical </option>
-    <option> # papers </option>
-    <option> first authors </option>
-    <option> last authors </option>
+    <option> sort by # papers </option>
+    <option> only first author </option>
+    <option> only last author </option>
   </select>  
 
-  &nbsp Show: 
+  &nbsp Show KR:
   <select id="KR">
-    <option> KR </option>
-    <option> ALL </option>
-  </select> 
+    <option> korean </option>
+    <option> all </option>
+  </select>
 
-  &nbsp <button onclick="myfunction()">Submit</button>
+  &nbsp <button onclick="myfunction()" style="font-size : 13px">Submit</button>
 
   </div>
 
   <br>
   <br>
-
     <div class="container">
+      <h5><b>All Areas</b>
+        <button onclick="check('all')" style="font-size : 12px">on</button>
+        <button onclick="uncheck('all')" style="font-size : 12px">off</button>
+      </h5>
       <div class="row">
-        
         <div class="col-sm-4">
-      	<h5><b>COMPUTER VISION</b></h5>
+      	<h5><b>COMPUTER VISION</b>
+          <button onclick="check('CV')" style="font-size : 12px">on</button>
+          <button onclick="uncheck('CV')" style="font-size : 12px">off</button>
+        </h5>
 	  	  <table class="table-sm" style="width:100%;">
 		    <tbody>
 		      <tr>
-	   	        <input type="checkbox" name="CV" value="CVPR"> CVPR<br>
+	   	        <input type="checkbox" name="CV" value="CVPR" checked="checked"> CVPR<br>
 			  </tr>
 			  <tr>
-			    <input type="checkbox" name="CV" value="ECCV"> ECCV<br>
+			    <input type="checkbox" name="CV" value="ECCV" checked="checked"> ECCV<br>
 	          </tr>
 			  <tr>
-			    <input type="checkbox" name="CV" value="ICCV"> ICCV<br>
+			    <input type="checkbox" name="CV" value="ICCV" checked="checked"> ICCV<br>
 	          </tr>	          
 		    </tbody>
 		  </table>
 		</div>
 
 		<div class="col-sm-4">
-      <h5><b>MACHINE LEARNING </b></h5> 
+      <h5><b>MACHINE LEARNING </b>
+          <button onclick="check('ML')" style="font-size : 12px">on</button>
+          <button onclick="uncheck('ML')" style="font-size : 12px">off</button>
+      </h5>
 	  	  <table class="table-sm" style="width:100%;">
 		    <tbody>
 		      <tr>
-			    <input type="checkbox" name="ML" value="AISTATS"> AISTATS<br>
+			    <input type="checkbox" name="ML" value="AISTATS" checked="checked"> AISTATS<br>
 			    </tr>
 		      <tr>
-			    <input type="checkbox" name="ML" value="COLT"> COLT<br>
+			    <input type="checkbox" name="ML" value="COLT" checked="checked"> COLT<br>
 		      </tr>
 		      <tr>
-			    <input type="checkbox" name="ML" value="ICLR"> ICLR<br>
+			    <input type="checkbox" name="ML" value="ICLR" checked="checked"> ICLR<br>
 		      </tr>
           <tr>
-          <input type="checkbox" name="ML" value="ICML"> ICML<br>
+          <input type="checkbox" name="ML" value="ICML" checked="checked"> ICML<br>
           </tr>
           <tr>
-          <input type="checkbox" name="ML" value="NIPS"> NIPS<br>
+          <input type="checkbox" name="ML" value="NIPS" checked="checked"> NIPS<br>
           </tr>
           <tr>
-          <input type="checkbox" name="ML" value="UAI"> UAI<br>
+          <input type="checkbox" name="ML" value="UAI" checked="checked"> UAI<br>
           </tr>
 
 		    </tbody>
@@ -194,20 +232,23 @@
 		</div>
 
     <div class="col-sm-4">
-      <h5><b>DATA MINING</b></h5>
+      <h5><b>DATA MINING</b>
+          <button onclick="check('DM')" style="font-size : 12px">on</button>
+          <button onclick="uncheck('DM')" style="font-size : 12px">off</button>
+      </h5>
         <table class="table-sm" style="width:100%;">
         <tbody>
           <tr>
-            <input type="checkbox" name="DM" value="CIKM"> CIKM<br>
+            <input type="checkbox" name="DM" value="CIKM" checked="checked"> CIKM<br>
           </tr>
           <tr>
-            <input type="checkbox" name="DM" value="ICDE"> ICDE<br>
+            <input type="checkbox" name="DM" value="ICDE" checked="checked"> ICDE<br>
           </tr>
           <tr>
-            <input type="checkbox" name="DM" value="ICDM"> ICDM<br>
+            <input type="checkbox" name="DM" value="ICDM" checked="checked"> ICDM<br>
           </tr>
           <tr>
-            <input type="checkbox" name="DM" value="KDD"> KDD<br>
+            <input type="checkbox" name="DM" value="KDD" checked="checked"> KDD<br>
           </tr>                 
         </tbody>
       </table>
@@ -224,33 +265,38 @@
     <div class="container">
       <div class="row">
 
-
         <div class="col-sm-4">
-      	<h5><b>NATURAL LANGUAGE PROCESSING</b></h5>
+      	<h5><b>NATURAL LANGUAGE PROCESSING</b>
+          <button onclick="check('NLP')" style="font-size : 12px">on</button>
+          <button onclick="uncheck('NLP')" style="font-size : 12px">off</button>
+        </h5>
 	  	  <table class="table-sm" style="width:100%;">
 		    <tbody>
 		      <tr>
-	   	      <input type="checkbox" name="NLP" value="ACL"> ACL<br>
+	   	      <input type="checkbox" name="NLP" value="ACL" checked="checked"> ACL<br>
 			    </tr>
 			    <tr>
-	   	      <input type="checkbox" name="NLP" value="EMNLP"> EMNLP<br>
+	   	      <input type="checkbox" name="NLP" value="EMNLP" checked="checked"> EMNLP<br>
 	        </tr>
 			    <tr>
-	   	      <input type="checkbox" name="NLP" value="NAACL"> NAACL<br>
+	   	      <input type="checkbox" name="NLP" value="NAACL" checked="checked"> NAACL<br>
 	        </tr>
 		    </tbody>
 		  </table>
 		</div>
         
         <div class="col-sm-4">
-      	<h5><b>THE WEB &amp; INFORMATION RETRIEVAL</b></h5>
+      	<h5><b>THE WEB &amp; INFORMATION RETRIEVAL</b>
+          <button onclick="check('WIR')" style="font-size : 12px">on</button>
+          <button onclick="uncheck('WIR')" style="font-size : 12px">off</button>
+        </h5>
 	  	  <table class="table-sm" style="width:100%;">
 		    <tbody>
 		      <tr>
-	   	      <input type="checkbox" name="WIR" value="SIGIR"> SIGIR<br>
+	   	      <input type="checkbox" name="WIR" value="SIGIR" checked="checked"> SIGIR<br>
 			    </tr>
 			    <tr>
-	   	      <input type="checkbox" name="WIR" value="WWW"> WWW<br>
+	   	      <input type="checkbox" name="WIR" value="WWW" checked="checked"> WWW<br>
 	        </tr>      
 		    </tbody>
 		  </table>
@@ -258,15 +304,18 @@
 
 	  </div>
     </div>
-    <br />
-    <br />
+  <br />
+  <br />
+  <br />
 
 	<div class="jumbotron text-center" style="margin-bottom:0">
-	  <address>Contact Information:
-      <a href="mailto:jyuno426@kaist.ac.kr"> jyuno426@kaist.ac.kr</a>
-      <br />
-      <a href="mailto:camusian@kaist.ac.kr"> camusian@kaist.ac.kr</a>
-    </address>
+        <address>
+            Made by
+            이승현 (<a href="mailto:camusian@kaist.ac.kr">camusian@kaist.ac.kr</a>),
+            한준호 (<a href="mailto:jyuno426@kaist.ac.kr">jyuno426@kaist.ac.kr</a>),
+            신진우 (<a href="mailto:jinwoos@kaist.ac.kr">jinwoos@kaist.ac.kr</a>),
+            Korean Advanced Institute of Science and Technology
+        </address>
 	</div>
   </body>
 
