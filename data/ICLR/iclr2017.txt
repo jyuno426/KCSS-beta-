@@ -1,0 +1,792 @@
+Making Neural Programming Architectures Generalize via Recursion
+Jonathon Cai, Richard Shin, Dawn Song
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Oral
+End-to-end Optimized Image Compression
+Johannes Ballé, Valero Laparra, Eero P. Simoncelli
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Oral
+Optimization as a Model for Few-Shot Learning
+Sachin Ravi, Hugo Larochelle
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Oral
+Learning End-to-End Goal-Oriented Dialog
+Antoine Bordes, Y-Lan Boureau, Jason Weston
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Oral
+Towards Principled Methods for Training Generative Adversarial Networks
+Martin Arjovsky, Leon Bottou
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone28 Replies
+ICLR 2017 Conference Oral
+Reinforcement Learning with Unsupervised Auxiliary Tasks
+Max Jaderberg, Volodymyr Mnih, Wojciech Marian Czarnecki, Tom Schaul, Joel Z Leibo, David Silver, Koray Kavukcuoglu
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone23 Replies
+ICLR 2017 Conference Oral
+Multi-Agent Cooperation and the Emergence of (Natural) Language
+Angeliki Lazaridou, Alexander Peysakhovich, Marco Baroni
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Oral
+Understanding deep learning requires rethinking generalization
+Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone48 Replies
+ICLR 2017 Conference Oral
+Neural Architecture Search with Reinforcement Learning
+Barret Zoph, Quoc Le
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone28 Replies
+ICLR 2017 Conference Oral
+Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic
+Shixiang Gu, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, Sergey Levine
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone29 Replies
+ICLR 2017 Conference Oral
+Learning to Act by Predicting the Future
+Alexey Dosovitskiy, Vladlen Koltun
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Oral
+On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima
+Nitish Shirish Keskar, Dheevatsa Mudigere, Jorge Nocedal, Mikhail Smelyanskiy, Ping Tak Peter Tang
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Oral
+Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data
+Nicolas Papernot, Martín Abadi, Úlfar Erlingsson, Ian Goodfellow, Kunal Talwar
+02 Nov 2016ICLR 2017 conference submissionReaders:  Everyone22 Replies
+ICLR 2017 Conference Oral
+Amortised MAP Inference for Image Super-resolution
+Casper Kaae Sønderby, Jose Caballero, Lucas Theis, Wenzhe Shi, Ferenc Huszár
+01 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Oral
+Learning Graphical State Transitions
+Daniel D. Johnson
+30 Oct 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Oral
+Maximum Entropy Flow Networks
+Gabriel Loaiza-Ganem *, Yuanjun Gao *, John P. Cunningham
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Topology and Geometry of Half-Rectified Network Optimization
+C. Daniel Freeman, Joan Bruna
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer
+Sergey Zagoruyko, Nikos Komodakis
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Learning Visual Servoing with Deep Features and Fitted Q-Iteration
+Alex X. Lee, Sergey Levine, Pieter Abbeel
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+Stochastic Neural Networks for Hierarchical Reinforcement Learning
+Carlos Florensa, Yan Duan, Pieter Abbeel
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Nonparametric Neural Networks
+George Philipp, Jaime G. Carbonell
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Distributed Second-Order Optimization using Kronecker-Factored Approximations
+Jimmy Ba, Roger Grosse, James Martens
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Pruning Filters for Efficient ConvNets
+Hao Li, Asim Kadav, Igor Durdanovic, Hanan Samet, Hans Peter Graf
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Learning to Generate Samples from Noise through Infusion Training
+Florian Bordes, Sina Honari, Pascal Vincent
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+FILTER SHAPING FOR CONVOLUTIONAL NEURAL NETWORKS
+Xingyi Li, Fuxin Li, Xiaoli Fern, Raviv Raich
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Normalizing the Normalizers: Comparing and Extending Network Normalization Schemes
+Mengye Ren, Renjie Liao, Raquel Urtasun, Fabian H. Sinz, Richard S. Zemel
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Multilayer Recurrent Network Models of Primate Retinal Ganglion Cell Responses
+Eleanor Batty, Josh Merel, Nora Brackbill, Alexander Heitman, Alexander Sher, Alan Litke, E.J. Chichilnisky, Liam Paninski
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Improving Generative Adversarial Networks with Denoising Feature Matching
+David Warde-Farley, Yoshua Bengio
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+Efficient Vector Representation for Documents through Corruption
+Minmin Chen
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+Learning Invariant Feature Spaces to Transfer Skills with Reinforcement Learning
+Abhishek Gupta, Coline Devin, YuXuan Liu, Pieter Abbeel, Sergey Levine
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Transfer of View-manifold Learning to Similarity Perception of Novel Objects
+Xingyu Lin, Hao Wang, Zhihao Li, Yimeng Zhang, Alan Yuille, Tai Sing Lee
+06 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+What does it take to generate natural textures?
+Ivan Ustyuzhaninov *, Wieland Brendel *, Leon Gatys, Matthias Bethge
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Emergence of foveal image sampling from learning to attend in visual scenes
+Brian Cheung, Eric Weiss, Bruno Olshausen
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+An Information-Theoretic Framework for Fast and Robust Unsupervised Learning via Neural Population Infomax
+Wentao Huang, Kechen Zhang
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+PixelCNN++: Improving the PixelCNN with Discretized Logistic Mixture Likelihood and Other Modifications
+Tim Salimans, Andrej Karpathy, Xi Chen, Diederik P. Kingma
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Mode Regularized Generative Adversarial Networks
+Tong Che, Yanran Li, Athul Jacob, Yoshua Bengio, Wenjie Li
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone27 Replies
+ICLR 2017 Conference Poster
+Highway and Residual Networks learn Unrolled Iterative Estimation
+Klaus Greff, Rupesh K. Srivastava, Jürgen Schmidhuber
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Improving Neural Language Models with a Continuous Cache
+Edouard Grave, Armand Joulin, Nicolas Usunier
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Unsupervised Cross-Domain Image Generation
+Yaniv Taigman, Adam Polyak, Lior Wolf
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone33 Replies
+ICLR 2017 Conference Poster
+Third Person Imitation Learning
+Bradly C Stadie, Pieter Abbeel, Ilya Sutskever
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Variational Recurrent Adversarial Deep Domain Adaptation
+Sanjay Purushotham, Wilka Carvalho, Tanachat Nilanon, Yan Liu
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Program Synthesis for Character Level Language Modeling
+Pavol Bielik, Veselin Raychev, Martin Vechev
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Episodic Exploration for Deep Deterministic Policies for StarCraft Micromanagement
+Nicolas Usunier, Gabriel Synnaeve, Zeming Lin, Soumith Chintala
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Soft Weight-Sharing for Neural Network Compression
+Karen Ullrich, Edward Meeds, Max Welling
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Neural Program Lattices
+Chengtao Li, Daniel Tarlow, Alexander L. Gaunt, Marc Brockschmidt, Nate Kushman
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+Tracking the World State with Recurrent Entity Networks
+Mikael Henaff, Jason Weston, Arthur Szlam, Antoine Bordes, Yann LeCun
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Steerable CNNs
+Taco S. Cohen, Max Welling
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Learning to Query, Reason, and Answer Questions On Ambiguous Texts
+Xiaoxiao Guo, Tim Klinger, Clemens Rosenbaum, Joseph P. Bigus, Murray Campbell, Ban Kawas, Kartik Talamadupula, Gerry Tesauro, Satinder Singh
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning
+William Lotter, Gabriel Kreiman, David Cox
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Diet Networks: Thin Parameters for Fat Genomics
+Adriana Romero, Pierre Luc Carrier, Akram Erraqabi, Tristan Sylvain, Alex Auvolat, Etienne Dejoie, Marc-André Legault, Marie-Pierre Dubé, Julie G. Hussin, Yoshua Bengio
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+Deep Biaffine Attention for Neural Dependency Parsing
+Timothy Dozat, Christopher D. Manning
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+PixelVAE: A Latent Variable Model for Natural Images
+Ishaan Gulrajani, Kundan Kumar, Faruk Ahmed, Adrien Ali Taiga, Francesco Visin, David Vazquez, Aaron Courville
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Snapshot Ensembles: Train 1, Get M for Free
+Gao Huang, Yixuan Li, Geoff Pleiss, Zhuang Liu, John E. Hopcroft, Kilian Q. Weinberger
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone36 Replies
+ICLR 2017 Conference Poster
+Training Agent for First-Person Shooter Game with Actor-Critic Curriculum Learning
+Yuxin Wu, Yuandong Tian
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Neuro-Symbolic Program Synthesis
+Emilio Parisotto, Abdel-rahman Mohamed, Rishabh Singh, Lihong Li, Dengyong Zhou, Pushmeet Kohli
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Decomposing Motion and Content for Natural Video Sequence Prediction
+Ruben Villegas, Jimei Yang, Seunghoon Hong, Xunyu Lin, Honglak Lee
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone23 Replies
+ICLR 2017 Conference Poster
+Towards a Neural Statistician
+Harrison Edwards, Amos Storkey
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Generative Models and Model Criticism via Optimized Maximum Mean Discrepancy
+Dougal J. Sutherland, Hsiao-Yu Tung, Heiko Strathmann, Soumyajit De, Aaditya Ramdas, Alex Smola, Arthur Gretton
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Generalizing Skills with Semi-Supervised Reinforcement Learning
+Chelsea Finn, Tianhe Yu, Justin Fu, Pieter Abbeel, Sergey Levine
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone8 Replies
+ICLR 2017 Conference Poster
+Learning Curve Prediction with Bayesian Neural Networks
+Aaron Klein, Stefan Falkner, Jost Tobias Springenberg, Frank Hutter
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Learning to Optimize
+Ke Li, Jitendra Malik
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+A Compare-Aggregate Model for Matching Text Sequences
+Shuohang Wang, Jing Jiang
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Data Noising as Smoothing in Neural Network Language Models
+Ziang Xie, Sida I. Wang, Jiwei Li, Daniel Lévy, Aiming Nie, Dan Jurafsky, Andrew Y. Ng
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Training Compressed Fully-Connected Networks with a Density-Diversity Penalty
+Shengjie Wang, Haoran Cai, Jeff Bilmes, William Noble
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone22 Replies
+ICLR 2017 Conference Poster
+Autoencoding Variational Inference For Topic Models
+Akash Srivastava, Charles Sutton
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone24 Replies
+ICLR 2017 Conference Poster
+Optimal Binary Autoencoding with Pairwise Correlations
+Akshay Balsubramani
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone6 Replies
+ICLR 2017 Conference Poster
+On the Quantitative Analysis of Decoder-Based Generative Models
+Yuhuai Wu, Yuri Burda, Ruslan Salakhutdinov, Roger Grosse
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Trained Ternary Quantization
+Chenzhuo Zhu, Song Han, Huizi Mao, William J. Dally
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+DSD: Dense-Sparse-Dense Training for Deep Neural Networks
+Song Han, Jeff Pool, Sharan Narang, Huizi Mao, Enhao Gong, Shijian Tang, Erich Elsen, Peter Vajda, Manohar Paluri, John Tran, Bryan Catanzaro, William J. Dally
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+A Compositional Object-Based Approach to Learning Physical Dynamics
+Michael Chang, Tomer Ullman, Antonio Torralba, Joshua Tenenbaum
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Learning to Remember Rare Events
+Lukasz Kaiser, Ofir Nachum, Aurko Roy, Samy Bengio
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Transfer Learning for Sequence Tagging with Hierarchical Recurrent Networks
+Zhilin Yang, Ruslan Salakhutdinov, William W. Cohen
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Words or Characters? Fine-grained Gating for Reading Comprehension
+Zhilin Yang, Bhuwan Dhingra, Ye Yuan, Junjie Hu, William W. Cohen, Ruslan Salakhutdinov
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+A Simple but Tough-to-Beat Baseline for Sentence Embeddings
+Sanjeev Arora, Yingyu Liang, Tengyu Ma
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Capacity and Trainability in Recurrent Neural Networks
+Jasmine Collins, Jascha Sohl-Dickstein, David Sussillo
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Learning to Perform Physics Experiments via Deep Reinforcement Learning
+Misha Denil, Pulkit Agrawal, Tejas D Kulkarni, Tom Erez, Peter Battaglia, Nando de Freitas
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+Improving Policy Gradient by Exploring Under-appreciated Rewards
+Ofir Nachum, Mohammad Norouzi, Dale Schuurmans
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Deep Learning with Dynamic Computation Graphs
+Moshe Looks, Marcello Herreshoff, DeLesley Hutchins, Peter Norvig
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Calibrating Energy-based Generative Adversarial Networks
+Zihang Dai, Amjad Almahairi, Philip Bachman, Eduard Hovy, Aaron Courville
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Pruning Convolutional Neural Networks for Resource Efficient Inference
+Pavlo Molchanov, Stephen Tyree, Tero Karras, Timo Aila, Jan Kautz
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+Query-Reduction Networks for Question Answering
+Minjoon Seo, Sewon Min, Ali Farhadi, Hannaneh Hajishirzi
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+Designing Neural Network Architectures using Reinforcement Learning
+Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Machine Comprehension Using Match-LSTM and Answer Pointer
+Shuohang Wang, Jing Jiang
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+DeepDSL: A Compilation-based Domain-Specific Language for Deep Learning
+Tian Zhao, Xiao Bing Huang, Yu Cao
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Bidirectional Attention Flow for Machine Comprehension
+Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone27 Replies
+ICLR 2017 Conference Poster
+Incorporating long-range consistency in CNN-based texture generation
+Guillaume Berger, Roland Memisevic
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Dynamic Coattention Networks For Question Answering
+Caiming Xiong, Victor Zhong, Richard Socher
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone32 Replies
+ICLR 2017 Conference Poster
+SampleRNN: An Unconditional End-to-End Neural Audio Generation Model
+Soroush Mehri, Kundan Kumar, Ishaan Gulrajani, Rithesh Kumar, Shubham Jain, Jose Sotelo, Aaron Courville, Yoshua Bengio
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Metacontrol for Adaptive Imagination-Based Optimization
+Jessica B. Hamrick, Andrew J. Ballard, Razvan Pascanu, Oriol Vinyals, Nicolas Heess, Peter W. Battaglia
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Exploring Sparsity in Recurrent Neural Networks
+Sharan Narang, Greg Diamos, Shubho Sengupta, Erich Elsen
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Lossy Image Compression with Compressive Autoencoders
+Lucas Theis, Wenzhe Shi, Andrew Cunningham, Ferenc Huszár
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone31 Replies
+ICLR 2017 Conference Poster
+Structured Attention Networks
+Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Zoneout: Regularizing RNNs by Randomly Preserving Hidden Activations
+David Krueger, Tegan Maharaj, Janos Kramar, Mohammad Pezeshki, Nicolas Ballas, Nan Rosemary Ke, Anirudh Goyal, Yoshua Bengio, Aaron Courville, Christopher Pal
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Deep Probabilistic Programming
+Dustin Tran, Matthew D. Hoffman, Rif A. Saurous, Eugene Brevdo, Kevin Murphy, David M. Blei
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+LR-GAN: Layered Recursive Generative Adversarial Networks for Image Generation
+Jianwei Yang, Anitha Kannan, Dhruv Batra, Devi Parikh
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Variational Lossy Autoencoder
+Xi Chen, Diederik P. Kingma, Tim Salimans, Yan Duan, Prafulla Dhariwal, John Schulman, Ilya Sutskever, Pieter Abbeel
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone26 Replies
+ICLR 2017 Conference Poster
+A recurrent neural network without chaos
+Thomas Laurent, James von Brecht
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer
+Noam Shazeer, *Azalia Mirhoseini, *Krzysztof Maziarz, Andy Davis, Quoc Le, Geoffrey Hinton, Jeff Dean
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone23 Replies
+ICLR 2017 Conference Poster
+Tree-structured decoding with doubly-recurrent neural networks
+David Alvarez-Melis, Tommi S. Jaakkola
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone22 Replies
+ICLR 2017 Conference Poster
+Introspection:Accelerating Neural Network Training By Learning Weight Evolution
+Abhishek Sinha, Aahitagni Mukherjee, Mausoom Sarkar, Balaji Krishnamurthy
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone23 Replies
+ICLR 2017 Conference Poster
+Hyperband: Bandit-Based Configuration Evaluation for Hyperparameter Optimization
+Lisha Li, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, Ameet Talwalkar
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+Lie-Access Neural Turing Machines
+Greg Yang, Alexander Rush
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Quasi-Recurrent Neural Networks
+James Bradbury, Stephen Merity, Caiming Xiong, Richard Socher
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Recurrent Environment Simulators
+Silvia Chiappa, Sébastien Racaniere, Daan Wierstra, Shakir Mohamed
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+EPOpt: Learning Robust Neural Network Policies Using Model Ensembles
+Aravind Rajeswaran, Sarvjeet Ghotra, Balaraman Ravindran, Sergey Levine
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Attend, Adapt and Transfer: Attentive Deep Architecture for Adaptive Transfer from multiple sources in the same domain
+Janarthanan Rajendran, Aravind Lakshminarayanan, Mitesh M. Khapra, Prasanna P, Balaraman Ravindran
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Multi-view Recurrent Neural Acoustic Word Embeddings
+Wanjia He, Weiran Wang, Karen Livescu
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Learning Features of Music From Scratch
+John Thickstun, Zaid Harchaoui, Sham Kakade
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks
+Dan Hendrycks, Kevin Gimpel
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Learning to superoptimize programs
+Rudy Bunel, Alban Desmaison, M. Pawan Kumar, Philip H.S. Torr, Pushmeet Kohli
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+Trusting SVM for Piecewise Linear CNNs
+Leonard Berrada, Andrew Zisserman, M. Pawan Kumar
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+Sigma Delta Quantized Networks
+Peter O'Connor, Max Welling
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+A STRUCTURED SELF-ATTENTIVE SENTENCE EMBEDDING
+Zhouhan Lin, Minwei Feng, Cicero Nogueira dos Santos, Mo Yu, Bing Xiang, Bowen Zhou, Yoshua Bengio
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Regularizing CNNs with Locally Constrained Decorrelations
+Pau Rodríguez, Jordi Gonzàlez, Guillem Cucurull, Josep M. Gonfaus, Xavier Roca
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables
+Chris J. Maddison, Andriy Mnih, Yee Whye Teh
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Unrolled Generative Adversarial Networks
+Luke Metz, Ben Poole, David Pfau, Jascha Sohl-Dickstein
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency
+Adji B. Dieng, Chong Wang, Jianfeng Gao, John Paisley
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Frustratingly Short Attention Spans in Neural Language Modeling
+Michał Daniluk, Tim Rocktäschel, Johannes Welbl, Sebastian Riedel
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Recurrent Hidden Semi-Markov Model
+Hanjun Dai, Bo Dai, Yan-Ming Zhang, Shuang Li, Le Song
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Deep Variational Bayes Filters: Unsupervised Learning of State Space Models from Raw Data
+Maximilian Karl, Maximilian Soelch, Justin Bayer, Patrick van der Smagt
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Generative Multi-Adversarial Networks
+Ishan Durugkar, Ian Gemp, Sridhar Mahadevan
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone23 Replies
+ICLR 2017 Conference Poster
+Mollifying Networks
+Caglar Gulcehre, Marcin Moczulski, Francesco Visin, Yoshua Bengio
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework
+Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot, Matthew Botvinick, Shakir Mohamed, Alexander Lerchner
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Offline bilingual word vectors, orthogonal transformations and the inverted softmax
+Samuel L. Smith, David H. P. Turban, Steven Hamblin, Nils Y. Hammerla
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Visualizing Deep Neural Network Decisions: Prediction Difference Analysis
+Luisa M Zintgraf, Taco S Cohen, Tameem Adel, Max Welling
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Categorical Reparameterization with Gumbel-Softmax
+Eric Jang, Shixiang Gu, Ben Poole
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Online Bayesian Transfer Learning for Sequential Data Modeling
+Priyank Jaini, Zhitang Chen, Pablo Carbajal, Edith Law, Laura Middleton, Kayla Regan, Mike Schaekermann, George Trimponias, James Tung, Pascal Poupart
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+Latent Sequence Decompositions
+William Chan, Yu Zhang, Quoc Le, Navdeep Jaitly
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Paleo: A Performance Model for Deep Neural Networks
+Hang Qi, Evan R. Sparks, Ameet Talwalkar
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Combining policy gradient and Q-learning
+Brendan O'Donoghue, Remi Munos, Koray Kavukcuoglu, Volodymyr Mnih
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone34 Replies
+ICLR 2017 Conference Poster
+Density estimation using Real NVP
+Laurent Dinh, Jascha Sohl-Dickstein, Samy Bengio
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Recurrent Batch Normalization
+Tim Cooijmans, Nicolas Ballas, César Laurent, Çağlar Gülçehre, Aaron Courville
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+SGDR: Stochastic Gradient Descent with Warm Restarts
+Ilya Loshchilov, Frank Hutter
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+Learning a Natural Language Interface with Neural Programmer
+Arvind Neelakantan, Quoc V. Le, Martin Abadi, Andrew McCallum, Dario Amodei
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Reinforcement Learning through Asynchronous Advantage Actor-Critic on a GPU
+Mohammad Babaeizadeh, Iuri Frosio, Stephen Tyree, Jason Clemons, Jan Kautz
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Learning to Navigate in Complex Environments
+Piotr Mirowski, Razvan Pascanu, Fabio Viola, Hubert Soyer, Andy Ballard, Andrea Banino, Misha Denil, Ross Goroshin, Laurent Sifre, Koray Kavukcuoglu, Dharshan Kumaran, Raia Hadsell
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone22 Replies
+ICLR 2017 Conference Poster
+DeepCoder: Learning to Write Programs
+Matej Balog, Alexander L. Gaunt, Marc Brockschmidt, Sebastian Nowozin, Daniel Tarlow
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Learning and Policy Search in Stochastic Dynamical Systems with Bayesian Neural Networks
+Stefan Depeweg, José Miguel Hernández-Lobato, Finale Doshi-Velez, Steffen Udluft
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Variable Computation in Recurrent Neural Networks
+Yacine Jernite, Edouard Grave, Armand Joulin, Tomas Mikolov
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Deep Variational Information Bottleneck
+Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+The Neural Noisy Channel
+Lei Yu, Phil Blunsom, Chris Dyer, Edward Grefenstette, Tomas Kocisky
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Automatic Rule Extraction from Long Short Term Memory Networks
+W. James Murdoch, Arthur Szlam
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Dialogue Learning With Human-in-the-Loop
+Jiwei Li, Alexander H. Miller, Sumit Chopra, Marc'Aurelio Ranzato, Jason Weston
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Adversarially Learned Inference
+Vincent Dumoulin, Ishmael Belghazi, Ben Poole, Alex Lamb, Martin Arjovsky, Olivier Mastropietro, Aaron Courville
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Learning through Dialogue Interactions by Asking Questions
+Jiwei Li, Alexander H. Miller, Sumit Chopra, Marc'Aurelio Ranzato, Jason Weston
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone25 Replies
+ICLR 2017 Conference Poster
+Deep Information Propagation
+Samuel S. Schoenholz, Justin Gilmer, Surya Ganguli, Jascha Sohl-Dickstein
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone8 Replies
+ICLR 2017 Conference Poster
+FractalNet: Ultra-Deep Neural Networks without Residuals
+Gustav Larsson, Michael Maire, Gregory Shakhnarovich
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Revisiting Classifier Two-Sample Tests
+David Lopez-Paz, Maxime Oquab
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone21 Replies
+ICLR 2017 Conference Poster
+Learning to Repeat: Fine Grained Action Repetition for Deep Reinforcement Learning
+Sahil Sharma, Aravind S. Lakshminarayanan, Balaraman Ravindran
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Loss-aware Binarization of Deep Networks
+Lu Hou, Quanming Yao, James T. Kwok
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone21 Replies
+ICLR 2017 Conference Poster
+Learning to Play in a Day: Faster Deep Reinforcement Learning by Optimality Tightening
+Frank S.He, Yang Liu, Alexander G. Schwing, Jian Peng
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone28 Replies
+ICLR 2017 Conference Poster
+Energy-based Generative Adversarial Networks
+Junbo Zhao, Michael Mathieu, Yann LeCun
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Central Moment Discrepancy (CMD) for Domain-Invariant Representation Learning
+Werner Zellinger, Thomas Grubinger, Edwin Lughofer, Thomas Natschläger, Susanne Saminger-Platz
+05 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Incremental Network Quantization: Towards Lossless CNNs with Low-precision Weights
+Aojun Zhou, Anbang Yao, Yiwen Guo, Lin Xu, Yurong Chen
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+Entropy-SGD: Biasing Gradient Descent Into Wide Valleys
+Pratik Chaudhari, Anna Choromanska, Stefano Soatto, Yann LeCun, Carlo Baldassi, Christian Borgs, Jennifer Chayes, Levent Sagun, Riccardo Zecchina
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone33 Replies
+ICLR 2017 Conference Poster
+Deep Multi-task Representation Learning: A Tensor Factorisation Approach
+Yongxin Yang, Timothy M. Hospedales
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Sample Efficient Actor-Critic with Experience Replay
+Ziyu Wang, Victor Bapst, Nicolas Heess, Volodymyr Mnih, Remi Munos, Koray Kavukcuoglu, Nando de Freitas
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone19 Replies
+ICLR 2017 Conference Poster
+Temporal Ensembling for Semi-Supervised Learning
+Samuli Laine, Timo Aila
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+On Detecting Adversarial Perturbations
+Jan Hendrik Metzen, Tim Genewein, Volker Fischer, Bastian Bischoff
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Training deep neural-networks using a noise adaptation layer
+Jacob Goldberger, Ehud Ben-Reuven
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Learning to Compose Words into Sentences with Reinforcement Learning
+Dani Yogatama, Phil Blunsom, Chris Dyer, Edward Grefenstette, Wang Ling
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone24 Replies
+ICLR 2017 Conference Poster
+Delving into Transferable Adversarial Examples and Black-box Attacks
+Yanpei Liu, Xinyun Chen, Chang Liu, Dawn Song
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone22 Replies
+ICLR 2017 Conference Poster
+Identity Matters in Deep Learning
+Moritz Hardt, Tengyu Ma
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Adversarial Feature Learning
+Jeff Donahue, Philipp Krähenbühl, Trevor Darrell
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+Towards the Limit of Network Quantization
+Yoojin Choi, Mostafa El-Khamy, Jungwon Lee
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Faster CNNs with Direct Sparse Convolutions and Guided Pruning
+Jongsoo Park, Sheng Li, Wei Wen, Ping Tak Peter Tang, Hai Li, Yiran Chen, Pradeep Dubey
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone7 Replies
+ICLR 2017 Conference Poster
+Stick-Breaking Variational Autoencoders
+Eric Nalisnick, Padhraic Smyth
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone22 Replies
+ICLR 2017 Conference Poster
+Batch Policy Gradient Methods for Improving Neural Conversation Models
+Kirthevasan Kandasamy, Yoram Bachrach, Ryota Tomioka, Daniel Tarlow, David Carter
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+Support Regularized Sparse Coding and Its Fast Encoder
+Yingzhen Yang, Jiahui Yu, Pushmeet Kohli, Jianchao Yang, Thomas S. Huang
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling
+Hakan Inan, Khashayar Khosravi, Richard Socher
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Towards Deep Interpretability (MUS-ROVER II): Learning Hierarchical Representations of Tonal Music
+Haizi Yu, Lav R. Varshney
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Discrete Variational Autoencoders
+Jason Tyler Rolfe
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone23 Replies
+ICLR 2017 Conference Poster
+Do Deep Convolutional Nets Really Need to be Deep and Convolutional?
+Gregor Urban, Krzysztof J. Geras, Samira Ebrahimi Kahou, Ozlem Aslan, Shengjie Wang, Abdelrahman Mohamed, Matthai Philipose, Matt Richardson, Rich Caruana
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+Geometry of Polysemy
+Jiaqi Mu, Suma Bhat, Pramod Viswanath
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone18 Replies
+ICLR 2017 Conference Poster
+Learning Invariant Representations Of Planar Curves
+Gautam Pai, Aaron Wetzler, Ron Kimmel
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone16 Replies
+ICLR 2017 Conference Poster
+Reasoning with Memory Augmented Neural Networks for Language Comprehension
+Tsendsuren Munkhdalai, Hong Yu
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone12 Replies
+ICLR 2017 Conference Poster
+Learning Recurrent Representations for Hierarchical Behavior Modeling
+Eyrun Eyjolfsdottir, Kristin Branson, Yisong Yue, Pietro Perona
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone21 Replies
+ICLR 2017 Conference Poster
+Adversarial Machine Learning at Scale
+Alexey Kurakin, Ian J. Goodfellow, Samy Bengio
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone13 Replies
+ICLR 2017 Conference Poster
+Predicting Medications from Diagnostic Codes with Recurrent Neural Networks
+Jacek M. Bajor, Thomas A. Lasko
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Recurrent Mixture Density Network for Spatiotemporal Visual Attention
+Loris Bazzani, Hugo Larochelle, Lorenzo Torresani
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone20 Replies
+ICLR 2017 Conference Poster
+Inductive Bias of Deep Convolutional Networks through Pooling Geometry
+Nadav Cohen, Amnon Shashua
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+Efficient Representation of Low-Dimensional Manifolds using Deep Networks
+Ronen Basri, David W. Jacobs
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Semi-Supervised Classification with Graph Convolutional Networks
+Thomas N. Kipf, Max Welling
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone7 Replies
+ICLR 2017 Conference Poster
+Sparsely-Connected Neural Networks: Towards Efficient VLSI Implementation of Deep Neural Networks
+Arash Ardakani, Carlo Condo, Warren J. Gross
+04 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Adversarial Training Methods for Semi-Supervised Text Classification
+Takeru Miyato, Andrew M. Dai, Ian Goodfellow
+03 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Fine-grained Analysis of Sentence Embeddings Using Auxiliary Prediction Tasks
+Yossi Adi, Einat Kermany, Yonatan Belinkov, Ofer Lavi, Yoav Goldberg
+03 Nov 2016ICLR 2017 conference submissionReaders:  Everyone15 Replies
+ICLR 2017 Conference Poster
+Pointer Sentinel Mixture Models
+Stephen Merity, Caiming Xiong, James Bradbury, Richard Socher
+03 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+An Actor-Critic Algorithm for Sequence Prediction
+Dzmitry Bahdanau, Philemon Brakel, Kelvin Xu, Anirudh Goyal, Ryan Lowe, Joelle Pineau, Aaron Courville, Yoshua Bengio
+03 Nov 2016ICLR 2017 conference submissionReaders:  Everyone23 Replies
+ICLR 2017 Conference Poster
+Understanding Trainable Sparse Coding with Matrix Factorization
+Thomas Moreau, Joan Bruna
+03 Nov 2016ICLR 2017 conference submissionReaders:  Everyone9 Replies
+ICLR 2017 Conference Poster
+Tighter bounds lead to improved classifiers
+Nicolas Le Roux
+03 Nov 2016ICLR 2017 conference submissionReaders:  Everyone8 Replies
+ICLR 2017 Conference Poster
+HolStep: A Machine Learning Dataset for Higher-order Logic Theorem Proving
+Cezary Kaliszyk, François Chollet, Christian Szegedy
+02 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Why Deep Neural Networks for Function Approximation?
+Shiyu Liang, R. Srikant
+02 Nov 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Hierarchical Multiscale Recurrent Neural Networks
+Junyoung Chung, Sungjin Ahn, Yoshua Bengio
+30 Oct 2016ICLR 2017 conference submissionReaders:  Everyone11 Replies
+ICLR 2017 Conference Poster
+Neural Photo Editing with Introspective Adversarial Networks
+Andrew Brock, Theodore Lim, J.M. Ritchie, Nick Weston
+30 Oct 2016ICLR 2017 conference submissionReaders:  Everyone17 Replies
+ICLR 2017 Conference Poster
+Dropout with Expectation-linear Regularization
+Xuezhe Ma, Yingkai Gao, Zhiting Hu, Yaoliang Yu, Yuntian Deng, Eduard Hovy
+29 Oct 2016ICLR 2017 conference submissionReaders:  Everyone10 Replies
+ICLR 2017 Conference Poster
+HyperNetworks
+David Ha, Andrew M. Dai, Quoc V. Le
+27 Oct 2016ICLR 2017 conference submissionReaders:  Everyone14 Replies
+ICLR 2017 Conference Poster
+A Learned Representation For Artistic Style
+Vincent Dumoulin, Jonathon Shlens, Manjunath Kudlur
+26 Oct 2016ICLR 2017 conference submissionReaders:  Everyone22 Replies
+ICLR 2017 Conference Poster
+Hadamard Product for Low-rank Bilinear Pooling
+Jin-Hwa Kim, Kyoung-Woon On, Woosang Lim, Jeonghee Kim, Jung-Woo Ha, Byoung-Tak Zhang
+17 Oct 2016ICLR 2017 conference submissionReaders:  Everyone25 Replies
+ICLR 2017 Conference Poster

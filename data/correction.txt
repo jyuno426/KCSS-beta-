@@ -1,0 +1,20 @@
+acl 2012         https://dblp.org/db/conf/acl/acl2012-1.html     https://dblp.org/db/conf/acl/acl2012-2.html
+acl 2013         https://dblp.org/db/conf/acl/acl2013-1.html     https://dblp.org/db/conf/acl/acl2013-2.html
+acl 2014         https://dblp.org/db/conf/acl/acl2014-1.html     https://dblp.org/db/conf/acl/acl2014-2.html
+acl 2015         https://dblp.org/db/conf/acl/acl2015-1.html     https://dblp.org/db/conf/acl/acl2015-2.html
+acl 2016         https://dblp.org/db/conf/acl/acl2016-1.html     https://dblp.org/db/conf/acl/acl2016-2.html
+acl 2017         https://dblp.org/db/conf/acl/acl2017-1.html     https://dblp.org/db/conf/acl/acl2017-2.html
+acl 2018         https://dblp.org/db/conf/acl/acl2018-1.html     https://dblp.org/db/conf/acl/acl2018-2.html
+aistats 2009     https://dblp.org/db/journals/jmlr/jmlrp5.html
+aistats 2010     https://dblp.org/db/journals/jmlr/jmlrp9.html
+aistats 2011     https://dblp.org/db/journals/jmlr/jmlrp15.html
+aistats 2012     https://dblp.org/db/journals/jmlr/jmlrp22.html
+colt    2011     https://dblp.org/db/journals/jmlr/jmlrp19.html
+colt    2012     https://dblp.org/db/journals/jmlr/jmlrp23.html
+eccv    2008    https://dblp.org/db/conf/eccv/eccv2008-1.html   https://dblp.org/db/conf/eccv/eccv2008-2.html   https://dblp.org/db/conf/eccv/eccv2008-3.html   https://dblp.org/db/conf/eccv/eccv2008-4.html
+eccv    2010    https://dblp.org/db/conf/eccv/eccv2010-1.html   https://dblp.org/db/conf/eccv/eccv2010-2.html   https://dblp.org/db/conf/eccv/eccv2010-3.html   https://dblp.org/db/conf/eccv/eccv2010-4.html   https://dblp.org/db/conf/eccv/eccv2010-5.html   https://dblp.org/db/conf/eccv/eccv2010-6.html
+eccv    2012    https://dblp.org/db/conf/eccv/eccv2012-1.html   https://dblp.org/db/conf/eccv/eccv2012-2.html   https://dblp.org/db/conf/eccv/eccv2012-3.html   https://dblp.org/db/conf/eccv/eccv2012-4.html   https://dblp.org/db/conf/eccv/eccv2012-5.html   https://dblp.org/db/conf/eccv/eccv2012-6.html   https://dblp.org/db/conf/eccv/eccv2012-7.html
+eccv    2014    https://dblp.org/db/conf/eccv/eccv2014-1.html   https://dblp.org/db/conf/eccv/eccv2014-2.html   https://dblp.org/db/conf/eccv/eccv2014-3.html   https://dblp.org/db/conf/eccv/eccv2014-4.html   https://dblp.org/db/conf/eccv/eccv2014-5.html   https://dblp.org/db/conf/eccv/eccv2014-6.html   https://dblp.org/db/conf/eccv/eccv2014-7.html
+eccv    2016    https://dblp.org/db/conf/eccv/eccv2016-1.html   https://dblp.org/db/conf/eccv/eccv2016-2.html   https://dblp.org/db/conf/eccv/eccv2016-3.html   https://dblp.org/db/conf/eccv/eccv2016-4.html   https://dblp.org/db/conf/eccv/eccv2016-5.html   https://dblp.org/db/conf/eccv/eccv2016-6.html   https://dblp.org/db/conf/eccv/eccv2016-7.html   https://dblp.org/db/conf/eccv/eccv2016-8.html
+eccv    2018    https://dblp.org/db/conf/eccv/eccv2018-1.html   https://dblp.org/db/conf/eccv/eccv2018-2.html   https://dblp.org/db/conf/eccv/eccv2018-3.html   https://dblp.org/db/conf/eccv/eccv2018-4.html   https://dblp.org/db/conf/eccv/eccv2018-5.html   https://dblp.org/db/conf/eccv/eccv2018-6.html   https://dblp.org/db/conf/eccv/eccv2018-7.html   https://dblp.org/db/conf/eccv/eccv2018-8.html   https://dblp.org/db/conf/eccv/eccv2018-9.html   https://dblp.org/db/conf/eccv/eccv2018-10.html  https://dblp.org/db/conf/eccv/eccv2018-11.html  https://dblp.org/db/conf/eccv/eccv2018-12.html  https://dblp.org/db/conf/eccv/eccv2018-13.html  https://dblp.org/db/conf/eccv/eccv2018-14.html  https://dblp.org/db/conf/eccv/eccv2018-15.html  https://dblp.org/db/conf/eccv/eccv2018-16.html
+naacl   2018   https://dblp.org/db/conf/naacl/naacl2018-1.html https://dblp.org/db/conf/naacl/naacl2018-2.html https://dblp.org/db/conf/naacl/naacl2018-3.html

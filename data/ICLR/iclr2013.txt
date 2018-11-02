@@ -1,0 +1,69 @@
+Herded Gibbs Sampling
+Luke Bornn, Yutian Chen, Nando de Freitas, Maya Baya, Jing Fang, Max Welling
+19 Jan 2013ICLR 2013 conference submissionReaders:  Everyone9 Replies
+Knowledge Matters: Importance of Prior Information for Optimization
+Çağlar Gülçehre, Yoshua Bengio
+19 Jan 2013ICLR 2013 conference submissionReaders:  Everyone10 Replies
+The Neural Representation Benchmark and its Evaluation on Brain and Machine
+Charles Cadieu, Ha Hong, Dan Yamins, Nicolas Pinto, Najib J. Majaj, James J. DiCarlo
+18 Jan 2013ICLR 2013 conference submissionReaders:  Everyone6 Replies
+Feature grouping from spatially constrained multiplicative interaction
+Felix Bauer, Roland Memisevic
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone4 Replies
+Discriminative Recurrent Sparse Auto-Encoders
+Jason Rolfe, Yann LeCun
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone17 Replies
+Discrete Restricted Boltzmann Machines
+Guido F. Montufar, Jason Morton
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone5 Replies
+Indoor Semantic Segmentation using depth information
+Camille Couprie, Clement Farabet, Laurent Najman, Yann LeCun
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone6 Replies
+Stochastic Pooling for Regularization of Deep Convolutional Neural Networks
+Matthew Zeiler, Rob Fergus
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone9 Replies
+Information Theoretic Learning with Infinitely Divisible Kernels
+Luis Gonzalo Sánchez, Jose C. Principe
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone8 Replies
+What Regularized Auto-Encoders Learn from the Data Generating Distribution
+Guillaume Alain, Yoshua Bengio
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone6 Replies
+Complexity of Representation and Inference in Compositional Models with Part Sharing
+Alan Yuille, Roozbeh Mottaghi
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone9 Replies
+Feature Learning in Deep Neural Networks - A Study on Speech Recognition Tasks
+Dong Yu, Mike Seltzer, Jinyu Li, Jui-Ting Huang, Frank Seide
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone4 Replies
+Barnes-Hut-SNE
+Laurens van der Maaten
+16 Jan 2013ICLR 2013 conference submissionReaders:  Everyone9 Replies
+Efficient Learning of Domain-invariant Image Representations
+Judy Hoffman, Erik Rodner, Jeff Donahue, Kate Saenko, Trevor Darrell
+16 Jan 2013ICLR 2013 conference submissionReaders:  Everyone7 Replies
+Cutting Recursive Autoencoder Trees
+Christian Scheible, Hinrich Schuetze
+21 Jan 2013ICLR 2013 conference submissionReaders:  Everyone7 Replies
+Saturating Auto-Encoder
+Ross Goroshin, Yann LeCun
+18 Jan 2013ICLR 2013 conference submissionReaders:  Everyone8 Replies
+Jitter-Adaptive Dictionary Learning - Application to Multi-Trial Neuroelectric Signals
+Sebastian Hitziger, Maureen Clerc, Alexandre Gramfort, Sandrine Saillet, Christian Bénar, Théodore Papadopoulo
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone9 Replies
+Training Neural Networks with Stochastic Hessian-Free Optimization
+Ryan Kiros
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone9 Replies
+Metric-Free Natural Gradient for Joint-Training of Boltzmann Machines
+Guillaume Desjardins, Razvan Pascanu, Aaron Courville, Yoshua Bengio
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone4 Replies
+Adaptive learning rates and parallelization for stochastic, sparse, non-smooth gradients
+Tom Schaul, Yann LeCun
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone4 Replies
+Block Coordinate Descent for Sparse NMF
+Vamsi Potluru, Sergey M. Plis, Jonathan Le Roux, Barak A. Pearlmutter, Vince D. Calhoun, Thomas P. Hayes
+17 Jan 2013ICLR 2013 conference submissionReaders:  Everyone9 Replies
+The Diagonalized Newton Algorithm for Nonnegative Matrix Factorization
+Hugo Van hamme
+16 Jan 2013ICLR 2013 conference submissionReaders:  Everyone6 Replies
+Local Component Analysis
+Nicolas Le Roux, Francis Bach
+12 Jan 2013ICLR 2013 conference submissionReaders:  Everyone4 Replies

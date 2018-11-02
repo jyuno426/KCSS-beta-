@@ -4,87 +4,75 @@
     <meta name="description" content="Find Korean Names!">
     <meta name="keywords" content="korean names, korean name classifier">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Seunghyun Lee, Junho Han">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <meta name="author" content="Seunghyun Lee, Junho Han, Jinwoo Shin">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title> Korean Name Finder </title>
+    <title> AI People Search </title>
 
     <style type="text/css">
-      
       body {
-      font-family: Helvetica, Arial;
+      font-family: Arial, Helvetica, sans-serif;
       }
-
-      table td {
-      vertical-align: top;
-      }
-      
-      td {
-      padding-top: 2px;
-      padding-bottom: 2px;
-      }
-
       a {
       color : blue ;
+      text-decoration: none;
       }
-            
+      a:hover{
+        color : blue;
+        text-decoration: underline;
+      }
+      a:visited{
+        color:darkcyan;
+      }
+      a:active{
+        color:black;
+      }
+      .container{
+        padding-top: 30px;
+      }
+      #footer{
+        padding-top: 5px;
+      }
+      hr{
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+      }
     </style>
 
     <script>
+      window.onload = function() {
+        document.getElementById("fromyear").options[7].selected = true;
+        document.getElementById("toyear").options[10].selected = true;
+      };
       function myFunction(){
       	var selectedValue1 = document.getElementById("fromyear").value;
       	var selectedValue2 = document.getElementById("toyear").value;
         var selectedValue3 = document.getElementById("filter").selectedIndex;
         var selectedValue4 = document.getElementById("KR").selectedIndex;
 
-      	var CV = document.getElementsByName("CV");
-      	var ML = document.getElementsByName("ML");
-      	var DM = document.getElementsByName("DM");
-      	var NLP = document.getElementsByName("NLP");
-      	var WIR = document.getElementsByName("WIR");
+      	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
 
-      	var x = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
+        var areas = ["CV", "ML", "DM", "NLP", "WIR"];
 
-      	var i;
-      	
-      	for (i = 0; i < CV.length; i++) { 
-    		if(CV[i].checked === true){
-    			x += CV[i].value;
-    			x += "_";
-				}
-			}
-      	for (i = 0; i < ML.length; i++) { 
-    		if(ML[i].checked === true){
-    			x += ML[i].value;
-    			x += "_";
-				}
-			}
-      	for (i = 0; i < DM.length; i++) { 
-    		if(DM[i].checked === true){
-    			x += DM[i].value;
-    			x += "_";
-				}
-			}
-      	for (i = 0; i < NLP.length; i++) { 
-    		if(NLP[i].checked === true){
-    			x += NLP[i].value;
-    			x += "_";
-				}
-			}
-      	for (i = 0; i < WIR.length; i++) { 
-    		if(WIR[i].checked === true){
-    			x += WIR[i].value;
-    			x += "_";
-				}
-			}
-      	      	      	      	      	      	
-      	window.location = x;
+      	var i, j, select;
+      	for (i = 0; i < areas.length; i++) {
+      	  select = document.getElementsByName(areas[i])
+      	  for (j = 0; j < select.length; j++) {
+      	    if (select[j].checked === true) {
+      	      new_location += select[j].value;
+      	      new_location += "_";
+      	    }
+      	  }
+      	}
+
+      	window.location = new_location;
       }
 
       function check(name) {
         var checkboxes;
+        var top_checkbox = document.getElementById(name);
         if (name == 'all') {
           checkboxes = document.getElementsByTagName('input');
         } else {
@@ -92,223 +80,278 @@
         }
         for (var i = 0; i < checkboxes.length; i++) {
           if (checkboxes[i].type == 'checkbox') {
-            checkboxes[i].checked = true;
+            checkboxes[i].checked = top_checkbox.checked;
           }
         }
       }
-
-      function uncheck(name) {
-        var checkboxes;
-        if (name == 'all') {
-          checkboxes = document.getElementsByTagName('input');
-        } else {
-          checkboxes = document.getElementsByName(name);
-        }
-        for (var i = 0; i < checkboxes.length; i++) {
-          console.log(i)
-          if (checkboxes[i].type == 'checkbox') {
-            checkboxes[i].checked = false;
-          }
-        }
-      }
-
     </script>
-
-
-
   </head>
 
   <body>
-	<div class="jumbotron text-center">
-	  <div class="header">
-  	    <h1><b>AIPeopleSearch</b></h1>
-  	  </div>
-  	</div>
-  <br />
-  <br />
-
-  <div class="container">
-  From: 
-  <select id="fromyear">
-  	{% for year in years %}
-      <option value="{{year}}"> {{year}} </option>
-  	{% endfor %}
-  </select>
-  &nbsp To: 
-  <select id="toyear">
-  	{% for year in years[:-1] %}
-      <option> {{year}} </option>
-  	{% endfor %}
-      <option selected="selected"> {{years[-1]}} </option>
-  </select>  
-  
-  &nbsp Filter:
-  <select id="filter">
-    <option> sort alphabetically </option>
-    <option> sort by # of papers </option>
-    <option> only first author </option>
-    <option> only last author </option>
-  </select>  
-
-  &nbsp Show KR:
-  <select id="KR">
-    <option> korean </option>
-    <option> all </option>
-  </select>
-
-  &nbsp <button onclick="myFunction()" style="font-size : 13px">Submit</button>
-
-  </div>
-
-  <br>
-  <br>
-    <div class="container">
-      <h5><b>All Areas</b>
-        <button onclick="check('all')" style="font-size : 12px">on</button>
-        <button onclick="uncheck('all')" style="font-size : 12px">off</button>
-      </h5>
-      <div class="row">
-        <div class="col-sm-4">
-      	<h5><b>COMPUTER VISION</b>
-          <button onclick="check('CV')" style="font-size : 12px">on</button>
-          <button onclick="uncheck('CV')" style="font-size : 12px">off</button>
-        </h5>
-	  	  <table class="table-sm" style="width:100%;">
-		    <tbody>
-		      <tr>
-	   	        <input type="checkbox" name="CV" value="CVPR" checked="checked"> CVPR<br>
-			  </tr>
-			  <tr>
-			    <input type="checkbox" name="CV" value="ECCV" checked="checked"> ECCV<br>
-	          </tr>
-			  <tr>
-			    <input type="checkbox" name="CV" value="ICCV" checked="checked"> ICCV<br>
-	          </tr>	          
-		    </tbody>
-		  </table>
-		</div>
-
-		<div class="col-sm-4">
-      <h5><b>MACHINE LEARNING </b>
-          <button onclick="check('ML')" style="font-size : 12px">on</button>
-          <button onclick="uncheck('ML')" style="font-size : 12px">off</button>
-      </h5>
-	  	  <table class="table-sm" style="width:100%;">
-		    <tbody>
-		      <tr>
-			    <input type="checkbox" name="ML" value="AISTATS" checked="checked"> AISTATS<br>
-			    </tr>
-		      <tr>
-			    <input type="checkbox" name="ML" value="COLT" checked="checked"> COLT<br>
-		      </tr>
-		      <tr>
-			    <input type="checkbox" name="ML" value="ICLR" checked="checked"> ICLR<br>
-		      </tr>
-          <tr>
-          <input type="checkbox" name="ML" value="ICML" checked="checked"> ICML<br>
-          </tr>
-          <tr>
-          <input type="checkbox" name="ML" value="NIPS" checked="checked"> NIPS<br>
-          </tr>
-          <tr>
-          <input type="checkbox" name="ML" value="UAI" checked="checked"> UAI<br>
-          </tr>
-
-		    </tbody>
-		  </table>
-		</div>
-
-    <div class="col-sm-4">
-      <h5><b>DATA MINING</b>
-          <button onclick="check('DM')" style="font-size : 12px">on</button>
-          <button onclick="uncheck('DM')" style="font-size : 12px">off</button>
-      </h5>
-        <table class="table-sm" style="width:100%;">
-        <tbody>
-          <tr>
-            <input type="checkbox" name="DM" value="CIKM" checked="checked"> CIKM<br>
-          </tr>
-          <tr>
-            <input type="checkbox" name="DM" value="ICDE" checked="checked"> ICDE<br>
-          </tr>
-          <tr>
-            <input type="checkbox" name="DM" value="ICDM" checked="checked"> ICDM<br>
-          </tr>
-          <tr>
-            <input type="checkbox" name="DM" value="KDD" checked="checked"> KDD<br>
-          </tr>                 
-        </tbody>
-      </table>
+    <br>
+    <div class="container" id="header">
+      <h1> AIPS: AI People Search </h1>
     </div>
-
-
-	  </div>
-    </div>
-
-  <br>
-
-
 
     <div class="container">
-      <div class="row">
-
-        <div class="col-sm-4">
-      	<h5><b>NATURAL LANGUAGE PROCESSING</b>
-          <button onclick="check('NLP')" style="font-size : 12px">on</button>
-          <button onclick="uncheck('NLP')" style="font-size : 12px">off</button>
-        </h5>
-	  	  <table class="table-sm" style="width:100%;">
-		    <tbody>
-		      <tr>
-	   	      <input type="checkbox" name="NLP" value="ACL" checked="checked"> ACL<br>
-			    </tr>
-			    <tr>
-	   	      <input type="checkbox" name="NLP" value="EMNLP" checked="checked"> EMNLP<br>
-	        </tr>
-			    <tr>
-	   	      <input type="checkbox" name="NLP" value="NAACL" checked="checked"> NAACL<br>
-	        </tr>
-		    </tbody>
-		  </table>
-		</div>
-        
-        <div class="col-sm-4">
-      	<h5><b>THE WEB &amp; INFORMATION RETRIEVAL</b>
-          <button onclick="check('WIR')" style="font-size : 12px">on</button>
-          <button onclick="uncheck('WIR')" style="font-size : 12px">off</button>
-        </h5>
-	  	  <table class="table-sm" style="width:100%;">
-		    <tbody>
-		      <tr>
-	   	      <input type="checkbox" name="WIR" value="SIGIR" checked="checked"> SIGIR<br>
-			    </tr>
-			    <tr>
-	   	      <input type="checkbox" name="WIR" value="WWW" checked="checked"> WWW<br>
-	        </tr>      
-		    </tbody>
-		  </table>
-		</div>
-
-	  </div>
+      <div class="form-inline">
+        <div class="form-group">
+          <label for="sel1">From</label>
+          <select class="form-control" id="fromyear">
+            {% for year in years %}
+              <option value="{{year}}"> {{year}} </option>
+            {% endfor %}
+          </select>
+        </div>
+        &nbsp;
+        <div class="form-group">
+          <label for="sel1">To</label>
+          <select class="form-control" id="toyear">
+            {% for year in years %}
+              <option> {{year}} </option>
+            {% endfor %}
+          </select>
+        </div>
+        &nbsp;
+        <div class="form-group">
+          <label for="sel1">Filter</label>
+          <select class="form-control" id="filter">
+            <option> sort alphabetically </option>
+            <option> sort by # of papers </option>
+            <option> only first author </option>
+            <option> only last author </option>
+          </select>
+        </div>
+        &nbsp;
+        <div class="form-group">
+          <label for="sel1">Show KR</label>
+          <select class="form-control" id="KR">
+            <option> korean </option>
+            <option> all </option>
+          </select>
+        </div>
+        &nbsp;
+        <button type="submit" class="btn btn-primary"
+                onclick="myFunction()">Submit</button>
+      </div>
     </div>
-  <br />
-  <br />
-  <br />
 
-	<div class="jumbotron text-center">
-        <address>
-            made by
-            이승현(<a href="mailto:camusian@kaist.ac.kr">camusian@kaist.ac.kr</a>),
-            한준호(<a href="mailto:jyuno426@kaist.ac.kr">jyuno426@kaist.ac.kr</a>),
-            신진우(<a href="mailto:jinwoos@kaist.ac.kr">jinwoos@kaist.ac.kr</a>),
-            Korean Advanced Institute of Science and Technology
-        </address>
-	</div>
+    <div class="container">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" checked="checked"
+                 id="all" onclick="check('all')"><b>All Areas</b>
+        </label>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" checked="checked"
+                     id="CV" onclick="check('CV')"><b>COMPUTER VISION</b>
+            </label>
+          </div>
+          <table class="table-sm" style="width:100%;">
+            <tbody>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="CV" value="CVPR" checked="checked"> CVPR
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="CV" value="ECCV" checked="checked"> ECCV</label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="CV" value="ICCV" checked="checked"> ICCV
+                  </label>
+                </div>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" checked="checked"
+                     id="DM" onclick="check('DM')"><b>DATA MINING</b>
+            </label>
+          </div>
+          <table class="table-sm" style="width:100%;">
+            <tbody>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="DM" value="CIKM" checked="checked"> CIKM
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="DM" value="ICDE" checked="checked"> ICDE
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="DM" value="ICDM" checked="checked"> ICDM
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="DM" value="KDD" checked="checked"> KDD
+                  </label>
+                </div>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" checked="checked"
+                     id="ML" onclick="check('ML')"><b>MACHINE LEARNING</b>
+            </label>
+          </div>
+          <table class="table-sm" style="width:100%;">
+            <tbody>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ML" value="AISTATS" checked="checked"> AISTATS
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ML" value="COLT" checked="checked"> COLT
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ML" value="ICLR" checked="checked"> ICLR
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ML" value="ICML" checked="checked"> ICML
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ML" value="NIPS" checked="checked"> NIPS
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ML" value="UAI" checked="checked"> UAI
+                  </label>
+                </div>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" checked="checked"
+                     id="NLP" onclick="check('NLP')"><b>NATURAL LANGUAGE PROCESSING</b>
+            </label>
+          </div>
+          <table class="table-sm" style="width:100%;">
+            <tbody>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="NLP" value="ACL" checked="checked"> ACL
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="NLP" value="EMNLP" checked="checked"> EMNLP
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="NLP" value="NAACL" checked="checked"> NAACL
+                  </label>
+                </div>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" checked="checked"
+                     id="WIR" onclick="check('WIR')"><b> WEB &amp; INFORMATION RETRIEVAL</b>
+            </label>
+          </div>
+          <table class="table-sm" style="width:100%;">
+            <tbody>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="WIR" value="SIGIR" checked="checked"> SIGIR
+                  </label>
+                </div>
+              </tr>
+              <tr>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="WIR" value="WWW" checked="checked"> WWW
+                  </label>
+                </div>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div class="container" style="text-align: center" id="footer">
+      <address>Made by
+        <a href="mailto:jyuno426@kaist.ac.kr"> Junho Han</a>,
+        <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a>,
+        <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a>,
+        Korea Advanced Institute of Science and Technology
+      </address>
+    </div>
+
   </body>
-
-
-
-
-
-
 </html>

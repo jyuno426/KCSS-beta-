@@ -5,11 +5,13 @@ import unidecode
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
+
 def is_alpha(name):
     for c in name:
         if c.lower() not in alphabet:
             return False
     return True
+
 
 def normalize(name):
     result = ''
@@ -17,6 +19,7 @@ def normalize(name):
         if c.lower() in alphabet:
             result += c
     return result
+
 
 def name_one_hot(name, max_seq_len):
     if not is_alpha(name):
@@ -34,18 +37,20 @@ def name_one_hot(name, max_seq_len):
         result.append(np.zeros(26, dtype=np.int))
     return np.array(result)
 
+
 def np_softmax(x):
     return np.exp(x) / np.sum(np.exp(x))
 
+
 def get_file(path):
-    return [word.strip() for word in open(
-        path, 'r'
-    ).readlines()]
+    return [_.strip() for _ in open(path, 'r').readlines()]
+
 
 def dump_list(_list, path):
     with open(path, 'w') as f:
         for word in _list:
             f.write(word + '\n')
+
 
 if __name__=='__main__':
     pass
