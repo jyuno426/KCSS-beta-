@@ -10,6 +10,18 @@ class DB_Maker:
                 './data/kr_last_names.txt'
             )
         ]
+        self.kr_hard_coding = [
+            ' '.join(line.split()) for line in get_file(
+                './data/kr_hard_coding.txt'
+            )
+        ]
+        var1 = [name.replace('-', ' ') for name in self.kr_hard_coding]
+        var2 = [name.replace('-', '') for name in self.kr_hard_coding]
+        self.kr_hard_coding += var1
+        self.kr_hard_coding += var2
+
+        self.kr_hard_coding = set(self.kr_hard_coding)
+
         self.model = keras_Model()
         self.model.load()
 
@@ -32,6 +44,8 @@ class DB_Maker:
         return (0 in idx) and (1 not in idx)
 
     def is_kr(self, name):
+        if name in self.kr_hard_coding:
+            return True
         parts = name.split()
         last = parts[-1]
         first = ' '.join(parts[:-1])
