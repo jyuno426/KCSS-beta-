@@ -88,7 +88,7 @@
     <br> <h3 class="text-center">Authors with Korean Names</h3> <hr>
     {% for krname in korean_names %}
       <button class="accordion">
-        <b> &emsp; &emsp;{{ krname }} ({{ dictionary[krname][1] }}) </b>
+        <b> &emsp; &emsp;{{ krname }} ({{ dictionary[krname][1] }}, {{ info_dict[krname] }}) </b>
       </button>
       <div class="panel">
         {% for title, authors, url, conf, year in dictionary[krname][0] %}
@@ -114,7 +114,7 @@
       <br> <h3 class="text-center">Authors with non-Korean Names</h3> <hr>
       {% for nonkrname in non_korean_names %}
         <button class="accordion">
-          <b> &emsp; &emsp;{{ nonkrname }} ({{ dictionary[nonkrname][1] }}) </b>
+          <b> &emsp; &emsp;{{ nonkrname }} ({{ dictionary[nonkrname][1] }}, {{ info_dict[nonkrname] }}) </b>
         </button>
         <div class="panel">
           {% for title, authors, url, conf, year in dictionary[nonkrname][0] %}

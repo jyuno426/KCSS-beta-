@@ -83,11 +83,30 @@ def display(name):
     korean_names = korean_names[:howmany]
     non_korean_names = non_korean_names[:howmany]
     
+    # for display, e.g. Jinwoo Shin (12, NIPS=3, ICML=3, AISTATS=4)
+    info_dict = {}
+    for author in korean_names + non_korean_names:
+        info_dict[author] = {}
+        for paper in big_dictionary[author][:-1]:
+            try:
+                info_dict[author][paper[0][3].upper()] += 1
+            except KeyError:
+                info_dict[author][paper[0][3].upper()] = 1
+                
+    for author in info_dict.keys():
+        temp = ""
+        for journal in info_dict[author].keys():
+            temp += journal + "=" + str(info_dict[author][journal]) + ', '
+        temp = temp[:-2]
+        info_dict[author] = temp
+    
+    
     return render_template('display.html',
                            name=name,
                            dictionary=big_dictionary,
                            korean_names=korean_names,
                            non_korean_names=non_korean_names,
+                           info_dict = info_dict,
                            kroption=option - 1)
 
 
