@@ -11,65 +11,57 @@ import json, os
 #############################
 #####  HELPER FUNCTIONS #####
 #############################
-def sort_by_lastname(lst):
-    temp = []
-    for x in lst:
-        pos = x.rfind(' ')
-        first = x[:pos]
-        last = x[pos+1:]
-        temp.append(last + ' ' + first)
-    lst = temp
-    lst.sort()
-    
-    temp = []
-    for x in lst:
-        pos = x.lfind(' ')
-        last = x[:pos]
-        first = x[pos+1:]
-        temp.append(first + ' ' + last)
-        
-    return temp
+def dic_update(dic1, dic2):
+    for key, value in dic2.items():
+        if key in dic1:
+            dic1[key] += value
+        else:
+            dic1[key] = value
 
-app = Flask(__name__) # placeholder for current module
+
+app = Flask(__name__)  # placeholder for current module
+
 
 @app.route('/')
 def home():
-    currentYear = datetime.now().year
-    return render_template('home.html', years = [x for x in range(2008,currentYear+1)])
+    fromyear = 2008
+    toyear = datetime.now().year
+    return render_template('home.html', years=range(fromyear, toyear+1))
+
 
 @app.route('/<name>')
 def display(name):
     fromyear = int(name[0:4])
     toyear = int(name[4:8])
     option = int(name[8])
-    kroption = int(name[9])
+    howmany = [10, 25, 50, 100, 200][int(name[9])]
     conf_list = sorted(name[10:].lower().split('_')[1:-1])
     filters = ['every', 'every', 'first', 'last']
 
     # Display options:
-    # 0. Default: Alphabetical
-    # 1. Number of papers
-    # 2. View first authors only
-    # 3. View last authors only
+    # 0. all
+    # 1. only korean
+    # 2. only first author
+    # 3. only last author
 
     big_dic = {}
     kr_names = set()
     nonkr_names = set()
 
     # load data from database, for each conf, fromyear ~ toyear
-    for conf in conf_list:
-        for year in range(toyear, fromyear-1, -1):
+    for year in range(toyear, fromyear-1, -1):
+        for conf in conf_list:
             path = './database/' + conf.upper() + '/' +\
                    conf + str(year) + '_' + filters[option]
             if os.path.isfile(path + '_kr.json'):
                 kr_dic = json.load(open(path + '_kr.json', 'r'))
                 kr_names.update(list(kr_dic.keys()))
-                big_dic.update(kr_dic)
+                dic_update(big_dic, kr_dic)
 
-                if kroption == 1:
+                if option != 1:
                     nonkr_dic = json.load(open(path + '_nonkr.json', 'r'))
                     nonkr_names.update(list(nonkr_dic.keys()))
-                    big_dic.update(nonkr_dic)
+                    dic_update(big_dic, nonkr_dic)
 
     # big_dictionary available
     big_dictionary = {}
@@ -78,22 +70,26 @@ def display(name):
 
     # Data ready: 1. (non_)korean_names (list), 2. big_dictionary
 
-    korean_names = sorted(list(kr_names))
-    non_korean_names = sorted(list(nonkr_names))
+    korean_names = list(kr_names)
+    non_korean_names = list(nonkr_names)
 
-    if option == 1:
-        kr = sorted([(-big_dictionary[x][1], x) for x in korean_names])
-        korean_names = [x[1] for x in kr]
+    # Basically sort result by # of papers
+    kr = sorted([(-big_dictionary[x][1], x) for x in korean_names])
+    korean_names = [x[1] for x in kr]
+    if option != 1:
         nonkr = sorted([(-big_dictionary[x][1], x) for x in non_korean_names])
         non_korean_names = [x[1] for x in nonkr]
+
+    korean_names = korean_names[:howmany]
+    non_korean_names = non_korean_names[:howmany]
     
     return render_template('display.html',
-                           name = name,
-                           dictionary = big_dictionary,
-                           korean_names = korean_names,
-                           non_korean_names = non_korean_names,
-                           kroption = kroption)
+                           name=name,
+                           dictionary=big_dictionary,
+                           korean_names=korean_names,
+                           non_korean_names=non_korean_names,
+                           kroption=option - 1)
 
 
 if __name__ == '__main__':
-    app.run(port = 5002)
+    app.run(port=5002)

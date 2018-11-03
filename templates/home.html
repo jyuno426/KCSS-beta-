@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="description" content="Find Korean Names!">
-    <meta name="keywords" content="korean names, korean name classifier">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Seunghyun Lee, Junho Han, Jinwoo Shin">
+    <meta name="author" content="Junho Han, Seunghyun Lee, Jinwoo Shin">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
@@ -12,11 +10,11 @@
 
     <style type="text/css">
       body {
-      font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
       }
       a {
-      color : blue ;
-      text-decoration: none;
+        color : blue ;
+        text-decoration: none;
       }
       a:hover{
         color : blue;
@@ -45,12 +43,18 @@
       window.onload = function() {
         document.getElementById("fromyear").options[7].selected = true;
         document.getElementById("toyear").options[10].selected = true;
+        document.getElementById("filter2").options[2].selected = true;
+
+        var topbox = document.getElementById("all");
+        topbox.checked = true;
+        checkAll(topbox);
       };
-      function myFunction(){
+
+      function submit(){
       	var selectedValue1 = document.getElementById("fromyear").value;
       	var selectedValue2 = document.getElementById("toyear").value;
         var selectedValue3 = document.getElementById("filter").selectedIndex;
-        var selectedValue4 = document.getElementById("KR").selectedIndex;
+        var selectedValue4 = document.getElementById("filter2").selectedIndex;
 
       	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
 
@@ -70,18 +74,69 @@
       	window.location = new_location;
       }
 
-      function check(name) {
-        var checkboxes;
-        var top_checkbox = document.getElementById(name);
-        if (name == 'all') {
-          checkboxes = document.getElementsByTagName('input');
-        } else {
-          checkboxes = document.getElementsByName(name);
-        }
+      function checkAll(topbox) {
+        var checkboxes = document.getElementsByTagName("input");
         for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].type == 'checkbox') {
-            checkboxes[i].checked = top_checkbox.checked;
+          if (checkboxes[i].type == "checkbox") {
+            checkboxes[i].checked = topbox.checked;
           }
+        }
+      }
+
+      function checkParts(partbox) {
+        if (!partbox.checked) {
+          var topbox = document.getElementById("all");
+          topbox.checked = false;
+        }
+        var checkboxes = document.getElementsByName(partbox.id);
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].type == "checkbox") {
+            checkboxes[i].checked = partbox.checked;
+          }
+        }
+        allChecked();
+      }
+
+      function check(box) {
+        if (!box.checked) {
+          var topbox = document.getElementById("all");
+          var partbox = document.getElementById(box.name);
+          topbox.checked = false;
+          partbox.checked = false;
+        }
+        partsChecked(box.name);
+        allChecked();
+      }
+
+      function partsChecked(name) {
+        var partbox = document.getElementById(name);
+        var checkboxes = document.getElementsByName(name);
+        var c = true;
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].type == "checkbox") {
+            if (!checkboxes[i].checked) {
+              c = false;
+            }
+          }
+        }
+        partbox.checked = c;
+      }
+
+      function allChecked() {
+        var topbox = document.getElementById("all");
+        var checkboxes = document.getElementsByTagName("input");
+
+        var a = 0, b = 0;
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].type == "checkbox") {
+            a = a + 1;
+            if (checkboxes[i].checked) {
+              b = b + 1;
+            }
+          }
+        }
+        if (a == b + 1) {
+          topbox.checked = true;
         }
       }
     </script>
@@ -96,51 +151,54 @@
     <div class="container">
       <div class="form-inline">
         <div class="form-group">
-          <label for="sel1">From</label>
+          <label for="fromyear">From</label>
           <select class="form-control" id="fromyear">
             {% for year in years %}
-              <option value="{{year}}"> {{year}} </option>
+              <option value="{{year}}">{{year}}</option>
             {% endfor %}
           </select>
         </div>
         &nbsp;
         <div class="form-group">
-          <label for="sel1">To</label>
+          <label for="toyear">To</label>
           <select class="form-control" id="toyear">
             {% for year in years %}
-              <option> {{year}} </option>
+              <option>{{year}}</option>
             {% endfor %}
           </select>
         </div>
         &nbsp;
         <div class="form-group">
-          <label for="sel1">Filter</label>
+          <label for="filter">Filter</label>
           <select class="form-control" id="filter">
-            <option> sort alphabetically </option>
-            <option> sort by # of papers </option>
-            <option> only first author </option>
-            <option> only last author </option>
+            <option>all</option>
+            <option>only korean</option>
+            <option>only first author</option>
+            <option>only last author</option>
           </select>
         </div>
         &nbsp;
         <div class="form-group">
-          <label for="sel1">Show KR</label>
-          <select class="form-control" id="KR">
-            <option> korean </option>
-            <option> all </option>
+          <select class="form-control" id="filter2">
+            <option>&le; 10 authors</option>
+            <option>&le; 25 authors</option>
+            <option>&le; 50 authors</option>
+            <option>&le; 100 authors</option>
+            <option>&le; 200 authors</option>
           </select>
         </div>
         &nbsp;
-        <button type="submit" class="btn btn-primary"
-                onclick="myFunction()">Submit</button>
+        <div class="form-group">
+          <button type="submit" onclick="submit()"
+                  class="btn btn-primary form-control">Submit</button>
+        </div>
       </div>
     </div>
 
     <div class="container">
       <div class="checkbox">
         <label>
-          <input type="checkbox" checked="checked"
-                 id="all" onclick="check('all')"><b>All Areas</b>
+          <input type="checkbox" id="all" onclick="checkAll(this)"><b>All Areas</b>
         </label>
       </div>
 
@@ -148,129 +206,90 @@
         <div class="col-sm-4">
           <div class="checkbox">
             <label>
-              <input type="checkbox" checked="checked"
-                     id="CV" onclick="check('CV')"><b>COMPUTER VISION</b>
+              <input type="checkbox" id="CV" onclick="checkParts(this)"><b>COMPUTER VISION</b>
             </label>
           </div>
-          <table class="table-sm" style="width:100%;">
-            <tbody>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="CV" value="CVPR" checked="checked"> CVPR
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="CV" value="ECCV" checked="checked"> ECCV</label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="CV" value="ICCV" checked="checked"> ICCV
-                  </label>
-                </div>
-              </tr>
-            </tbody>
-          </table>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="CV" value="CVPR" onclick="check(this)"> CVPR
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="CV" value="ECCV" onclick="check(this)"> ECCV
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="CV" value="ICCV" onclick="check(this)"> ICCV
+            </label>
+          </div>
         </div>
 
         <div class="col-sm-4">
           <div class="checkbox">
             <label>
-              <input type="checkbox" checked="checked"
-                     id="DM" onclick="check('DM')"><b>DATA MINING</b>
+              <input type="checkbox" id="DM" onclick="checkParts(this)"><b>DATA MINING</b>
             </label>
           </div>
-          <table class="table-sm" style="width:100%;">
-            <tbody>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="DM" value="CIKM" checked="checked"> CIKM
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="DM" value="ICDE" checked="checked"> ICDE
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="DM" value="ICDM" checked="checked"> ICDM
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="DM" value="KDD" checked="checked"> KDD
-                  </label>
-                </div>
-              </tr>
-            </tbody>
-          </table>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="DM" value="CIKM" onclick="check(this)"> CIKM
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="DM" value="ICDE" onclick="check(this)"> ICDE
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="DM" value="ICDM" onclick="check(this)"> ICDM
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="DM" value="KDD" onclick="check(this)"> KDD
+            </label>
+          </div>
         </div>
 
         <div class="col-sm-4">
           <div class="checkbox">
             <label>
-              <input type="checkbox" checked="checked"
-                     id="ML" onclick="check('ML')"><b>MACHINE LEARNING</b>
+              <input type="checkbox" id="ML" onclick="checkParts(this)"><b>MACHINE LEARNING</b>
             </label>
           </div>
-          <table class="table-sm" style="width:100%;">
-            <tbody>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="ML" value="AISTATS" checked="checked"> AISTATS
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="ML" value="COLT" checked="checked"> COLT
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="ML" value="ICLR" checked="checked"> ICLR
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="ML" value="ICML" checked="checked"> ICML
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="ML" value="NIPS" checked="checked"> NIPS
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="ML" value="UAI" checked="checked"> UAI
-                  </label>
-                </div>
-              </tr>
-            </tbody>
-          </table>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="ML" value="AISTATS" onclick="check(this)"> AISTATS
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="ML" value="COLT" onclick="check(this)"> COLT
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="ML" value="ICLR" onclick="check(this)"> ICLR
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="ML" value="ICML" onclick="check(this)"> ICML
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="ML" value="NIPS" onclick="check(this)"> NIPS
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="ML" value="UAI" onclick="check(this)"> UAI
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -280,62 +299,42 @@
         <div class="col-sm-4">
           <div class="checkbox">
             <label>
-              <input type="checkbox" checked="checked"
-                     id="NLP" onclick="check('NLP')"><b>NATURAL LANGUAGE PROCESSING</b>
+              <input type="checkbox" id="NLP" onclick="checkParts(this)"><b>NATURAL LANGUAGE PROCESSING</b>
             </label>
           </div>
-          <table class="table-sm" style="width:100%;">
-            <tbody>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="NLP" value="ACL" checked="checked"> ACL
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="NLP" value="EMNLP" checked="checked"> EMNLP
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="NLP" value="NAACL" checked="checked"> NAACL
-                  </label>
-                </div>
-              </tr>
-            </tbody>
-          </table>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="NLP" value="ACL" onclick="check(this)"> ACL
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="NLP" value="EMNLP" onclick="check(this)"> EMNLP
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="NLP" value="NAACL" onclick="check(this)"> NAACL
+            </label>
+          </div>
         </div>
 
         <div class="col-sm-4">
           <div class="checkbox">
             <label>
-              <input type="checkbox" checked="checked"
-                     id="WIR" onclick="check('WIR')"><b> WEB &amp; INFORMATION RETRIEVAL</b>
+              <input type="checkbox" id="WIR" onclick="checkParts(this)"><b> WEB &amp; INFORMATION RETRIEVAL</b>
             </label>
           </div>
-          <table class="table-sm" style="width:100%;">
-            <tbody>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="WIR" value="SIGIR" checked="checked"> SIGIR
-                  </label>
-                </div>
-              </tr>
-              <tr>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="WIR" value="WWW" checked="checked"> WWW
-                  </label>
-                </div>
-              </tr>
-            </tbody>
-          </table>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="WIR" value="SIGIR" onclick="check(this)"> SIGIR
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="WIR" value="WWW" onclick="check(this)"> WWW
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -345,11 +344,12 @@
     <br>
     <hr>
     <div class="container" style="text-align: center" id="footer">
-      <address>Made by
+      <address>AIPS was made by
         <a href="mailto:jyuno426@kaist.ac.kr"> Junho Han</a>,
-        <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a>,
-        <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a>,
-        Korea Advanced Institute of Science and Technology
+        <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a> and
+        <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a> at
+        Algorithmic Intelligence Laboratory,
+        Korea Advanced Institute of Science and Technology.
       </address>
     </div>
 

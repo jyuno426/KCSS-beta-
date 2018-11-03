@@ -58,7 +58,7 @@ class DB_Maker:
                     last = [{}, {}]
 
                     for _title, author_list, url in paper_list:
-                        elem = [_title.strip().strip('.'), author_list, url]
+                        elem = [_title.strip().strip('.'), author_list, url, conf, year]
                         for author in author_list:
                             self.update_dic(author, every, elem)
                         self.update_dic(author_list[0], first, elem)
