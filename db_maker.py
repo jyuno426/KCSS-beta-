@@ -25,6 +25,16 @@ class DB_Maker:
         self.model = keras_Model()
         self.model.load()
 
+    def is_subseq(self, x, y):
+        it = iter(y)
+        return all(c in it for c in x)
+
+    def include(self, name, kr_set):
+        for kr_name in kr_set:
+            if self.is_subseq(name, kr_name):
+                return True
+        return False
+
     def is_kr_last_name(self, last_name):
         return last_name.lower() in self.kr_last_names
 
@@ -44,7 +54,9 @@ class DB_Maker:
         return (0 in idx) and (1 not in idx)
 
     def is_kr(self, name):
-        if name in self.kr_hard_coding:
+        if self.include(
+                name.replace(' ', '').replace('.', '').replace('-', ''),
+                self.kr_hard_coding):
             return True
         parts = name.split()
         last = parts[-1]

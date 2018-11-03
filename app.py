@@ -22,14 +22,14 @@ def dic_update(dic1, dic2):
 app = Flask(__name__)  # placeholder for current module
 
 
-@app.route('/AIPS')
+@app.route('/')
 def home():
     fromyear = 2008
     toyear = datetime.now().year
     return render_template('home.html', years=range(fromyear, toyear+1))
 
 
-@app.route('/AIPS/<name>')
+@app.route('/<name>')
 def display(name):
     fromyear = int(name[0:4])
     toyear = int(name[4:8])

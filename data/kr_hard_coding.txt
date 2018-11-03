@@ -33,7 +33,7 @@ Sue	Moon
 Sung-Hyon	Myaeng
 Tek-Jin	Nam
 Jun-yong	Noh
-Alice H.	Oh
+Alice	Oh
 KyoungSoo	Park
 Sukyoung	Ryu
 Insik	Shin
@@ -94,7 +94,7 @@ Seongsoo	Hong
 Chung-Kil	Hur
 Wha Sook	Jeon
 Kyomin	Jung
-U	Kang
+U.	Kang
 Chong-kwon	Kim
 Gunhee	Kim
 Hyoung-Joo	Kim
