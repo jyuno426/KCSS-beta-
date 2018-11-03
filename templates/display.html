@@ -28,6 +28,7 @@
       }
       .container{
         padding-top: 30px;
+        padding-bottom: 30px;
       }
       #footer{
         padding-top: 5px;
@@ -85,13 +86,17 @@
   </head>
 
   <body>
-    <br> <h3 class="text-center">Authors with Korean Names</h3> <hr>
-    {% for krname in korean_names %}
+    <br>
+    <div class="container" id="header">
+      <h1> AIPS: AI People Search </h1>
+    </div>
+
+    {% for name in names_list %}
       <button class="accordion">
-        <b> &emsp; &emsp;{{ krname }} ({{ dictionary[krname][1] }}, {{ info_dict[krname] }}) </b>
+        <b> &emsp; &emsp;{{ name }} ({{ dictionary[name][1] }}, {{ info_dict[name] }}) </b>
       </button>
       <div class="panel">
-        {% for title, authors, url, conf, year in dictionary[krname][0] %}
+        {% for title, authors, url, conf, year in dictionary[name][0] %}
           <br>
           <div class="dropdown">
             &emsp; &emsp;
@@ -110,6 +115,7 @@
 	    </div>
 	  {% endfor %}
 
+    <!--
     {% if kroption %}
       <br> <h3 class="text-center">Authors with non-Korean Names</h3> <hr>
       {% for nonkrname in non_korean_names %}
@@ -136,6 +142,7 @@
         </div>
       {% endfor %}
     {% endif %}
+    -->
 
     <hr>
     <div class="container" style="text-align: center" id="footer">

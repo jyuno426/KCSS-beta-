@@ -74,14 +74,21 @@ def display(name):
     non_korean_names = list(nonkr_names)
 
     # Basically sort result by # of papers
-    kr = sorted([(-big_dictionary[x][1], x) for x in korean_names])
-    korean_names = [x[1] for x in kr]
-    if option != 1:
-        nonkr = sorted([(-big_dictionary[x][1], x) for x in non_korean_names])
-        non_korean_names = [x[1] for x in nonkr]
-
-    korean_names = korean_names[:howmany]
-    non_korean_names = non_korean_names[:howmany]
+    
+    if option == 1:
+        kr = sorted([(-big_dictionary[x][1], x) for x in korean_names])
+        korean_names = [x[1] for x in kr]                
+        names_list = korean_names[:howmany]
+    else:
+        combined_names = korean_names + non_korean_names
+        temp = sorted([(-big_dictionary[x][1], x) for x in combined_names])
+        combined_names = [x[1] for x in temp]
+        names_list = combined_names[:howmany]
+    
+    # names_list available 
+    
+    
+    
     
     # for display, e.g. Jinwoo Shin (12, NIPS=3, ICML=3, AISTATS=4)
     info_dict = {}
@@ -104,8 +111,7 @@ def display(name):
     return render_template('display.html',
                            name=name,
                            dictionary=big_dictionary,
-                           korean_names=korean_names,
-                           non_korean_names=non_korean_names,
+                           names_list=names_list,
                            info_dict = info_dict,
                            kroption=option - 1)
 
