@@ -89,17 +89,17 @@ def display(name):
     
     
     
-    
     # for display, e.g. Jinwoo Shin (12, NIPS=3, ICML=3, AISTATS=4)
     info_dict = {}
     for author in korean_names + non_korean_names:
         info_dict[author] = {}
-        for paper in big_dictionary[author][:-1]:
+        for paper in big_dictionary[author][0]:
             try:
-                info_dict[author][paper[0][3].upper()] += 1
+                info_dict[author][paper[3].upper()] += 1
             except KeyError:
-                info_dict[author][paper[0][3].upper()] = 1
-                
+                info_dict[author][paper[3].upper()] = 1
+    
+
     for author in info_dict.keys():
         temp = ""
         for journal in info_dict[author].keys():
