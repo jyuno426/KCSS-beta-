@@ -82,6 +82,14 @@
         padding:8px;
         margin:2px 0 4px;
       }
+      
+      #paper-container{
+        vertical-align: top;
+        display: inline-block;
+        word-wrap: break-word;
+        width: 90%;
+      }
+
     </style>
   </head>
 
@@ -104,11 +112,11 @@
                   <img alt src="../static/paper_image.png" class="icon">
             </a>
             &emsp;
-            <h5 style="display:inline;">
+            <div id="paper-container">
               <i>{{ title }}</i>,
-              {% for author in authors %} {{ author }}, {% endfor %}
+                {% for author in authors %} {{ author }}, {% endfor %}
               <b>{{ conf.upper() }}</b>, {{ year }}
-            </h5>
+            </div>
           </div>
         {% endfor %}
         <br>
