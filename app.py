@@ -24,7 +24,7 @@ app = Flask(__name__)  # placeholder for current module
 
 @app.route('/')
 def home():
-    fromyear = 1950
+    fromyear = 1960
     toyear = datetime.now().year
     area_table = [
         [
@@ -41,6 +41,7 @@ def home():
                 ['ICDM', '(2001-2017)'],
                 ['KDD', '(1995-2018)'],
                 ['SIGIR', '(1971-2018)'],
+                ['WSDM', '(2008-2018)'],
                 ['WWW', '(2001-2018)']
             ]],
             ['COMPUTER VISION & GRAPHICS', 'CVG', [
