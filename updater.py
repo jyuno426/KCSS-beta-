@@ -8,17 +8,49 @@ from utils import *
 
 dblp_url = 'https://dblp.org/db/conf/'
 
-class DBLP_Crawler:
+class Updater:
     def __init__(self):
-        return
+        self.save_path = './database/'
+        self.author_url_dic = {}
+        self.author_dic = {}
+
+    def initialize_database(self):
+        # open('./data/exceptions.txt', 'w').close()
+        if os.path.isdir(self.save_path):
+            shutil.rmtree(self.save_path)
+        os.mkdir(self.save_path)
+
+    def save(self, conf, year, paper_list):
+        path = self.save_path + conf.upper() + '/' + conf + str(year) + '.json'
+        with open(path, 'w') as f:
+            json.dump(paper_list, f)
+        print('success')
+
+    def save_author_url_dic(self):
+        path = './database/author_url_dic.json'
+        if os.path.exists(path):
+            with open(path, 'r') as f:
+                self.author_url_dic.update(json.load(f))
+        with open(path, 'w') as f:
+            json.dump(self.author_url_dic, f)
+
+    def get_conf2dblp(self):
+        conf2dblp = {}
+        for conf in get_file('./data/conferences.txt'):
+            conf2dblp[conf] = conf
+        conf2dblp.pop('iclr')
+        conf2dblp['aes'] = 'semanticaudio'
+        return conf2dblp
 
     def parse_data(self, rawdata):
         data = rawdata.find('div', {'class': 'data'})
 
         author_list = []
         for elem in data.find_all('span', {'itemprop': 'author'}):
-            author = elem.find('span', {'itemprop': 'name'})
-            author_list.append(author.text)
+            author = smooth(elem.find('span', {'itemprop': 'name'}).text)
+            url = elem.find('a')['href']
+            author_list.append(author)
+            self.author_url_dic[author] = url
         title = data.find('span', {'class': 'title'}).text
 
         try:
@@ -34,7 +66,7 @@ class DBLP_Crawler:
 
         return title, author_list, url
 
-    def crawl_dblp_paper(self, url):
+    def get_paper_list(self, url):
         html = BeautifulSoup(requests.get(url).text, 'lxml')
 
         paper_list = []
@@ -43,67 +75,91 @@ class DBLP_Crawler:
             if title and author_list:
                 paper_list.append([title, author_list, link_url])
 
+        if not paper_list:
+            for data in html.find_all('li', {'class': 'entry article'}):
+                title, author_list, link_url = self.parse_data(data)
+                if title and author_list:
+                    paper_list.append([title, author_list, link_url])
+
         return paper_list
 
-    def get_list(self, url):
-        return self.crawl_dblp_paper(url)
+    def update_conf(self, conf, dblp, fromyear, toyear):
+        # conf should be in lower case.
+        print(conf)
+        path = self.save_path + conf.upper() + '/'
+        if not os.path.isdir(path):
+            os.mkdir(path)
 
+        html = BeautifulSoup(requests.get(dblp_url + dblp + '/').text, 'lxml').text
 
-class Updater:
-    def __init__(self):
-        self.save_path = './database/'
-        self.dblp_crawler = DBLP_Crawler()
+        # exceptions = set()
+        for year in range(fromyear, toyear + 1):
+            print(year)
+            if os.path.exists(path + conf + str(year) + '.json') or not (str(year) in html):
+                continue
+            url = dblp_url + dblp + '/' + dblp + str(year) + '.html'
+            paper_list = self.get_paper_list(url)
+            if paper_list:
+                self.save(conf, year, paper_list)
+                continue
 
-    def initialize_database(self):
-        open('./data/exception.txt', 'w').close()
-        if os.path.isdir(self.save_path):
-            shutil.rmtree(self.save_path)
-        os.mkdir(self.save_path)
+            url = dblp_url + dblp + '/' + dblp + str(year)[2:] + '.html'
+            paper_list = self.get_paper_list(url)
+            if paper_list:
+                self.save(conf, year, paper_list)
+                continue
 
-    def add_exception(self, conf, year):
-        print('exception:', conf, year)
-        with open('./data/exception.txt', 'a+') as f:
-            f.write(conf + '\t' + str(year) + '\n')
+            url = dblp_url + dblp + '/' + dblp + str(year) + '-1.html'
+            paper_list = self.get_paper_list(url)
+            if paper_list:
+                i = 2
+                while True:
+                    url = dblp_url + dblp + '/' + dblp + str(year) + '-' + str(i) + '.html'
+                    temp = self.get_paper_list(url)
+                    if temp:
+                        paper_list += temp
+                    else:
+                        break
+                    i += 1
+                self.save(conf, year, paper_list)
+                continue
 
-    def save(self, conf, year, paper_list):
-        print('success:', conf, year)
-        path = self.save_path + conf.upper() + '/' + conf + str(year) + '.json'
-        with open(path, 'w') as f: json.dump(paper_list, f)
+            url = dblp_url + dblp + '/' + dblp + str(year)[2:] + '-1.html'
+            paper_list = self.get_paper_list(url)
+            if paper_list:
+                i = 2
+                while True:
+                    url = dblp_url + dblp + '/' + dblp + str(year)[2:] + '-' + str(i) + '.html'
+                    temp = self.get_paper_list(url)
+                    if temp:
+                        paper_list += temp
+                    else:
+                        break
+                self.save(conf, year, paper_list)
+                continue
 
-    def get_conf_list(self):
-        conf_list = get_file('./data/conferences.txt')
-        conf_list.remove('iclr')
-        return conf_list
-
-    def get_paper_list(self, url):
-        return self.dblp_crawler.get_list(url)
+        self.save_author_url_dic()
 
     def update(self, fromyear, toyear):
         self.initialize_database()  # caution! It removes all database
 
-        for conf in self.get_conf_list():
-            # conf should be in lower case.
-            os.mkdir(self.save_path + conf.upper() + '/')
-            for year in range(fromyear, toyear + 1):
-                url = dblp_url + conf + '/' + conf + str(year) + '.html'
-                paper_list = self.get_paper_list(url)
-                if paper_list:
-                    self.save(conf, year, paper_list)
-                else:
-                    self.add_exception(conf, year)
+        for conf, dblp in self.get_conf2dblp().items():
+            self.update_conf(conf, dblp, fromyear, toyear)
 
     def update_exceptions(self):
-        with open('./data/correction.txt', 'r') as f:
+        with open('./data/corrections.txt', 'r') as f:
             for line in f.readlines():
                 words = [word.strip() for word in line.strip().split()]
                 conf = words[0]
                 year = words[1]
+                print(conf, year)
+
                 paper_list = []
-                check = True
                 for url in words[2:]:
                     paper_list += self.get_paper_list(url)
-                if check:
-                    self.save(conf, year, paper_list)
+                self.save(conf, year, paper_list)
+
+        self.save_author_url_dic()
 
     def update_iclr(self):
         os.mkdir(self.save_path + 'ICLR/')
@@ -124,20 +180,41 @@ class Updater:
                 lines = [line.strip() for line in f.readlines()]
                 for i in range(len(lines)//term):
                     title = lines[term*i]
-                    author_list = []
-                    for author in lines[term*i+1].split(','):
-                        normalized_name = ''
-                        for word in author.split():
-                            _word = normalize(word)
-                            if len(_word) > 0:
-                                normalized_name += (' ' + _word)
-                        author_list.append(normalized_name.strip())
+                    author_list = [smooth(x) for x in lines[term*i+1].split(',')]
                     paper_list.append([title, author_list, url])
 
             self.save('iclr', year, paper_list)
 
+    def correct_names(self):
+        with open('./database/author_url_dic.json', 'r') as f:
+            self.author_url_dic = json.load(f)
+
+        kr_hard_coding = sorted([smooth(x) for x in get_file('./data/kr_hard_coding.txt')])
+
+        for author in kr_hard_coding:
+            if not(author in self.author_url_dic):
+                continue
+            print(author)
+            url = self.author_url_dic[author]
+            html = BeautifulSoup(requests.get(url).text, 'lxml')
+
+            primary = smooth(html.find('span', {'class': 'name primary'}).text)
+            secondary_list = [smooth(x.text) for x in html.find_all('span', {'class': 'name secondary'})]
+
+            print(primary, secondary_list)
+
+            for name in secondary_list:
+                if name and name != name.lower():
+                    self.author_dic[name] = primary
+
+        with open('./database/author_dic.json', 'w') as f:
+            json.dump(self.author_dic, f)
+
+
 if __name__ == '__main__':
-    updater = Updater()
-    updater.update(2008, 2018)
-    updater.update_exceptions()
-    updater.update_iclr()
+    pass
+    # updater = Updater()
+    # updater.update(1950, 2018)
+    # updater.update_exceptions()
+    # updater.update_iclr()
+    # updater.correct_names()

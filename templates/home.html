@@ -29,6 +29,9 @@
       .container{
         padding-top: 30px;
       }
+      .col-sm-4 {
+        padding-bottom: 1px;
+      }
       #footer{
         padding-top: 5px;
       }
@@ -37,23 +40,12 @@
         height: 1px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
       }
-      .row{
-        padding-top:10px;
-        padding-bottom:10px;
-      }
-      .checkbox{
-        padding-left:10px;
-      }
-      #nonindent{
-        padding-left:0px;
-      }
-
     </style>
 
     <script>
       window.onload = function() {
-        document.getElementById("fromyear").options[7].selected = true;
-        document.getElementById("toyear").options[10].selected = true;
+        document.getElementById("fromyear").options[2015 - 1950].selected = true;
+        document.getElementById("toyear").options[2018 - 1950].selected = true;
         document.getElementById("filter2").options[2].selected = true;
 
         var topbox = document.getElementById("all");
@@ -69,7 +61,7 @@
 
       	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
 
-        var areas = ["ML", "DM", "CV", "NLP", "SSP", "RB", "THR"];
+        var areas = ["ML", "DMIR", "CVG", "NLP", "SSP", "R"];
 
       	var i, j, select;
       	for (i = 0; i < areas.length; i++) {
@@ -207,217 +199,37 @@
     </div>
 
     <div class="container">
-      <div class="col-sm-4">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" id="all" onclick="checkAll(this)"><b>All Areas</b>
-          </label>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="all" onclick="checkAll(this)"><b>All Areas</b>
+            </label>
+          </div>
         </div>
       </div>
+      {% for area_row in area_table %}
+        <div class="row">
+          {% for area, id, conf_list in area_row %}
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="{{ id }}" onclick="checkParts(this)"><b>{{ area }}</b>
+                </label>
+              </div>
+              {% for conf, year in conf_list %}
+                <div class="checkbox" style="padding-left: 20px;">
+                  <label>
+                    <input type="checkbox" name="{{ id }}" value="{{ conf }}" onclick="check(this)">
+                    {{ conf }} {{ year }}
+                  </label>
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
     </div>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="checkbox", id="nonindent">
-            <label>
-              <input type="checkbox" id="ML" onclick="checkParts(this)"><b>MACHINE LEARNING</b>
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="ML" value="AISTATS" onclick="check(this)"> AISTATS
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="ML" value="COLT" onclick="check(this)"> COLT
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="ML" value="ICLR" onclick="check(this)"> ICLR
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="ML" value="ICML" onclick="check(this)"> ICML
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="ML" value="NIPS" onclick="check(this)"> NIPS
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="ML" value="UAI" onclick="check(this)"> UAI
-            </label>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="checkbox", id="nonindent">
-            <label>
-              <input type="checkbox" id="DM" onclick="checkParts(this)"><b>DATA MINING</b>
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="DM" value="CIKM" onclick="check(this)"> CIKM
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="DM" value="ICDM" onclick="check(this)"> ICDM
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="DM" value="KDD" onclick="check(this)"> KDD
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="DM" value="SIGIR" onclick="check(this)"> SIGIR
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="DM" value="WWW" onclick="check(this)"> WWW
-            </label>
-          </div>
-        </div>
-
-
-        <div class="col-sm-4">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="CV" onclick="checkParts(this)"><b>COMPUTER VISION &amp; GRAPHICS</b>
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="CV" value="CVPR" onclick="check(this)"> CVPR
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="CV" value="ECCV" onclick="check(this)"> ECCV
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="CV" value="ICCV" onclick="check(this)"> ICCV
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="CV" value="SIGGRAPH" onclick="check(this)"> SIGGRAPH
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="CV" value="WACV" onclick="check(this)"> WACV
-            </label>
-          </div>
-        </div>      
-      </div>
-
-
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="NLP" onclick="checkParts(this)"><b>NATURAL LANGUAGE PROCESSING</b>
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="NLP" value="ACL" onclick="check(this)"> ACL
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="NLP" value="EMNLP" onclick="check(this)"> EMNLP
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="NLP" value="NAACL" onclick="check(this)"> NAACL
-            </label>
-          </div>
-        </div>
-
-
-        <div class="col-sm-4">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" id="SSP" onclick="checkParts(this)"><b>SPEECH &amp; SIGNAL PROCESSING</b>
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="SSP" value="AES" onclick="check(this)"> AES
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="SSP" value="ICASSP" onclick="check(this)"> ICASSP
-              </label>
-            </div>
-          </div>
-    
-        <div class="col-sm-4">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="RB" onclick="checkParts(this)"><b> ROBOTICS</b>
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="RB" value="ICRA" onclick="check(this)"> ICRA
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="RB" value="IROS" onclick="check(this)"> IROS
-            </label>
-          </div>
-          <div class="checkbox">
-              <label>
-                <input type="checkbox" name="RB" value="RSS" onclick="check(this)"> RSS
-              </label>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="THR" onclick="checkParts(this)"><b> THEORY</b>
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="THR" value="FOCS" onclick="check(this)"> FOCS
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="THR" value="SODA" onclick="check(this)"> SODA
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="THR" value="STOC" onclick="check(this)"> STOC
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
     <br>
     <br>

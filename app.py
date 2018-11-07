@@ -24,9 +24,62 @@ app = Flask(__name__)  # placeholder for current module
 
 @app.route('/')
 def home():
-    fromyear = 2008
+    fromyear = 1950
     toyear = datetime.now().year
-    return render_template('home.html', years=range(fromyear, toyear+1))
+    area_table = [
+        [
+            ['MACHINE LEARNING', 'ML', [
+                ['AISTATS', '(1995-2018)'],
+                ['COLT', '(1988-2018)'],
+                ['ICLR', '(2013-2018)'],
+                ['ICML', '(1988-2018)'],
+                ['NIPS', '(1987-2017)'],
+                ['UAI', '(1985-2017)']
+            ]],
+            ['DATA MINING & INFORMATION RETRIEVAL', 'DMIR', [
+                ['CIKM', '(1992-2018)'],
+                ['ICDM', '(2001-2017)'],
+                ['KDD', '(1995-2018)'],
+                ['SIGIR', '(1971-2018)'],
+                ['WWW', '(2001-2018)']
+            ]],
+            ['COMPUTER VISION & GRAPHICS', 'CVG', [
+                ['CVPR', '(1988-2017)'],
+                ['ECCV', '(1990-2018)'],
+                ['ICCV', '(1988-2017)'],
+                ['SIGGRAPH', '(1974-2018)'],
+                ['WACV', '(1992-2018)']
+            ]]
+        ],
+        [
+            ['NATURAL LANGUAGE PROCESSING', 'NLP', [
+                ['ACL', '(1979-2018)'],
+                ['EMNLP', '(1996-2018)'],
+                ['NAACL', '(1986-2018)']
+            ]],
+            ['SPEECH & SIGNAL PROCESSING', 'SSP', [
+                ['AES', '(2011-2017)'],
+                ['ICASSP', '(1976-2018)']
+            ]],
+            ['ROBOTICS', 'R', [
+                ['ICRA', '(1984-2018)'],
+                ['IROS', '(1989-2017)'],
+                ['RSS', '(2005-2017)']
+            ]]
+        ],
+        [
+            ['THEORY', 'T', [
+                ['FOCS', '(1960-2017)'],
+                ['SIGMETRICS', '(1976-2018)'],
+                ['SODA', '(1990-2018)'],
+                ['STOC', '(1969-2018)']
+            ]]
+        ]
+    ]
+
+    return render_template('home.html',
+                           years=range(fromyear, toyear+1),
+                           area_table=area_table)
 
 
 @app.route('/<name>')
@@ -102,7 +155,7 @@ def display(name):
 
     for author in info_dict.keys():
         temp = ""
-        for journal in info_dict[author].keys():
+        for journal in sorted(info_dict[author].keys()):
             temp += journal + "=" + str(info_dict[author][journal]) + ', '
         temp = temp[:-2]
         info_dict[author] = temp
@@ -112,9 +165,9 @@ def display(name):
                            name=name,
                            dictionary=big_dictionary,
                            names_list=names_list,
-                           info_dict = info_dict,
+                           info_dict=info_dict,
                            kroption=option - 1)
 
 
 if __name__ == '__main__':
-    app.run(port=5002, debug = True)
+    app.run(port=5002, debug=True)

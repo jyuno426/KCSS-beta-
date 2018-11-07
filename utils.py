@@ -13,6 +13,15 @@ def is_alpha(name):
     return True
 
 
+def smooth(name):
+    al = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz -"
+    res = ""
+    for c in unidecode.unidecode(name):
+        if c in al:
+            res += c
+    return res.strip()
+
+
 def normalize(name):
     result = ''
     for c in unidecode.unidecode(name):
@@ -53,4 +62,5 @@ def dump_list(_list, path):
 
 
 if __name__=='__main__':
+    print(smooth('Rémi Leblond'))
     pass

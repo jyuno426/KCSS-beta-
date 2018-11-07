@@ -15,6 +15,11 @@ class DB_Maker:
                 './data/kr_hard_coding.txt'
             )
         ]
+        self.nonkr_hard_coding = [
+            ' '.join(line.split()) for line in get_file(
+                './data/nonkr_hard_coding.txt'
+            )
+        ]
         var1 = [name.replace('-', ' ') for name in self.kr_hard_coding]
         var2 = [name.replace('-', '') for name in self.kr_hard_coding]
         self.kr_hard_coding += var1
@@ -24,16 +29,6 @@ class DB_Maker:
 
         self.model = keras_Model()
         self.model.load()
-
-    def is_subseq(self, x, y):
-        it = iter(y)
-        return all(c in it for c in x)
-
-    def include(self, name, kr_set):
-        for kr_name in kr_set:
-            if self.is_subseq(name, kr_name):
-                return True
-        return False
 
     def is_kr_last_name(self, last_name):
         return last_name.lower() in self.kr_last_names
@@ -54,15 +49,15 @@ class DB_Maker:
         return (0 in idx) and (1 not in idx)
 
     def is_kr(self, name):
-        if self.include(
-                name.replace(' ', '').replace('.', '').replace('-', ''),
-                self.kr_hard_coding):
+        if name in self.kr_hard_coding:
             return True
+        if name in self.nonkr_hard_coding:
+            return False
         parts = name.split()
         last = parts[-1]
         first = ' '.join(parts[:-1])
         return self.is_kr_last_name(last) and\
-               self.is_kr_first_name(first)
+           self.is_kr_first_name(first)
 
     def update_dic(self, author, dic, elem):
         i = 0 if self.is_kr(author) else 1
@@ -73,31 +68,38 @@ class DB_Maker:
 
     def make_db(self, fromyear, toyear):
         conf_list = get_file('./data/conferences.txt')
+        author_dic = json.load(open('./database/author_dic.json'))
         for conf in conf_list:
             for year in range(fromyear, toyear + 1):
                 path = './database/' + conf.upper() + '/' + conf + str(year)
-                if os.path.isfile(path + '.json'):
-                    paper_list = json.load(open(path + '.json', 'r'))
+                if not os.path.isfile(path + '.json'):
+                    continue
+                paper_list = json.load(open(path + '.json', 'r'))
 
-                    every = [{}, {}]
-                    first = [{}, {}]
-                    last = [{}, {}]
+                every = [{}, {}]
+                first = [{}, {}]
+                last = [{}, {}]
 
-                    for _title, author_list, url in paper_list:
-                        elem = [_title.strip().strip('.'), author_list, url, conf, year]
-                        for author in author_list:
-                            self.update_dic(author, every, elem)
-                        self.update_dic(author_list[0], first, elem)
-                        self.update_dic(author_list[-1], last, elem)
+                for _title, _author_list, url in paper_list:
+                    author_list = [
+                        author_dic[author] if author in author_dic
+                        else author for author in _author_list
+                    ]
+                    elem = [_title.strip().strip('.'), author_list, url, conf, year]
+                    for author in author_list:
+                        self.update_dic(author, every, elem)
+                    self.update_dic(author_list[0], first, elem)
+                    self.update_dic(author_list[-1], last, elem)
 
-                    json.dump(every[0], open(path + '_every_kr.json', 'w'))
-                    json.dump(every[1], open(path + '_every_nonkr.json', 'w'))
-                    json.dump(first[0], open(path + '_first_kr.json', 'w'))
-                    json.dump(first[1], open(path + '_first_nonkr.json', 'w'))
-                    json.dump(last[0], open(path + '_last_kr.json', 'w'))
-                    json.dump(last[1], open(path + '_last_nonkr.json', 'w'))
+                json.dump(every[0], open(path + '_every_kr.json', 'w'))
+                json.dump(every[1], open(path + '_every_nonkr.json', 'w'))
+                json.dump(first[0], open(path + '_first_kr.json', 'w'))
+                json.dump(first[1], open(path + '_first_nonkr.json', 'w'))
+                json.dump(last[0], open(path + '_last_kr.json', 'w'))
+                json.dump(last[1], open(path + '_last_nonkr.json', 'w'))
 
-                    print(conf, year)
+                print(conf, year)
+
 
 if __name__ == '__main__':
-    DB_Maker().make_db(2008, 2018)
+    DB_Maker().make_db(1950, 2018)
