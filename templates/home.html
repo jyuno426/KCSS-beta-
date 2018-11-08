@@ -6,7 +6,7 @@
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title> AI People Search </title>
+    <title> AI Korean Search </title>
 
     <style type="text/css">
       body {
@@ -27,10 +27,10 @@
         color:black;
       }
       .container{
-        padding-top: 30px;
+        padding-top: 15px;
       }
       .col-sm-4 {
-        padding-bottom: 1px;
+        padding-bottom: 15px;
       }
       #footer{
         padding-top: 5px;
@@ -44,8 +44,9 @@
 
     <script>
       window.onload = function() {
-        document.getElementById("fromyear").options[2015 - 1950].selected = true;
-        document.getElementById("toyear").options[2018 - 1950].selected = true;
+        document.getElementById("fromyear").options[2009 - 1960].selected = true;
+        document.getElementById("toyear").options[2018 - 1960].selected = true;
+        document.getElementById("filter").options[1].selected = true;
         document.getElementById("filter2").options[2].selected = true;
 
         var topbox = document.getElementById("all");
@@ -61,7 +62,7 @@
 
       	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
 
-        var areas = ["ML", "DMIR", "CVG", "NLP", "SSP", "R"];
+        var areas = ["ML", "DMIR", "CVG", "NLP", "SSP", "R", "T", "CA", "N", "S", "DB", "OS"];
 
       	var i, j, select;
       	for (i = 0; i < areas.length; i++) {
@@ -147,9 +148,10 @@
 
   <body>
     <br>
-    <div class="container" id="header">
-      <h1> AIPS: AI People Search </h1>
+    <div class="container" id="header" align="center">
+      <h1> AIKS: AI Korean Search </h1>
     </div>
+    <hr>
 
     <div class="container">
       <div class="form-inline">
@@ -208,7 +210,28 @@
           </div>
         </div>
       </div>
-      {% for area_row in area_table %}
+      {% for area_row in ai_table %}
+        <div class="row">
+          {% for area, id, conf_list in area_row %}
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="{{ id }}" onclick="checkParts(this)"><b>{{ area }}</b>
+                </label>
+              </div>
+              {% for conf, year in conf_list %}
+                <div class="checkbox" style="padding-left: 20px;">
+                  <label>
+                    <input type="checkbox" name="{{ id }}" value="{{ conf }}" onclick="check(this)">
+                    {{ conf }} {{ year }}
+                  </label>
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+      {% for area_row in non_ai_table %}
         <div class="row">
           {% for area, id, conf_list in area_row %}
             <div class="col-sm-4">
@@ -231,12 +254,9 @@
       {% endfor %}
     </div>
 
-    <br>
-    <br>
-    <br>
     <hr>
     <div class="container" style="text-align: center" id="footer">
-      <address>AIPS was made by
+      <address>AIKS was made by
         <a href="mailto:jyuno426@kaist.ac.kr"> Junho Han</a>,
         <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a> and
         <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a> at

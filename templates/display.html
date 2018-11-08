@@ -6,11 +6,11 @@
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title> AI People Search </title>
+    <title> AI Korean Search </title>
 
     <style type="text/css">
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, Open Sans, sans-serif;
       }
       a {
         color : blue ;
@@ -27,8 +27,7 @@
         color:black;
       }
       .container{
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 15px;
       }
       #footer{
         padding-top: 5px;
@@ -52,10 +51,10 @@
         transition:0.3s;
       }
       button.accordion:hover{
-        background-color:rgba(255,255,255,0.3);
+        background-color:#96d2ea;
       }
       button.accordion.active{
-        background-color:#e7e7e7;
+        background-color:#96d2ea;
         color: black;
         border-radius:4px 4px 0 0;
         margin:4px 0 0;
@@ -73,49 +72,42 @@
       }
       div.panel.show{
         opacity:1;
-        max-height:5000px;
+        max-height:10000px;
         padding:8px;
         margin:2px 0 4px;
-      }
-
-      #paper-container{
-        vertical-align: top;
-        display: inline-block;
-        word-wrap: break-word;
-        width: 90%;
       }
     </style>
   </head>
 
   <body>
     <br>
-    <div class="container" id="header">
-      <h1> AIPS: AI People Search </h1>
+    <div class="container" id="header" align="center">
+        <h1> AIKS: AI Korean Search </h1>
+    </div>
+    <hr>
+
+    <div class="container">
+      {% for name in names_list %}
+        <button class="accordion">
+          <b> {{ name }} ({{ dictionary[name][1] }}) </b>
+        </button>
+        <div class="panel">
+          {{ info_dict[name] }}<br>
+          {% for title, authors, url, conf, year in dictionary[name][0] %}
+            <br>
+            <div>
+              <b>{{ conf.upper() }}</b>, {{ year }}{% for author in authors %}, {{ author }} {% endfor %}<br>
+              <a href="{{ url }}" style="text-decoration:none;">
+                <img alt src="../static/paper_image.png" class="icon">
+              </a>
+              &nbsp;<i>{{ title }}</i>
+            </div>
+          {% endfor %}
+          <br>
+        </div>
+      {% endfor %}
     </div>
 
-    {% for name in names_list %}
-      <button class="accordion">
-        <b> &emsp; &emsp;{{ name }} ({{ dictionary[name][1] }}, {{ info_dict[name] }}) </b>
-      </button>
-      <div class="panel">
-        {% for title, authors, url, conf, year in dictionary[name][0] %}
-          <br>
-          <div class="dropdown">
-            &emsp; &emsp;
-            <a href="{{ url }}" style="text-decoration:none;">
-                  <img alt src="../static/paper_image.png" class="icon">
-            </a>
-            &emsp;
-            <div id="paper-container">
-              <i>{{ title }}</i>,
-                {% for author in authors %} {{ author }}, {% endfor %}
-              <b>{{ conf.upper() }}</b>, {{ year }}
-            </div>
-          </div>
-        {% endfor %}
-        <br>
-	    </div>
-	  {% endfor %}
 
     <!--
     {% if kroption %}
@@ -146,9 +138,10 @@
     {% endif %}
     -->
 
+    <br>
     <hr>
     <div class="container" style="text-align: center" id="footer">
-      <address>AIPS was made by
+      <address>AIKS was made by
         <a href="mailto:jyuno426@kaist.ac.kr"> Junho Han</a>,
         <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a> and
         <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a> at

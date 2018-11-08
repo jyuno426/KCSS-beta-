@@ -26,61 +26,97 @@ app = Flask(__name__)  # placeholder for current module
 def home():
     fromyear = 1960
     toyear = datetime.now().year
-    area_table = [
-        [
-            ['MACHINE LEARNING', 'ML', [
-                ['AISTATS', '(1995-2018)'],
-                ['COLT', '(1988-2018)'],
-                ['ICLR', '(2013-2018)'],
-                ['ICML', '(1988-2018)'],
-                ['NIPS', '(1987-2017)'],
-                ['UAI', '(1985-2017)']
-            ]],
-            ['DATA MINING & INFORMATION RETRIEVAL', 'DMIR', [
-                ['CIKM', '(1992-2018)'],
-                ['ICDM', '(2001-2017)'],
-                ['KDD', '(1995-2018)'],
-                ['SIGIR', '(1971-2018)'],
-                ['WSDM', '(2008-2018)'],
-                ['WWW', '(2001-2018)']
-            ]],
-            ['COMPUTER VISION & GRAPHICS', 'CVG', [
-                ['CVPR', '(1988-2017)'],
-                ['ECCV', '(1990-2018)'],
-                ['ICCV', '(1988-2017)'],
-                ['SIGGRAPH', '(1974-2018)'],
-                ['WACV', '(1992-2018)']
-            ]]
-        ],
-        [
-            ['NATURAL LANGUAGE PROCESSING', 'NLP', [
-                ['ACL', '(1979-2018)'],
-                ['EMNLP', '(1996-2018)'],
-                ['NAACL', '(1986-2018)']
-            ]],
-            ['SPEECH & SIGNAL PROCESSING', 'SSP', [
-                ['AES', '(2011-2017)'],
-                ['ICASSP', '(1976-2018)']
-            ]],
-            ['ROBOTICS', 'R', [
-                ['ICRA', '(1984-2018)'],
-                ['IROS', '(1989-2017)'],
-                ['RSS', '(2005-2017)']
-            ]]
-        ],
-        [
-            ['THEORY', 'T', [
-                ['FOCS', '(1960-2017)'],
-                ['SIGMETRICS', '(1976-2018)'],
-                ['SODA', '(1990-2018)'],
-                ['STOC', '(1969-2018)']
-            ]]
-        ]
+    ai_list = [
+        ['MACHINE LEARNING', 'ML', [
+            'AISTATS', 'COLT', 'ICLR', 'ICML', 'NIPS', 'UAI'
+        ]],
+        ['DATA MINING & INFORMATION RETRIEVAL', 'DMIR', [
+            'CIKM', 'ICDM', 'KDD', 'SIGIR', 'WSDM', 'WWW'
+        ]],
+        ['COMPUTER VISION & GRAPHICS', 'CVG', [
+            'BMVC', 'CVPR', 'ECCV', 'ICCV', 'SIGGRAPH', 'WACV'
+        ]],
+        ['NATURAL LANGUAGE PROCESSING', 'NLP', [
+            'ACL', 'EMNLP', 'NAACL'
+        ]],
+        ['SPEECH & SIGNAL PROCESSING', 'SSP', [
+            'AES', 'ICASSP'
+        ]],
+        ['ROBOTICS', 'R', [
+            'ICRA', 'IROS', 'RSS'
+        ]]
     ]
+    non_ai_list = [
+        ['THEORY', 'T', [
+            'FOCS', 'SIGMETRICS', 'SODA', 'STOC', 'ISIT'
+        ]],
+        ['COMPUTER ARCHITECTURE', 'CA', [
+            'ASPLOS', 'HPCA', 'ISCA', 'MICRO'
+        ]],
+        ['Networks', 'N', [
+            'SIGCOMM', 'NSDI', 'INFOCOM', 'MOBIHOC'
+        ]],
+        ['SECURITY', 'S', [
+            'CCS', 'IEEE-S&P', 'USENIX-SECURITY', 'NDSS'
+        ]],
+        ['DATA BASES', 'DB', [
+            'SIGMOD', 'VLDB', 'PODS'
+        ]],
+        ['OPERATING SYSTEMS', 'OS', [
+            'OSDI', 'SOSP', 'EUROSYS', 'FAST', 'USENIX-ATC'
+        ]]
+    ]
+
+    ai_table = []
+    ai_list.sort()
+    for area, id, conf_list in ai_list:
+        temp = []
+        for x in sorted(conf_list):
+            conf = x.replace('-', ' ')
+            for year in range(fromyear, toyear + 1):
+                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
+                    min_year = str(year)
+                    break
+            for year in range(toyear, fromyear - 1, -1):
+                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
+                    max_year = str(year)
+                    break
+            temp.append([x, '(' + min_year + '-' + max_year + ')'])
+        ai_table.append([area, id, temp])
+
+    non_ai_table = []
+    non_ai_list.sort()
+    for area, id, conf_list in non_ai_list:
+        print(area, id, conf_list)
+        temp = []
+        for x in sorted(conf_list):
+            conf = x.replace('-', ' ')
+            for year in range(fromyear, toyear + 1):
+                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
+                    min_year = str(year)
+                    break
+            for year in range(toyear, fromyear - 1, -1):
+                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
+                    max_year = str(year)
+                    break
+            temp.append([x, '(' + min_year + '-' + max_year + ')'])
+        non_ai_table.append([area, id, temp])
+
+    new_ai_table = []
+    for i in range(len(ai_table)):
+        if i % 3 == 0:
+            new_ai_table.append([])
+        new_ai_table[i//3].append(ai_table[i])
+    new_non_ai_table = []
+    for i in range(len(non_ai_table)):
+        if i % 3 == 0:
+            new_non_ai_table.append([])
+        new_non_ai_table[i//3].append(non_ai_table[i])
 
     return render_template('home.html',
                            years=range(fromyear, toyear+1),
-                           area_table=area_table)
+                           ai_table=new_ai_table,
+                           non_ai_table=new_non_ai_table)
 
 
 @app.route('/<name>')
@@ -89,7 +125,9 @@ def display(name):
     toyear = int(name[4:8])
     option = int(name[8])
     howmany = [10, 25, 50, 100, 200][int(name[9])]
-    conf_list = sorted(name[10:].lower().split('_')[1:-1])
+    conf_list = sorted(
+        name[10:].replace('-', ' ').lower().split('_')[1:-1]
+    )
     filters = ['every', 'every', 'first', 'last']
 
     # Display options:
@@ -103,8 +141,8 @@ def display(name):
     nonkr_names = set()
 
     # load data from database, for each conf, fromyear ~ toyear
-    for year in range(toyear, fromyear-1, -1):
-        for conf in conf_list:
+    for conf in conf_list:
+        for year in range(toyear, fromyear-1, -1):
             path = './database/' + conf.upper() + '/' +\
                    conf + str(year) + '_' + filters[option]
             if os.path.isfile(path + '_kr.json'):

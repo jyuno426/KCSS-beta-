@@ -11,12 +11,12 @@ class DB_Maker:
             )
         ]
         self.kr_hard_coding = [
-            ' '.join(line.split()) for line in get_file(
+            smooth(' '.join(line.split())) for line in get_file(
                 './data/kr_hard_coding.txt'
             )
         ]
         self.nonkr_hard_coding = [
-            ' '.join(line.split()) for line in get_file(
+            smooth(' '.join(line.split())) for line in get_file(
                 './data/nonkr_hard_coding.txt'
             )
         ]

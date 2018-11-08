@@ -62,6 +62,14 @@ Mun
 Myaeng
 Na
 Nam
+Namgung
+Namkung
+Namkoong
+Namgoong
+Namgoung
+Namkoung
+Nho
+No
 Noh
 Oh
 Ok
@@ -73,6 +81,7 @@ Park
 Ra
 Rhee
 Rhu
+Rho
 Ro
 Roh
 Ryang
@@ -105,4 +114,5 @@ Yim
 Yoo
 Yook
 Yoon
+Yu
 Yun

@@ -4,6 +4,9 @@ aistats 2009    https://dblp.org/db/journals/jmlr/jmlrp5.html
 aistats 2010    https://dblp.org/db/journals/jmlr/jmlrp9.html
 aistats 2011    https://dblp.org/db/journals/jmlr/jmlrp15.html
 aistats 2012    https://dblp.org/db/journals/jmlr/jmlrp22.html
+bmvc    1987    https://dblp.org/db/conf/bmvc/avc1987.html
+bmvc    1988    https://dblp.org/db/conf/bmvc/avc1988.html
+bmvc    1989    https://dblp.org/db/conf/bmvc/avc1989.html
 colt    2011    https://dblp.org/db/journals/jmlr/jmlrp19.html
 colt    2012    https://dblp.org/db/journals/jmlr/jmlrp23.html
 icml    1988    https://dblp.org/db/conf/icml/ml1988.html
@@ -31,3 +34,31 @@ siggraph    2015    https://dblp.org/db/journals/tog/tog34.html
 siggraph    2016    https://dblp.org/db/journals/tog/tog35.html
 siggraph    2017    https://dblp.org/db/journals/tog/tog36.html
 siggraph    2018    https://dblp.org/db/journals/tog/tog37.html
+usenix-atc  1986    https://dblp.org/db/conf/usenix/usenix_su86.html
+usenix-atc  1987    https://dblp.org/db/conf/usenix/usenix_su87.html
+usenix-atc  1988    https://dblp.org/db/conf/usenix/usenix_wi88.html
+usenix-atc  1990    https://dblp.org/db/conf/usenix/usenix_su90.html
+usenix-atc  1991    https://dblp.org/db/conf/usenix/usenix_wi91.html    https://dblp.org/db/conf/usenix/usenix_su91.html
+usenix-atc  1992    https://dblp.org/db/conf/usenix/usenix_su92.html
+usenix-atc  1993    https://dblp.org/db/conf/usenix/usenix_wi93.html    https://dblp.org/db/conf/usenix/usenix_su93.html
+usenix-atc  1994    https://dblp.org/db/conf/usenix/usenix_wi94.html    https://dblp.org/db/conf/usenix/usenix_su94.html
+usenix-atc  1995    https://dblp.org/db/conf/usenix/usenix_wi95.html
+usenix-atc  1999    https://dblp.org/db/conf/usenix/usenix1999g.html    https://dblp.org/db/conf/usenix/usenix1999f.html
+usenix-atc  2000    https://dblp.org/db/conf/usenix/usenix2000g.html    https://dblp.org/db/conf/usenix/usenix2000f.html
+usenix-atc  2001    https://dblp.org/db/conf/usenix/usenix2001g.html    https://dblp.org/db/conf/usenix/usenix2001f.html
+usenix-atc  2002    https://dblp.org/db/conf/usenix/usenix2002g.html    https://dblp.org/db/conf/usenix/usenix2002f.html
+usenix-atc  2003    https://dblp.org/db/conf/usenix/usenix2003g.html    https://dblp.org/db/conf/usenix/usenix2003f.html
+usenix-atc  2004    https://dblp.org/db/conf/usenix/usenix2004g.html    https://dblp.org/db/conf/usenix/usenix2004f.html
+usenix-atc  2005    https://dblp.org/db/conf/usenix/usenix2005g.html    https://dblp.org/db/conf/usenix/usenix2005f.html
+usenix-atc  2006    https://dblp.org/db/conf/usenix/usenix2006g.html
+vldb    2008    https://dblp.org/db/journals/pvldb/pvldb1.html
+vldb    2009    https://dblp.org/db/journals/pvldb/pvldb2.html
+vldb    2010    https://dblp.org/db/journals/pvldb/pvldb3.html
+vldb    2011    https://dblp.org/db/journals/pvldb/pvldb4.html
+vldb    2012    https://dblp.org/db/journals/pvldb/pvldb5.html
+vldb    2013    https://dblp.org/db/journals/pvldb/pvldb6.html
+vldb    2014    https://dblp.org/db/journals/pvldb/pvldb7.html
+vldb    2015    https://dblp.org/db/journals/pvldb/pvldb8.html
+vldb    2016    https://dblp.org/db/journals/pvldb/pvldb9.html
+vldb    2017    https://dblp.org/db/journals/pvldb/pvldb10.html
+vldb    2018    https://dblp.org/db/journals/pvldb/pvldb11.html

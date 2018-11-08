@@ -38,8 +38,12 @@ class Updater:
         conf2dblp = {}
         for conf in get_file('./data/conferences.txt'):
             conf2dblp[conf] = conf
-        conf2dblp.pop('iclr')
-        conf2dblp['aes'] = 'semanticaudio'
+        if 'iclr' in conf2dblp: conf2dblp.pop('iclr')
+        if 'aes' in conf2dblp: conf2dblp['aes'] = 'semanticaudio'
+        if 'ieee s&p' in conf2dblp: conf2dblp['ieee s&p'] = 'sp'
+        if 'usenix security' in conf2dblp: conf2dblp['usenix security'] = 'uss'
+        if 'usenix atc' in conf2dblp: conf2dblp['usenix atc'] = 'usenix'
+
         return conf2dblp
 
     def parse_data(self, rawdata):
@@ -141,7 +145,7 @@ class Updater:
         self.save_author_url_dic()
 
     def update(self, fromyear, toyear):
-        self.initialize_database()  # caution! It removes all database
+        # self.initialize_database()  # caution! It removes all database
 
         for conf, dblp in self.get_conf2dblp().items():
             self.update_conf(conf, dblp, fromyear, toyear)
@@ -150,7 +154,7 @@ class Updater:
         with open('./data/corrections.txt', 'r') as f:
             for line in f.readlines():
                 words = [word.strip() for word in line.strip().split()]
-                conf = words[0]
+                conf = words[0].replace('-', ' ')
                 year = words[1]
                 print(conf, year)
 
@@ -212,9 +216,9 @@ class Updater:
 
 
 if __name__ == '__main__':
-    pass
-    # updater = Updater()
+    # pass
+    updater = Updater()
     # updater.update(1950, 2018)
-    # updater.update_exceptions()
-    # updater.update_iclr()
-    # updater.correct_names()
+    updater.update_exceptions()
+    updater.update_iclr()
+    updater.correct_names()

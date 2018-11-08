@@ -14,7 +14,7 @@ def is_alpha(name):
 
 
 def smooth(name):
-    al = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz -"
+    al = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz -."
     res = ""
     for c in unidecode.unidecode(name):
         if c in al:
