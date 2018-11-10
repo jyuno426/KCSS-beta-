@@ -94,7 +94,6 @@ def display(name):
     
     # names_list available
 
-    print("Complete-mid")
     # for display, e.g. Jinwoo Shin (12, NIPS=3, ICML=3, AISTATS=4)
     info_dict = {}
     part_dict = {}

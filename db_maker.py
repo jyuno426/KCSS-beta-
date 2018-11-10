@@ -160,7 +160,7 @@ class DB_Maker:
             new_non_ai_table[i // 3].append(non_ai_table[i])
         
         with open('./database/area_table.json', 'w') as f:
-            json.dump([['AI', new_ai_table], ['non-AI', new_non_ai_table]], f)
+            json.dump([['AI', new_ai_table], ['non-AI (but related)', new_non_ai_table]], f)
 
     def make_db(self, fromyear, toyear):
         conf_list = get_file('./data/conferences.txt')
