@@ -27,6 +27,7 @@
         color:black;
       }
       .container{
+        max-width: 1050px;
         padding-top: 15px;
       }
       #footer{
@@ -60,19 +61,19 @@
         margin:4px 0 0;
        }
       div.panel{
+        max-height:0;
         background-color:rgba(255,255,255,0.8);
         color:#000;
         border-radius:0 0 4px 4px;
-        overflow:hidden;
+        overflow: auto;
         opacity:0;
-        max-height:0;
-        transition:0.3s;
         padding:0 8px;
         margin:0;
+        transition:0.3s;
       }
       div.panel.show{
         opacity:1;
-        max-height:10000px;
+        max-height:500px;
         padding:8px;
         margin:2px 0 4px;
       }
@@ -89,10 +90,10 @@
     <div class="container">
       {% for name in names_list %}
         <button class="accordion">
-          <b> {{ name }} ({{ dictionary[name][1] }}) </b>
+          <b> {{ name }} </b>
         </button>
         <div class="panel">
-          {{ info_dict[name] }}<br>
+          {{ info_dict[name] }} (TOTAL={{ dictionary[name][1] }})<br>
           {% for title, authors, url, conf, year in dictionary[name][0] %}
             <br>
             <div>
@@ -107,36 +108,6 @@
         </div>
       {% endfor %}
     </div>
-
-
-    <!--
-    {% if kroption %}
-      <br> <h3 class="text-center">Authors with non-Korean Names</h3> <hr>
-      {% for nonkrname in non_korean_names %}
-        <button class="accordion">
-          <b> &emsp; &emsp;{{ nonkrname }} ({{ dictionary[nonkrname][1] }}, {{ info_dict[nonkrname] }}) </b>
-        </button>
-        <div class="panel">
-          {% for title, authors, url, conf, year in dictionary[nonkrname][0] %}
-            <br>
-            <div class="dropdown">
-              &emsp; &emsp;
-              <a href="{{ url }}" style="text-decoration:none;">
-                    <img alt src="../static/paper_image.png" class="icon">
-              </a>
-              &emsp;
-              <h5 style="display:inline;">
-                <i>{{ title }}</i>,
-                {% for author in authors %} {{ author }}, {% endfor %}
-                <b>{{ conf.upper() }}</b>, {{ year }}
-              </h5>
-            </div>
-          {% endfor %}
-          <br>
-        </div>
-      {% endfor %}
-    {% endif %}
-    -->
 
     <br>
     <hr>
@@ -160,5 +131,6 @@
         };
       }
      </script>
+
   </body>
 </html>

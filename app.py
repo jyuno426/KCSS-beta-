@@ -26,97 +26,11 @@ app = Flask(__name__)  # placeholder for current module
 def home():
     fromyear = 1960
     toyear = datetime.now().year
-    ai_list = [
-        ['MACHINE LEARNING', 'ML', [
-            'AISTATS', 'COLT', 'ICLR', 'ICML', 'NIPS', 'UAI'
-        ]],
-        ['DATA MINING & INFORMATION RETRIEVAL', 'DMIR', [
-            'CIKM', 'ICDM', 'KDD', 'SIGIR', 'WSDM', 'WWW'
-        ]],
-        ['COMPUTER VISION & GRAPHICS', 'CVG', [
-            'BMVC', 'CVPR', 'ECCV', 'ICCV', 'SIGGRAPH', 'WACV'
-        ]],
-        ['NATURAL LANGUAGE PROCESSING', 'NLP', [
-            'ACL', 'EMNLP', 'NAACL'
-        ]],
-        ['SPEECH & SIGNAL PROCESSING', 'SSP', [
-            'AES', 'ICASSP'
-        ]],
-        ['ROBOTICS', 'R', [
-            'ICRA', 'IROS', 'RSS'
-        ]]
-    ]
-    non_ai_list = [
-        ['THEORY', 'T', [
-            'FOCS', 'SIGMETRICS', 'SODA', 'STOC', 'ISIT'
-        ]],
-        ['COMPUTER ARCHITECTURE', 'CA', [
-            'ASPLOS', 'HPCA', 'ISCA', 'MICRO'
-        ]],
-        ['Networks', 'N', [
-            'SIGCOMM', 'NSDI', 'INFOCOM', 'MOBIHOC'
-        ]],
-        ['SECURITY', 'S', [
-            'CCS', 'IEEE-S&P', 'USENIX-SECURITY', 'NDSS'
-        ]],
-        ['DATA BASES', 'DB', [
-            'SIGMOD', 'VLDB', 'PODS'
-        ]],
-        ['OPERATING SYSTEMS', 'OS', [
-            'OSDI', 'SOSP', 'EUROSYS', 'FAST', 'USENIX-ATC'
-        ]]
-    ]
-
-    ai_table = []
-    ai_list.sort()
-    for area, id, conf_list in ai_list:
-        temp = []
-        for x in sorted(conf_list):
-            conf = x.replace('-', ' ')
-            for year in range(fromyear, toyear + 1):
-                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
-                    min_year = str(year)
-                    break
-            for year in range(toyear, fromyear - 1, -1):
-                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
-                    max_year = str(year)
-                    break
-            temp.append([x, '(' + min_year + '-' + max_year + ')'])
-        ai_table.append([area, id, temp])
-
-    non_ai_table = []
-    non_ai_list.sort()
-    for area, id, conf_list in non_ai_list:
-        print(area, id, conf_list)
-        temp = []
-        for x in sorted(conf_list):
-            conf = x.replace('-', ' ')
-            for year in range(fromyear, toyear + 1):
-                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
-                    min_year = str(year)
-                    break
-            for year in range(toyear, fromyear - 1, -1):
-                if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
-                    max_year = str(year)
-                    break
-            temp.append([x, '(' + min_year + '-' + max_year + ')'])
-        non_ai_table.append([area, id, temp])
-
-    new_ai_table = []
-    for i in range(len(ai_table)):
-        if i % 3 == 0:
-            new_ai_table.append([])
-        new_ai_table[i//3].append(ai_table[i])
-    new_non_ai_table = []
-    for i in range(len(non_ai_table)):
-        if i % 3 == 0:
-            new_non_ai_table.append([])
-        new_non_ai_table[i//3].append(non_ai_table[i])
+    area_table = json.load(open('./database/area_table.json'))
 
     return render_template('home.html',
                            years=range(fromyear, toyear+1),
-                           ai_table=new_ai_table,
-                           non_ai_table=new_non_ai_table)
+                           area_table=area_table)
 
 
 @app.route('/<name>')
@@ -124,9 +38,8 @@ def display(name):
     fromyear = int(name[0:4])
     toyear = int(name[4:8])
     option = int(name[8])
-    howmany = [10, 25, 50, 100, 200][int(name[9])]
     conf_list = sorted(
-        name[10:].replace('-', ' ').lower().split('_')[1:-1]
+        name[9:].replace('-', ' ').lower().split('_')[1:-1]
     )
     filters = ['every', 'every', 'first', 'last']
 
@@ -169,28 +82,30 @@ def display(name):
     
     if option == 1:
         kr = sorted([(-big_dictionary[x][1], x) for x in korean_names])
-        korean_names = [x[1] for x in kr]                
-        names_list = korean_names[:howmany]
+        korean_names = [x[1] for x in kr][:100]
+        kr = sorted([(x.split()[-1], x) for x in korean_names])
+        names_list = [x[1] for x in kr]
     else:
         combined_names = korean_names + non_korean_names
         temp = sorted([(-big_dictionary[x][1], x) for x in combined_names])
-        combined_names = [x[1] for x in temp]
-        names_list = combined_names[:howmany]
+        combined_names = [x[1] for x in temp][:100]
+        temp = sorted([(x.split()[-1], x) for x in combined_names])
+        names_list = [x[1] for x in temp]
     
-    # names_list available 
-    
-    
-    
+    # names_list available
+
+    print("Complete-mid")
     # for display, e.g. Jinwoo Shin (12, NIPS=3, ICML=3, AISTATS=4)
     info_dict = {}
-    for author in korean_names + non_korean_names:
+    part_dict = {}
+    for author in names_list:
         info_dict[author] = {}
+        part_dict[author] = big_dictionary[author]
         for paper in big_dictionary[author][0]:
             try:
                 info_dict[author][paper[3].upper()] += 1
             except KeyError:
                 info_dict[author][paper[3].upper()] = 1
-    
 
     for author in info_dict.keys():
         temp = ""
@@ -198,11 +113,10 @@ def display(name):
             temp += journal + "=" + str(info_dict[author][journal]) + ', '
         temp = temp[:-2]
         info_dict[author] = temp
-    
-    
+
     return render_template('display.html',
                            name=name,
-                           dictionary=big_dictionary,
+                           dictionary=part_dict,
                            names_list=names_list,
                            info_dict=info_dict,
                            kroption=option - 1)

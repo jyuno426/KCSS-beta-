@@ -27,10 +27,14 @@
         color:black;
       }
       .container{
+        max-width: 1050px;
         padding-top: 15px;
       }
       .col-sm-4 {
-        padding-bottom: 15px;
+        padding-bottom: 1px;
+      }
+      .col-sm-10 {
+        padding-bottom: 1px;
       }
       #footer{
         padding-top: 5px;
@@ -47,29 +51,31 @@
         document.getElementById("fromyear").options[2009 - 1960].selected = true;
         document.getElementById("toyear").options[2018 - 1960].selected = true;
         document.getElementById("filter").options[1].selected = true;
-        document.getElementById("filter2").options[2].selected = true;
 
-        var topbox = document.getElementById("all");
-        topbox.checked = true;
-        checkAll(topbox);
+        var ai = document.getElementById("AI");
+        ai.checked = true;
+        checkAll(ai);
+
+        var nai = document.getElementById("non-AI");
+        nai.checked = true;
+        checkAll(nai);
       };
 
       function submit(){
       	var selectedValue1 = document.getElementById("fromyear").value;
       	var selectedValue2 = document.getElementById("toyear").value;
         var selectedValue3 = document.getElementById("filter").selectedIndex;
-        var selectedValue4 = document.getElementById("filter2").selectedIndex;
 
-      	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
+      	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+"_";
 
-        var areas = ["ML", "DMIR", "CVG", "NLP", "SSP", "R", "T", "CA", "N", "S", "DB", "OS"];
+        var areas = ["AI", "ML", "DMIR", "CVG", "NLP", "R", "T", "CA", "N", "SC", "D", "OS"];
 
       	var i, j, select;
       	for (i = 0; i < areas.length; i++) {
       	  select = document.getElementsByName(areas[i])
       	  for (j = 0; j < select.length; j++) {
       	    if (select[j].checked === true) {
-      	      new_location += select[j].value;
+      	      new_location += select[j].id;
       	      new_location += "_";
       	    }
       	  }
@@ -79,69 +85,52 @@
       }
 
       function checkAll(topbox) {
-        var checkboxes = document.getElementsByTagName("input");
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].type == "checkbox") {
-            checkboxes[i].checked = topbox.checked;
-          }
-        }
+        var checkboxes = document.getElementsByClassName(topbox.id);
+        for (var i = 0; i < checkboxes.length; i++)
+          checkboxes[i].checked = topbox.checked;
       }
 
       function checkParts(partbox) {
         if (!partbox.checked) {
-          var topbox = document.getElementById("all");
+          var topbox = document.getElementById(partbox.className);
           topbox.checked = false;
         }
         var checkboxes = document.getElementsByName(partbox.id);
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].type == "checkbox") {
-            checkboxes[i].checked = partbox.checked;
-          }
-        }
-        allChecked();
+        for (var i = 0; i < checkboxes.length; i++)
+          checkboxes[i].checked = partbox.checked;
+        allChecked(partbox.className);
       }
 
       function check(box) {
         if (!box.checked) {
-          var topbox = document.getElementById("all");
+          var topbox = document.getElementById(box.className);
           var partbox = document.getElementById(box.name);
           topbox.checked = false;
           partbox.checked = false;
         }
         partsChecked(box.name);
-        allChecked();
+        allChecked(box.className);
       }
 
       function partsChecked(name) {
         var partbox = document.getElementById(name);
         var checkboxes = document.getElementsByName(name);
         var c = true;
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].type == "checkbox") {
-            if (!checkboxes[i].checked) {
+        for (var i = 0; i < checkboxes.length; i++)
+            if (!checkboxes[i].checked)
               c = false;
-            }
-          }
-        }
         partbox.checked = c;
       }
 
-      function allChecked() {
-        var topbox = document.getElementById("all");
-        var checkboxes = document.getElementsByTagName("input");
+      function allChecked(id) {
+        var topbox = document.getElementById(id);
+        var checkboxes = document.getElementsByClassName(id);
 
-        var a = 0, b = 0;
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].type == "checkbox") {
-            a = a + 1;
-            if (checkboxes[i].checked) {
-              b = b + 1;
-            }
-          }
-        }
-        if (a == b + 1) {
-          topbox.checked = true;
-        }
+        var a = 0;
+        for (var i = 0; i < checkboxes.length; i++)
+            if (!checkboxes[i].checked)
+              return;
+        topbox.checked = true;
       }
     </script>
   </head>
@@ -184,16 +173,6 @@
         </div>
         &nbsp;
         <div class="form-group">
-          <select class="form-control" id="filter2">
-            <option>&le; 10 authors</option>
-            <option>&le; 25 authors</option>
-            <option>&le; 50 authors</option>
-            <option>&le; 100 authors</option>
-            <option>&le; 200 authors</option>
-          </select>
-        </div>
-        &nbsp;
-        <div class="form-group">
           <button type="submit" onclick="submit()"
                   class="btn btn-primary form-control">Submit</button>
         </div>
@@ -201,56 +180,39 @@
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="all" onclick="checkAll(this)"><b>All Areas</b>
-            </label>
+      {% for id, table in area_table%}
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="{{ id }}"
+                       onclick="checkAll(this)"><b>All {{ id }} Areas</b>
+              </label>
+            </div>
           </div>
         </div>
-      </div>
-      {% for area_row in ai_table %}
-        <div class="row">
-          {% for area, id, conf_list in area_row %}
-            <div class="col-sm-4">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="{{ id }}" onclick="checkParts(this)"><b>{{ area }}</b>
-                </label>
-              </div>
-              {% for conf, year in conf_list %}
-                <div class="checkbox" style="padding-left: 20px;">
+        {% for row in table %}
+          <div class="row">
+            {% for area_title, area, conf_list in row %}
+              <div class="col-sm-4">
+                <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="{{ id }}" value="{{ conf }}" onclick="check(this)">
-                    {{ conf }} {{ year }}
+                    <input type="checkbox" class="{{ id }}" id="{{ area }}"
+                           onclick="checkParts(this)"><strong>{{ area_title }}</strong>
                   </label>
                 </div>
-              {% endfor %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-      {% for area_row in non_ai_table %}
-        <div class="row">
-          {% for area, id, conf_list in area_row %}
-            <div class="col-sm-4">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="{{ id }}" onclick="checkParts(this)"><b>{{ area }}</b>
-                </label>
+                {% for conf, year in conf_list %}
+                  <div class="checkbox" style="padding-left: 20px;">
+                    <label>
+                      <input type="checkbox" class="{{ id }}" name="{{ area }}" id="{{ conf }}"
+                             onclick="check(this)">{{ conf }} {{ year }}
+                    </label>
+                  </div>
+                {% endfor %}
               </div>
-              {% for conf, year in conf_list %}
-                <div class="checkbox" style="padding-left: 20px;">
-                  <label>
-                    <input type="checkbox" name="{{ id }}" value="{{ conf }}" onclick="check(this)">
-                    {{ conf }} {{ year }}
-                  </label>
-                </div>
-              {% endfor %}
-            </div>
-          {% endfor %}
-        </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
       {% endfor %}
     </div>
 

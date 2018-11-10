@@ -4,9 +4,6 @@ aistats 2009    https://dblp.org/db/journals/jmlr/jmlrp5.html
 aistats 2010    https://dblp.org/db/journals/jmlr/jmlrp9.html
 aistats 2011    https://dblp.org/db/journals/jmlr/jmlrp15.html
 aistats 2012    https://dblp.org/db/journals/jmlr/jmlrp22.html
-bmvc    1987    https://dblp.org/db/conf/bmvc/avc1987.html
-bmvc    1988    https://dblp.org/db/conf/bmvc/avc1988.html
-bmvc    1989    https://dblp.org/db/conf/bmvc/avc1989.html
 colt    2011    https://dblp.org/db/journals/jmlr/jmlrp19.html
 colt    2012    https://dblp.org/db/journals/jmlr/jmlrp23.html
 icml    1988    https://dblp.org/db/conf/icml/ml1988.html

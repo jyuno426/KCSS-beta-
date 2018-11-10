@@ -15,7 +15,7 @@ class Updater:
         self.author_dic = {}
 
     def initialize_database(self):
-        # open('./data/exceptions.txt', 'w').close()
+        open('./data/exceptions.txt', 'w').close()
         if os.path.isdir(self.save_path):
             shutil.rmtree(self.save_path)
         os.mkdir(self.save_path)
@@ -39,7 +39,6 @@ class Updater:
         for conf in get_file('./data/conferences.txt'):
             conf2dblp[conf] = conf
         if 'iclr' in conf2dblp: conf2dblp.pop('iclr')
-        if 'aes' in conf2dblp: conf2dblp['aes'] = 'semanticaudio'
         if 'ieee s&p' in conf2dblp: conf2dblp['ieee s&p'] = 'sp'
         if 'usenix security' in conf2dblp: conf2dblp['usenix security'] = 'uss'
         if 'usenix atc' in conf2dblp: conf2dblp['usenix atc'] = 'usenix'
@@ -96,7 +95,7 @@ class Updater:
 
         html = BeautifulSoup(requests.get(dblp_url + dblp + '/').text, 'lxml').text
 
-        # exceptions = set()
+        exceptions = []
         for year in range(fromyear, toyear + 1):
             print(year)
             if os.path.exists(path + conf + str(year) + '.json') or not (str(year) in html):
@@ -139,9 +138,15 @@ class Updater:
                         paper_list += temp
                     else:
                         break
+                    i += 1
                 self.save(conf, year, paper_list)
                 continue
-
+            exceptions.append(year)
+        with open('./data/exceptions.txt', 'a+') as f:
+            f.write(conf)
+            for year in exceptions:
+                f.write(' ' + str(year))
+            f.write('\n')
         self.save_author_url_dic()
 
     def update(self, fromyear, toyear):
@@ -198,7 +203,6 @@ class Updater:
         for author in kr_hard_coding:
             if not(author in self.author_url_dic):
                 continue
-            print(author)
             url = self.author_url_dic[author]
             html = BeautifulSoup(requests.get(url).text, 'lxml')
 
@@ -219,6 +223,6 @@ if __name__ == '__main__':
     # pass
     updater = Updater()
     # updater.update(1950, 2018)
-    updater.update_exceptions()
-    updater.update_iclr()
+    # updater.update_exceptions()
+    # updater.update_iclr()
     updater.correct_names()
