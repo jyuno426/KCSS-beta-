@@ -246,4 +246,4 @@ if __name__ == '__main__':
     # updater.update(1950, 2018)
     # updater.update_exceptions()
     # updater.update_iclr()
-    updater.correct_names()
+    # updater.correct_names()

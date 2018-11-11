@@ -35,7 +35,7 @@ class DB_Maker:
                 'AISTATS', 'COLT', 'ICLR', 'ICML', 'NIPS', 'UAI'
             ]],
             ['COMPUTER VISION & GRAPHICS', 'CVG', [
-                'CVPR', 'ECCV', 'ICCV', 'SIGGRAPH'
+                'CVPR', 'ECCV', 'ICCV', 'SIGGRAPH', 'BMVC'
             ]],
             ['DATA MINING & INFORMATION RETRIEVAL', 'DMIR', [
                 'CIKM', 'ICDM', 'KDD', 'SIGIR', 'WSDM', 'WWW'
@@ -102,12 +102,11 @@ class DB_Maker:
         return self.is_kr_last_name(last) and\
            self.is_kr_first_name(first)
 
-    def update_dic(self, author, dic, elem):
-        i = 0 if self.is_kr(author) else 1
-        if author in dic[i]:
-            dic[i][author].append(elem)
+    def update_dict(self, author, dict, elem):
+        if author in dict:
+            dict[author].append(elem)
         else:
-            dic[i][author] = [elem]
+            dict[author] = [elem]
 
     def make_area_table(self, fromyear, toyear):
         ai_table = []
@@ -165,16 +164,14 @@ class DB_Maker:
     def make_db(self, fromyear, toyear):
         conf_list = get_file('./data/conferences.txt')
         author_dic = json.load(open('./database/author_dic.json'))
+
         for conf in conf_list:
             for year in range(fromyear, toyear + 1):
                 path = './database/' + conf.upper() + '/' + conf + str(year)
                 if not os.path.isfile(path + '.json'):
                     continue
                 paper_list = json.load(open(path + '.json', 'r'))
-
-                every = [{}, {}]
-                first = [{}, {}]
-                last = [{}, {}]
+                dict = [{}, {}, {}, {}]
 
                 for _title, _author_list, url in paper_list:
                     author_list = [
@@ -183,16 +180,23 @@ class DB_Maker:
                     ]
                     elem = [_title.strip().strip('.'), author_list, url, conf, year]
                     for author in author_list:
-                        self.update_dic(author, every, elem)
-                    self.update_dic(author_list[0], first, elem)
-                    self.update_dic(author_list[-1], last, elem)
+                        self.update_dict(author, dict[0], elem)
+                        if self.is_kr(author):
+                            self.update_dict(author, dict[1], elem)
+                    self.update_dict(author_list[0], dict[2], elem)
+                    self.update_dict(author_list[-1], dict[3], elem)
 
-                json.dump(every[0], open(path + '_every_kr.json', 'w'))
-                json.dump(every[1], open(path + '_every_nonkr.json', 'w'))
-                json.dump(first[0], open(path + '_first_kr.json', 'w'))
-                json.dump(first[1], open(path + '_first_nonkr.json', 'w'))
-                json.dump(last[0], open(path + '_last_kr.json', 'w'))
-                json.dump(last[1], open(path + '_last_nonkr.json', 'w'))
+                for i, filter in enumerate(['all', 'korean', 'first', 'last']):
+                    json.dump(dict[i], open(path + '_' + filter + '.json', 'w'))
+                    coauthor_dict = {}
+                    for author, paper_list in dict[i].items():
+                        temp = set()
+                        for _, coauthor_list, __, ___, ____ in paper_list:
+                            for coauthor in coauthor_list:
+                                if coauthor != author and (i != 1 or self.is_kr(coauthor)):
+                                    temp.add(coauthor)
+                        coauthor_dict[author] = sorted(list(temp))
+                    json.dump(coauthor_dict, open(path + '_coauthor_' + filter + '.json', 'w'))
 
                 print(conf, year)
 
