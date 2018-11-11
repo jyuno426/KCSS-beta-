@@ -67,17 +67,23 @@
         border-radius:0 0 4px 4px;
         overflow: auto;
         opacity:0;
-        padding:0 8px;
+        padding:0 15px 0 15px;
         margin:0;
-        transition:0.3s;
+        transition:0.3s ease-in;
       }
       div.panel.show{
         opacity:1;
         max-height:500px;
-        padding:8px;
-        margin:2px 0 4px;
+        padding: 8px 15px 0 15px;
+        transition:0.6s ease;
       }
     </style>
+    <script>
+      function action(accordion) {
+        accordion.classList.toggle("active");
+        accordion.nextElementSibling.classList.toggle("show");
+      }
+    </script>
   </head>
 
   <body>
@@ -88,23 +94,24 @@
     <hr>
 
     <div class="container">
-      {% for name in names_list %}
-        <button class="accordion">
-          <b> {{ name }} </b>
+      {% for name in name_list %}
+        <button class="accordion" onclick="action(this)">
+          <b> {{ name }} ({{ dictionary[name][1] }})</b>
         </button>
         <div class="panel">
-          {{ info_dict[name] }} (TOTAL={{ dictionary[name][1] }})<br>
-          {% for title, authors, url, conf, year in dictionary[name][0] %}
-            <br>
-            <div>
-              <b>{{ conf.upper() }}</b>, {{ year }}{% for author in authors %}, {{ author }} {% endfor %}<br>
+          {{ info_dict[name] }}<br>
+          <p>
+            {% for title, authors, url, conf, year in dictionary[name][0] %}
+              <br>
+              <b>{{ conf.upper() }}</b>, {{ year }}{% for author in authors %}, {{ author }}{% endfor %}<br>
               <a href="{{ url }}" style="text-decoration:none;">
                 <img alt src="../static/paper_image.png" class="icon">
               </a>
               &nbsp;<i>{{ title }}</i>
-            </div>
-          {% endfor %}
-          <br>
+              <br>
+            {% endfor %}
+            <br>
+          </p>
         </div>
       {% endfor %}
     </div>
@@ -121,16 +128,6 @@
         If you could notify us Korean authors that do not appear in the search results, we will incorporate them.
       </address>
     </div>
-
-    <script>
-      var accordions = document.querySelectorAll("button.accordion");
-      for (var i = 0; i < accordions.length; i++) {
-        accordions[i].onclick = function() {
-          this.classList.toggle("active");
-          this.nextElementSibling.classList.toggle("show");
-        };
-      }
-     </script>
 
   </body>
 </html>

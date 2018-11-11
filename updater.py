@@ -198,10 +198,26 @@ class Updater:
         with open('./database/author_url_dic.json', 'r') as f:
             self.author_url_dic = json.load(f)
 
-        kr_hard_coding = sorted([smooth(x) for x in get_file('./data/kr_hard_coding.txt')])
+        with open('./database/author_dic.json', 'r') as f:
+            self.author_dic = json.load(f)
 
-        for author in kr_hard_coding:
-            if not(author in self.author_url_dic):
+        with open('./database/skip_author.json', 'r') as f:
+            skip = set(json.load(f))
+
+        from db_maker import DB_Maker
+        db_maker = DB_Maker()
+
+        candidates = []
+        for x in self.author_url_dic.keys():
+            if ('.' in x or '-' in x) and db_maker.is_kr(x):
+                candidates.append(x)
+
+        candidates += [smooth(x) for x in get_file('./data/kr_hard_coding.txt')]
+        candidates = sorted(list(set(candidates)))
+
+        for i, author in enumerate(candidates):
+            print(i, '/', len(candidates))
+            if not(author in self.author_url_dic) or author in skip:
                 continue
             url = self.author_url_dic[author]
             html = BeautifulSoup(requests.get(url).text, 'lxml')
@@ -211,12 +227,17 @@ class Updater:
 
             print(primary, secondary_list)
 
+            skip.add(primary)
             for name in secondary_list:
                 if name and name != name.lower():
+                    skip.add(name)
                     self.author_dic[name] = primary
 
-        with open('./database/author_dic.json', 'w') as f:
-            json.dump(self.author_dic, f)
+            with open('./database/author_dic.json', 'w') as f:
+                json.dump(self.author_dic, f)
+            with open('./database/skip_author.json', 'w') as f:
+                json.dump(sorted(list(skip)), f)
+
 
 
 if __name__ == '__main__':

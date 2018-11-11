@@ -51,6 +51,7 @@
         document.getElementById("fromyear").options[2009 - 1960].selected = true;
         document.getElementById("toyear").options[2018 - 1960].selected = true;
         document.getElementById("filter").options[1].selected = true;
+        document.getElementById("filter2").options[2].selected = true;
 
         var ai = document.getElementById("AI");
         ai.checked = true;
@@ -65,8 +66,9 @@
       	var selectedValue1 = document.getElementById("fromyear").value;
       	var selectedValue2 = document.getElementById("toyear").value;
         var selectedValue3 = document.getElementById("filter").selectedIndex;
+        var selectedValue4 = document.getElementById("filter2").selectedIndex;
 
-      	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+"_";
+      	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
 
         var areas = ["AI", "ML", "DMIR", "CVG", "NLP", "R", "T", "CA", "N", "SC", "D", "OS"];
 
@@ -152,7 +154,7 @@
             {% endfor %}
           </select>
         </div>
-        &nbsp;
+
         <div class="form-group">
           <label for="toyear">To</label>
           <select class="form-control" id="toyear">
@@ -161,7 +163,7 @@
             {% endfor %}
           </select>
         </div>
-        &nbsp;
+
         <div class="form-group">
           <label for="filter">Filter</label>
           <select class="form-control" id="filter">
@@ -169,6 +171,17 @@
             <option>only korean</option>
             <option>only first author</option>
             <option>only last author</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="filter2"></label>
+          <select class="form-control" id="filter2">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+            <option>200</option>
           </select>
         </div>
         &nbsp;
