@@ -1,1 +1,1 @@
-{"Sangwook P. Kim": [], "SangMin Shim": ["Soo-Mook Moon"], "Soo-Mook Moon": ["SangMin Shim"]}
+{"Sangwook P. Kim": {}, "SangMin Shim": {"Soo-Mook Moon": 1}, "Soo-Mook Moon": {"SangMin Shim": 1}}

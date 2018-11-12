@@ -1,1 +1,1 @@
-{"Yong Jae Lee": [], "Chang-Kyu Song": ["Bohyung Han"], "Bohyung Han": ["Chang-Kyu Song"], "Byung-soo Kim": ["Jae Young Park"], "Jae Young Park": ["Byung-soo Kim"]}
+{"Yong Jae Lee": {}, "Chang-Kyu Song": {"Bohyung Han": 1}, "Bohyung Han": {"Chang-Kyu Song": 1}, "Byung-soo Kim": {"Jae Young Park": 1}, "Jae Young Park": {"Byung-soo Kim": 1}}

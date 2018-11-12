@@ -1,1 +1,1 @@
-{"Ho Jin Woo": ["Won Suk Lee"], "Won Suk Lee": ["Ho Jin Woo"]}
+{"Ho Jin Woo": {"Won Suk Lee": 1}, "Won Suk Lee": {"Ho Jin Woo": 1}}

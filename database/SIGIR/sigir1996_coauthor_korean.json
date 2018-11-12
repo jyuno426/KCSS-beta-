@@ -1,1 +1,1 @@
-{"Kyung-Ah Han": ["Sung-Hyon Myaeng"], "Sung-Hyon Myaeng": ["Kyung-Ah Han"], "Joon Ho Lee": ["Jeong Soo Ahn"], "Jeong Soo Ahn": ["Joon Ho Lee"]}
+{"Kyung-Ah Han": {"Sung-Hyon Myaeng": 1}, "Sung-Hyon Myaeng": {"Kyung-Ah Han": 1}, "Joon Ho Lee": {"Jeong Soo Ahn": 1}, "Jeong Soo Ahn": {"Joon Ho Lee": 1}}

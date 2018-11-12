@@ -1,1 +1,1 @@
-{"Doo Hyun Lee": ["In-So Kweon"], "In-So Kweon": ["Doo Hyun Lee"], "Hee-Joong Kang": ["Seong-Whan Lee"], "Seong-Whan Lee": ["Hee-Joong Kang"], "Joon H. Han": ["Yoon K. Kim"], "Yoon K. Kim": ["Joon H. Han"], "Hyundoo Shin": [], "Sang-Hack Jung": []}
+{"Doo Hyun Lee": {"In-So Kweon": 1}, "In-So Kweon": {"Doo Hyun Lee": 1}, "Hee-Joong Kang": {"Seong-Whan Lee": 1}, "Seong-Whan Lee": {"Hee-Joong Kang": 1}, "Joon H. Han": {"Yoon K. Kim": 1}, "Yoon K. Kim": {"Joon H. Han": 1}, "Hyundoo Shin": {}, "Sang-Hack Jung": {}}

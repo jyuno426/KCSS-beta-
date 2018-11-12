@@ -1,1 +1,1 @@
-{"Hanme Kim": [], "Jongwoo Lim": [], "Minwoo Park": [], "Jiho Chang": ["Dae-Hwan Hwang", "Jae-chan Jeong"], "Jae-chan Jeong": ["Dae-Hwan Hwang", "Jiho Chang"], "Dae-Hwan Hwang": ["Jae-chan Jeong", "Jiho Chang"]}
+{"Hanme Kim": {}, "Jongwoo Lim": {}, "Minwoo Park": {}, "Jiho Chang": {"Jae-chan Jeong": 1, "Dae-Hwan Hwang": 1}, "Jae-chan Jeong": {"Jiho Chang": 1, "Dae-Hwan Hwang": 1}, "Dae-Hwan Hwang": {"Jiho Chang": 1, "Jae-chan Jeong": 1}}

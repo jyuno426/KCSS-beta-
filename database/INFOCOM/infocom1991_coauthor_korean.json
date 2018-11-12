@@ -1,1 +1,1 @@
-{"Chung-Ju Chang": [], "Young Man Kim": ["Kyungsook Y. Lee"], "Kyungsook Y. Lee": ["Young Man Kim"], "Sang Wu Kim": [], "Il-Hyung Cho": [], "Youngho Kim": ["Chongsang Kim"], "Chongsang Kim": ["Youngho Kim"], "Dong-Min Lim": ["Hwang-Soo Lee"], "Hwang-Soo Lee": ["Dong-Min Lim"]}
+{"Chung-Ju Chang": {}, "Young Man Kim": {"Kyungsook Y. Lee": 1}, "Kyungsook Y. Lee": {"Young Man Kim": 1}, "Sang Wu Kim": {}, "Il-Hyung Cho": {}, "Youngho Kim": {"Chongsang Kim": 1}, "Chongsang Kim": {"Youngho Kim": 1}, "Dong-Min Lim": {"Hwang-Soo Lee": 1}, "Hwang-Soo Lee": {"Dong-Min Lim": 1}}

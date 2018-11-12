@@ -1,1 +1,1 @@
-{"Sehoon Ha": ["Joohyung Kim"], "Joohyung Kim": ["Sehoon Ha"], "Hyun Soo Park": [], "Jae Sung Park": ["Chonhyon Park"], "Chonhyon Park": ["Jae Sung Park"], "Chanyeol Yoo": []}
+{"Sehoon Ha": {"Joohyung Kim": 1}, "Joohyung Kim": {"Sehoon Ha": 1}, "Hyun Soo Park": {}, "Jae Sung Park": {"Chonhyon Park": 1}, "Chonhyon Park": {"Jae Sung Park": 1}, "Chanyeol Yoo": {}}

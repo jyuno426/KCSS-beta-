@@ -1,1 +1,1 @@
-{"Young-Sook Hwang": [], "Hyo-Jung O. Lee": ["Hyeon-Jin Kim", "Myung-Gil Jang"], "Hyeon-Jin Kim": ["Hyo-Jung O. Lee", "Myung-Gil Jang"], "Myung-Gil Jang": ["Hyeon-Jin Kim", "Hyo-Jung O. Lee"], "Seok Bae Jang": []}
+{"Young-Sook Hwang": {}, "Hyo-Jung O. Lee": {"Hyeon-Jin Kim": 1, "Myung-Gil Jang": 1}, "Hyeon-Jin Kim": {"Hyo-Jung O. Lee": 1, "Myung-Gil Jang": 1}, "Myung-Gil Jang": {"Hyo-Jung O. Lee": 1, "Hyeon-Jin Kim": 1}, "Seok Bae Jang": {}}

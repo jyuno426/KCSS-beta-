@@ -1,1 +1,1 @@
-{"Chulyun Kim": ["Kyuseok Shim"], "Kyuseok Shim": ["Chulyun Kim", "Jungchul Woo"], "Jungchul Woo": ["Kyuseok Shim"], "Sang Kyun Cha": ["Changbin Song"], "Changbin Song": ["Sang Kyun Cha"], "Eugene Inseok Chong": [], "Hye-Young Paik": []}
+{"Chulyun Kim": {"Kyuseok Shim": 1}, "Kyuseok Shim": {"Chulyun Kim": 1, "Jungchul Woo": 1}, "Jungchul Woo": {"Kyuseok Shim": 1}, "Sang Kyun Cha": {"Changbin Song": 1}, "Changbin Song": {"Sang Kyun Cha": 1}, "Eugene Inseok Chong": {}, "Hye-Young Paik": {}}

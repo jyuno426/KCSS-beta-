@@ -1,1 +1,1 @@
-{"Hyun-Chul Kim": [], "Jinwoo Shin": [], "Kyung-Ah Sohn": ["Seyoung Kim"], "Seyoung Kim": ["Kyung-Ah Sohn"], "Honglak Lee": ["Kihyuk Sohn"], "Jingu Kim": [], "Eunho Yang": [], "Chun-Nam Yu": [], "Hyokun Yun": [], "Kihyuk Sohn": ["Honglak Lee"]}
+{"Hyun-Chul Kim": {}, "Jinwoo Shin": {}, "Kyung-Ah Sohn": {"Seyoung Kim": 1}, "Seyoung Kim": {"Kyung-Ah Sohn": 1}, "Honglak Lee": {"Kihyuk Sohn": 1}, "Jingu Kim": {}, "Eunho Yang": {}, "Chun-Nam Yu": {}, "Hyokun Yun": {}, "Kihyuk Sohn": {"Honglak Lee": 1}}

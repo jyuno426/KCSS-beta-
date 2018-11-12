@@ -1,1 +1,1 @@
-{"Jae-Woo Chang": ["Joon Ho Lee", "Yoon-Joon Lee"], "Joon Ho Lee": ["Jae-Woo Chang", "Yoon-Joon Lee"], "Yoon-Joon Lee": ["Jae-Woo Chang", "Joon Ho Lee"]}
+{"Jae-Woo Chang": {"Joon Ho Lee": 1, "Yoon-Joon Lee": 1}, "Joon Ho Lee": {"Jae-Woo Chang": 1, "Yoon-Joon Lee": 1}, "Yoon-Joon Lee": {"Jae-Woo Chang": 1, "Joon Ho Lee": 1}}

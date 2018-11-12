@@ -1,1 +1,1 @@
-{"Doe Hyun Yoon": [], "Sangwon Seo": [], "Sunpyo Hong": ["Hyesoon Kim"], "Hyesoon Kim": ["Sunpyo Hong"], "John Kim": []}
+{"Doe Hyun Yoon": {}, "Sangwon Seo": {}, "Sunpyo Hong": {"Hyesoon Kim": 1}, "Hyesoon Kim": {"Sunpyo Hong": 1}, "John Kim": {}}

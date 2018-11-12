@@ -1,1 +1,1 @@
-{"Jingu Kim": ["Haesun Park"], "Haesun Park": ["Jingu Kim"], "Yung-Kyun Noh": ["Byoung-Tak Zhang"], "Byoung-Tak Zhang": ["Yung-Kyun Noh"], "Ji Won Yoon": [], "Donghui Wang": []}
+{"Jingu Kim": {"Haesun Park": 1}, "Haesun Park": {"Jingu Kim": 1}, "Yung-Kyun Noh": {"Byoung-Tak Zhang": 1}, "Byoung-Tak Zhang": {"Yung-Kyun Noh": 1}, "Ji Won Yoon": {}, "Donghui Wang": {}}

@@ -1,1 +1,1 @@
-{"Oh-Woog Kwon": ["Key-Sun Choi", "Myoung-Cheol Kim"], "Myoung-Cheol Kim": ["Key-Sun Choi", "Oh-Woog Kwon"], "Key-Sun Choi": ["Myoung-Cheol Kim", "Oh-Woog Kwon"], "Suk-Chung Yoon": ["Il-Yeol Song"], "Il-Yeol Song": ["Suk-Chung Yoon"]}
+{"Oh-Woog Kwon": {"Myoung-Cheol Kim": 1, "Key-Sun Choi": 1}, "Myoung-Cheol Kim": {"Oh-Woog Kwon": 1, "Key-Sun Choi": 1}, "Key-Sun Choi": {"Oh-Woog Kwon": 1, "Myoung-Cheol Kim": 1}, "Suk-Chung Yoon": {"Il-Yeol Song": 1}, "Il-Yeol Song": {"Suk-Chung Yoon": 1}}

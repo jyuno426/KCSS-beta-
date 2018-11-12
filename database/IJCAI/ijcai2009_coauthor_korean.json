@@ -1,1 +1,1 @@
-{"Joohyung Lee": ["Tae-Won Kim"], "Tae-Won Kim": ["Joohyung Lee"], "Jaedeug Choi": ["Kee-Eung Kim"], "Kee-Eung Kim": ["Jaedeug Choi"], "Honglak Lee": [], "Wonhong Nam": ["Dongwon Lee"], "Dongwon Lee": ["Wonhong Nam"], "Sung Wook Yoon": [], "Young-Woo Seo": [], "Jaesik Choi": []}
+{"Joohyung Lee": {"Tae-Won Kim": 1}, "Tae-Won Kim": {"Joohyung Lee": 1}, "Jaedeug Choi": {"Kee-Eung Kim": 1}, "Kee-Eung Kim": {"Jaedeug Choi": 1}, "Honglak Lee": {}, "Wonhong Nam": {"Dongwon Lee": 1}, "Dongwon Lee": {"Wonhong Nam": 1}, "Sung Wook Yoon": {}, "Young-Woo Seo": {}, "Jaesik Choi": {}}

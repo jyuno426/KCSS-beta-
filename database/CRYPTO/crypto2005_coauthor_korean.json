@@ -1,1 +1,1 @@
-{"Jung Yeon Hwang": ["Dong Hoon Lee", "Jongin Lim"], "Dong Hoon Lee": ["Jongin Lim", "Jung Yeon Hwang"], "Jongin Lim": ["Dong Hoon Lee", "Jung Yeon Hwang"]}
+{"Jung Yeon Hwang": {"Dong Hoon Lee": 1, "Jongin Lim": 1}, "Dong Hoon Lee": {"Jung Yeon Hwang": 1, "Jongin Lim": 1}, "Jongin Lim": {"Jung Yeon Hwang": 1, "Dong Hoon Lee": 1}}

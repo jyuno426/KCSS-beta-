@@ -1,1 +1,1 @@
-{"Ju-Seog Jang": ["Sang-Yung Shin", "Soo-Young Lee"], "Soo-Young Lee": ["Ju-Seog Jang", "Sang-Yung Shin"], "Sang-Yung Shin": ["Ju-Seog Jang", "Soo-Young Lee"], "Seho Oh": [], "Yee-Chun Lee": []}
+{"Ju-Seog Jang": {"Soo-Young Lee": 1, "Sang-Yung Shin": 1}, "Soo-Young Lee": {"Ju-Seog Jang": 1, "Sang-Yung Shin": 1}, "Sang-Yung Shin": {"Ju-Seog Jang": 1, "Soo-Young Lee": 1}, "Seho Oh": {}, "Yee-Chun Lee": {}}

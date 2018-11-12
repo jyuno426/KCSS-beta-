@@ -1,1 +1,1 @@
-{"Myeongjae Jeon": ["Saehoon Kim", "Seung-won Hwang"], "Saehoon Kim": ["Myeongjae Jeon", "Seung-won Hwang"], "Seung-won Hwang": ["Myeongjae Jeon", "Saehoon Kim"], "Youngho Kim": [], "Jae Hyun Park": [], "Kyung-Soon Lee": []}
+{"Myeongjae Jeon": {"Saehoon Kim": 1, "Seung-won Hwang": 1}, "Saehoon Kim": {"Myeongjae Jeon": 1, "Seung-won Hwang": 1}, "Seung-won Hwang": {"Myeongjae Jeon": 1, "Saehoon Kim": 1}, "Youngho Kim": {}, "Jae Hyun Park": {}, "Kyung-Soon Lee": {}}

@@ -1,1 +1,1 @@
-{"Kang Wook Lee": ["Ki Tae Park"], "Ki Tae Park": ["Kang Wook Lee"], "Un-Min Bae": ["Soo-Young Lee"], "Soo-Young Lee": ["Un-Min Bae"], "Te-Won Lee": []}
+{"Kang Wook Lee": {"Ki Tae Park": 1}, "Ki Tae Park": {"Kang Wook Lee": 1}, "Un-Min Bae": {"Soo-Young Lee": 1}, "Soo-Young Lee": {"Un-Min Bae": 1}, "Te-Won Lee": {}}

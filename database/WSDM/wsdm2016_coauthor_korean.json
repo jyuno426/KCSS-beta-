@@ -1,1 +1,1 @@
-{"Chanhyun Kang": ["Noseong Park"], "Noseong Park": ["Chanhyun Kang"]}
+{"Chanhyun Kang": {"Noseong Park": 1}, "Noseong Park": {"Chanhyun Kang": 1}}

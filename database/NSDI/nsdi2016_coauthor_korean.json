@@ -1,1 +1,1 @@
-{"Changhoon Kim": [], "Byungkwon Choi": ["Dongsu Han", "KyoungSoo Park"], "KyoungSoo Park": ["Byungkwon Choi", "Dongsu Han"], "Dongsu Han": ["Byungkwon Choi", "KyoungSoo Park"], "Youngjin Kwon": []}
+{"Changhoon Kim": {}, "Byungkwon Choi": {"KyoungSoo Park": 1, "Dongsu Han": 1}, "KyoungSoo Park": {"Byungkwon Choi": 1, "Dongsu Han": 1}, "Dongsu Han": {"Byungkwon Choi": 1, "KyoungSoo Park": 1}, "Youngjin Kwon": {}}

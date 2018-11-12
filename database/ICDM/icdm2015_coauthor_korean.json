@@ -1,1 +1,1 @@
-{"Jinyoung Yeo": ["Seung-won Hwang"], "Seung-won Hwang": ["Jinyoung Yeo"], "Jaekoo Lee": ["Sungroh Yoon"], "Sungroh Yoon": ["Jaekoo Lee"]}
+{"Jinyoung Yeo": {"Seung-won Hwang": 1}, "Seung-won Hwang": {"Jinyoung Yeo": 1}, "Jaekoo Lee": {"Sungroh Yoon": 1}, "Sungroh Yoon": {"Jaekoo Lee": 1}}

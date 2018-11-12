@@ -1,1 +1,1 @@
-{"Hyoseung Kim": ["Hojung Cha"], "Hojung Cha": ["Hyoseung Kim"], "KyoungSoo Park": ["Kang-Won Lee"], "Kang-Won Lee": ["KyoungSoo Park"]}
+{"Hyoseung Kim": {"Hojung Cha": 1}, "Hojung Cha": {"Hyoseung Kim": 1}, "KyoungSoo Park": {"Kang-Won Lee": 1}, "Kang-Won Lee": {"KyoungSoo Park": 1}}

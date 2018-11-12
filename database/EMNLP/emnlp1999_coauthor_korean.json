@@ -1,1 +1,1 @@
-{"Seonho Kim": ["Jung-Ho Ahn", "Mansuk Song"], "Mansuk Song": ["Jung-Ho Ahn", "Juntae Yoon", "Key-Sun Choi", "Seonho Kim"], "Jung-Ho Ahn": ["Mansuk Song", "Seonho Kim"], "Juntae Yoon": ["Key-Sun Choi", "Mansuk Song"], "Key-Sun Choi": ["Juntae Yoon", "Mansuk Song"]}
+{"Seonho Kim": {"Mansuk Song": 1, "Jung-Ho Ahn": 1}, "Mansuk Song": {"Seonho Kim": 1, "Jung-Ho Ahn": 1, "Juntae Yoon": 1, "Key-Sun Choi": 1}, "Jung-Ho Ahn": {"Seonho Kim": 1, "Mansuk Song": 1}, "Juntae Yoon": {"Key-Sun Choi": 1, "Mansuk Song": 1}, "Key-Sun Choi": {"Juntae Yoon": 1, "Mansuk Song": 1}}

@@ -1,1 +1,1 @@
-{"Jongman Kim": ["Dongkook Park"], "Dongkook Park": ["Jongman Kim"], "John Kim": [], "Jong-Deok Choi": ["Kyung Dong Ryu"], "Kyung Dong Ryu": ["Jong-Deok Choi"], "JaeWoong Chung": [], "Hyunseok Lee": [], "Seungryul Choi": []}
+{"Jongman Kim": {"Dongkook Park": 1}, "Dongkook Park": {"Jongman Kim": 1}, "John Kim": {}, "Jong-Deok Choi": {"Kyung Dong Ryu": 1}, "Kyung Dong Ryu": {"Jong-Deok Choi": 1}, "JaeWoong Chung": {}, "Hyunseok Lee": {}, "Seungryul Choi": {}}

@@ -1,1 +1,1 @@
-{"Doo Soon Kim": [], "Kye-Hyeon Kim": ["Seungjin Choi"], "Seungjin Choi": ["Kye-Hyeon Kim"], "Suin Kim": ["Alice H. Oh"], "Alice H. Oh": ["Suin Kim"], "Sanghack Lee": [], "Jeon-Hyung Kang": []}
+{"Doo Soon Kim": {}, "Kye-Hyeon Kim": {"Seungjin Choi": 1}, "Seungjin Choi": {"Kye-Hyeon Kim": 1}, "Suin Kim": {"Alice H. Oh": 1}, "Alice H. Oh": {"Suin Kim": 1}, "Sanghack Lee": {}, "Jeon-Hyung Kang": {}}

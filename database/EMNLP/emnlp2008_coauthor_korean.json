@@ -1,1 +1,1 @@
-{"Jung-Tae Lee": ["Sang-Bum Kim", "Young-In Song"], "Sang-Bum Kim": ["Jung-Tae Lee", "Young-In Song"], "Young-In Song": ["Jung-Tae Lee", "Sang-Bum Kim"], "Yejin Choi": []}
+{"Jung-Tae Lee": {"Sang-Bum Kim": 1, "Young-In Song": 1}, "Sang-Bum Kim": {"Jung-Tae Lee": 1, "Young-In Song": 1}, "Young-In Song": {"Jung-Tae Lee": 1, "Sang-Bum Kim": 1}, "Yejin Choi": {}}

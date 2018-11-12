@@ -1,1 +1,1 @@
-{"Kil-Chan Ha": ["Choonsik Park", "Jae Heon Kim"], "Jae Heon Kim": ["Choonsik Park", "Kil-Chan Ha"], "Choonsik Park": ["Jae Heon Kim", "Kil-Chan Ha"], "Eonkyung Lee": ["Sangjin Lee"], "Sangjin Lee": ["Eonkyung Lee"]}
+{"Kil-Chan Ha": {"Jae Heon Kim": 1, "Choonsik Park": 1}, "Jae Heon Kim": {"Kil-Chan Ha": 1, "Choonsik Park": 1}, "Choonsik Park": {"Kil-Chan Ha": 1, "Jae Heon Kim": 1}, "Eonkyung Lee": {"Sangjin Lee": 1}, "Sangjin Lee": {"Eonkyung Lee": 1}}

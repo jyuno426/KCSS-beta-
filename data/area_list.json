@@ -1,0 +1,24 @@
+[
+  ["Machine Learning", ["AISTATS", "COLT", "ICLR", "ICML", "NIPS", "UAI"]],
+  ["Computer Vision & Graphics", ["CVPR", "ECCV", "ICCV", "SIGGRAPH", "BMVC"]],
+  ["Data Mining & Information Retrieval", ["CIKM", "ICDM", "KDD", "SIGIR", "WSDM", "WWW"]],
+  ["Artificial Intelligence", ["AAAI", "IJCAI"]],
+  ["Natural Language Processing", ["ACL", "EMNLP", "NAACL"]],
+  ["Robotics", ["ICRA", "IROS", "RSS"]],
+  ["Theory", ["FOCS", "SIGMETRICS", "SODA", "STOC"]],
+  ["Computer Architecture", ["ASPLOS", "HPCA", "ISCA", "MICRO"]],
+  ["Networks", ["SIGCOMM", "NSDI", "INFOCOM", "MOBIHOC", "CONEXT"]],
+  ["Security & Cryptography", ["CCS", "IEEE S&P", "USENIX Security", "NDSS", "CRYPTO", "EuroCrypt"]],
+  ["Databases", ["SIGMOD", "VLDB", "PODS", "ICDE"]],
+  ["Operating Systems", ["OSDI", "SOSP", "EuroSys", "FAST", "USENIX ATC"]],
+
+  ["Design Automation", ["DAC", "ICCAD"]],
+  ["Embedded & Real-Time Systems", ["EMSOFT", "RTAS", "RTSS"]],
+  ["High-Performance Computing", ["HPDC", "ICS", "SC"]],
+  ["Mobile Computing", ["MobiCom", "MobiSys", "SenSys"]],
+  ["Programming Languages", ["PLDI", "POPL", "ICFP", "OOPSLA"]],
+  ["Software Engineering", ["FSE", "ICSE", "ASE", "ISSTA"]],
+  ["Computational Economics", ["EC", "WINE"]],
+  ["Human-Computer Interaction", ["CHI", "UbiComp", "Pervasive", "UIST"]],
+  ["Computational Biology", ["ISMB", "RECOMB"]]
+]

@@ -6,7 +6,7 @@
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title> AI Korean Search </title>
+    <title> CS Korean Search </title>
 
     <style type="text/css">
       body {
@@ -53,32 +53,27 @@
         document.getElementById("filter").options[1].selected = true;
         document.getElementById("filter2").options[2].selected = true;
 
-        var ai = document.getElementById("AI");
-        ai.checked = true;
-        checkAll(ai);
-
-        var nai = document.getElementById("non-AI (but related)");
-        nai.checked = true;
-        checkAll(nai);
+        document.getElementById("all").checked = true;
+        checkAll();
       };
 
       function submit(){
-      	var selectedValue1 = document.getElementById("fromyear").value;
-      	var selectedValue2 = document.getElementById("toyear").value;
-        var selectedValue3 = document.getElementById("filter").selectedIndex;
-        var selectedValue4 = document.getElementById("filter2").selectedIndex;
+      	var s1 = document.getElementById("fromyear").value;
+      	var s2 = document.getElementById("toyear").value;
+        var s3 = document.getElementById("filter").selectedIndex;
+        var s4 = document.getElementById("filter2").selectedIndex;
 
-      	var new_location = "/"+selectedValue1+selectedValue2+selectedValue3+selectedValue4+"_";
+      	var new_location = "/"+s1+s2+s3+s4+"_";
 
-        var areas = ["AI", "ML", "DMIR", "CVG", "NLP", "R", "T", "CA", "N", "SC", "D", "OS"];
+        var area_table = {{ area_table|safe }};
 
-      	var i, j, select;
-      	for (i = 0; i < areas.length; i++) {
-      	  select = document.getElementsByName(areas[i])
-      	  for (j = 0; j < select.length; j++) {
-      	    if (select[j].checked === true) {
-      	      new_location += select[j].id;
-      	      new_location += "_";
+      	var i, j, k, checkboxes;
+      	for (i = 0; i < area_table.length; i++) {
+      	  for (j = 0; j < area_table[i].length; j++) {
+      	    checkboxes = document.getElementsByName(area_table[i][j][0]);
+      	    for (k = 0; k < checkboxes.length; k++) {
+      	      if (checkboxes[k].checked)
+      	        new_location += (checkboxes[k].id.replace(" ", "-") + "_");
       	    }
       	  }
       	}
@@ -86,52 +81,50 @@
       	window.location = new_location;
       }
 
-      function checkAll(topbox) {
-        var checkboxes = document.getElementsByClassName(topbox.id);
+      function checkAll() {
+        var topbox = document.getElementById("all");
+        var checkboxes = document.getElementsByTagName("input");
         for (var i = 0; i < checkboxes.length; i++)
           checkboxes[i].checked = topbox.checked;
       }
 
       function checkParts(partbox) {
         if (!partbox.checked) {
-          var topbox = document.getElementById(partbox.className);
+          var topbox = document.getElementById("all");
           topbox.checked = false;
         }
         var checkboxes = document.getElementsByName(partbox.id);
         for (var i = 0; i < checkboxes.length; i++)
           checkboxes[i].checked = partbox.checked;
-        allChecked(partbox.className);
+        allChecked();
       }
 
       function check(box) {
         if (!box.checked) {
-          var topbox = document.getElementById(box.className);
+          var topbox = document.getElementById("all");
           var partbox = document.getElementById(box.name);
           topbox.checked = false;
           partbox.checked = false;
         }
         partsChecked(box.name);
-        allChecked(box.className);
+        allChecked();
       }
 
       function partsChecked(name) {
         var partbox = document.getElementById(name);
         var checkboxes = document.getElementsByName(name);
-        var c = true;
-        for (var i = 0; i < checkboxes.length; i++)
-            if (!checkboxes[i].checked)
-              c = false;
-        partbox.checked = c;
-      }
-
-      function allChecked(id) {
-        var topbox = document.getElementById(id);
-        var checkboxes = document.getElementsByClassName(id);
-
-        var a = 0;
         for (var i = 0; i < checkboxes.length; i++)
             if (!checkboxes[i].checked)
               return;
+        partbox.checked = true;
+      }
+
+      function allChecked() {
+        var topbox = document.getElementById("all");
+        var checkboxes = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxes.length; i++)
+          if (!checkboxes[i].checked)
+            return;
         topbox.checked = true;
       }
     </script>
@@ -140,7 +133,7 @@
   <body>
     <br>
     <div class="container" id="header" align="center">
-      <h1> AIKS: AI Korean Search </h1>
+      <h1> CSKS: CS Korean Search </h1>
     </div>
     <hr>
 
@@ -193,45 +186,40 @@
     </div>
 
     <div class="container">
-      {% for id, table in area_table%}
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" id="{{ id }}"
-                       onclick="checkAll(this)"><b>All {{ id }} Areas</b>
-              </label>
-            </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="all" onclick="checkAll()"><b>All Areas</b>
+            </label>
           </div>
         </div>
-        {% for row in table %}
-          <div class="row">
-            {% for area_title, area, conf_list in row %}
-              <div class="col-sm-4">
-                <div class="checkbox">
+      </div>
+      {% for row in area_table %}
+        <div class="row">
+          {% for title, conf_list in row %}
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="{{ title }}" onclick="checkParts(this)"><b>{{ title }}</b>
+                </label>
+              </div>
+              {% for conf, year in conf_list %}
+                <div class="checkbox" style="padding-left: 20px;">
                   <label>
-                    <input type="checkbox" class="{{ id }}" id="{{ area }}"
-                           onclick="checkParts(this)"><strong>{{ area_title }}</strong>
+                    <input type="checkbox" name="{{ title }}" id="{{ conf }}" onclick="check(this)">{{ conf }} {{ year }}
                   </label>
                 </div>
-                {% for conf, year in conf_list %}
-                  <div class="checkbox" style="padding-left: 20px;">
-                    <label>
-                      <input type="checkbox" class="{{ id }}" name="{{ area }}" id="{{ conf }}"
-                             onclick="check(this)">{{ conf }} {{ year }}
-                    </label>
-                  </div>
-                {% endfor %}
-              </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
       {% endfor %}
     </div>
 
     <hr>
     <div class="container" style="text-align: center" id="footer">
-      <address>AIKS was made by
+      <address>CSKS was created by
         <a href="mailto:jyuno426@kaist.ac.kr"> Junho Han</a>,
         <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a> and
         <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a> at

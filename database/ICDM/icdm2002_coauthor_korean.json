@@ -1,1 +1,1 @@
-{"Kiseok Choi": [], "Sung Young Jung": ["Jeong-Hee Hong", "Taek-Soo Kim"], "Jeong-Hee Hong": ["Sung Young Jung", "Taek-Soo Kim"], "Taek-Soo Kim": ["Jeong-Hee Hong", "Sung Young Jung"], "Hwanjo Yu": [], "Se June Hong": [], "Chi-Hoon Lee": []}
+{"Kiseok Choi": {}, "Sung Young Jung": {"Jeong-Hee Hong": 1, "Taek-Soo Kim": 1}, "Jeong-Hee Hong": {"Sung Young Jung": 1, "Taek-Soo Kim": 1}, "Taek-Soo Kim": {"Sung Young Jung": 1, "Jeong-Hee Hong": 1}, "Hwanjo Yu": {}, "Se June Hong": {}, "Chi-Hoon Lee": {}}

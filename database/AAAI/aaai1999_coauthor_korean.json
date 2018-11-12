@@ -1,1 +1,1 @@
-{"Hak-Jin Kim": [], "Seok Won Lee": [], "GeunSik Jo": ["Hwi-Yoon Lee", "Kang-Hee Lee"], "Kang-Hee Lee": ["GeunSik Jo", "Hwi-Yoon Lee"], "Hwi-Yoon Lee": ["GeunSik Jo", "Kang-Hee Lee"], "Kwun Han": [], "Joonoo Kim": [], "Sanguk Noh": []}
+{"Hak-Jin Kim": {}, "Seok Won Lee": {}, "GeunSik Jo": {"Kang-Hee Lee": 1, "Hwi-Yoon Lee": 1}, "Kang-Hee Lee": {"GeunSik Jo": 1, "Hwi-Yoon Lee": 1}, "Hwi-Yoon Lee": {"GeunSik Jo": 1, "Kang-Hee Lee": 1}, "Kwun Han": {}, "Joonoo Kim": {}, "Sanguk Noh": {}}

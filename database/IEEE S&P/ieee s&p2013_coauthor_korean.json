@@ -1,1 +1,1 @@
-{"Min Suk Kang": ["Soo Bum Lee"], "Soo Bum Lee": ["Min Suk Kang"], "Yongdae Kim": []}
+{"Min Suk Kang": {"Soo Bum Lee": 1}, "Soo Bum Lee": {"Min Suk Kang": 1}, "Yongdae Kim": {}}

@@ -1,1 +1,1 @@
-{"Sang Kyun Cha": ["Keunjoo Kwon"], "Keunjoo Kwon": ["Sang Kyun Cha"], "Bongki Moon": [], "Seok-Ju Chun": ["Chin-Wan Chung", "Seok-Lyong Lee"], "Chin-Wan Chung": ["Seok-Ju Chun", "Seok-Lyong Lee"], "Seok-Lyong Lee": ["Chin-Wan Chung", "Seok-Ju Chun"], "Kyuseok Shim": []}
+{"Sang Kyun Cha": {"Keunjoo Kwon": 1}, "Keunjoo Kwon": {"Sang Kyun Cha": 1}, "Bongki Moon": {}, "Seok-Ju Chun": {"Chin-Wan Chung": 1, "Seok-Lyong Lee": 1}, "Chin-Wan Chung": {"Seok-Ju Chun": 1, "Seok-Lyong Lee": 1}, "Seok-Lyong Lee": {"Seok-Ju Chun": 1, "Chin-Wan Chung": 1}, "Kyuseok Shim": {}}

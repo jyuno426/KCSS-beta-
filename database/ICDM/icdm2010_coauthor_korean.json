@@ -1,1 +1,1 @@
-{"Heeyoung Kim": [], "Sunho Park": ["Seungjin Choi"], "Seungjin Choi": ["Sunho Park"], "Jaewon Yang": [], "Gunhee Kim": [], "Eui-Hong Han": [], "U. Kang": [], "Sangkyum Kim": [], "Hwanjo Yu": ["Sungchul Kim"], "Sungchul Kim": ["Hwanjo Yu"]}
+{"Heeyoung Kim": {}, "Sunho Park": {"Seungjin Choi": 1}, "Seungjin Choi": {"Sunho Park": 1}, "Jaewon Yang": {}, "Gunhee Kim": {}, "Eui-Hong Han": {}, "U. Kang": {}, "Sangkyum Kim": {}, "Hwanjo Yu": {"Sungchul Kim": 1}, "Sungchul Kim": {"Hwanjo Yu": 1}}

@@ -1,1 +1,1 @@
-{"Joon Ho Lee": ["Myoung-Ho Kim", "Won Yong Kim", "Yoon-Joon Lee"], "Won Yong Kim": ["Joon Ho Lee", "Myoung-Ho Kim", "Yoon-Joon Lee"], "Myoung-Ho Kim": ["Joon Ho Lee", "Won Yong Kim", "Yoon-Joon Lee"], "Yoon-Joon Lee": ["Joon Ho Lee", "Myoung-Ho Kim", "Won Yong Kim"]}
+{"Joon Ho Lee": {"Won Yong Kim": 1, "Myoung-Ho Kim": 1, "Yoon-Joon Lee": 1}, "Won Yong Kim": {"Joon Ho Lee": 1, "Myoung-Ho Kim": 1, "Yoon-Joon Lee": 1}, "Myoung-Ho Kim": {"Joon Ho Lee": 1, "Won Yong Kim": 1, "Yoon-Joon Lee": 1}, "Yoon-Joon Lee": {"Joon Ho Lee": 1, "Won Yong Kim": 1, "Myoung-Ho Kim": 1}}

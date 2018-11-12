@@ -38,10 +38,21 @@ class Updater:
         conf2dblp = {}
         for conf in get_file('./data/conferences.txt'):
             conf2dblp[conf] = conf
+
         if 'iclr' in conf2dblp: conf2dblp.pop('iclr')
-        if 'ieee s&p' in conf2dblp: conf2dblp['ieee s&p'] = 'sp'
-        if 'usenix security' in conf2dblp: conf2dblp['usenix security'] = 'uss'
-        if 'usenix atc' in conf2dblp: conf2dblp['usenix atc'] = 'usenix'
+
+        dblp_dict = {
+            'ieee s&p': 'sp',
+            'usenix security': 'uss',
+            'usenix atc': 'usenix',
+            'fse': 'sigsoft',
+            'ase': 'kbse',
+            'ec': 'sigecom',
+            'ubicomp': 'huc'
+        }
+        for conf, dblp in dblp_dict.items():
+            if conf in conf2dblp:
+                conf2dblp[conf] = dblp
 
         return conf2dblp
 
@@ -97,9 +108,9 @@ class Updater:
 
         exceptions = []
         for year in range(fromyear, toyear + 1):
-            print(year)
             if os.path.exists(path + conf + str(year) + '.json') or not (str(year) in html):
                 continue
+            print(year)
             url = dblp_url + dblp + '/' + dblp + str(year) + '.html'
             paper_list = self.get_paper_list(url)
             if paper_list:
@@ -209,7 +220,7 @@ class Updater:
 
         candidates = []
         for x in self.author_url_dic.keys():
-            if ('.' in x or '-' in x) and db_maker.is_kr(x):
+            if ('.' in x or '-' in x or len(x.split()) > 3) and db_maker.is_kr(x):
                 candidates.append(x)
 
         candidates += [smooth(x) for x in get_file('./data/kr_hard_coding.txt')]
@@ -246,4 +257,4 @@ if __name__ == '__main__':
     # updater.update(1950, 2018)
     # updater.update_exceptions()
     # updater.update_iclr()
-    # updater.correct_names()
+    updater.correct_names()

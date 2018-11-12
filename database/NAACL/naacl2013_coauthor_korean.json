@@ -1,1 +1,1 @@
-{"Heeyoung Lee": [], "Mi-Young Kim": [], "Hyun-Je Song": ["Se-Young Park", "Seong-Bae Park"], "Seong-Bae Park": ["Hyun-Je Song", "Se-Young Park"], "Se-Young Park": ["Hyun-Je Song", "Seong-Bae Park"], "Young-Bum Kim": []}
+{"Heeyoung Lee": {}, "Mi-Young Kim": {}, "Hyun-Je Song": {"Seong-Bae Park": 1, "Se-Young Park": 1}, "Seong-Bae Park": {"Hyun-Je Song": 1, "Se-Young Park": 1}, "Se-Young Park": {"Hyun-Je Song": 1, "Seong-Bae Park": 1}, "Young-Bum Kim": {}}

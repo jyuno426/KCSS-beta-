@@ -1,1 +1,1 @@
-{"Ilhyun Kim": [], "Jinwoo Suh": ["Eun-Gyu Kim"], "Eun-Gyu Kim": ["Jinwoo Suh"], "Changkyu Kim": ["Jaehyuk Huh"], "Jaehyuk Huh": ["Changkyu Kim"]}
+{"Ilhyun Kim": {}, "Jinwoo Suh": {"Eun-Gyu Kim": 1}, "Eun-Gyu Kim": {"Jinwoo Suh": 1}, "Changkyu Kim": {"Jaehyuk Huh": 1}, "Jaehyuk Huh": {"Changkyu Kim": 1}}

@@ -1,1 +1,1 @@
-{"Kyung-Hoon Kwon": ["Jong-Hoon Oh", "Kukjin Kang"], "Kukjin Kang": ["Jong-Hoon Oh", "Kyung-Hoon Kwon"], "Jong-Hoon Oh": ["Kukjin Kang", "Kyung-Hoon Kwon"]}
+{"Kyung-Hoon Kwon": {"Kukjin Kang": 1, "Jong-Hoon Oh": 1}, "Kukjin Kang": {"Kyung-Hoon Kwon": 1, "Jong-Hoon Oh": 1}, "Jong-Hoon Oh": {"Kyung-Hoon Kwon": 1, "Kukjin Kang": 1}}

@@ -1,1 +1,1 @@
-{"Hongil Yoon": [], "Daehyun Kim": [], "Hyoukjun Kwon": [], "Jaewon Lee": ["Changkyu Kim", "Jangwoo Kim"], "Changkyu Kim": ["Jaewon Lee", "Jangwoo Kim"], "Jangwoo Kim": ["Changkyu Kim", "Jaewon Lee"], "Taesoo Kim": []}
+{"Hongil Yoon": {}, "Daehyun Kim": {}, "Hyoukjun Kwon": {}, "Jaewon Lee": {"Changkyu Kim": 1, "Jangwoo Kim": 1}, "Changkyu Kim": {"Jaewon Lee": 1, "Jangwoo Kim": 1}, "Jangwoo Kim": {"Jaewon Lee": 1, "Changkyu Kim": 1}, "Taesoo Kim": {}}

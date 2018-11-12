@@ -1,1 +1,1 @@
-{"Cheongjae Lee": ["Gary Geunbae Lee", "Sangkeun Jung"], "Sangkeun Jung": ["Cheongjae Lee", "Gary Geunbae Lee"], "Gary Geunbae Lee": ["Cheongjae Lee", "Sangkeun Jung"]}
+{"Cheongjae Lee": {"Sangkeun Jung": 1, "Gary Geunbae Lee": 1}, "Sangkeun Jung": {"Cheongjae Lee": 1, "Gary Geunbae Lee": 1}, "Gary Geunbae Lee": {"Cheongjae Lee": 1, "Sangkeun Jung": 1}}
