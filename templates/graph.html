@@ -3,34 +3,38 @@
 
 <svg style="background-color:grey"></svg>
 
+
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
-var names_list = {{ names_list|safe }};
+
+var name_list = {{ name_list|safe }};
 var dictionary = {{ dictionary|safe }};
 var max_papers = {{ max_papers|safe }};
 var info_dict = {{ info_dict|safe}};
 var node_colour_dict = {{ node_colour_dict|safe }};
+var edge_dict = {{ edge_dict|safe }};
+var edge_scaling_factor = {{ edge_scaling_factor|safe }};
+
 
 var nodes = [];
-for(var i=0; i<names_list.length; i++){
-  nodes.push({ id: names_list[i], label: names_list[i]})
+for(var i=0; i<name_list.length; i++){
+  nodes.push({ id: name_list[i], label: name_list[i]})
 }
 
+/*
 var links = [
 	{ target: "Sewoong Oh", source: "Honglak Lee" , strength: 1 },
   { target: "Honglak Lee", source: "Sewoong Oh" , strength: 1 },
-  { target: "Hongseok Namkoong", source: "Hanul Shin" , strength: 0.05 },
-  { target: "Hyeji Kim", source: "Changho Suh" , strength: 0.3 },
-  { target: "Honglak Lee", source: "Changho Suh" , strength: 0.3 },
-  { target: "Byoung-Tak Zhang", source: "Changho Suh" , strength: 0.3 },
-  { target: "Hanul Shin", source: "Eun Jee Lee" , strength: 0.3 },
-  { target: "Byoung-Tak Zhang", source: "Eun Jee Lee" , strength: 0.3 },
-  { target: "Hyeonwoo Noh", source: "Eun Jee Lee" , strength: 0.3 },
-  { target: "Hyeonwoo Noh", source: "Changho Suh" , strength: 0.3 },
-  { target: "Bohyung Han", source: "Hongseok Namkoong", strength: 1.0}
   ]
+*/
 
+var links = []
+for(var author in edge_dict){
+  for(var coauthor in edge_dict[author]){
+    links.push({ target: coauthor, source: author, strength: edge_dict[author][coauthor]/edge_scaling_factor});
+  }
+}
 
 
 function getNodeSize(node){
@@ -79,8 +83,10 @@ function getTextColor(node, neighbors) {
 
 
 
-var width = 640;
-var height = 480;
+var width = 960,
+    height = 500,
+    radius = 10;
+
 var svg = d3.select('svg')
 svg.attr('width', width).attr('height', height)
 
@@ -132,7 +138,6 @@ function selectNode(selectedNode) {
 
 
 
-
 var linkElements = svg.append("g")
   .attr("class", "links")
   .selectAll("line")
@@ -157,13 +162,24 @@ var textElements = svg.append("g")
   .data(nodes)
   .enter().append("text")
     .text(function (node) { return  node.label })
-	  .attr("font-size", 7)
+	  .attr("font-size", 10)
 	  .attr("dx", 5)
     .attr("dy", 3)
+
+
 simulation.nodes(nodes).on('tick', () => {
+  /*
+  node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+      .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+
+  link.attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+  */
   nodeElements
-    .attr('cx', function (node) { return node.x })
-    .attr('cy', function (node) { return node.y })
+    .attr('cx', function (node) { return Math.max(radius, Math.min(width - radius, node.x)); })
+    .attr('cy', function (node) { return Math.max(radius, Math.min(height - radius, node.y)); })
   textElements
     .attr('x', function (node) { return node.x })
     .attr('y', function (node) { return node.y })
