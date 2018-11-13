@@ -94,14 +94,16 @@
   <body>
     <br>
     <div class="container" id="header">
-      <h1 style="font-family: Georgia, serif; font-weight: bold; color: #527bbd;">
+      <h2 style="font-family: Georgia, serif; font-weight: bold; color: #527bbd;">
         Computer Science Korean Search (CSKS)
-      </h1>
+      </h2>
     </div>
     <hr>
 
     <div class="container">
-      <svg></svg>
+      <div style="width: 100%; height: 500px">
+        <svg style="height: 500px;"></svg>
+      </div>
       {% for name in name_list %}
         <button class="accordion" onclick="action(this)">
           <b> {{ name }} ({{ dictionary[name][1] }})</b>
@@ -195,10 +197,10 @@
       function getTextColor(node, neighbors) {
         return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1 ? 'black' : 'black'
       }
-      var width = 960,
+      var svg = d3.select('svg')
+      var width = svg.style('width').replace("px", ""),
           height = 500,
           radius = 10;
-      var svg = d3.select('svg')
       svg.attr('width', width).attr('height', height)
       // simulation setup with all forces
       var linkForce = d3
@@ -232,28 +234,28 @@
         linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
       }
       var linkElements = svg.append("g")
-        .attr("class", "links")
-        .selectAll("line")
-        .data(links)
-        .enter().append("line")
+          .attr("class", "links")
+          .selectAll("line")
+          .data(links)
+          .enter().append("line")
           .attr("stroke-width", 1)                                // CHANGE LINK WIDTH
           .attr("stroke", "rgba(153,153,153,0.6)")
       var nodeElements = svg.append("g")
-        .attr("class", "nodes")
-        .attr("stroke","white")
-        .selectAll("circle")
-        .data(nodes)
-        .enter().append("circle")
+          .attr("class", "nodes")
+          .attr("stroke","white")
+          .selectAll("circle")
+          .data(nodes)
+          .enter().append("circle")
           .attr("r", getNodeSize)                                        // CHANGE NODE SIZE
           .attr("fill", getNodeColor)
           .call(dragDrop)
           .on('click', selectNode)
 
       var textElements = svg.append("g")
-        .attr("class", "texts")
-        .selectAll("text")
-        .data(nodes)
-        .enter().append("text")
+          .attr("class", "texts")
+          .selectAll("text")
+          .data(nodes)
+          .enter().append("text")
           .text(function (node) { return  node.label })
           .attr("font-size", 10)
           .attr("dx", 5)
