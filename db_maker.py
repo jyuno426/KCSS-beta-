@@ -86,6 +86,7 @@ class DB_Maker:
         author_dic = json.load(open('./database/author_dic.json'))
 
         for conf in conf_list:
+            if conf <= 'nips': continue
             for year in range(fromyear, toyear + 1):
                 path = './database/' + conf.upper() + '/' + conf + str(year)
                 if not os.path.isfile(path + '.json'):
@@ -126,5 +127,5 @@ class DB_Maker:
 if __name__ == '__main__':
     db_maker = DB_Maker()
     # print(db_maker.is_kr('Myoungsoo Jung'))
-    # db_maker.make_area_table(1950, 2018)
-    # db_maker.make_db(1950, 2018)
+    db_maker.make_area_table(1950, 2018)
+    db_maker.make_db(1950, 2018)

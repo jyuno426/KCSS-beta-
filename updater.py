@@ -200,10 +200,34 @@ class Updater:
                 lines = [line.strip() for line in f.readlines()]
                 for i in range(len(lines)//term):
                     title = lines[term*i]
-                    author_list = [smooth(x) for x in lines[term*i+1].split(',')]
+                    author_list = list(filter(None, [smooth(x) for x in lines[term*i+1].split(',')]))
                     paper_list.append([title, author_list, url])
 
             self.save('iclr', year, paper_list)
+
+    def update_cvpr(self):
+        paper_list = []
+        path = './data/CVPR/cvpr2018.txt'
+        with open(path, 'r', encoding='utf-8') as f:
+            lines = [line.strip() for line in f.readlines()]
+            for i in range(len(lines)//4):
+                title = lines[4*i]
+                author_list = list(filter(None, [smooth(x) for x in lines[4*i+1].split(',')]))
+                paper_list.append([title, author_list, 'http://openaccess.thecvf.com/CVPR2018.py'])
+
+        self.save('cvpr', 2018, paper_list)
+
+    def update_nips(self):
+        paper_list = []
+        path = './data/NIPS/nips2018.txt'
+        with open(path, 'r', encoding='utf-8') as f:
+            lines = [line.strip() for line in f.readlines()]
+            for i in range(len(lines)//5):
+                title = lines[5*i+2]
+                author_list = list(filter(None, [smooth(x) for x in lines[5*i+4].split('·')]))
+                paper_list.append([title, author_list, 'https://nips.cc/Conferences/2018/Schedule?type=Poster'])
+
+        self.save('nips', 2018, paper_list)
 
     def correct_names(self):
         with open('./database/author_url_dic.json', 'r') as f:
@@ -254,8 +278,10 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
-    updater.update_conf('icassp', 'icassp', 1950, 2018)
     # updater.update(1950, 2018)
     # updater.update_exceptions()
     # updater.update_iclr()
+    # updater.update_cvpr()
+    # updater.update_nips()
     updater.correct_names()
+    # updater.update_conf('icassp', 'icassp', 1950, 2018)
