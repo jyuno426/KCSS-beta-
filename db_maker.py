@@ -24,7 +24,7 @@ class DB_Maker:
     def prob_kr_first(self, first_name):
         first = ''
         idx = set()
-        a, b, c = 0, 0, 50
+        a, b, c = 0, 0, 0.5
         for _part in first_name.split():
             part = normalize(_part)
             if len(part) > 1:
@@ -46,7 +46,6 @@ class DB_Maker:
                 b = max(b, scale(prob[1]))
             c = min(c, scale(prob[0]))
             idx.add(arg)
-
         if 0 in idx:
             if 1 in idx:
                 return 1 - b

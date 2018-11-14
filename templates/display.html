@@ -109,10 +109,10 @@
 
       <br><br>
       <p style="font-family: Georgia, serif; font-size: 15px">
-        The following list of authors is sorted by last name.<br>
-        For each entry AUTHOR (n, p):<br>
-        n = number of papers written by AUTHOR;<br>
-        p = probability that AUTHOR has a Korean name, as predicted by our LSTM model.<br>
+        The following list of authors is sorted by last name.
+        For each entry AUTHOR (<b>N</b>, <b>P</b>),
+        <b>N</b> is the number of papers written by AUTHOR and
+        <b>P</b> is the probability that AUTHOR has a Korean name (as predicted by our LSTM model).
       </p>
       {% for name in name_list %}
         <button class="accordion" onclick="action(this)">
@@ -218,7 +218,7 @@
 			  .links(labelAnchorLinks)
 			  .gravity(0)
 			  .linkDistance(0)
-			  .linkStrength(8)
+			  .linkStrength(1)
 			  .charge(-100)
 			  .size([w, h]);
 			force2.start();
