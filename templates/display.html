@@ -204,12 +204,10 @@
 			  .size([w, h])
 			  .nodes(nodes)
 			  .links(links)
-			  .gravity(1)
+			  .gravity(1.5)
 			  .linkDistance(50)
 			  .charge(-3000)
-			  .linkStrength(function(x) {
-				  return x.weight * 10
-			});
+			  .linkStrength(0.5);
 			force.start();
 
 			var force2 = d3
@@ -218,7 +216,7 @@
 			  .links(labelAnchorLinks)
 			  .gravity(0)
 			  .linkDistance(0)
-			  .linkStrength(1)
+			  .linkStrength(4)
 			  .charge(-100)
 			  .size([w, h]);
 			force2.start();

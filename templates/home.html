@@ -65,44 +65,24 @@
         document.getElementById("fromyear").options[2009 - 1960].selected = true;
         document.getElementById("toyear").options[2018 - 1960].selected = true;
         document.getElementById("filter").options[1].selected = true;
-        document.getElementById("filter2").options[2].selected = true;
+        document.getElementById("filter2").options[0].selected = true;
 
-        var ai = document.getElementById("AI");
-        ai.checked = true;
-        checkAll(ai);
-
-        var nai = document.getElementById("non-AI");
-        nai.checked = true;
-        checkAll(nai);
+        var checkboxes = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].id.includes("*")) {
+            checkboxes[i].checked = true;
+            check(checkboxes[i]);
+          }
+        }
       };
 
-      function submit(){
-      	var s1 = document.getElementById("fromyear").value;
-      	var s2 = document.getElementById("toyear").value;
-        var s3 = document.getElementById("filter").selectedIndex;
-        var s4 = document.getElementById("filter2").selectedIndex;
-
-      	var new_location = "/"+s1+s2+s3+s4+"_";
-
-        var area_table = {{ area_table|safe }};
-
-      	var i, j, k, l, checkboxes;
-      	for (i = 0; i < area_table.length; i++) {
-      	  for (j = 0; j < area_table[i][1].length; j++) {
-      	    for (k = 0; k < area_table[i][1][j].length; k++) {
-              checkboxes = document.getElementsByName(area_table[i][1][j][k][0]);
-              for (l = 0; l < checkboxes.length; l++) {
-                if (checkboxes[l].checked)
-                  new_location += (checkboxes[l].id.replace(" ", "-") + "_");
-              }
-      	    }
-      	  }
-      	}
-
-      	window.location = new_location;
+      function checkAll(topbox) {
+        var checkboxes = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxes.length; i++)
+          checkboxes[i].checked = topbox.checked;
       }
 
-      function checkAll(topbox) {
+      function checkClass(topbox) {
         var checkboxes = document.getElementsByClassName(topbox.id);
         for (var i = 0; i < checkboxes.length; i++)
           checkboxes[i].checked = topbox.checked;
@@ -111,7 +91,7 @@
       function checkParts(partbox) {
         if (!partbox.checked) {
           var topbox = document.getElementById(partbox.className);
-          topbox.checked = false;
+          if (topbox) topbox.checked = false;
         }
         var checkboxes = document.getElementsByName(partbox.id);
         for (var i = 0; i < checkboxes.length; i++)
@@ -150,6 +130,32 @@
               return;
         topbox.checked = true;
       }
+
+      function submit(){
+      	var s1 = document.getElementById("fromyear").value;
+      	var s2 = document.getElementById("toyear").value;
+        var s3 = document.getElementById("filter").selectedIndex;
+        var s4 = document.getElementById("filter2").selectedIndex;
+
+      	var new_location = "/"+s1+s2+s3+s4+"_";
+
+        var area_table = {{ area_table|safe }};
+
+      	var i, j, k, l, checkboxes;
+      	for (i = 0; i < area_table.length; i++) {
+      	  for (j = 0; j < area_table[i][1].length; j++) {
+      	    for (k = 0; k < area_table[i][1][j].length; k++) {
+              checkboxes = document.getElementsByName(area_table[i][1][j][k][0]);
+              for (l = 0; l < checkboxes.length; l++) {
+                if (checkboxes[l].checked)
+                  new_location += (checkboxes[l].id.replace(" ", "-").replace("*", "") + "_");
+              }
+      	    }
+      	  }
+      	}
+
+      	window.location = new_location;
+      }
     </script>
 
     <title> Korean Computer Scientist Search (KCSS) </title>
@@ -174,7 +180,7 @@
             {% endfor %}
           </select>
         </div>
-
+        &nbsp;
         <div class="form-group">
           <label for="toyear">To</label>
           <select class="form-control" id="toyear">
@@ -183,7 +189,7 @@
             {% endfor %}
           </select>
         </div>
-
+        &nbsp;
         <div class="form-group">
           <label for="filter">Filter</label>
           <select class="form-control" id="filter">
@@ -191,9 +197,10 @@
             <option>only korean</option>
             <option>only first author</option>
             <option>only last author</option>
+            <option>only korean first author</option>
+            <option>only korean last author</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="filter2"></label>
           <select class="form-control" id="filter2">
@@ -212,17 +219,26 @@
     </div>
 
     <div class="container">
-      {% for id, table in area_table%}
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" id="{{ id }}"
-                       onclick="checkAll(this)"><b>All {{ id }} Areas</b>
-              </label>
-            </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label style="font-size: 20px;">
+              <input type="checkbox" id="all" onclick="checkAll(this)"
+                     style="position: relative; bottom: 1px;"><b> All Areas</b>
+            </label>
           </div>
         </div>
+        <div class="col-sm-4">
+          <div class="checkbox">
+            <label style="font-size: 20px;">
+              <input type="checkbox" id="AI" onclick="checkClass(this)"
+                     style="position: relative; bottom: 1px;"><b> All AI Areas</b>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      {% for id, table in area_table%}
         {% for row in table %}
           <div class="row">
             {% for area, conf_list in row %}
@@ -247,16 +263,16 @@
         {% endfor %}
       {% endfor %}
     </div>
-
     <hr>
-    <div class="container" style="text-align: center" id="footer">
+    <div class="container" style="text-align: center;" id="footer">
       <address>KCSS was created by
         <a href="mailto:jyuno426@kaist.ac.kr"> Junho Han</a>,
         <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a> and
         <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a> at
-        <a href="http://alinlab.kaist.ac.kr"> Algorithmic Intelligence Laboratory, KAIST</a>. <br> <br>
+        <a href="http://alinlab.kaist.ac.kr"> Algorithmic Intelligence Laboratory, KAIST</a>.<br>
         Korean names are classified by a LSTM model, and search results for Korean authors are not perfect. <br>
-        If you could notify us Korean authors that do not appear in the search results, we will incorporate them.
+        If you could notify us Korean authors that do not appear in the search results, we will incorporate them.<br>
+        * indicates conferences listed in <a href="https://csrankings.org/">CSRankings.</a>
       </address>
     </div>
 

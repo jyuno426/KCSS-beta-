@@ -87,7 +87,7 @@ class DB_Maker:
                 temp = []
                 for x in sorted(conf_list):
                     y = '('
-                    conf = x.replace('-', ' ')
+                    conf = x.replace('*', '')
                     for year in range(fromyear, toyear + 1):
                         if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
                             y += str(year)
@@ -109,6 +109,7 @@ class DB_Maker:
     def make_db(self, fromyear, toyear):
         conf_list = get_file('./data/conferences.txt')
         author_dic = json.load(open('./database/author_dic.json'))
+        options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
 
         for conf in conf_list:
             for year in range(fromyear, toyear + 1):
@@ -116,7 +117,7 @@ class DB_Maker:
                 if not os.path.isfile(path + '.json'):
                     continue
                 paper_list = json.load(open(path + '.json', 'r'))
-                dict = [{}, {}, {}, {}]
+                data = [{} for _ in range(len(options))]
 
                 for _title, _author_list, url in paper_list:
                     author_list = [
@@ -125,16 +126,21 @@ class DB_Maker:
                     ]
                     elem = [_title.strip().strip('.'), author_list, url, conf, year]
                     for author in author_list:
-                        self.update_dict(author, dict[0], elem)
+                        self.update_dict(author, data[0], elem)
                         if self.is_kr(author):
-                            self.update_dict(author, dict[1], elem)
-                    self.update_dict(author_list[0], dict[2], elem)
-                    self.update_dict(author_list[-1], dict[3], elem)
+                            self.update_dict(author, data[1], elem)
+                    first, last = author_list[0], author_list[-1]
+                    self.update_dict(first, data[2], elem)
+                    self.update_dict(last, data[3], elem)
+                    if self.is_kr(first):
+                        self.update_dict(first, data[4], elem)
+                    if self.is_kr(last):
+                        self.update_dict(last, data[5], elem)
 
-                for i, filter in enumerate(['all', 'korean', 'first', 'last']):
-                    json.dump(dict[i], open(path + '_' + filter + '.json', 'w'))
+                for i, option in enumerate(options):
+                    json.dump(data[i], open(path + '_' + option + '.json', 'w'))
                     coauthor_dict = {}
-                    for author, value in dict[i].items():
+                    for author, value in data[i].items():
                         paper_list = value[1:]
                         coauthor_dict[author] = {}
                         for _, coauthor_list, __, ___, ____ in paper_list:
@@ -144,7 +150,7 @@ class DB_Maker:
                                         coauthor_dict[author][coauthor] += 1
                                     except KeyError:
                                         coauthor_dict[author][coauthor] = 1
-                    json.dump(coauthor_dict, open(path + '_coauthor_' + filter + '.json', 'w'))
+                    json.dump(coauthor_dict, open(path + '_coauthor_' + option + '.json', 'w'))
 
                 print(conf, year)
 
@@ -153,4 +159,4 @@ if __name__ == '__main__':
     db_maker = DB_Maker()
     # print(db_maker.is_kr('Myoungsoo Jung'))
     db_maker.make_area_table(1950, 2018)
-    db_maker.make_db(1950, 2018)
+    # db_maker.make_db(1950, 2018)

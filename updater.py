@@ -244,11 +244,13 @@ class Updater:
 
         candidates = []
         for x in self.author_url_dic.keys():
-            if ('.' in x or '-' in x or len(x.split()) > 3) and db_maker.is_kr(x):
+            if db_maker.is_kr(x):  # ('.' in x or '-' in x or len(x.split()) > 3)
                 candidates.append(x)
 
         candidates += [smooth(x) for x in get_file('./data/kr_hard_coding.txt')]
         candidates = sorted(list(set(candidates)))
+
+        print(len(candidates))
 
         for i, author in enumerate(candidates):
             print(i, '/', len(candidates))
@@ -283,5 +285,5 @@ if __name__ == '__main__':
     # updater.update_iclr()
     # updater.update_cvpr()
     # updater.update_nips()
-    # updater.correct_names()
+    updater.correct_names()
     # updater.update_conf('icassp', 'icassp', 1950, 2018)

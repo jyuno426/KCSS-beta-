@@ -1,28 +1,28 @@
 [["AI", [
-  ["Machine Learning", ["AISTATS", "COLT", "ICLR", "ICML", "NIPS", "UAI"]],
-  ["Data Mining & Information Retrieval", ["CIKM", "ICDM", "KDD", "SIGIR", "WSDM", "WWW"]],
-  ["Computer Vision & Graphics", ["CVPR", "ECCV", "ICCV", "SIGGRAPH", "BMVC"]],
-  ["Natural Language Processing", ["ACL", "EMNLP", "NAACL"]],
-  ["Robotics", ["ICRA", "IROS", "RSS"]],
-  ["Artificial Intelligence & Signal Processing", ["AAAI", "IJCAI", "ICASSP"]]
+  ["Machine Learning", ["AISTATS", "COLT", "ICLR", "ICML*", "NIPS*", "UAI"]],
+  ["Data Mining & Information Retrieval", ["CIKM", "ICDM", "KDD*", "SIGIR*", "WSDM", "WWW*"]],
+  ["Computer Vision & Graphics", ["CVPR*", "ECCV*", "ICCV*", "SIGGRAPH*", "BMVC"]],
+  ["Natural Language Processing", ["ACL*", "EMNLP*", "NAACL*"]],
+  ["Robotics", ["ICRA*", "IROS*", "RSS*"]],
+  ["Artificial Intelligence & Signal Processing", ["AAAI*", "IJCAI*", "ICASSP"]]
 ]], ["non-AI", [
-  ["Security & Cryptography", ["CCS", "IEEE S&P", "USENIX Security", "NDSS", "CRYPTO", "EuroCrypt"]],
-  ["Operating Systems", ["OSDI", "SOSP", "EuroSys", "FAST", "USENIX ATC"]],
-  ["Networks", ["SIGCOMM", "NSDI", "INFOCOM", "MOBIHOC", "CONEXT"]],
+  ["Security & Cryptography", ["CCS*", "IEEE S&P*", "USENIX Security*", "NDSS", "CRYPTO*", "EuroCrypt*"]],
+  ["Operating Systems", ["OSDI*", "SOSP*", "EuroSys", "FAST", "USENIX ATC"]],
+  ["Networks", ["SIGCOMM*", "NSDI*", "INFOCOM", "MOBIHOC", "CONEXT"]],
 
-  ["Theory", ["FOCS", "SIGMETRICS", "SODA", "STOC"]],
-  ["Computer Architecture", ["ASPLOS", "HPCA", "ISCA", "MICRO"]],
-  ["Databases", ["SIGMOD", "VLDB", "PODS", "ICDE"]],
+  ["Theory", ["FOCS*", "SIGMETRICS*", "SODA*", "STOC*"]],
+  ["Computer Architecture", ["ASPLOS*", "HPCA", "ISCA*", "MICRO*"]],
+  ["Databases", ["SIGMOD*", "VLDB*", "PODS", "ICDE"]],
 
-  ["Programming Languages", ["PLDI", "POPL", "ICFP", "OOPSLA"]],
-  ["Software Engineering", ["FSE", "ICSE", "ASE", "ISSTA"]],
-  ["Human-Computer Interaction", ["CHI", "UbiComp", "Pervasive", "UIST"]],
+  ["Programming Languages", ["PLDI*", "POPL*", "ICFP", "OOPSLA"]],
+  ["Software Engineering", ["FSE*", "ICSE*", "ASE", "ISSTA"]],
+  ["Human-Computer Interaction", ["CHI*", "UbiComp*", "Pervasive*", "UIST*"]],
 
-  ["Embedded & Real-Time Systems", ["EMSOFT", "RTAS", "RTSS"]],
-  ["High-Performance Computing", ["HPDC", "ICS", "SC"]],
-  ["Mobile Computing", ["MobiCom", "MobiSys", "SenSys"]],
+  ["Embedded & Real-Time Systems", ["EMSOFT*", "RTAS*", "RTSS*"]],
+  ["High-Performance Computing", ["HPDC*", "ICS*", "SC*"]],
+  ["Mobile Computing", ["MobiCom*", "MobiSys*", "SenSys*"]],
 
-  ["Design Automation", ["DAC", "ICCAD"]],
-  ["Computational Economics", ["EC", "WINE"]],
-  ["Computational Biology", ["ISMB", "RECOMB"]]
+  ["Design Automation", ["DAC*", "ICCAD*"]],
+  ["Computational Economics", ["EC*", "WINE*"]],
+  ["Computational Biology", ["ISMB*", "RECOMB*"]]
 ]]]

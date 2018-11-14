@@ -13,6 +13,7 @@ data = {}
 coauthor_data = {}
 min_year = 1960
 max_year = datetime.now().year
+options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
 area_table = json.load(open('./database/area_table.json'))
 
 app = Flask(__name__)  # placeholder for current module
@@ -29,7 +30,7 @@ def home():
 def display(name):
     fromyear = int(name[0:4])
     toyear = int(name[4:8])
-    option = ['all', 'korean', 'first', 'last'][int(name[8])]
+    option = options[int(name[8])]
     howmany = [10, 25, 50, 100][int(name[9])]
     conf_list = sorted(name[10:].replace('-', ' ').lower().split('_')[1:-1])
     graph_heights = {10: "400px", 25: "600px", 50: "800px", 100: "1140px"}
@@ -107,7 +108,7 @@ def display(name):
 def backdoor(name):
     fromyear = int(name[0:4])
     toyear = int(name[4:8])
-    option = ['all', 'korean', 'first', 'last'][int(name[8])]
+    option = options[int(name[8])]
     howmany = [10, 25, 50, 100][int(name[9])]
     conf_list = sorted(name[10:].replace('-', ' ').lower().split('_')[1:-1])
     graph_heights = {10: "400px", 25: "600px", 50: "800px", 100: "1140px"}
@@ -190,7 +191,7 @@ def init():
         for year in range(min_year, max_year + 1):
             data[conf][year] = {}
             coauthor_data[conf][year] = {}
-            for option in ['all', 'korean', 'first', 'last']:
+            for option in options:
                 path = './database/' + conf.upper() + '/' + conf.lower() + str(year) + '_'
                 if os.path.exists(path + option + '.json'):
                     data[conf][year][option] = json.load(open(path + option + '.json'))
