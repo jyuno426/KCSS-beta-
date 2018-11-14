@@ -145,10 +145,19 @@
       </address>
     </div>
 
+
+
+
+
+
+
+
+
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.6.0"></script>
 		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?2.6.0"></script>
 		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?2.6.0"></script>
     <script type="text/javascript" charset="utf-8">
+
       var name_list = {{ name_list|safe }};
       var dictionary = {{ dictionary|safe }};
       var max_papers = {{ max_papers|safe }};
@@ -157,14 +166,13 @@
       var edge_dict = {{ edge_dict|safe }};
       var edge_scaling_factor = {{ edge_scaling_factor|safe }};
 
-			var labelDistance = 0;
 			var vis = d3.select('svg');
 		  var w = vis.style('width').replace("px", ""), h = 800;
 
 			var nodes = [];
+      var links = [];
 			var labelAnchors = [];
 			var labelAnchorLinks = [];
-			var links = [];
 			var dict = {};
 
 			for(var i = 0; i < name_list.length; i++) {
@@ -180,7 +188,7 @@
           links.push({
             source: dict[author],
             target: dict[coauthor],
-            weight: 1//edge_dict[author][coauthor]/edge_scaling_factor
+            weight: 1
           });
         }
       }
@@ -192,6 +200,10 @@
 					weight: 1
 				});
 			};
+
+      function getNodeSize(node){
+        return Math.max(5, 20*dictionary[node.label][1]/max_papers);
+      }      
 
 			var force = d3
 			  .layout.force()
@@ -205,6 +217,16 @@
 				  return x.weight * 10
 			});
 			force.start();
+
+
+
+
+
+
+
+
+
+
 
 			var force2 = d3
 			  .layout.force()
@@ -233,10 +255,10 @@
 			  .attr("class", "node");
 
 			node.append("svg:circle")
-			  .attr("r", 5)
-			  .style("fill", "#555")
+			  .attr("r", getNodeSize)
+			  .style("fill", "rgba(169,183,192,1)")
 			  .style("stroke", "#FFF")
-			  .style("stroke-width", 3);
+			  .style("stroke-width", 2);
 			node.call(force.drag);
 
 			var anchorLink = vis
