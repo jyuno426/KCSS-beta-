@@ -283,5 +283,5 @@ if __name__ == '__main__':
     # updater.update_iclr()
     # updater.update_cvpr()
     # updater.update_nips()
-    updater.correct_names()
+    # updater.correct_names()
     # updater.update_conf('icassp', 'icassp', 1950, 2018)

@@ -8,7 +8,7 @@
 
     <style type="text/css">
       body {
-        font-family: Arial, Helvetica, Open Sans, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
       }
       a {
         color : blue ;
@@ -25,7 +25,7 @@
         color:black;
       }
       .container{
-        max-width: 1050px;
+        max-width: 1140px;
         padding-top: 15px;
       }
       #footer{
@@ -99,25 +99,29 @@
       </h2>
     </div>
     <hr>
-
     <div class="container">
-      <div style="width: 100%; height: 800px">
-        <svg style="height: 800px;">
-          <text text-anchor="middle" x="50%" y="95%"
-                font-size="20" font-weight="bold"
-                fill="#527bbd" font-family="Georgia, serif">
-            Collaboration Graph
-          </text>
-        </svg>
+      <div style="width: 100%; height: {{ graph_height }};">
+        <svg style="height: {{ graph_height }};"></svg>
       </div>
+      <h4 style="text-align: center; font-family: Georgia, serif; font-weight: bold; color: #527bbd;">
+        Collaboration Graph
+      </h4>
+
+      <br><br>
+      <p style="font-family: Georgia, serif; font-size: 15px">
+        The following list of authors is sorted by last name.<br>
+        For each entry AUTHOR (n, p):<br>
+        n = number of papers written by AUTHOR;<br>
+        p = probability that AUTHOR has a Korean name, as predicted by our LSTM model.<br>
+      </p>
       {% for name in name_list %}
         <button class="accordion" onclick="action(this)">
-          <b> {{ name }} ({{ dictionary[name][1] }})</b>
+          <b> {{ name }} ({{ data_dict[name][1] }}, {{ prob_dict[name] }}%)</b>
         </button>
         <div class="panel">
           {{ info_dict[name] }}<br>
           <p>
-            {% for title, authors, url, conf, year in dictionary[name][0] %}
+            {% for title, authors, url, conf, year in data_dict[name][0] %}
               <br>
               <b>{{ conf.upper() }}</b>, {{ year }}{% for author in authors %}, {{ author }}{% endfor %}<br>
               <a href="{{ url }}" style="text-decoration:none;">
@@ -145,29 +149,19 @@
       </address>
     </div>
 
-
-
-
-
-
-
-
-
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.6.0"></script>
 		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?2.6.0"></script>
 		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?2.6.0"></script>
     <script type="text/javascript" charset="utf-8">
-
       var name_list = {{ name_list|safe }};
-      var dictionary = {{ dictionary|safe }};
+      var data_dict = {{ data_dict|safe }};
       var max_papers = {{ max_papers|safe }};
       var info_dict = {{ info_dict|safe}};
-      var node_colour_dict = {{ node_colour_dict|safe }};
       var edge_dict = {{ edge_dict|safe }};
-      var edge_scaling_factor = {{ edge_scaling_factor|safe }};
 
 			var vis = d3.select('svg');
-		  var w = vis.style('width').replace("px", ""), h = 800;
+		  var w = vis.style('width').replace("px", ""),
+		      h = vis.style('height').replace("px", "");
 
 			var nodes = [];
       var links = [];
@@ -202,8 +196,8 @@
 			};
 
       function getNodeSize(node){
-        return Math.max(5, 20*dictionary[node.label][1]/max_papers);
-      }      
+        return Math.max(5, 20*data_dict[node.label][1]/max_papers);
+      }
 
 			var force = d3
 			  .layout.force()
@@ -217,16 +211,6 @@
 				  return x.weight * 10
 			});
 			force.start();
-
-
-
-
-
-
-
-
-
-
 
 			var force2 = d3
 			  .layout.force()

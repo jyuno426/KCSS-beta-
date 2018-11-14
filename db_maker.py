@@ -1,6 +1,5 @@
 from name_model import keras_Model
 from utils import *
-import numpy as np
 import json, os
 
 
@@ -19,39 +18,66 @@ class DB_Maker:
 
         self.area_table = json.load(open('./data/area_list.json'))
 
-    def is_kr_last_name(self, last_name):
+    def is_kr_last(self, last_name):
         return last_name.lower() in self.kr_last_names
 
-    def is_kr_first_name(self, first_name):
+    def prob_kr_first(self, first_name):
         first = ''
         idx = set()
+        a, b, c = 0, 0, 50
         for _part in first_name.split():
             part = normalize(_part)
             if len(part) > 1:
-                idx.add(np.argmax(self.model.pred(part)))
+                prob = self.model.pred(part)
+                arg = np.argmax(prob)
+                if arg == 0:
+                    a = max(a, scale(prob[0]))
+                elif arg == 1:
+                    b = max(b, scale(prob[1]))
+                c = min(c, scale(prob[0]))
+                idx.add(arg)
                 first += part
         if len(first) > 1:
-            arg = np.argmax(self.model.pred(first))
+            prob = self.model.pred(first)
+            arg = np.argmax(prob)
             if arg == 0:
-                return True
+                return scale(prob[0])
+            elif arg == 1:
+                b = max(b, scale(prob[1]))
+            c = min(c, scale(prob[0]))
             idx.add(arg)
-        return (0 in idx) and (1 not in idx)
 
-    def is_kr(self, name):
+        if 0 in idx:
+            if 1 in idx:
+                return 1 - b
+            else:
+                return a
+        else:
+            return c
+
+    def prob_kr(self, name):
         if name in self.kr_hard_coding:
-            return True
+            return 1
         if name in self.nonkr_hard_coding:
-            return False
+            return 0
+
         parts = name.split()
         last = parts[-1]
         first = ' '.join(parts[:-1])
-        return self.is_kr_last_name(last) and self.is_kr_first_name(first)
 
-    def update_dict(self, author, dict, elem):
-        if author in dict:
-            dict[author].append(elem)
+        if not self.is_kr_last(last):
+            return 0
         else:
-            dict[author] = [elem]
+            return self.prob_kr_first(first)
+
+    def is_kr(self, name):
+        return self.prob_kr(name) >= 0.5
+
+    def update_dict(self, author, _dict, elem):
+        if author in _dict:
+            _dict[author].append(elem)
+        else:
+            _dict[author] = [self.prob_kr(author), elem]
 
     def make_area_table(self, fromyear, toyear):
         area_table = []
@@ -86,7 +112,6 @@ class DB_Maker:
         author_dic = json.load(open('./database/author_dic.json'))
 
         for conf in conf_list:
-            if conf <= 'nips': continue
             for year in range(fromyear, toyear + 1):
                 path = './database/' + conf.upper() + '/' + conf + str(year)
                 if not os.path.isfile(path + '.json'):
@@ -110,7 +135,8 @@ class DB_Maker:
                 for i, filter in enumerate(['all', 'korean', 'first', 'last']):
                     json.dump(dict[i], open(path + '_' + filter + '.json', 'w'))
                     coauthor_dict = {}
-                    for author, paper_list in dict[i].items():
+                    for author, value in dict[i].items():
+                        paper_list = value[1:]
                         coauthor_dict[author] = {}
                         for _, coauthor_list, __, ___, ____ in paper_list:
                             for coauthor in coauthor_list:

@@ -61,6 +61,34 @@ def dump_list(_list, path):
             f.write(word + '\n')
 
 
+def scale(x):
+    if x < 1/3:
+        return x * 1.5
+    else:
+        return 0.75*x + 0.25
+
+
+def dict_update1(dict1, dict2, dict3):
+    for key, value in dict3.items():
+        if key in dict1:
+            dict1[key] += value[1:]
+        else:
+            dict1[key] = value[1:]
+            dict2[key] = int(value[0] * 100)
+
+
+def dict_update2(dict1, dict2):
+    for key, value in dict2.items():
+        if key in dict1:
+            for subkey, subvalue in dict2[key].items():
+                if subkey in dict1[key]:
+                    dict1[key][subkey] += subvalue
+                else:
+                    dict1[key][subkey] = subvalue
+        else:
+            dict1[key] = value
+
+
 if __name__=='__main__':
     print(smooth('Rémi Leblond'))
     pass
