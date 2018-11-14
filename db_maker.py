@@ -17,7 +17,7 @@ class DB_Maker:
         var2 = [name.replace('-', '') for name in self.kr_hard_coding]
         self.kr_hard_coding = set(self.kr_hard_coding + var1 + var2)
 
-        self.area_list = sorted(json.load(open('./data/area_list.json')))
+        self.area_table = json.load(open('./data/area_list.json'))
 
     def is_kr_last_name(self, last_name):
         return last_name.lower() in self.kr_last_names
@@ -55,26 +55,28 @@ class DB_Maker:
 
     def make_area_table(self, fromyear, toyear):
         area_table = []
-        for i, area in enumerate(self.area_list):
-            title, conf_list = area
-            temp = []
-            for x in sorted(conf_list):
-                y = '('
-                conf = x.replace('-', ' ')
-                for year in range(fromyear, toyear + 1):
-                    if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
-                        y += str(year)
-                        break
-                y += '-'
-                for year in range(toyear, fromyear - 1, -1):
-                    if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
-                        y += str(year)
-                        break
-                y += ')'
-                temp.append([x, y])
-            if i % 3 == 0:
-                area_table.append([])
-            area_table[-1].append([title, temp])
+        for ai, area_list in self.area_table:
+            area_table.append([ai, []])
+            for i, area in enumerate(area_list):
+                title, conf_list = area
+                temp = []
+                for x in sorted(conf_list):
+                    y = '('
+                    conf = x.replace('-', ' ')
+                    for year in range(fromyear, toyear + 1):
+                        if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
+                            y += str(year)
+                            break
+                    y += '-'
+                    for year in range(toyear, fromyear - 1, -1):
+                        if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
+                            y += str(year)
+                            break
+                    y += ')'
+                    temp.append([x, y])
+                if i % 3 == 0:
+                    area_table[-1][-1].append([])
+                area_table[-1][-1][-1].append([title, temp])
         
         with open('./database/area_table.json', 'w') as f:
             json.dump(area_table, f)
@@ -124,5 +126,5 @@ class DB_Maker:
 if __name__ == '__main__':
     db_maker = DB_Maker()
     # print(db_maker.is_kr('Myoungsoo Jung'))
-    db_maker.make_area_table(1950, 2018)
+    # db_maker.make_area_table(1950, 2018)
     # db_maker.make_db(1950, 2018)

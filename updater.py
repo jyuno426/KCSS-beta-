@@ -254,6 +254,7 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
+    updater.update_conf('icassp', 'icassp', 1950, 2018)
     # updater.update(1950, 2018)
     # updater.update_exceptions()
     # updater.update_iclr()

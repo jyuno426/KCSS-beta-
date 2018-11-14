@@ -19,6 +19,7 @@ def dict_update(dict1, dict2):
         else:
             dict1[key] = value
 
+
 def dict_update2(dict1, dict2):
     for key, value in dict2.items():
         if key in dict1:
@@ -42,7 +43,10 @@ app = Flask(__name__)  # placeholder for current module
 
 @app.route('/')
 def home():
-    return render_template('home.html', years=range(min_year, max_year + 1), area_table=area_table)
+    return render_template(
+        'home.html', years=range(min_year, max_year + 1), area_table=area_table
+    )
+
 
 @app.route('/<name>')
 def display(name):
@@ -83,18 +87,17 @@ def display(name):
             except KeyError:
                 info_dict[author][paper[3].upper()] = 1
     
-    temp_dict = copy.deepcopy(info_dict) # for later
+    temp_dict = copy.deepcopy(info_dict)  # for later
     
     for author in name_list:
         temp = ""
         for conf in sorted(info_dict[author].keys()):
             temp += conf + "=" + str(info_dict[author][conf]) + ', '
         info_dict[author] = temp[:-2]
-
     
     author_colour_dict = {}
     if len(conf_list) <= 5:
-        colours = [(0,255,255), (251,161,0), (230,230,250), (182,161,146), (255,247,192)]
+        colours = [(0, 255, 255), (251, 161, 0), (230, 230, 250), (182, 161, 146), (255, 247, 192)]
         colour_dict = {x.upper():np.array(colours[conf_list.index(x)]) for x in conf_list}
         for author in temp_dict.keys():
             total = sum([temp_dict[author][x] for x in temp_dict[author].keys()])
@@ -114,10 +117,8 @@ def display(name):
         for year in range(toyear, fromyear-1, -1):
             temp = copy.deepcopy(coauthor_dict[conf][year][filter])  # must use copy.deepcopy
             dict_update2(temp_edge_dict, temp)    
-    
-    
+
     edge_dict = {}
-    # dic = json.load(open("./database/ICML/icml2018_coauthor_all.json"))
     for author in name_list:
         edge_dict[author] = {}
         for key, value in temp_edge_dict[author].items():
