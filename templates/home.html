@@ -60,6 +60,7 @@
       }
     </style>
 
+
     <script>
       window.onload = function() {
         document.getElementById("fromyear").options[2009 - 1960].selected = true;
@@ -68,12 +69,7 @@
         document.getElementById("filter2").options[0].selected = true;
 
         var checkboxes = document.getElementsByTagName("input");
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].id.includes("*")) {
-            checkboxes[i].checked = true;
-            check(checkboxes[i]);
-          }
-        }
+        
       };
 
       function checkAll(topbox) {
@@ -82,10 +78,13 @@
           checkboxes[i].checked = topbox.checked;
       }
 
-      function checkClass(topbox) {
-        var checkboxes = document.getElementsByClassName(topbox.id);
-        for (var i = 0; i < checkboxes.length; i++)
-          checkboxes[i].checked = topbox.checked;
+      function checkCSRankings(topbox) {
+        var checkboxes = document.getElementsByTagName("input");
+        for (var i = 0; i < checkboxes.length; i++){
+          if (checkboxes[i].id.includes("*")){
+            checkboxes[i].checked = topbox.checked;
+          }
+        }
       }
 
       function checkParts(partbox) {
@@ -158,6 +157,7 @@
       }
     </script>
 
+
     <title> Korean Computer Scientist Search (KCSS) </title>
   </head>
 
@@ -169,6 +169,7 @@
       </h2>
     </div>
     <hr>
+
 
     <div class="container">
       <div class="form-inline">
@@ -218,21 +219,30 @@
       </div>
     </div>
 
+
+
+
+
+
+
+
+
+
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
           <div class="checkbox">
             <label style="font-size: 20px;">
               <input type="checkbox" id="all" onclick="checkAll(this)"
-                     style="position: relative; bottom: 1px;"><b> All Areas</b>
+                     style="position: relative; bottom: 1px;"><b> All Conferences</b>
             </label>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="checkbox">
             <label style="font-size: 20px;">
-              <input type="checkbox" id="AI" onclick="checkClass(this)"
-                     style="position: relative; bottom: 1px;"><b> All AI Areas</b>
+              <input type="checkbox" id="CSRankings" onclick="checkCSRankings(this)"
+                     style="position: relative; bottom: 1px;"><b> All Conferences on <a href="http://csrankings.org/#/index?all"> CSRankings </a> </b>
             </label>
           </div>
         </div>
