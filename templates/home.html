@@ -126,7 +126,7 @@
             if (!boxes[i].checked)
               c++;
 
-        if (c == 1) allbox.checked = true;
+        allbox.checked = (c < 2);
       }
 
       function submit(){
