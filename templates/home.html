@@ -255,11 +255,11 @@
               {% for conf, year in conf_list %}
                 <div class="checkbox" style="padding-left: 20px;">
                   <label>
-                    {% if "*" in conf %}
-                    <input type="checkbox" name="{{ area }}" id="{{ conf }}" onclick="check(this)" checked>
-                    {% else %}
+                    <!--{% if "*" in conf %}-->
+                    <!--<input type="checkbox" name="{{ area }}" id="{{ conf }}" onclick="check(this)" checked>-->
+                    <!--{% else %}-->
                     <input type="checkbox" name="{{ area }}" id="{{ conf }}" onclick="check(this)">
-                    {% endif %}
+                    <!--{% endif %}-->
                     {{ conf }} {{ year }}
                   </label>
                 </div>
