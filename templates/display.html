@@ -196,7 +196,7 @@
 			};
 
       function getNodeSize(node){
-        return Math.max(5, 20*data_dict[node.label][1]/max_papers);
+        return Math.max(5, 20*Math.sqrt(data_dict[node.label][1]/max_papers));
       }
 
 			var force = d3

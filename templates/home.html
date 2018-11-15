@@ -62,10 +62,6 @@
 
 
     <script>
-      window.onload = function() {
-        allChecked();
-      }
-
       function checkAll(allbox) {
         var boxes = document.getElementsByTagName("input");
         for (var i = 0; i < boxes.length; i++)
@@ -87,46 +83,35 @@
         allChecked();
       }
 
-      function check(box) {
-        if (!box.checked) {
-          var topbox = document.getElementById(box.className);
-          var partbox = document.getElementById(box.name);
-          topbox.checked = false;
-          partbox.checked = false;
-        }
-        allChecked();
-      }
-
       function allChecked() {
-        var allbox = document.getElementById("all");
-        var csbox = document.getElementById("CSRankings");
-        var boxes = document.getElementsByTagName("input");
-
-        var i, j, k, c = true;
-        for (i = 0; i < boxes.length; i++)
-          if (boxes[i].id.includes("*") && !boxes[i].checked)
-            c = false;
-
-        csbox.checked = c;
-
+        var i, j, k;
         var area_table = {{ area_table|safe }};
         for (i = 0; i < area_table.length; i++) {
           for (j = 0; j < area_table[i].length; j++) {
             var partbox = document.getElementById(area_table[i][j][0]);
-            var partboxes = document.getElementsByName(area_table[i][j][0]);
-            c = true;
-            for (k = 0; k < partboxes.length; k++)
-              if (!partboxes[k].checked)
-                c = false;
-            partbox.checked = c;
+            var boxes = document.getElementsByName(area_table[i][j][0]);
+            partbox.checked = true;
+            for (k = 0; k < boxes.length; k++)
+              if (!boxes[k].checked)
+                partbox.checked = false;
           }
         }
 
+        var allbox = document.getElementById("all");
+        var csbox = document.getElementById("CSRankings");
+        var boxes = document.getElementsByTagName("input");
+
+        csbox.checked = true;
+        for (i = 0; i < boxes.length; i++)
+          if (boxes[i].id.includes("*") && !boxes[i].checked)
+            csbox.checked = false;
+
+        var c = 0;
         for (i = 0, c = 0; i < boxes.length; i++)
             if (!boxes[i].checked)
               c++;
 
-        allbox.checked = (c < 2);
+        allbox.checked = c < 2 ? true : false;
       }
 
       function submit(){
@@ -248,15 +233,13 @@
             <div class="col-sm-4">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="{{ area }}"
-                         onclick="checkParts(this)"><b>{{ area }}</b>
+                  <input type="checkbox" id="{{ area }}" onclick="checkParts(this)"><b>{{ area }}</b>
                 </label>
               </div>
               {% for conf, year in conf_list %}
                 <div class="checkbox" style="padding-left: 20px;">
                   <label>
-                    <input type="checkbox" name="{{ area }}" id="{{ conf }}" onclick="check(this)">
-                    {{ conf }} {{ year }}
+                    <input type="checkbox" name="{{ area }}" id="{{ conf }}" onclick="allChecked()">{{ conf }} {{ year }}
                   </label>
                 </div>
               {% endfor %}
