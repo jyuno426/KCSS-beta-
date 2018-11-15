@@ -63,39 +63,28 @@
 
     <script>
       window.onload = function() {
-        document.getElementById("fromyear").options[2009 - 1960].selected = true;
-        document.getElementById("toyear").options[2018 - 1960].selected = true;
-        document.getElementById("filter").options[1].selected = true;
-        document.getElementById("filter2").options[0].selected = true;
-
-        var checkboxes = document.getElementsByTagName("input");
-        
-      };
-
-      function checkAll(topbox) {
-        var checkboxes = document.getElementsByTagName("input");
-        for (var i = 0; i < checkboxes.length; i++)
-          checkboxes[i].checked = topbox.checked;
+        allChecked();
       }
 
-      function checkCSRankings(topbox) {
-        var checkboxes = document.getElementsByTagName("input");
-        for (var i = 0; i < checkboxes.length; i++){
-          if (checkboxes[i].id.includes("*")){
-            checkboxes[i].checked = topbox.checked;
-          }
-        }
+      function checkAll(allbox) {
+        var boxes = document.getElementsByTagName("input");
+        for (var i = 0; i < boxes.length; i++)
+          boxes[i].checked = allbox.checked;
+      }
+
+      function checkCSRankings(csbox) {
+        var boxes = document.getElementsByTagName("input");
+        for (var i = 0; i < boxes.length; i++)
+          if (boxes[i].id.includes("*"))
+            boxes[i].checked = csbox.checked;
+        allChecked();
       }
 
       function checkParts(partbox) {
-        if (!partbox.checked) {
-          var topbox = document.getElementById(partbox.className);
-          if (topbox) topbox.checked = false;
-        }
-        var checkboxes = document.getElementsByName(partbox.id);
-        for (var i = 0; i < checkboxes.length; i++)
-          checkboxes[i].checked = partbox.checked;
-        allChecked(partbox.className);
+        var boxes = document.getElementsByName(partbox.id);
+        for (var i = 0; i < boxes.length; i++)
+          boxes[i].checked = partbox.checked;
+        allChecked();
       }
 
       function check(box) {
@@ -105,29 +94,39 @@
           topbox.checked = false;
           partbox.checked = false;
         }
-        partsChecked(box.name);
-        allChecked(box.className);
+        allChecked();
       }
 
-      function partsChecked(name) {
-        var partbox = document.getElementById(name);
-        var checkboxes = document.getElementsByName(name);
-        var c = true;
-        for (var i = 0; i < checkboxes.length; i++)
-            if (!checkboxes[i].checked)
-              c = false;
-        partbox.checked = c;
-      }
+      function allChecked() {
+        var allbox = document.getElementById("all");
+        var csbox = document.getElementById("CSRankings");
+        var boxes = document.getElementsByTagName("input");
 
-      function allChecked(id) {
-        var topbox = document.getElementById(id);
-        var checkboxes = document.getElementsByClassName(id);
+        var i, j, k, c = true;
+        for (i = 0; i < boxes.length; i++)
+          if (boxes[i].id.includes("*") && !boxes[i].checked)
+            c = false;
 
-        var a = 0;
-        for (var i = 0; i < checkboxes.length; i++)
-            if (!checkboxes[i].checked)
-              return;
-        topbox.checked = true;
+        csbox.checked = c;
+
+        var area_table = {{ area_table|safe }};
+        for (i = 0; i < area_table.length; i++) {
+          for (j = 0; j < area_table[i].length; j++) {
+            var partbox = document.getElementById(area_table[i][j][0]);
+            var partboxes = document.getElementsByName(area_table[i][j][0]);
+            c = true;
+            for (k = 0; k < partboxes.length; k++)
+              if (!partboxes[k].checked)
+                c = false;
+            partbox.checked = c;
+          }
+        }
+
+        for (i = 0, c = 0; i < boxes.length; i++)
+            if (!boxes[i].checked)
+              c++;
+
+        if (c == 1) allbox.checked = true;
       }
 
       function submit(){
@@ -140,16 +139,14 @@
 
         var area_table = {{ area_table|safe }};
 
-      	var i, j, k, l, checkboxes;
+      	var i, j, k, l, boxes;
       	for (i = 0; i < area_table.length; i++) {
-      	  for (j = 0; j < area_table[i][1].length; j++) {
-      	    for (k = 0; k < area_table[i][1][j].length; k++) {
-              checkboxes = document.getElementsByName(area_table[i][1][j][k][0]);
-              for (l = 0; l < checkboxes.length; l++) {
-                if (checkboxes[l].checked)
-                  new_location += (checkboxes[l].id.replace(" ", "-").replace("*", "") + "_");
-              }
-      	    }
+      	  for (j = 0; j < area_table[i].length; j++) {
+            boxes = document.getElementsByName(area_table[i][j][0]);
+            for (k = 0; k < boxes.length; k++)
+              if (boxes[k].checked) new_location += (
+                boxes[k].id.replace(" ", "-").replace("*", "") + "_"
+              );
       	  }
       	}
 
@@ -170,14 +167,17 @@
     </div>
     <hr>
 
-
     <div class="container">
       <div class="form-inline">
         <div class="form-group">
           <label for="fromyear">From</label>
           <select class="form-control" id="fromyear">
-            {% for year in years %}
-              <option value="{{year}}">{{year}}</option>
+            {% for year in years[:2008-2018] %}
+              <option>{{year}}</option>
+            {% endfor %}
+            <option value="2009" selected>2009</option>
+            {% for year in years[2009-2018:] %}
+              <option>{{year}}</option>
             {% endfor %}
           </select>
         </div>
@@ -185,9 +185,10 @@
         <div class="form-group">
           <label for="toyear">To</label>
           <select class="form-control" id="toyear">
-            {% for year in years %}
+            {% for year in years[:-1] %}
               <option>{{year}}</option>
             {% endfor %}
+            <option selected>2018</option>
           </select>
         </div>
         &nbsp;
@@ -195,7 +196,7 @@
           <label for="filter">Filter</label>
           <select class="form-control" id="filter">
             <option>all</option>
-            <option>only korean</option>
+            <option selected>only korean</option>
             <option>only first author</option>
             <option>only last author</option>
             <option>only korean first author</option>
@@ -205,7 +206,7 @@
         <div class="form-group">
           <label for="filter2"></label>
           <select class="form-control" id="filter2">
-            <option>&le; 10</option>
+            <option selected>&le; 10</option>
             <option>&le; 25</option>
             <option>&le; 50</option>
             <option>&le; 100</option>
@@ -219,22 +220,14 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
           <div class="checkbox">
             <label style="font-size: 20px;">
               <input type="checkbox" id="all" onclick="checkAll(this)"
-                     style="position: relative; bottom: 1px;"><b> All Conferences</b>
+                     style="position: relative; bottom: 1px;">
+              <b> All Conferences</b>
             </label>
           </div>
         </div>
@@ -242,35 +235,38 @@
           <div class="checkbox">
             <label style="font-size: 20px;">
               <input type="checkbox" id="CSRankings" onclick="checkCSRankings(this)"
-                     style="position: relative; bottom: 1px;"><b> All Conferences on <a href="http://csrankings.org/#/index?all"> CSRankings </a> </b>
+                     style="position: relative; bottom: 1px;">
+              <b> All Conferences on <a href="https://csrankings.org"> CSRankings </a> </b>
             </label>
           </div>
         </div>
       </div>
 
-      {% for id, table in area_table%}
-        {% for row in table %}
-          <div class="row">
-            {% for area, conf_list in row %}
-              <div class="col-sm-4">
-                <div class="checkbox">
+      {% for row in area_table %}
+        <div class="row">
+          {% for area, conf_list in row %}
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="{{ area }}"
+                         onclick="checkParts(this)"><b>{{ area }}</b>
+                </label>
+              </div>
+              {% for conf, year in conf_list %}
+                <div class="checkbox" style="padding-left: 20px;">
                   <label>
-                    <input type="checkbox" class="{{ id }}" id="{{ area }}"
-                           onclick="checkParts(this)"><b>{{ area }}</b>
+                    {% if "*" in conf %}
+                    <input type="checkbox" name="{{ area }}" id="{{ conf }}" onclick="check(this)" checked>
+                    {% else %}
+                    <input type="checkbox" name="{{ area }}" id="{{ conf }}" onclick="check(this)">
+                    {% endif %}
+                    {{ conf }} {{ year }}
                   </label>
                 </div>
-                {% for conf, year in conf_list %}
-                  <div class="checkbox" style="padding-left: 20px;">
-                    <label>
-                      <input type="checkbox" class="{{ id }}" name="{{ area }}" id="{{ conf }}"
-                             onclick="check(this)">{{ conf }} {{ year }}
-                    </label>
-                  </div>
-                {% endfor %}
-              </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
       {% endfor %}
     </div>
     <hr>
@@ -282,9 +278,9 @@
         <a href="http://alinlab.kaist.ac.kr"> Algorithmic Intelligence Laboratory, KAIST</a>.<br><br>
         Korean names are classified by a LSTM model, and search results for Korean authors are not perfect. <br>
         If you could notify us Korean authors that do not appear in the search results, we will incorporate them.<br><br>
-        * indicates the conference is listed on <a href="https://csrankings.org/">CSRankings.</a><br>
-        We do not apply any specific rules of CSRankings - e.g. CSRankings only counts papers of at least 6 pages, 
-        while we do all papers. <br>
+        * indicates that the conference is listed on <a href="https://csrankings.org/">CSRankings.</a>
+        We do not apply any specific rules of CSRankings,<br>
+        for example, CSRankings only counts papers of at least 6 pages while we do all papers.<br>
         Our search results may therefore be different from those of CSRankings.
       </address>
     </div>

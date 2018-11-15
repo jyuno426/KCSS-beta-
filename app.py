@@ -19,6 +19,11 @@ area_table = json.load(open('./database/area_table.json'))
 app = Flask(__name__)  # placeholder for current module
 
 
+def main():
+    init()
+    app.run(port=5002)
+
+
 @app.route('/')
 def home():
     return render_template('home.html',
@@ -33,7 +38,7 @@ def display(name):
     option = options[int(name[8])]
     howmany = [10, 25, 50, 100][int(name[9])]
     conf_list = sorted(name[10:].replace('-', ' ').lower().split('_')[1:-1])
-    graph_heights = {10: "400px", 25: "600px", 50: "800px", 100: "1140px"}
+    graph_heights = {10: "400px", 25: "600px", 50: "900px", 100: "1140px"}
     graph_height = graph_heights[howmany]
 
     data_dict = {}
@@ -202,5 +207,4 @@ def init():
 
 
 if __name__ == '__main__':
-    init()
-    app.run(port=5002)
+    main()

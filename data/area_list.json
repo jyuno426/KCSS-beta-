@@ -1,11 +1,10 @@
-[["AI", [
+[
   ["Machine Learning", ["AISTATS", "COLT", "ICLR", "ICML*", "NIPS*", "UAI"]],
   ["Data Mining & Information Retrieval", ["CIKM", "ICDM", "KDD*", "SIGIR*", "WSDM", "WWW*"]],
   ["Computer Vision & Graphics", ["CVPR*", "ECCV*", "ICCV*", "SIGGRAPH*", "BMVC"]],
   ["Natural Language Processing", ["ACL*", "EMNLP*", "NAACL*"]],
-  ["Robotics", ["ICRA*", "IROS*", "RSS*"]],
-  ["Artificial Intelligence & Signal Processing", ["AAAI*", "IJCAI*", "ICASSP"]]
-]], ["non-AI", [
+  ["Artificial Intelligence & Robotics", ["AAAI*", "IJCAI*", "ICRA*", "IROS*", "RSS*"]],
+
   ["Security & Cryptography", ["CCS*", "IEEE S&P*", "USENIX Security*", "NDSS", "CRYPTO*", "EuroCrypt*"]],
   ["Operating Systems", ["OSDI*", "SOSP*", "EuroSys", "FAST", "USENIX ATC"]],
   ["Networks", ["SIGCOMM*", "NSDI*", "INFOCOM", "MOBIHOC", "CONEXT"]],
@@ -25,4 +24,4 @@
   ["Design Automation", ["DAC*", "ICCAD*"]],
   ["Computational Economics", ["EC*", "WINE*"]],
   ["Computational Biology", ["ISMB*", "RECOMB*"]]
-]]]
+]

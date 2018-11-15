@@ -23,7 +23,6 @@ focs
 fse
 hpca
 hpdc
-icassp
 iccad
 iccv
 icde
