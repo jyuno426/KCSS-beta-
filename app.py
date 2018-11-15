@@ -20,7 +20,7 @@ app = Flask(__name__)  # placeholder for current module
 
 
 def main():
-    init()
+    # init()
     app.run(port=5002)
 
 
