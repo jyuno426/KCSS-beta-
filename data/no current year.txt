@@ -1,4 +1,0 @@
-cvpr
-iccv
-nips
-uai
