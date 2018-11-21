@@ -111,6 +111,7 @@ class DB_Maker:
 
         for conf in conf_list:
             for year in range(fromyear, toyear + 1):
+                # if conf != 'cvpr' or year != 2018: continue
                 path = './database/' + conf.upper() + '/' + conf + str(year)
                 if not os.path.isfile(path + '.json'):
                     continue
