@@ -157,5 +157,5 @@ class DB_Maker:
 if __name__ == '__main__':
     db_maker = DB_Maker()
     # print(db_maker.is_kr('Sungjin Im'))
-    db_maker.make_area_table(1950, 2018)
-    db_maker.make_db(1950, 2018)
+    db_maker.make_area_table(1950, 2019)
+    db_maker.make_db(1950, 2019)

@@ -157,11 +157,11 @@
         <div class="form-group">
           <label for="fromyear">From</label>
           <select class="form-control" id="fromyear">
-            {% for year in years[:2008-2018] %}
+            {% for year in years[:2008-years[-1]] %}
               <option>{{year}}</option>
             {% endfor %}
             <option value="2009" selected>2009</option>
-            {% for year in years[2009-2018:] %}
+            {% for year in years[2009-years[-1]:] %}
               <option>{{year}}</option>
             {% endfor %}
           </select>
@@ -173,7 +173,7 @@
             {% for year in years[:-1] %}
               <option>{{year}}</option>
             {% endfor %}
-            <option selected>2018</option>
+            <option selected>{{years[-1]}}</option>
           </select>
         </div>
         &nbsp;

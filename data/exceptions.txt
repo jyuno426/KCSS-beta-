@@ -22,4 +22,84 @@ rtss 1983 1984 2018
 sc 2018
 sensys 1993
 ubicomp 1993 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018
-wine 1993 2018icassp 1977 1985 1986 1987 1988 1989 1990 1991 1992 1993
+wine 1993 2018
+icassp 1977 1985 1986 1987 1988 1989 1990 1991 1992 1993
+aaai
+acl
+aistats
+ase
+asplos
+bmvc
+ccs
+chi
+cikm
+colt
+conext
+crypto
+cvpr
+dac
+ec
+eccv
+emnlp
+emsoft
+eurocrypt
+eurosys
+fast
+focs
+fse
+hpca
+hpdc
+iccad
+iccv
+icde 2019
+icdm
+icfp
+icml
+icra
+ics
+icse
+ieee s&p
+ijcai 2019
+infocom
+iros
+isca
+ismb
+issta
+kdd
+micro
+mobicom
+mobihoc
+mobisys
+naacl
+ndss
+neurips
+nsdi
+oopsla
+osdi
+pervasive
+pldi
+pods
+popl
+recomb
+rss
+rtas
+rtss
+sc
+sensys
+sigcomm
+siggraph
+sigir 2019
+sigmetrics
+sigmod 2019
+soda
+sosp
+stoc
+uai
+ubicomp
+uist
+usenix atc
+usenix security
+vldb
+wine
+wsdm
+www

@@ -5,8 +5,27 @@ import shutil
 import requests
 from bs4 import BeautifulSoup
 from utils import *
+from selenium import webdriver
 
 dblp_url = 'https://dblp.org/db/conf/'
+
+
+def BS(url):
+    return BeautifulSoup(requests.get(url).text, 'lxml')
+
+
+def get_arxiv(url):
+    html = BS(url)
+    left = html.find('div', {'class': 'leftcolumn'})
+    title = left.find('h1', {'class': 'title mathjax'}).text[6:]
+    authors = [smooth(x) for x in left.find('div', {'class': 'authors'}).text.split(',')]
+
+    pdf_url = 'https://arxiv.org' + html.find(
+        'div', {'class': 'extra-services'}
+    ).find_all('li')[0].find('a')['href']
+
+    return title, authors, pdf_url
+
 
 class Updater:
     def __init__(self):
@@ -48,7 +67,8 @@ class Updater:
             'fse': 'sigsoft',
             'ase': 'kbse',
             'ec': 'sigecom',
-            'ubicomp': 'huc'
+            'ubicomp': 'huc',
+            'neurips': 'nips'
         }
         for conf, dblp in dblp_dict.items():
             if conf in conf2dblp:
@@ -81,7 +101,7 @@ class Updater:
         return title, author_list, url
 
     def get_paper_list(self, url):
-        html = BeautifulSoup(requests.get(url).text, 'lxml')
+        html = BS(url)
 
         paper_list = []
         for data in html.find_all('li', {'class': 'entry inproceedings'}):
@@ -104,7 +124,7 @@ class Updater:
         if not os.path.isdir(path):
             os.mkdir(path)
 
-        html = BeautifulSoup(requests.get(dblp_url + dblp + '/').text, 'lxml').text
+        html = BS(dblp_url + dblp + '/').text
 
         exceptions = []
         for year in range(fromyear, toyear + 1):
@@ -182,26 +202,86 @@ class Updater:
         self.save_author_url_dic()
 
     def update_iclr(self):
-        os.mkdir(self.save_path + 'ICLR/')
-        for year in [2013, 2017, 2018]:
-            if year == 2013:
-                term = 3
-                url = 'https://openreview.net/group?id=ICLR.cc/2013'
-            elif year == 2017:
-                term = 4
-                url = 'https://openreview.net/group?id=ICLR.cc/2017/conference'
-            else:
-                term = 4
-                url = 'https://openreview.net/group?id=ICLR.cc/2018/Conference'
+        # os.mkdir(self.save_path + 'ICLR/')
+        driver = webdriver.Chrome('./data/chromedriver.exe')
+        driver.implicitly_wait(300)
 
+        for year in range(2019, 2020):
+            print(year)
             paper_list = []
-            path = './data/ICLR/iclr' + str(year) + '.txt'
-            with open(path, 'r', encoding='utf-8') as f:
-                lines = [line.strip() for line in f.readlines()]
-                for i in range(len(lines)//term):
-                    title = lines[term*i]
-                    author_list = list(filter(None, [smooth(x) for x in lines[term*i+1].split(',')]))
-                    paper_list.append([title, author_list, url])
+
+            if year == 2013:
+                url = 'https://openreview.net/group?id=ICLR.cc/2013/conference'
+                driver.get(url)
+                for x in driver.find_elements_by_class_name('note_content_pdf')[:23]:
+                    arxiv_url = x.get_attribute('href')
+                    if 'arxiv' in arxiv_url:
+                        paper_list.append(get_arxiv(arxiv_url))
+
+            elif year == 2014:
+                url = 'https://iclr.cc/archive/2014/conference-proceedings/'
+                html = BS(url)
+
+                a_list = html.find(
+                    'div', {'id': 'sites-chrome-everything-scrollbar'}
+                ).find(
+                    'table', {'id': 'sites-chrome-main'}
+                ).find(
+                    'div', {'id': 'sites-canvas-main'}
+                ).find(
+                    'div', {'dir': 'ltr'}
+                ).find_all('a')
+
+                for x in a_list:
+                    arxiv_url = x['href']
+                    if 'arxiv' in arxiv_url:
+                        paper_list.append(get_arxiv(arxiv_url))
+
+            elif year == 2015 or year == 2016:
+                url = 'https://iclr.cc/archive/www/doku.php%3Fid=iclr' + str(year) + ':accepted-main.html'
+                html = BS(url)
+
+                for level3 in html.find_all('div', {'class': 'level3'})[:2]:
+                    for x in level3.find_all('a'):
+                        arxiv_url = x['href']
+                        if 'arxiv' in arxiv_url:
+                            paper_list.append(get_arxiv(arxiv_url))
+
+            elif year == 2017:
+                url = 'https://openreview.net/group?id=ICLR.cc/2017/conference'
+                driver.get(url)
+
+                for x in driver.find_elements_by_xpath('//*[starts-with(@id, "note_")]')[:198]:
+                    title = x.find_element_by_class_name('note_content_title').text
+                    authors = [smooth(y) for y in x.find_element_by_class_name('signatures').text.split(',')]
+                    pdf_url = x.find_element_by_class_name('note_content_pdf').get_attribute('href')
+                    paper_list.append([title, authors, pdf_url])
+
+            elif year == 2018 or year == 2019:
+                url = 'https://openreview.net/group?id=ICLR.cc/' + str(year) + '/Conference'
+                driver.get(url)
+
+                aaa = []
+                while not aaa:
+                    html = BeautifulSoup(driver.page_source, 'lxml')
+                    aaa = html.find(
+                        'div', {'id': 'accepted-oral-papers'}
+                    ).find_all(
+                        'li', {'class': 'note '}
+                    ) + html.find(
+                        'div', {'id': 'accepted-poster-papers'}
+                    ).find_all(
+                        'li', {'class': 'note '}
+                    )
+
+                for x in aaa:
+                    try:
+                        title = x.find('h4').text.strip()
+                        authors = [smooth(y) for y in x.find('div', {'class': 'note-authors'}).text.split(',')]
+                        pdf_url = 'https://openreview.net' + x.find('a', {'class': 'pdf-link'})['href']
+                        paper_list.append([title, authors, pdf_url])
+                    except:
+                        pass
 
             self.save('iclr', year, paper_list)
 
@@ -217,17 +297,17 @@ class Updater:
 
         self.save('cvpr', 2018, paper_list)
 
-    def update_nips(self):
-        paper_list = []
-        path = './data/NIPS/nips2018.txt'
-        with open(path, 'r', encoding='utf-8') as f:
-            lines = [line.strip() for line in f.readlines()]
-            for i in range(len(lines)//5):
-                title = lines[5*i+2]
-                author_list = list(filter(None, [smooth(x) for x in lines[5*i+4].split('·')]))
-                paper_list.append([title, author_list, 'https://nips.cc/Conferences/2018/Schedule?type=Poster'])
-
-        self.save('nips', 2018, paper_list)
+    # def update_nips(self):
+    #     paper_list = []
+    #     path = './data/NIPS/nips2018.txt'
+    #     with open(path, 'r', encoding='utf-8') as f:
+    #         lines = [line.strip() for line in f.readlines()]
+    #         for i in range(len(lines)//5):
+    #             title = lines[5*i+2]
+    #             author_list = list(filter(None, [smooth(x) for x in lines[5*i+4].split('·')]))
+    #             paper_list.append([title, author_list, 'https://nips.cc/Conferences/2018/Schedule?type=Poster'])
+    #
+    #     self.save('nips', 2018, paper_list)
 
     def correct_names(self):
         with open('./database/author_url_dic.json', 'r') as f:
@@ -257,7 +337,7 @@ class Updater:
             if not(author in self.author_url_dic) or author in skip:
                 continue
             url = self.author_url_dic[author]
-            html = BeautifulSoup(requests.get(url).text, 'lxml')
+            html = BS(url)
 
             primary = smooth(html.find('span', {'class': 'name primary'}).text)
             secondary_list = [smooth(x.text) for x in html.find_all('span', {'class': 'name secondary'})]
@@ -280,10 +360,8 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
-    # updater.update(1950, 2018)
+    # updater.update(2019, 2019)
     # updater.update_exceptions()
-    # updater.update_iclr()
+    updater.update_iclr()
     # updater.update_cvpr()
-    # updater.update_nips()
-    updater.update_conf('cvpr', 'cvpr', 1950, 2018)
     updater.correct_names()

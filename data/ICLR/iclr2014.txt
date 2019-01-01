@@ -1,0 +1,184 @@
+Multilingual Distributed Representations without Word Alignment
+
+    Karl Moritz Hermann; Phil Blunsom
+
+
+
+Zero-Shot Learning by Convex Combination of Semantic Embeddings
+
+    Mohammad Norouzi; Tomas Mikolov; Samy Bengio; Yoram Singer; Jonathon Shlens; Andrea Frome; Greg S. Corrado; Jeffrey Dean
+
+
+Exact solutions to the nonlinear dynamics of learning in deep linear neural networks
+
+    Andrew M. Saxe; James L. McClelland; Surya Ganguli
+
+
+
+Revisiting Natural Gradient for Deep Networks
+
+    Razvan Pascanu; Yoshua Bengio
+
+
+Unit Tests for Stochastic Optimization
+    Tom Schaul; Ioannis Antonoglou; David Silver
+
+The return of AdaBoost.MH: multi-class Hamming trees
+
+    Balázs Kégl
+
+
+Neuronal Synchrony in Complex-Valued Deep Networks
+
+    David P. Reichert; Thomas Serre
+
+
+Bounding the Test Log-Likelihood of Generative Models
+
+    Yoshua Bengio; Li Yao; KyungHyun Cho
+
+
+A Generative Product-of-Filters Model of Audio
+
+    Dawen Liang; Mathew D. Hoffman; Gautham Mysore
+
+
+How to Construct Deep Recurrent Neural Networks
+
+    Razvan Pascanu; Caglar Gulcehre; Kyunghyun Cho; Yoshua Bengio
+
+
+Zero-Shot Learning and Clustering for Semantic Utterance Classification
+
+    Yann N. Dauphin; Gokhan Tur; Dilek Hakkani-Tur; Larry Heck
+
+
+An empirical analysis of dropout in piecewise linear networks
+
+    David Warde-Farley; Ian J. Goodfellow; Aaron Courville; Yoshua Bengio
+
+
+An Empirical Investigation of Catastrophic Forgeting in Gradient-Based Neural Networks
+
+    Ian J. Goodfellow; Mehdi Mirza; Da Xiao; Aaron Courville; Yoshua Bengio;
+
+
+On Fast Dropout and its Applicability to Recurrent Networks
+
+    Justin Bayer; Christian Osendorfer; Daniela Korhammer; Nutan Chen; Sebastian Urban; Patrick van der Smagt
+
+
+Network In Network
+
+    Min Lin; Qiang Chen; Shuicheng Yan
+
+
+Auto-Encoding Variational Bayes
+
+    Diederik P. Kingma; Max Welling
+
+
+
+Group-sparse Embeddings in Collective Matrix Factorization
+
+    Arto Klami; Guillaume Bouchard; Abhishek Tripathi
+
+
+
+Learning Human Pose Estimation Features with Convolutional Networks
+
+    Ajrun Jain; Jonathan Tompson; Mykhaylo Andriluka; Graham W. Taylor; Christoph Bregler
+
+
+EXMOVES: Classifier-based Features for Scalable Action Recognition
+
+    Du Tran; Lorenzo Torresani
+
+
+On the number of inference regions of deep feed forward networks with piece-wise linear activations
+
+    Razvan Pascanu; Guido Montufar; Yoshua Bengio
+
+
+
+Intriguing properties of neural networks
+
+    Christian Szegedy; Wojciech Zaremba; Ilya Sutskever; Joan Bruna; Dumitru Erhan; Ian Goodfellow; Rob Fergus
+
+
+Fast Training of Convolutional Networks through FFTs
+
+    Michael Mathieu; Mikael Henaff; Yann LeCun
+
+
+Deep and Wide Multiscale Recursive Networks for Robust Image Labeling
+
+    Gary B. Huang; Viren Jain
+
+
+Some Improvements on Deep Convolutional Neural Network Based Image Classification
+
+    Andrew G. Howard
+
+
+Deep Convolutional Ranking for Multilabel Image Annotation
+
+    Yunchao Gong; Yangqing Jia; Thomas Leung; Alexander Toshev; Sergey Ioffe
+
+
+Learning to encode motion using spatio-temporal synchrony
+
+    Kishore Reddy Konda; Roland Memisevic; Vincent Michalski
+
+
+Multi-View Priors for Learning Detectors from Sparse Viewpoint Data
+
+    Bojan Pepik; Michael Stark; Peter Gehler; Bernt Schiele
+
+
+k-Sparse Autoencoders
+
+    Alireza Makhzani; Brendan Frey
+
+
+OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks
+
+    Pierre Sermanet; Rob Fergus; Yann LeCun; Xiang Zhang; David Eigen; Michael Mathieu
+
+
+
+Multi-digit Number Recognition from Street View Imagery using Deep Convolutional Neural Networks
+
+    Ian J. Goodfellow; Yaroslav Bulatov; Julian Ibarz; Sacha Arnoud; Vinay Shet
+
+
+
+Sequentially Generated Instance-Dependent Image Representations for Classification
+
+    Ludovic Denoyer; Matthieu Cord; Patrick Gallinari; Nicolas Thome; Gabriel Dulac-Arnold
+
+
+
+Learned versus Hand-Designed Feature Representations for 3d Agglomeration
+
+    John A. Bogovic; Gary B. Huang; Viren Jain
+
+
+
+Spectral Networks and Locally Connected Networks on Graphs
+
+    Joan Bruna; Wojciech Zaremba; Arthur Szlam; Yann LeCun
+
+
+
+Sparse similarity-preserving hashing
+
+    Alex M. Bronstein; Pablo Sprechmann; Michael M. Bronstein; Jonathan Masci; Guillermo Sapiro
+
+
+
+Learning Transformations for Classification Forests
+
+    Qiang Qiu; Guillermo Sapiro
+
+

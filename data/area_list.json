@@ -1,5 +1,5 @@
 [
-  ["Machine Learning", ["AISTATS", "COLT", "ICLR", "ICML*", "NIPS*", "UAI"]],
+  ["Machine Learning", ["AISTATS", "COLT", "ICLR", "ICML*", "NeurIPS*", "UAI"]],
   ["Data Mining & Information Retrieval", ["CIKM", "ICDM", "KDD*", "SIGIR*", "WSDM", "WWW*"]],
   ["Computer Vision & Graphics", ["CVPR*", "ECCV*", "ICCV*", "SIGGRAPH*", "BMVC"]],
   ["Natural Language Processing", ["ACL*", "EMNLP*", "NAACL*"]],

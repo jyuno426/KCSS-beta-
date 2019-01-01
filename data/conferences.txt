@@ -47,7 +47,7 @@ mobihoc
 mobisys
 naacl
 ndss
-nips
+neurips
 nsdi
 oopsla
 osdi

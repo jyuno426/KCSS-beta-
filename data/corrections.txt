@@ -18,7 +18,7 @@ naacl   1986    https://dblp.org/db/conf/hlt/hlt1986.html
 naacl   1989    https://dblp.org/db/conf/naacl/hlt1989-1.html   https://dblp.org/db/conf/naacl/hlt1989-2.html
 naacl   1992    https://dblp.org/db/conf/naacl/hlt1992.html
 naacl   1993    https://dblp.org/db/conf/naacl/hlt1993.html
-nips    1996    https://dblp.org/db/conf/nips/nipsN1996.html
+neurips    1996    https://dblp.org/db/conf/nips/nipsN1996.html
 siggraph    2004    https://dblp.org/db/journals/tog/tog23.html
 siggraph    2005    https://dblp.org/db/journals/tog/tog24.html
 siggraph    2006    https://dblp.org/db/journals/tog/tog25.html
