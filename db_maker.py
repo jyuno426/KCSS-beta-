@@ -1,12 +1,15 @@
 from name_model import keras_Model
 from utils import *
-import json, os
+import json, os, copy
+from datetime import datetime
+
+min_year = 1960
+max_year = datetime.now().year
 
 
 class DB_Maker:
     def __init__(self):
         self.model = keras_Model()
-        self.model.load()
 
         self.kr_last_names = [name.lower() for name in get_file('./data/kr_last_names.txt')]
         self.kr_hard_coding = [smooth(' '.join(line.split())) for line in get_file('./data/kr_hard_coding.txt')]
@@ -17,6 +20,9 @@ class DB_Maker:
         self.kr_hard_coding = set(self.kr_hard_coding + var1 + var2)
 
         self.area_list = sorted(json.load(open('./data/area_list.json')), key=lambda x: (-len(x[1]), x[0]))
+
+    def load_model(self):
+        self.model.load()
 
     def is_kr_last(self, last_name):
         return last_name.lower() in self.kr_last_names
@@ -78,8 +84,9 @@ class DB_Maker:
         else:
             _dict[author] = [self.prob_kr(author), elem]
 
-    def make_area_table(self, fromyear, toyear):
+    def make_configuration(self, fromyear, toyear):
         area_table = []
+        recent_year_dict = {}
         for i, area in enumerate(self.area_list):
             title, conf_list = area
             temp = []
@@ -94,6 +101,7 @@ class DB_Maker:
                 for year in range(toyear, fromyear - 1, -1):
                     if os.path.exists('./database/' + conf.upper() + '/' + conf.lower() + str(year) + '.json'):
                         y += str(year)
+                        recent_year_dict[conf.lower()] = year
                         break
                 y += ')'
                 temp.append([x, y])
@@ -103,59 +111,122 @@ class DB_Maker:
         
         with open('./database/area_table.json', 'w') as f:
             json.dump(area_table, f)
+        with open('./data/recent_year_dict.json', 'w') as f:
+            json.dump(recent_year_dict, f)
 
-    def make_db(self, fromyear, toyear):
-        conf_list = get_file('./data/conferences.txt')
+    def make_conf_db(self, conf, fromyear, toyear):
         author_dic = json.load(open('./database/author_dic.json'))
         options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
+        for year in range(fromyear, toyear + 1):
+            # if conf != 'cvpr' or year != 2018: continue
+            path = './database/' + conf.upper() + '/' + conf + str(year)
+            if not os.path.isfile(path + '.json'):
+                continue
+            paper_list = json.load(open(path + '.json', 'r'))
+            data = [{} for _ in range(len(options))]
 
+            for _title, _author_list, url in paper_list:
+                author_list = [
+                    author_dic[author] if author in author_dic
+                    else author for author in _author_list
+                ]
+                elem = [_title.strip().strip('.'), author_list, url, conf, year]
+                for author in author_list:
+                    self.update_dict(author, data[0], elem)
+                    if self.is_kr(author):
+                        self.update_dict(author, data[1], elem)
+                first, last = author_list[0], author_list[-1]
+                self.update_dict(first, data[2], elem)
+                self.update_dict(last, data[3], elem)
+                if self.is_kr(first):
+                    self.update_dict(first, data[4], elem)
+                if self.is_kr(last):
+                    self.update_dict(last, data[5], elem)
+
+            for i, option in enumerate(options):
+                json.dump(data[i], open(path + '_' + option + '.json', 'w'))
+                coauthor_dict = {}
+                for author, value in data[i].items():
+                    paper_list = value[1:]
+                    coauthor_dict[author] = {}
+                    for _, coauthor_list, __, ___, ____ in paper_list:
+                        for coauthor in coauthor_list:
+                            if coauthor != author and (i != 1 or self.is_kr(coauthor)):
+                                try:
+                                    coauthor_dict[author][coauthor] += 1
+                                except KeyError:
+                                    coauthor_dict[author][coauthor] = 1
+                json.dump(coauthor_dict, open(path + '_coauthor_' + option + '.json', 'w'))
+
+            print(conf, year)
+
+    def make_all_db(self, fromyear, toyear):
+        conf_list = get_file('./data/conferences.txt')
         for conf in conf_list:
+            self.make_conf_db(conf, fromyear, toyear)
+
+    def fix_db(self, fromyear, toyear):
+        author_dic = json.load(open('./database/author_dic.json'))
+        options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
+        conf_list = get_file('./data/conferences.txt')
+
+        c = False
+        for conf in conf_list:
+            if conf == 'neurips' or c:
+                c = True
+            else:
+                continue
             for year in range(fromyear, toyear + 1):
                 # if conf != 'cvpr' or year != 2018: continue
                 path = './database/' + conf.upper() + '/' + conf + str(year)
                 if not os.path.isfile(path + '.json'):
                     continue
-                paper_list = json.load(open(path + '.json', 'r'))
-                data = [{} for _ in range(len(options))]
-
-                for _title, _author_list, url in paper_list:
-                    author_list = [
-                        author_dic[author] if author in author_dic
-                        else author for author in _author_list
-                    ]
-                    elem = [_title.strip().strip('.'), author_list, url, conf, year]
-                    for author in author_list:
-                        self.update_dict(author, data[0], elem)
-                        if self.is_kr(author):
-                            self.update_dict(author, data[1], elem)
-                    first, last = author_list[0], author_list[-1]
-                    self.update_dict(first, data[2], elem)
-                    self.update_dict(last, data[3], elem)
-                    if self.is_kr(first):
-                        self.update_dict(first, data[4], elem)
-                    if self.is_kr(last):
-                        self.update_dict(last, data[5], elem)
 
                 for i, option in enumerate(options):
-                    json.dump(data[i], open(path + '_' + option + '.json', 'w'))
-                    coauthor_dict = {}
-                    for author, value in data[i].items():
-                        paper_list = value[1:]
-                        coauthor_dict[author] = {}
-                        for _, coauthor_list, __, ___, ____ in paper_list:
-                            for coauthor in coauthor_list:
-                                if coauthor != author and (i != 1 or self.is_kr(coauthor)):
-                                    try:
-                                        coauthor_dict[author][coauthor] += 1
-                                    except KeyError:
-                                        coauthor_dict[author][coauthor] = 1
-                    json.dump(coauthor_dict, open(path + '_coauthor_' + option + '.json', 'w'))
+                    data = json.load(open(path + '_' + option + '.json'))
+                    new_data = {}
+
+                    for author, value in data.items():
+                        new_value = copy.deepcopy(value)
+
+                        for j in range(1, len(value)):
+                            coauthor_list = value[j][1]
+                            for k in range(len(coauthor_list)):
+                                coauthor = coauthor_list[k]
+                                if coauthor in author_dic:
+                                    new_value[j][1][k] = author_dic[coauthor]
+
+                        if author in author_dic:
+                            new_data[author_dic[author]] = new_value
+                        else:
+                            new_data[author] = new_value
+
+                    json.dump(new_data, open(path + '_' + option + '.json', 'w'))
+
+                    data = json.load(open(path + '_coauthor_' + option + '.json'))
+                    new_data = {}
+
+                    for author, value in data.items():
+                        new_value = {}
+                        for coauthor, count in value.items():
+                            if coauthor in author_dic:
+                                new_value[author_dic[coauthor]] = count
+                            else:
+                                new_value[coauthor] = count
+                        if author in author_dic:
+                            new_data[author_dic[author]] = new_value
+                        else:
+                            new_data[author] = new_value
+
+                    json.dump(new_data, open(path + '_coauthor_' + option + '.json', 'w'))
 
                 print(conf, year)
 
 
 if __name__ == '__main__':
     db_maker = DB_Maker()
+    db_maker.fix_db(min_year, max_year)
+    # db_maker.load_model()  # It takes some time
     # print(db_maker.is_kr('Sungjin Im'))
-    db_maker.make_area_table(1950, 2019)
-    db_maker.make_db(1950, 2019)
+    # db_maker.make_configuration(1950, 2019)
+    # db_maker.make_all_db(1950, 2019)

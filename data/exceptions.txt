@@ -103,3 +103,14 @@ vldb
 wine
 wsdm
 www
+aaai 2019
+acl 2019
+aistats 2019
+ase 2019
+asplos 2019
+bmvc 2019
+ccs 2019
+chi 2019
+cikm 2019
+colt 2019
+conext 2019

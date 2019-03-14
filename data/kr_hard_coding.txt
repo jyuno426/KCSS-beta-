@@ -30,6 +30,7 @@ Sung-Ju Lee
 Dongman Lee
 Seung Ryoul Maeng
 Sue Moon
+Sue B. Moon
 Sung-Hyon Myaeng
 Tek-Jin Nam
 Jun-yong Noh
@@ -206,3 +207,7 @@ Yong Jae Lee
 Michael S. Ryoo
 Kang G. Shin
 Jung Hee Cheon
+Keon Jang
+Shinae Woo
+Joongi Kim
+Keunhong Lee

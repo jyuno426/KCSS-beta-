@@ -6,8 +6,9 @@ Created on Sat Jun 30 17:45:03 2018
 """
 from flask import Flask, render_template
 from datetime import datetime
-import json, os, copy
+import json, copy
 from utils import *
+import threading
 
 data = {}
 coauthor_data = {}
@@ -17,11 +18,19 @@ options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
 area_table = json.load(open('./database/area_table.json'))
 
 app = Flask(__name__)  # placeholder for current module
+restart = False
 
 
-def main():
+def main(mode='local'):
+    restart_period = 7 * 24 * 60 * 60  # sec
+    threading.Timer(restart_period, restart_program).start()
     init()
-    app.run(port=5002)
+    if mode == 'local':
+        app.run(port=5002)
+    elif mode == 'host':
+        app.run(port=5002, host='0.0.0.0')
+    else:
+        raise Exception('Invalid mode')
 
 
 @app.route('/')
@@ -207,4 +216,9 @@ def init():
 
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) > 1:
+        raise Exception('# of arguments should be 0 or 1')
+    elif len(sys.argv) == 1:
+        main(mode=sys.argv[0])
+    else:
+        main()

@@ -2,6 +2,8 @@
 
 import numpy as np
 import unidecode
+import sys
+import os
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -87,6 +89,17 @@ def dict_update2(dict1, dict2):
                     dict1[key][subkey] = subvalue
         else:
             dict1[key] = value
+
+
+def restart_program():
+    """
+    Restarts the current program.
+    Note: this function does not return.
+    Any cleanup action (like saving data) must
+    be done before calling this function.
+    """
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
 
 
 if __name__=='__main__':

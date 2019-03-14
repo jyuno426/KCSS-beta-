@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import os
 import json
 import shutil
 import requests
@@ -178,7 +177,7 @@ class Updater:
             for year in exceptions:
                 f.write(' ' + str(year))
             f.write('\n')
-        self.save_author_url_dic()
+        # self.save_author_url_dic()
 
     def update(self, fromyear, toyear):
         # self.initialize_database()  # caution! It removes all database
@@ -362,6 +361,6 @@ if __name__ == '__main__':
     updater = Updater()
     # updater.update(2019, 2019)
     # updater.update_exceptions()
-    updater.update_iclr()
+    # updater.update_iclr()
     # updater.update_cvpr()
-    updater.correct_names()
+    # updater.correct_names()
