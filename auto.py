@@ -1,8 +1,6 @@
 from updater import Updater
 from db_maker import DB_Maker
 from datetime import datetime
-# from utils import restart_program
-# import threading
 import json
 
 
@@ -19,4 +17,5 @@ if __name__ == '__main__':
         my_updater.update_conf(conf, dblp, fromyear, toyear)
         my_db_maker.make_conf_db(conf, fromyear, toyear)
 
+    my_db_maker.make_configuration(1960, current_year)
 
