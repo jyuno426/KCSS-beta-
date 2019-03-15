@@ -167,17 +167,11 @@ class DB_Maker:
 
     def fix_db(self, fromyear, toyear):
         author_dic = json.load(open('./database/author_dic.json'))
-        options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
+        options = ['all', 'korean', 'first', 'korean_first', 'last', 'korean_last']
         conf_list = get_file('./data/conferences.txt')
 
-        c = False
         for conf in conf_list:
-            if conf == 'neurips' or c:
-                c = True
-            else:
-                continue
             for year in range(fromyear, toyear + 1):
-                # if conf != 'cvpr' or year != 2018: continue
                 path = './database/' + conf.upper() + '/' + conf + str(year)
                 if not os.path.isfile(path + '.json'):
                     continue
@@ -219,6 +213,26 @@ class DB_Maker:
                             new_data[author] = new_value
 
                     json.dump(new_data, open(path + '_coauthor_' + option + '.json', 'w'))
+
+                for co in ['', 'coauthor_']:
+                    for i in range(0, 6, 2):
+                        all = options[i]
+                        kor = options[i + 1]
+                        all_data = json.load(open(path + '_' + co + all + '.json'))
+                        kor_data = json.load(open(path + '_' + co + kor + '.json'))
+                        for author in all_data.keys():
+                            if author in self.kr_hard_coding:
+                                if co == '':
+                                    all_data[author][0] = 1
+                                kor_data[author] = all_data[author]
+                            if author in self.nonkr_hard_coding:
+                                if co == '':
+                                    all_data[author][0] = 0
+                                if author in kor_data:
+                                    del kor_data[author]
+
+                        json.dump(all_data, open(path + '_' + co + all + '.json', 'w'))
+                        json.dump(kor_data, open(path + '_' + co + kor + '.json', 'w'))
 
                 print(conf, year)
 

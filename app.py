@@ -8,7 +8,7 @@ from flask import Flask, render_template
 from datetime import datetime
 import json, copy
 from utils import *
-import threading
+# import threading
 
 data = {}
 coauthor_data = {}
@@ -22,8 +22,8 @@ restart = False
 
 
 def main(mode='local'):
-    restart_period = 7 * 24 * 60 * 60  # sec
-    threading.Timer(restart_period, restart_program).start()
+    # restart_period = 7 * 24 * 60 * 60  # sec
+    # threading.Timer(restart_period, restart_program).start()
     init()
     if mode == 'local':
         app.run(port=5002)
@@ -216,9 +216,9 @@ def init():
 
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 2:
         raise Exception('# of arguments should be 0 or 1')
-    elif len(sys.argv) == 1:
-        main(mode=sys.argv[0])
+    elif len(sys.argv) == 2:
+        main(mode=sys.argv[1])
     else:
         main()
