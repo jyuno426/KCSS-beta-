@@ -115,7 +115,7 @@ class DB_Maker:
             json.dump(recent_year_dict, f)
 
     def make_conf_db(self, conf, fromyear, toyear):
-        author_dic = json.load(open('./database/author_dic.json'))
+        author_dic = json.load(open('./data/author_dic.json'))
         options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
         for year in range(fromyear, toyear + 1):
             # if conf != 'cvpr' or year != 2018: continue
@@ -125,12 +125,12 @@ class DB_Maker:
             paper_list = json.load(open(path + '.json', 'r'))
             data = [{} for _ in range(len(options))]
 
-            for _title, _author_list, url in paper_list:
+            for _title, _author_list, url, pages in paper_list:
                 author_list = [
                     author_dic[author] if author in author_dic
                     else author for author in _author_list
                 ]
-                elem = [_title.strip().strip('.'), author_list, url, conf, year]
+                elem = [_title.strip().strip('.'), author_list, url, pages, conf, year]
                 for author in author_list:
                     self.update_dict(author, data[0], elem)
                     if self.is_kr(author):
@@ -149,7 +149,7 @@ class DB_Maker:
                 for author, value in data[i].items():
                     paper_list = value[1:]
                     coauthor_dict[author] = {}
-                    for _, coauthor_list, __, ___, ____ in paper_list:
+                    for _, coauthor_list, __, ___, ____, _____ in paper_list:
                         for coauthor in coauthor_list:
                             if coauthor != author and (i != 1 or self.is_kr(coauthor)):
                                 try:
@@ -166,7 +166,7 @@ class DB_Maker:
             self.make_conf_db(conf, fromyear, toyear)
 
     def fix_db(self, fromyear, toyear):
-        author_dic = json.load(open('./database/author_dic.json'))
+        author_dic = json.load(open('./data/author_dic.json'))
         options = ['all', 'korean', 'first', 'korean_first', 'last', 'korean_last']
         conf_list = get_file('./data/conferences.txt')
 
@@ -239,7 +239,7 @@ class DB_Maker:
 
 if __name__ == '__main__':
     db_maker = DB_Maker()
-    db_maker.fix_db(min_year, max_year)
+    # db_maker.fix_db(min_year, max_year)
     # db_maker.load_model()  # It takes some time
     # print(db_maker.is_kr('Sungjin Im'))
     # db_maker.make_configuration(1950, 2019)

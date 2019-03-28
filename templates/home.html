@@ -119,8 +119,9 @@
       	var s2 = document.getElementById("toyear").value;
         var s3 = document.getElementById("filter").selectedIndex;
         var s4 = document.getElementById("filter2").selectedIndex;
+        var s5 = document.getElementById("filter3").selectedIndex;
 
-      	var new_location = "/"+s1+s2+s3+s4+"_";
+      	var new_location = "/"+s1+s2+s3+s4+s5+"_";
 
         var area_table = {{ area_table|safe }};
 
@@ -191,10 +192,17 @@
         <div class="form-group">
           <label for="filter2"></label>
           <select class="form-control" id="filter2">
-            <option selected>&le; 10</option>
-            <option>&le; 25</option>
-            <option>&le; 50</option>
-            <option>&le; 100</option>
+            <option selected>&le; 10 authors</option>
+            <option>&le; 25 authors</option>
+            <option>&le; 50 authors</option>
+            <option>&le; 100 authors</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="filter3"></label>
+          <select class="form-control" id="filter3">
+            <option>&ge; 0 pages</option>
+            <option selected>&ge; 6 pages</option>
           </select>
         </div>
         &nbsp;

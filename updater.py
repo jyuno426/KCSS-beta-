@@ -14,6 +14,7 @@ def BS(url):
 
 
 def get_arxiv(url):
+    # print(url)
     html = BS(url)
     left = html.find('div', {'class': 'leftcolumn'})
     title = left.find('h1', {'class': 'title mathjax'}).text[6:]
@@ -23,7 +24,9 @@ def get_arxiv(url):
         'div', {'class': 'extra-services'}
     ).find_all('li')[0].find('a')['href']
 
-    return title, authors, pdf_url
+    pages = 0
+
+    return title, authors, pdf_url, pages
 
 
 class Updater:
@@ -33,7 +36,6 @@ class Updater:
         self.author_dic = {}
 
     def initialize_database(self):
-        open('./data/exceptions.txt', 'w').close()
         if os.path.isdir(self.save_path):
             shutil.rmtree(self.save_path)
         os.mkdir(self.save_path)
@@ -81,13 +83,19 @@ class Updater:
         author_list = []
         for elem in data.find_all('span', {'itemprop': 'author'}):
             author = smooth(elem.find('span', {'itemprop': 'name'}).text)
-            url = elem.find('a')['href']
+            # url = elem.find('a')['href']
             author_list.append(author)
-            self.author_url_dic[author] = url
+            # self.author_url_dic[author] = url
         title = data.find('span', {'class': 'title'}).text
+        try:
+            pagination = data.find('span', {'itemprop': 'pagination'}).text
+            page_from, page_to = pagination.split('-')
+            pages = int(page_to) - int(page_from) + 1
+        except:
+            pages = 0
 
         try:
-            url = rawdata.find(
+            paper_url = rawdata.find(
                 'nav', {'class': 'publ'}
             ).find_all(
                 'li', {'class': 'drop-down'}
@@ -95,24 +103,24 @@ class Updater:
                 'div', {'class': 'body'}
             ).find_all('a', {'itemprop': 'url'})[0]['href']
         except:
-            url = ''
+            paper_url = ''
 
-        return title, author_list, url
+        return title, author_list, paper_url, pages
 
     def get_paper_list(self, url):
         html = BS(url)
 
         paper_list = []
         for data in html.find_all('li', {'class': 'entry inproceedings'}):
-            title, author_list, link_url = self.parse_data(data)
+            title, author_list, link_url, pages = self.parse_data(data)
             if title and author_list:
-                paper_list.append([title, author_list, link_url])
+                paper_list.append([title, author_list, link_url, pages])
 
         if not paper_list:
             for data in html.find_all('li', {'class': 'entry article'}):
-                title, author_list, link_url = self.parse_data(data)
+                title, author_list, link_url, pages = self.parse_data(data)
                 if title and author_list:
-                    paper_list.append([title, author_list, link_url])
+                    paper_list.append([title, author_list, link_url, pages])
 
         return paper_list
 
@@ -182,7 +190,12 @@ class Updater:
     def update(self, fromyear, toyear):
         # self.initialize_database()  # caution! It removes all database
 
+        c = False
         for conf, dblp in self.get_conf2dblp().items():
+            if conf == 'icdm':
+                c = True
+            if not c:
+                continue
             self.update_conf(conf, dblp, fromyear, toyear)
 
     def update_exceptions(self):
@@ -198,7 +211,7 @@ class Updater:
                     paper_list += self.get_paper_list(url)
                 self.save(conf, year, paper_list)
 
-        self.save_author_url_dic()
+        # self.save_author_url_dic()
 
     def update_iclr(self):
         # os.mkdir(self.save_path + 'ICLR/')
@@ -254,7 +267,8 @@ class Updater:
                     title = x.find_element_by_class_name('note_content_title').text
                     authors = [smooth(y) for y in x.find_element_by_class_name('signatures').text.split(',')]
                     pdf_url = x.find_element_by_class_name('note_content_pdf').get_attribute('href')
-                    paper_list.append([title, authors, pdf_url])
+                    pages = 0
+                    paper_list.append([title, authors, pdf_url, pages])
 
             elif year == 2018 or year == 2019:
                 url = 'https://openreview.net/group?id=ICLR.cc/' + str(year) + '/Conference'
@@ -262,23 +276,27 @@ class Updater:
 
                 aaa = []
                 while not aaa:
-                    html = BeautifulSoup(driver.page_source, 'lxml')
-                    aaa = html.find(
-                        'div', {'id': 'accepted-oral-papers'}
-                    ).find_all(
-                        'li', {'class': 'note '}
-                    ) + html.find(
-                        'div', {'id': 'accepted-poster-papers'}
-                    ).find_all(
-                        'li', {'class': 'note '}
-                    )
+                    try:
+                        html = BeautifulSoup(driver.page_source, 'lxml')
+                        aaa = html.find(
+                            'div', {'id': 'accepted-oral-papers'}
+                        ).find_all(
+                            'li', {'class': 'note '}
+                        ) + html.find(
+                            'div', {'id': 'accepted-poster-papers'}
+                        ).find_all(
+                            'li', {'class': 'note '}
+                        )
+                    except:
+                        pass
 
                 for x in aaa:
                     try:
                         title = x.find('h4').text.strip()
                         authors = [smooth(y) for y in x.find('div', {'class': 'note-authors'}).text.split(',')]
                         pdf_url = 'https://openreview.net' + x.find('a', {'class': 'pdf-link'})['href']
-                        paper_list.append([title, authors, pdf_url])
+                        pages = 0
+                        paper_list.append([title, authors, pdf_url, pages])
                     except:
                         pass
 
@@ -292,7 +310,8 @@ class Updater:
             for i in range(len(lines)//4):
                 title = lines[4*i]
                 author_list = list(filter(None, [smooth(x) for x in lines[4*i+1].split(',')]))
-                paper_list.append([title, author_list, 'http://openaccess.thecvf.com/CVPR2018.py'])
+                pages = 0
+                paper_list.append([title, author_list, 'http://openaccess.thecvf.com/CVPR2018.py', pages])
 
         self.save('cvpr', 2018, paper_list)
 
@@ -359,8 +378,8 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
-    # updater.update(2019, 2019)
+    # updater.update(1950, 2019)
     # updater.update_exceptions()
-    # updater.update_iclr()
+    updater.update_iclr()
     # updater.update_cvpr()
     # updater.correct_names()

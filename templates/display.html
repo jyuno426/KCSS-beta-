@@ -121,7 +121,7 @@
         <div class="panel">
           {{ info_dict[name] }}<br>
           <p>
-            {% for title, authors, url, conf, year in data_dict[name][0] %}
+            {% for title, authors, url, pages, conf, year in data_dict[name][0] %}
               <br>
               <b>{{ conf.upper() }}</b>, {{ year }}{% for author in authors %}, {{ author }}{% endfor %}<br>
               <a href="{{ url }}" style="text-decoration:none;">
