@@ -16,7 +16,7 @@ min_year = 1960
 max_year = datetime.now().year
 options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
 options2 = [10, 25, 50, 100]
-options3 = [1, 6]
+options3 = [1, 2, 3, 4, 5, 6]
 area_table = json.load(open('./database/area_table.json'))
 
 app = Flask(__name__)  # placeholder for current module
@@ -70,11 +70,27 @@ def display(name, is_backdoor=False):
     # load data from database, for each conf, fromyear ~ toyear
     for conf in conf_list:
         for year in range(toyear, fromyear-1, -1):
-            temp = copy.deepcopy(data[conf][year][option][option3])  # must use copy.deepcopy
+            temp = {}
+            co_temp = {}
+            for author, value in data[conf][year][option].items():
+                res = [value[0]]
+                for paper in value[1:]:
+                    if paper[3] == 0 or paper[3] >= option3:
+                        res.append(paper)
+                if len(res) > 1:
+                    temp[author] = copy.deepcopy(res)   # must use copy.deepcopy
+                    co_temp[author] = {}
+                    for _, coauthor_list, __, ___, ____, _____ in temp[author][1:]:
+                        for coauthor in coauthor_list:
+                            if coauthor != author:
+                                try:
+                                    co_temp[author][coauthor] += 1
+                                except KeyError:
+                                    co_temp[author][coauthor] = 1
+
             names.update(list(temp.keys()))
             dict_update1(data_dict, prob_dict, temp)
-            temp = copy.deepcopy(coauthor_data[conf][year][option][option3])  # must use copy.deepcopy
-            dict_update2(edge_dict, temp)
+            dict_update2(edge_dict, co_temp)
 
     # Choose top "option2" authors in terms of # of papers
     # Sort those authors by lexicographic order (last name, first name)
@@ -145,35 +161,10 @@ def init():
             for option in options:
                 coauthor_data[conf][year][option] = {}
                 data[conf][year][option] = {}
-                for option3 in options3:
-                    data[conf][year][option][option3] = {}
-                    coauthor_data[conf][year][option][option3] = {}
 
                 path = './database/' + conf.upper() + '/' + conf.lower() + str(year) + '_'
                 if os.path.exists(path + option + '.json'):
-                    temp = json.load(open(path + option + '.json'))
-                    for option3 in options3:
-                        if option3 == 0:
-                            data[conf][year][option][option3] = temp
-                        else:
-                            for author, value in temp.items():
-                                res = [value[0]]
-                                for paper in value[1:]:
-                                    if paper[3] == 0 or paper[3] >= option3:
-                                        res.append(paper)
-                                if len(res) > 1:
-                                    data[conf][year][option][option3][author] = res
-
-                        for author, value in data[conf][year][option][option3].items():
-                            paper_list = value[1:]
-                            coauthor_data[conf][year][option][option3][author] = {}
-                            for _, coauthor_list, __, ___, ____, _____ in paper_list:
-                                for coauthor in coauthor_list:
-                                    if coauthor != author:
-                                        try:
-                                            coauthor_data[conf][year][option][option3][author][coauthor] += 1
-                                        except KeyError:
-                                            coauthor_data[conf][year][option][option3][author][coauthor] = 1
+                    data[conf][year][option] = json.load(open(path + option + '.json'))
 
 
 if __name__ == '__main__':
