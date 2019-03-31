@@ -122,6 +122,7 @@ class DB_Maker:
             path = './database/' + conf.upper() + '/' + conf + str(year)
             if not os.path.isfile(path + '.json'):
                 continue
+
             paper_list = json.load(open(path + '.json', 'r'))
             data = [{} for _ in range(len(options))]
 
@@ -143,20 +144,21 @@ class DB_Maker:
                 if self.is_kr(last):
                     self.update_dict(last, data[5], elem)
 
-            for i, option in enumerate(options):
-                json.dump(data[i], open(path + '_' + option + '.json', 'w'))
-                coauthor_dict = {}
-                for author, value in data[i].items():
-                    paper_list = value[1:]
-                    coauthor_dict[author] = {}
-                    for _, coauthor_list, __, ___, ____, _____ in paper_list:
-                        for coauthor in coauthor_list:
-                            if coauthor != author and (i != 1 or self.is_kr(coauthor)):
-                                try:
-                                    coauthor_dict[author][coauthor] += 1
-                                except KeyError:
-                                    coauthor_dict[author][coauthor] = 1
-                json.dump(coauthor_dict, open(path + '_coauthor_' + option + '.json', 'w'))
+            # for i, option in enumerate(options):
+            #     json.dump(data[i], open(path + '_' + option + '.json', 'w'))
+            #     coauthor_dict = {}
+            #     for author, value in data[i].items():
+            #         paper_list = value[1:]
+            #         coauthor_dict[author] = {}
+            #         for _, coauthor_list, __, ___, ____, _____ in paper_list:
+            #             for coauthor in coauthor_list:
+            #                 # if coauthor != author and (i != 1 or self.is_kr(coauthor)):
+            #                 if coauthor != author:
+            #                     try:
+            #                         coauthor_dict[author][coauthor] += 1
+            #                     except KeyError:
+            #                         coauthor_dict[author][coauthor] = 1
+            #     json.dump(coauthor_dict, open(path + '_coauthor_' + option + '.json', 'w'))
 
             print(conf, year)
 
@@ -197,24 +199,25 @@ class DB_Maker:
 
                     json.dump(new_data, open(path + '_' + option + '.json', 'w'))
 
-                    data = json.load(open(path + '_coauthor_' + option + '.json'))
-                    new_data = {}
+                    # data = json.load(open(path + '_coauthor_' + option + '.json'))
+                    # new_data = {}
+                    #
+                    # for author, value in data.items():
+                    #     new_value = {}
+                    #     for coauthor, count in value.items():
+                    #         if coauthor in author_dic:
+                    #             new_value[author_dic[coauthor]] = count
+                    #         else:
+                    #             new_value[coauthor] = count
+                    #     if author in author_dic:
+                    #         new_data[author_dic[author]] = new_value
+                    #     else:
+                    #         new_data[author] = new_value
+                    #
+                    # json.dump(new_data, open(path + '_coauthor_' + option + '.json', 'w'))
 
-                    for author, value in data.items():
-                        new_value = {}
-                        for coauthor, count in value.items():
-                            if coauthor in author_dic:
-                                new_value[author_dic[coauthor]] = count
-                            else:
-                                new_value[coauthor] = count
-                        if author in author_dic:
-                            new_data[author_dic[author]] = new_value
-                        else:
-                            new_data[author] = new_value
-
-                    json.dump(new_data, open(path + '_coauthor_' + option + '.json', 'w'))
-
-                for co in ['', 'coauthor_']:
+                # for co in ['', 'coauthor_']:
+                for co in ['']:
                     for i in range(0, 6, 2):
                         all = options[i]
                         kor = options[i + 1]
@@ -243,4 +246,4 @@ if __name__ == '__main__':
     # db_maker.load_model()  # It takes some time
     # print(db_maker.is_kr('Sungjin Im'))
     # db_maker.make_configuration(1950, 2019)
-    # db_maker.make_all_db(1950, 2019)
+    db_maker.make_all_db(1950, 2019)

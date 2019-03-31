@@ -73,7 +73,7 @@ def display(name, is_backdoor=False):
             temp = copy.deepcopy(data[conf][year][option][option3])  # must use copy.deepcopy
             names.update(list(temp.keys()))
             dict_update1(data_dict, prob_dict, temp)
-            temp = copy.deepcopy(coauthor_data[conf][year][option])  # must use copy.deepcopy
+            temp = copy.deepcopy(coauthor_data[conf][year][option][option3])  # must use copy.deepcopy
             dict_update2(edge_dict, temp)
 
     # Choose top "option2" authors in terms of # of papers
@@ -147,20 +147,34 @@ def init():
                 data[conf][year][option] = {}
                 for option3 in options3:
                     data[conf][year][option][option3] = {}
+                    coauthor_data[conf][year][option][option3] = {}
 
                 path = './database/' + conf.upper() + '/' + conf.lower() + str(year) + '_'
                 if os.path.exists(path + option + '.json'):
-                    coauthor_data[conf][year][option] = json.load(open(path + 'coauthor_' + option + '.json'))
+                    # coauthor_data[conf][year][option] = json.load(open(path + 'coauthor_' + option + '.json'))
                     temp = json.load(open(path + option + '.json'))
                     for option3 in options3:
                         if option3 == 0:
                             data[conf][year][option][option3] = temp
                         else:
-                            for key, value in temp.items():
-                                data[conf][year][option][option3][key] = [value[0]]
+                            for author, value in temp.items():
+                                res = [value[0]]
                                 for paper in value[1:]:
                                     if paper[3] == 0 or paper[3] >= option3:
-                                        data[conf][year][option][option3][key].append(paper)
+                                        res.append(paper)
+                                if len(res) > 1:
+                                    data[conf][year][option][option3][author] = res
+
+                        for author, value in data[conf][year][option][option3].items():
+                            paper_list = value[1:]
+                            coauthor_data[conf][year][option][option3][author] = {}
+                            for _, coauthor_list, __, ___, ____, _____ in paper_list:
+                                for coauthor in coauthor_list:
+                                    if coauthor != author:
+                                        try:
+                                            coauthor_data[conf][year][option][option3][author][coauthor] += 1
+                                        except KeyError:
+                                            coauthor_data[conf][year][option][option3][author][coauthor] = 1
 
 
 if __name__ == '__main__':
