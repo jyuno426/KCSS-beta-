@@ -199,23 +199,6 @@ class DB_Maker:
 
                     json.dump(new_data, open(path + '_' + option + '.json', 'w'))
 
-                    # data = json.load(open(path + '_coauthor_' + option + '.json'))
-                    # new_data = {}
-                    #
-                    # for author, value in data.items():
-                    #     new_value = {}
-                    #     for coauthor, count in value.items():
-                    #         if coauthor in author_dic:
-                    #             new_value[author_dic[coauthor]] = count
-                    #         else:
-                    #             new_value[coauthor] = count
-                    #     if author in author_dic:
-                    #         new_data[author_dic[author]] = new_value
-                    #     else:
-                    #         new_data[author] = new_value
-                    #
-                    # json.dump(new_data, open(path + '_coauthor_' + option + '.json', 'w'))
-
                 # for co in ['', 'coauthor_']:
                 for co in ['']:
                     for i in range(0, 6, 2):

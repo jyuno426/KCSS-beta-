@@ -151,7 +151,6 @@ def init():
 
                 path = './database/' + conf.upper() + '/' + conf.lower() + str(year) + '_'
                 if os.path.exists(path + option + '.json'):
-                    # coauthor_data[conf][year][option] = json.load(open(path + 'coauthor_' + option + '.json'))
                     temp = json.load(open(path + option + '.json'))
                     for option3 in options3:
                         if option3 == 0:
