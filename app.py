@@ -16,7 +16,7 @@ min_year = 1960
 max_year = datetime.now().year
 options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
 options2 = [10, 25, 50, 100]
-options3 = [0, 6]
+options3 = [1, 2, 3, 4, 5, 6]
 area_table = json.load(open('./database/area_table.json'))
 
 app = Flask(__name__)  # placeholder for current module
