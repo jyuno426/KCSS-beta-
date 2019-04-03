@@ -24,8 +24,8 @@ restart = False
 
 
 def main(mode='local'):
-    restart_period = 7 * 24 * 60 * 60  # sec
-    threading.Timer(restart_period, restart_program).start()
+    # restart_period = 7 * 24 * 60 * 60  # sec
+    # threading.Timer(restart_period, restart_program).start()
     init()
     if mode == 'local':
         app.run(port=5002)
