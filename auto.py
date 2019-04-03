@@ -14,8 +14,10 @@ if __name__ == '__main__':
     for conf, dblp in my_updater.get_conf2dblp().items():
         fromyear = recent_year_dict[conf] + 1
         toyear = current_year
-        my_updater.update_conf(conf, dblp, fromyear, toyear)
-        my_db_maker.make_conf_db(conf, fromyear, toyear)
+        success_years = my_updater.update_conf(conf, dblp, fromyear, toyear)
+        for year in success_years:
+            while not my_db_maker.make_conf_year_db(conf, year):
+                pass
 
     my_db_maker.make_configuration(1960, current_year)
 

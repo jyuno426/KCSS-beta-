@@ -47,7 +47,7 @@ class Updater:
         print('success')
 
     def save_author_url_dic(self):
-        path = './database/author_url_dic.json'
+        path = './data/author_url_dic.json'
         if os.path.exists(path):
             with open(path, 'r') as f:
                 self.author_url_dic.update(json.load(f))
@@ -133,7 +133,8 @@ class Updater:
 
         html = BS(dblp_url + dblp + '/').text
 
-        exceptions = []
+        success_years = []
+        # exceptions = []
         for year in range(fromyear, toyear + 1):
             if os.path.exists(path + conf + str(year) + '.json') or not (str(year) in html):
                 continue
@@ -142,12 +143,14 @@ class Updater:
             paper_list = self.get_paper_list(url)
             if paper_list:
                 self.save(conf, year, paper_list)
+                success_years.append(year)
                 continue
 
             url = dblp_url + dblp + '/' + dblp + str(year)[2:] + '.html'
             paper_list = self.get_paper_list(url)
             if paper_list:
                 self.save(conf, year, paper_list)
+                success_years.append(year)
                 continue
 
             url = dblp_url + dblp + '/' + dblp + str(year) + '-1.html'
@@ -163,6 +166,7 @@ class Updater:
                         break
                     i += 1
                 self.save(conf, year, paper_list)
+                success_years.append(year)
                 continue
 
             url = dblp_url + dblp + '/' + dblp + str(year)[2:] + '-1.html'
@@ -178,14 +182,16 @@ class Updater:
                         break
                     i += 1
                 self.save(conf, year, paper_list)
+                success_years.append(year)
                 continue
-            exceptions.append(year)
-        with open('./data/exceptions.txt', 'a+') as f:
-            f.write(conf)
-            for year in exceptions:
-                f.write(' ' + str(year))
-            f.write('\n')
+            # exceptions.append(year)
+        # with open('./data/exceptions.txt', 'a+') as f:
+        #     f.write(conf)
+        #     for year in exceptions:
+        #         f.write(' ' + str(year))
+        #     f.write('\n')
         # self.save_author_url_dic()
+        return success_years
 
     def update(self, fromyear, toyear):
         # self.initialize_database()  # caution! It removes all database
@@ -328,13 +334,13 @@ class Updater:
     #     self.save('nips', 2018, paper_list)
 
     def correct_names(self):
-        with open('./database/author_url_dic.json', 'r') as f:
+        with open('./data/author_url_dic.json', 'r') as f:
             self.author_url_dic = json.load(f)
 
-        with open('./database/author_dic.json', 'r') as f:
+        with open('./data/author_dic.json', 'r') as f:
             self.author_dic = json.load(f)
 
-        with open('./database/skip_author.json', 'r') as f:
+        with open('./data/skip_author.json', 'r') as f:
             skip = set(json.load(f))
 
         from db_maker import DB_Maker
@@ -368,9 +374,9 @@ class Updater:
                     skip.add(name)
                     self.author_dic[name] = primary
 
-            with open('./database/author_dic.json', 'w') as f:
+            with open('./data/author_dic.json', 'w') as f:
                 json.dump(self.author_dic, f)
-            with open('./database/skip_author.json', 'w') as f:
+            with open('./data/skip_author.json', 'w') as f:
                 json.dump(sorted(list(skip)), f)
 
 

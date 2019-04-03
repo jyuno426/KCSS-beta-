@@ -276,3 +276,82 @@ vldb 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019
 wine 1993 2019
 wsdm 1993
 www 1993 1994 1995 1996 1997 1998 1999 2000 2019
+aaai 2019
+acl 2019
+aistats 2019
+ase 2019
+asplos 2019
+bmvc 2019
+ccs 2019
+chi 2019
+cikm 2019
+colt 2019
+conext 2019
+crypto 2019
+cvpr 2019
+dac 2019
+ec 2019
+eccv 2019
+emnlp 2019
+emsoft 2019
+eurocrypt 2019
+eurosys
+fast
+focs 2019
+fse 2019
+hpca
+hpdc 2019
+iccad 2019
+iccv 2019
+icde 2019
+icdm 2019
+icfp 2019
+icml 2019
+icra 2019
+ics 2019
+icse 2019
+ieee s&p 2019
+ijcai 2019
+infocom 2019
+iros 2019
+isca 2019
+ismb 2019
+issta 2019
+kdd 2019
+micro 2019
+mobicom 2019
+mobihoc 2019
+mobisys 2019
+naacl 2019
+ndss 2019
+neurips 2019
+nsdi
+oopsla 2017 2018 2019
+osdi 2019
+pervasive 2019
+pldi 2019
+pods 2019
+popl 2018 2019
+recomb 2019
+rss 2019
+rtas 2019
+rtss 2019
+sc 2019
+sensys 2019
+sigcomm 2019
+siggraph 2019
+sigir 2019
+sigmetrics 2019
+sigmod 2019
+soda
+sosp 2019
+stoc 2019
+uai 2019
+ubicomp 2019
+uist 2019
+usenix atc 2019
+usenix security 2019
+vldb 2019
+wine 2019
+wsdm
+www 2019
