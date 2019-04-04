@@ -6,6 +6,7 @@
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <style type="text/css">
+      @media (min-width: 768px) { .container { width: 1100px; max-width: 1100px; } }
       body {
         font-family: Arial, Helvetica, sans-serif;
       }
@@ -24,13 +25,10 @@
         color:black;
       }
       .container{
-        max-width: 1140px;
+        max-width: 1100px;
         padding-top: 15px;
       }
       .col-sm-4 {
-        padding-bottom: 1px;
-      }
-      .col-sm-10 {
         padding-bottom: 1px;
       }
       #footer{
@@ -189,6 +187,7 @@
             <option>only korean last author</option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="filter2"></label>
           <select class="form-control" id="filter2">
@@ -198,6 +197,7 @@
             <option>&le; 100 authors</option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="filter3"></label>
           <select class="form-control" id="filter3">
@@ -275,6 +275,7 @@
         Our search results may therefore be different from those of CSRankings.<br><br>
         The database is updated every Sunday 03:00:00
         <a href="https://www.timeanddate.com/worldclock/south-korea/seoul">KST</a>
+        automatically.
       </address>
     </div>
     <!-- Default Statcounter code for KCSS

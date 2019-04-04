@@ -8,7 +8,7 @@ from flask import Flask, render_template
 from datetime import datetime
 import json, copy
 from utils import *
-import threading
+# import threading
 
 data = {}
 coauthor_data = {}
