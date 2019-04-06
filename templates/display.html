@@ -7,9 +7,13 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <style type="text/css">
-      @media (min-width: 768px) { .container { width: 1100px; max-width: 1100px; } }
+      @media (min-width: 768px) {
+        .container { width: 1100px; max-width: 1100px; }
+        #footer { max-width: 712px; }
+      }
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
       }
       a {
         color : blue ;
@@ -30,7 +34,10 @@
         padding-top: 15px;
       }
       #footer{
+        text-align: justify;
         padding-top: 5px;
+        padding-left: 3px;
+        padding-right: 3px;
       }
       hr{
         border: 0;
@@ -139,14 +146,20 @@
 
     <br>
     <hr>
-    <div class="container" style="text-align: center" id="footer">
+    <div class="container" id="footer">
       <address>KCSS was created by
         <a href="mailto:jyuno426@kaist.ac.kr"> Junho Han</a>,
         <a href="mailto:camusian@kaist.ac.kr"> Seunghyun Lee</a> and
         <a href="mailto:jinwoos@kaist.ac.kr"> Jinwoo Shin</a> at
-        <a href="http://alinlab.kaist.ac.kr"> Algorithmic Intelligence Laboratory, KAIST</a>. <br> <br>
-        Korean names are classified by a LSTM model, and search results for Korean authors are not perfect. <br>
-        If you could notify us Korean authors that do not appear in the search results, we will incorporate them.
+        <a href="http://alinlab.kaist.ac.kr"> Algorithmic Intelligence Laboratory, KAIST</a>.<br><br>
+        Korean names are classified by a LSTM model, and search results for Korean authors are not perfect.
+        If you could notify us (by emails:
+        <a href="mailto:camusian@kaist.ac.kr">camusian@kaist.ac.kr</a>,
+        <a href="mailto:jyuno426@kaist.ac.kr">jyuno426@kaist.ac.kr)</a>
+        Korean authors that do not appear in the search results, we will incorporate them.<br><br>
+        The database is updated every Sunday 03:00:00
+        <a href="https://www.timeanddate.com/worldclock/south-korea/seoul">KST</a>
+        automatically.
       </address>
     </div>
 
