@@ -9,7 +9,7 @@ max_year = datetime.now().year
 
 class DB_Maker:
     def __init__(self):
-        self.model = keras_Model()
+        self.model = None
 
         self.kr_last_names = [name.lower() for name in get_file('./data/kr_last_names.txt')]
         self.kr_hard_coding = [smooth(' '.join(line.split())) for line in get_file('./data/kr_hard_coding.txt')]
@@ -22,6 +22,7 @@ class DB_Maker:
         self.area_list = sorted(json.load(open('./data/area_list.json')), key=lambda x: (-len(x[1]), x[0]))
 
     def load_model(self):
+        self.model = keras_Model()
         self.model.load()
 
     def is_kr_last(self, last_name):
@@ -205,33 +206,30 @@ class DB_Maker:
                     json.dump(new_data, open(path + '_' + option + '.json', 'w'))
 
                 # for co in ['', 'coauthor_']:
-                for co in ['']:
-                    for i in range(0, 6, 2):
-                        all = options[i]
-                        kor = options[i + 1]
-                        all_data = json.load(open(path + '_' + co + all + '.json'))
-                        kor_data = json.load(open(path + '_' + co + kor + '.json'))
-                        for author in all_data.keys():
-                            if author in self.kr_hard_coding:
-                                if co == '':
-                                    all_data[author][0] = 1
-                                kor_data[author] = all_data[author]
-                            if author in self.nonkr_hard_coding:
-                                if co == '':
-                                    all_data[author][0] = 0
-                                if author in kor_data:
-                                    del kor_data[author]
+                for i in range(0, 6, 2):
+                    all = options[i]
+                    kor = options[i + 1]
+                    all_data = json.load(open(path + '_' + all + '.json'))
+                    kor_data = json.load(open(path + '_' + kor + '.json'))
+                    for author in all_data.keys():
+                        if author in self.kr_hard_coding:
+                            all_data[author][0] = 1
+                            kor_data[author] = all_data[author]
+                        if author in self.nonkr_hard_coding:
+                            all_data[author][0] = 0
+                            if author in kor_data:
+                                del kor_data[author]
 
-                        json.dump(all_data, open(path + '_' + co + all + '.json', 'w'))
-                        json.dump(kor_data, open(path + '_' + co + kor + '.json', 'w'))
+                    json.dump(all_data, open(path + '_' + all + '.json', 'w'))
+                    json.dump(kor_data, open(path + '_' + kor + '.json', 'w'))
 
                 print(conf, year)
 
 
 if __name__ == '__main__':
     db_maker = DB_Maker()
-    # db_maker.fix_db(min_year, max_year)
+    db_maker.fix_db(min_year, max_year)
     # db_maker.load_model()  # It takes some time
     # print(db_maker.is_kr('Sungjin Im'))
     # db_maker.make_configuration(1950, 2019)
-    db_maker.make_all_db(1950, 2019)
+    # db_maker.make_all_db(1950, 2019)
