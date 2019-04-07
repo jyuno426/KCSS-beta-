@@ -7,9 +7,9 @@
 
   ["Security & Cryptography", ["CCS*", "IEEE S&P*", "USENIX Security*", "NDSS", "CRYPTO*", "EuroCrypt*"]],
   ["Operating Systems", ["OSDI*", "SOSP*", "EuroSys", "FAST", "USENIX ATC"]],
-  ["Networks", ["SIGCOMM*", "NSDI*", "INFOCOM", "MOBIHOC", "CONEXT"]],
+  ["Networks", ["SIGCOMM*", "SIGMETRICS*", "NSDI*", "INFOCOM", "MOBIHOC", "CONEXT"]],
 
-  ["Theory", ["FOCS*", "SIGMETRICS*", "SODA*", "STOC*"]],
+  ["Theory", ["FOCS*", "SODA*", "STOC*"]],
   ["Computer Architecture", ["ASPLOS*", "HPCA", "ISCA*", "MICRO*"]],
   ["Databases", ["SIGMOD*", "VLDB*", "PODS", "ICDE"]],
 
