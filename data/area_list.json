@@ -15,7 +15,7 @@
 
   ["Programming Languages", ["PLDI*", "POPL*", "ICFP", "OOPSLA"]],
   ["Software Engineering", ["FSE*", "ICSE*", "ASE", "ISSTA"]],
-  ["Human-Computer Interaction", ["CHI*", "UbiComp*", "Pervasive*", "UIST*"]],
+  ["Human-Computer Interaction", ["CHI*", "CSCW", "UbiComp*", "Pervasive*", "UIST*"]],
 
   ["Embedded & Real-Time Systems", ["EMSOFT*", "RTAS*", "RTSS*"]],
   ["High-Performance Computing", ["HPDC*", "ICS*", "SC*"]],
