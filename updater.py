@@ -288,7 +288,17 @@ class Updater:
                             'div', {'id': 'accepted-oral-papers'}
                         ).find_all(
                             'li', {'class': 'note '}
-                        ) + html.find(
+                        )
+                    except:
+                        pass
+
+                driver.find_element_by_xpath('//*[@id="notes"]/div/ul/li[2]/a').click()
+
+                bbb = []
+                while not bbb:
+                    try:
+                        html = BeautifulSoup(driver.page_source, 'lxml')
+                        bbb = html.find(
                             'div', {'id': 'accepted-poster-papers'}
                         ).find_all(
                             'li', {'class': 'note '}
@@ -296,7 +306,7 @@ class Updater:
                     except:
                         pass
 
-                for x in aaa:
+                for x in aaa + bbb:
                     try:
                         title = x.find('h4').text.strip()
                         authors = [smooth(y) for y in x.find('div', {'class': 'note-authors'}).text.split(',')]
@@ -386,6 +396,6 @@ if __name__ == '__main__':
     updater = Updater()
     # updater.update(1950, 2019)
     # updater.update_exceptions()
-    updater.update_iclr()
+    # updater.update_iclr()
     # updater.update_cvpr()
     # updater.correct_names()
