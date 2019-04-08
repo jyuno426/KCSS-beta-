@@ -127,11 +127,15 @@ class DB_Maker:
         paper_list = json.load(open(path + '.json', 'r'))
         data = [{} for _ in range(len(options))]
 
-        for _title, _author_list, url, pages in paper_list:
+        for _title, _author_list, url, _pages in paper_list:
             author_list = [
                 author_dic[author] if author in author_dic
                 else author for author in _author_list
             ]
+            if conf == 'sigmetrics' and year >= 2018:
+                pages = 6
+            else:
+                pages = _pages
             elem = [_title.strip().strip('.'), author_list, url, pages, conf, year]
             for author in author_list:
                 self.update_dict(author, data[0], elem)
@@ -229,7 +233,7 @@ class DB_Maker:
 if __name__ == '__main__':
     db_maker = DB_Maker()
     # db_maker.load_model()  # It takes some time
-    # db_maker.make_conf_year_db('iclr', 2019)
+    # db_maker.make_conf_year_db('sigmetrics', 2018)
     # db_maker.fix_db(min_year, max_year)
     # print(db_maker.is_kr('Sungjin Im'))
     # db_maker.make_configuration(1950, 2019)
