@@ -24,6 +24,7 @@ focs
 fse
 hpca
 hpdc
+icalp
 iccad
 iccv
 icde
@@ -75,7 +76,9 @@ ubicomp
 uist
 usenix atc
 usenix security
+vis
 vldb
+vr
 wine
 wsdm
 www

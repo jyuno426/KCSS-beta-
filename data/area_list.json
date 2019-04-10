@@ -9,7 +9,7 @@
   ["Operating Systems", ["OSDI*", "SOSP*", "EuroSys", "FAST", "USENIX ATC"]],
   ["Networks", ["SIGCOMM*", "SIGMETRICS*", "NSDI*", "INFOCOM", "MOBIHOC", "CONEXT"]],
 
-  ["Theory", ["FOCS*", "SODA*", "STOC*"]],
+  ["Theory", ["FOCS*", "SODA*", "STOC*", "ICALP"]],
   ["Computer Architecture", ["ASPLOS*", "HPCA", "ISCA*", "MICRO*"]],
   ["Databases", ["SIGMOD*", "VLDB*", "PODS", "ICDE"]],
 
@@ -23,5 +23,7 @@
 
   ["Design Automation", ["DAC*", "ICCAD*"]],
   ["Computational Economics", ["EC*", "WINE*"]],
-  ["Computational Biology", ["ISMB*", "RECOMB*"]]
+  ["Computational Biology", ["ISMB*", "RECOMB*"]],
+
+  ["Visualization", ["VIS*", "VR*"]]
 ]

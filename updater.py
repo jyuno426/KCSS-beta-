@@ -41,6 +41,9 @@ class Updater:
         os.mkdir(self.save_path)
 
     def save(self, conf, year, paper_list):
+        path = self.save_path + conf.upper() + '/'
+        if not os.path.isdir(path):
+            os.mkdir(path)
         path = self.save_path + conf.upper() + '/' + conf + str(year) + '.json'
         with open(path, 'w') as f:
             json.dump(paper_list, f)
@@ -59,7 +62,10 @@ class Updater:
         for conf in get_file('./data/conferences.txt'):
             conf2dblp[conf] = conf
 
-        if 'iclr' in conf2dblp: conf2dblp.pop('iclr')
+        if 'iclr' in conf2dblp:
+            conf2dblp.pop('iclr')
+        if 'vis' in conf2dblp:
+            conf2dblp.pop('vis')
 
         dblp_dict = {
             'ieee s&p': 'sp',
@@ -89,8 +95,11 @@ class Updater:
         title = data.find('span', {'class': 'title'}).text
         try:
             pagination = data.find('span', {'itemprop': 'pagination'}).text
-            page_from, page_to = pagination.split('-')
-            pages = int(page_to) - int(page_from) + 1
+            if '-' in pagination:
+                page_from, page_to = pagination.split('-')
+                pages = int(page_to) - int(page_from) + 1
+            else:
+                pages = 1
         except:
             pages = 0
 
@@ -134,7 +143,7 @@ class Updater:
         html = BS(dblp_url + dblp + '/').text
 
         success_years = []
-        # exceptions = []
+        exceptions = []
         for year in range(fromyear, toyear + 1):
             if os.path.exists(path + conf + str(year) + '.json') or not (str(year) in html):
                 continue
@@ -184,12 +193,12 @@ class Updater:
                 self.save(conf, year, paper_list)
                 success_years.append(year)
                 continue
-            # exceptions.append(year)
-        # with open('./data/exceptions.txt', 'a+') as f:
-        #     f.write(conf)
-        #     for year in exceptions:
-        #         f.write(' ' + str(year))
-        #     f.write('\n')
+            exceptions.append(year)
+        with open('./data/exceptions.txt', 'a+') as f:
+            f.write(conf)
+            for year in exceptions:
+                f.write(' ' + str(year))
+            f.write('\n')
         # self.save_author_url_dic()
         return success_years
 
@@ -198,10 +207,6 @@ class Updater:
 
         c = False
         for conf, dblp in self.get_conf2dblp().items():
-            if conf == 'icdm':
-                c = True
-            if not c:
-                continue
             self.update_conf(conf, dblp, fromyear, toyear)
 
     def update_exceptions(self):
@@ -394,8 +399,10 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
-    # updater.update(1950, 2019)
+    # updater.update_conf('icalp', 'icalp', 1950, 2019)
+    # updater.update_conf('vr', 'vr', 1950, 2019)
     # updater.update_exceptions()
+    # updater.update(1950, 2019)
     # updater.update_iclr()
     # updater.update_cvpr()
     # updater.correct_names()

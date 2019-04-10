@@ -59,7 +59,7 @@ def display(name, is_backdoor=False):
     option2 = options2[int(name[9])]
     option3 = options3[int(name[10])]
     conf_list = sorted(name[11:].replace('-', ' ').lower().split('_')[1:-1])
-    graph_heights = {10: "400px", 25: "600px", 50: "900px", 100: "1140px"}
+    graph_heights = {10: "400px", 25: "600px", 50: "900px", 100: "1100px"}
     graph_height = graph_heights[option2]
 
     data_dict = {}
