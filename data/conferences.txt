@@ -24,6 +24,7 @@ focs
 fse
 hpca
 hpdc
+hri
 icalp
 iccad
 iccv
