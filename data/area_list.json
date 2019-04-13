@@ -2,7 +2,9 @@
   ["Machine Learning", ["AISTATS", "COLT", "ICLR", "ICML*", "NeurIPS*", "UAI"]],
   ["Data Mining & Information Retrieval", ["CIKM", "ICDM", "KDD*", "SIGIR*", "WSDM", "WWW*"]],
   ["Computer Vision & Graphics", ["CVPR*", "ECCV*", "ICCV*", "SIGGRAPH*", "BMVC"]],
-  ["Natural Language Processing", ["ACL*", "EMNLP*", "NAACL*"]],
+
+  ["Computational Linguistics & Speech Processing", ["ACL*", "EMNLP*", "NAACL*", "ICASSP", "INTERSPEECH"]],
+
   ["Artificial Intelligence & Robotics", ["AAAI*", "IJCAI*", "ICRA*", "IROS*", "RSS*", "HRI"]],
 
   ["Security & Cryptography", ["CCS*", "IEEE S&P*", "USENIX Security*", "NDSS", "CRYPTO*", "EuroCrypt*"]],

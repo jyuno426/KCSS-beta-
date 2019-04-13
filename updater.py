@@ -143,7 +143,7 @@ class Updater:
         html = BS(dblp_url + dblp + '/').text
 
         success_years = []
-        # exceptions = []
+        exceptions = []
         for year in range(fromyear, toyear + 1):
             if os.path.exists(path + conf + str(year) + '.json') or not (str(year) in html):
                 continue
@@ -193,12 +193,12 @@ class Updater:
                 self.save(conf, year, paper_list)
                 success_years.append(year)
                 continue
-            # exceptions.append(year)
-        # with open('./data/exceptions.txt', 'a+') as f:
-        #     f.write(conf)
-        #     for year in exceptions:
-        #         f.write(' ' + str(year))
-        #     f.write('\n')
+            exceptions.append(year)
+        with open('./data/exceptions.txt', 'a+') as f:
+            f.write(conf)
+            for year in exceptions:
+                f.write(' ' + str(year))
+            f.write('\n')
         # self.save_author_url_dic()
         return success_years
 
@@ -399,8 +399,9 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
-    # updater.update_conf('hri', 'hri', 1950, 2019)
-    # updater.update_exceptions()
+    # updater.update_conf('icassp', 'icassp', 1950, 2019)
+    # updater.update_conf('interspeech', 'interspeech', 1950, 2019)
+    updater.update_exceptions()
     # updater.update(1950, 2019)
     # updater.update_iclr()
     # updater.update_cvpr()

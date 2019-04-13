@@ -26,6 +26,7 @@ hpca
 hpdc
 hri
 icalp
+icassp
 iccad
 iccv
 icde
@@ -39,6 +40,7 @@ icse
 ieee s&p
 ijcai
 infocom
+interspeech
 iros
 isca
 ismb

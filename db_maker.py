@@ -188,6 +188,7 @@ class DB_Maker:
                 if not os.path.isfile(path + '.json'):
                     continue
 
+                # assumption: there is no person who used two names in one (conf, year)
                 for i, option in enumerate(options):
                     data = json.load(open(path + '_' + option + '.json'))
                     new_data = {}
@@ -232,11 +233,12 @@ class DB_Maker:
 
 if __name__ == '__main__':
     db_maker = DB_Maker()
-    # db_maker.load_model()  # It takes some time
-    # db_maker.make_conf_db('hri', min_year, max_year)
+    db_maker.load_model()  # It takes some time
+    db_maker.make_conf_db('icassp', min_year, max_year)
+    db_maker.make_conf_db('interspeech', min_year, max_year)
 
     # db_maker.make_conf_year_db('sigmetrics', 2018)
     db_maker.fix_db(min_year, max_year)
     # print(db_maker.is_kr('Sungjin Im'))
-    # db_maker.make_configuration(1950, 2019)
-    # db_maker.make_all_db(1950, 2019)
+    db_maker.make_configuration(min_year, max_year)
+    # db_maker.make_all_db(min_year, max_year)

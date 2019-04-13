@@ -1,3 +1,15 @@
+interspeech 1987    https://dblp.org/db/conf/interspeech/ecst1987.html
+interspeech 1989    https://dblp.org/db/conf/interspeech/eurospeech1989.html
+interspeech 1990    https://dblp.org/db/conf/interspeech/icslp1990.html
+interspeech 1991    https://dblp.org/db/conf/interspeech/eurospeech1991.html
+interspeech 1992    https://dblp.org/db/conf/interspeech/icslp1992.html
+interspeech 1993    https://dblp.org/db/conf/interspeech/eurospeech1993.html
+interspeech 1994    https://dblp.org/db/conf/interspeech/icslp1994.html
+interspeech 1995    https://dblp.org/db/conf/interspeech/eurospeech1995.html
+interspeech 1996    https://dblp.org/db/conf/interspeech/icslp1996.html
+interspeech 1997    https://dblp.org/db/conf/interspeech/eurospeech1997.html
+interspeech 1998    https://dblp.org/db/conf/interspeech/icslp1998.html
+interspeech 1999    https://dblp.org/db/conf/interspeech/eurospeech1999.html
 vr      1995    https://dblp.org/db/conf/vr/vrais1995.html
 vr      1996    https://dblp.org/db/conf/vr/vrais1996.html
 vr      1997    https://dblp.org/db/conf/vr/vrais1997.html
