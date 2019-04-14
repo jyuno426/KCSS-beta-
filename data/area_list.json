@@ -3,9 +3,9 @@
   ["Data Mining & Information Retrieval", ["CIKM", "ICDM", "KDD*", "SIGIR*", "WSDM", "WWW*"]],
   ["Computer Vision & Graphics", ["CVPR*", "ECCV*", "ICCV*", "SIGGRAPH*", "BMVC"]],
 
-  ["Computational Linguistics & Speech Processing", ["ACL*", "EMNLP*", "NAACL*", "ICASSP", "INTERSPEECH"]],
+  ["Linguistics & Speech", ["ACL*", "EMNLP*", "NAACL*", "ICASSP", "INTERSPEECH"]],
 
-  ["Artificial Intelligence & Robotics", ["AAAI*", "IJCAI*", "ICRA*", "IROS*", "RSS*", "HRI"]],
+  ["Artificial Intelligence & Robotics", ["AAAI*", "IJCAI*", "ICRA*", "IROS*", "RSS*"]],
 
   ["Security & Cryptography", ["CCS*", "IEEE S&P*", "USENIX Security*", "NDSS", "CRYPTO*", "EuroCrypt*"]],
   ["Operating Systems", ["OSDI*", "SOSP*", "EuroSys", "FAST", "USENIX ATC"]],
@@ -17,7 +17,7 @@
 
   ["Programming Languages", ["PLDI*", "POPL*", "ICFP", "OOPSLA"]],
   ["Software Engineering", ["FSE*", "ICSE*", "ASE", "ISSTA"]],
-  ["Human-Computer Interaction", ["CHI*", "CSCW", "UbiComp*", "Pervasive*", "UIST*"]],
+  ["Human-Computer Interaction", ["CHI*", "CSCW", "UbiComp*", "Pervasive*", "UIST*", "HRI"]],
 
   ["Embedded & Real-Time Systems", ["EMSOFT*", "RTAS*", "RTSS*"]],
   ["High-Performance Computing", ["HPDC*", "ICS*", "SC*"]],
