@@ -18,6 +18,7 @@ options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
 options2 = [10, 25, 50, 100]
 options3 = [1, 2, 3, 4, 5, 6]
 area_table = json.load(open('./database/area_table.json'))
+gender_dict = json.load(open('./database/gender_dict.json'))
 
 app = Flask(__name__)  # placeholder for current module
 restart = False
