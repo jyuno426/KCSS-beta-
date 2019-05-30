@@ -124,7 +124,7 @@ class DB_Maker:
                 print('predict genders on ' + path)
                 for author in data.keys():
                     if author not in gender_dict:
-                        gender_dict[author] = self.prob_woman(author)
+                        gender_dict[author] = str(int(100 * self.prob_woman(author)))
 
         with open('./database/gender_dict.json', 'w') as f:
             json.dump(gender_dict, f)
