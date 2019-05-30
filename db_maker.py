@@ -159,6 +159,8 @@ class DB_Maker:
         with open('./data/recent_year_dict.json', 'w') as f:
             json.dump(recent_year_dict, f)
 
+        self.make_gender_dict(fromyear, toyear)
+
     def make_conf_year_db(self, conf, year):
         author_dic = json.load(open('./data/author_dic.json'))
         options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
@@ -277,9 +279,9 @@ class DB_Maker:
 
 if __name__ == '__main__':
     db_maker = DB_Maker()
-    db_maker.load_model()  # It takes some time
+    # db_maker.load_model()  # It takes some time
 
-    db_maker.make_gender_dict(min_year, max_year)
+    # db_maker.make_gender_dict(min_year, max_year)
 
     # db_maker.make_conf_db('icassp', min_year, max_year)
     # db_maker.make_conf_db('interspeech', min_year, max_year)
