@@ -18,6 +18,7 @@ options = ['all', 'korean', 'first', 'last', 'korean_first', 'korean_last']
 options2 = [10, 25, 50, 100]
 options3 = [1, 2, 3, 4, 5, 6]
 area_table = json.load(open('./database/area_table.json'))
+gender_dict = json.load(open('./database/gender_dict.json'))
 
 app = Flask(__name__)  # placeholder for current module
 restart = False
@@ -44,7 +45,12 @@ def home():
 
 @app.route('/<name>')
 def main_page(name):
-    return display(name)
+    if name == 'backdoor':
+        return render_template('home_backdoor.html',
+                               area_table=area_table,
+                               years=range(min_year, max_year + 1))
+    else:
+        return display(name)
 
 
 @app.route('/backdoor/<name>')
@@ -58,7 +64,13 @@ def display(name, is_backdoor=False):
     option = options[int(name[8])]
     option2 = options2[int(name[9])]
     option3 = options3[int(name[10])]
-    conf_list = sorted(name[11:].replace('-', ' ').lower().split('_')[1:-1])
+    if is_backdoor:
+        thresholds = [0, 30, 40, 50]
+        woman_threshold = thresholds[int(name[11])]
+        conf_list = sorted(name[12:].replace('-', ' ').lower().split('_')[1:-1])
+    else:
+        woman_threshold = 0
+        conf_list = sorted(name[11:].replace('-', ' ').lower().split('_')[1:-1])
     graph_heights = {10: "400px", 25: "600px", 50: "900px", 100: "1100px"}
     graph_height = graph_heights[option2]
 
@@ -73,6 +85,8 @@ def display(name, is_backdoor=False):
             temp = {}
             co_temp = {}
             for author, value in data[conf][year][option].items():
+                if is_backdoor and (author not in gender_dict or int(gender_dict[author]) < woman_threshold):
+                    continue
                 res = [value[0]]
                 for paper in value[1:]:
                     if paper[3] == 0 or paper[3] >= option3:
@@ -104,7 +118,10 @@ def display(name, is_backdoor=False):
     temp = temp[:option2]
     max_papers = -temp[0][0] if temp else 1
 
-    if not is_backdoor:
+    if is_backdoor:
+        if 'korean' in option:
+            temp.sort(key=lambda x: -int(gender_dict[x[1]]))
+    else:
         temp = sorted([(x[1].split()[-1], x[1]) for x in temp])
 
     name_list = [x[1] for x in temp]
@@ -139,10 +156,14 @@ def display(name, is_backdoor=False):
             temp += conf + "=" + str(info_dict[author][conf]) + ', '
         info_dict[author] = temp[:-2]
 
-    return render_template("display.html",
+    return render_template('display.html',
                            name_list=name_list,
                            data_dict=data_dict,
-                           prob_dict=prob_dict,
+                           prob_dict=(
+                               gender_dict
+                               if is_backdoor and 'korean' in option else
+                               prob_dict
+                           ),
                            info_dict=info_dict,
                            edge_dict=edge_dict,
                            max_papers=max_papers,

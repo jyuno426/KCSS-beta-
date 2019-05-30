@@ -1,4 +1,5 @@
 from name_model import keras_Model
+from name_gender_model import keras_gender_Model
 from utils import *
 import json, os, copy
 from datetime import datetime
@@ -10,6 +11,7 @@ max_year = datetime.now().year
 class DB_Maker:
     def __init__(self):
         self.model = None
+        self.gender_model = None
 
         self.kr_last_names = [name.lower() for name in get_file('./data/kr_last_names.txt')]
         self.kr_hard_coding = [smooth(' '.join(line.split())) for line in get_file('./data/kr_hard_coding.txt')]
@@ -19,11 +21,17 @@ class DB_Maker:
         var2 = [name.replace('-', '') for name in self.kr_hard_coding]
         self.kr_hard_coding = set(self.kr_hard_coding + var1 + var2)
 
+        self.man_hard_coding = [smooth(' '.join(line.split())) for line in get_file('./data/man_hard_coding.txt')]
+        self.woman_hard_coding = [smooth(' '.join(line.split())) for line in get_file('./data/woman_hard_coding.txt')]
+
         self.area_list = sorted(json.load(open('./data/area_list.json')), key=lambda x: (-len(x[1]), x[0]))
 
     def load_model(self):
         self.model = keras_Model()
         self.model.load()
+
+        self.gender_model = keras_gender_Model()
+        self.gender_model.load()
 
     def is_kr_last(self, last_name):
         return last_name.lower() in self.kr_last_names
@@ -79,11 +87,47 @@ class DB_Maker:
     def is_kr(self, name):
         return self.prob_kr(name) >= 0.5
 
+    def prob_woman_first(self, first_name):
+        first = ''.join([normalize(part) for part in first_name.split()])
+        return self.gender_model.pred(first)[0]
+
+    def prob_woman(self, name):
+        if name in self.woman_hard_coding:
+            return 1
+        if name in self.man_hard_coding:
+            return 0
+
+        parts = name.split()
+        if len(parts) > 1:
+            first = ' '.join(parts[:-1])
+        else:
+            first = parts[0]
+        return self.prob_woman_first(first)
+
     def update_dict(self, author, _dict, elem):
         if author in _dict:
             _dict[author].append(elem)
         else:
             _dict[author] = [self.prob_kr(author), elem]
+
+    def make_gender_dict(self, fromyear, toyear):
+        gender_dict = {}
+        # key: author name / value: prob for woman
+        conf_list = get_file('./data/conferences.txt')
+
+        for conf in conf_list:
+            for year in range(fromyear, toyear + 1):
+                path = './database/' + conf.upper() + '/' + conf + str(year) + '_korean.json'
+                if not os.path.isfile(path):
+                    continue
+                data = json.load(open(path))
+                print('predict genders on ' + path)
+                for author in data.keys():
+                    if author not in gender_dict:
+                        gender_dict[author] = str(int(100 * self.prob_woman(author)))
+
+        with open('./database/gender_dict.json', 'w') as f:
+            json.dump(gender_dict, f)
 
     def make_configuration(self, fromyear, toyear):
         area_table = []
@@ -233,12 +277,15 @@ class DB_Maker:
 
 if __name__ == '__main__':
     db_maker = DB_Maker()
-    # db_maker.load_model()  # It takes some time
+    db_maker.load_model()  # It takes some time
+
+    db_maker.make_gender_dict(min_year, max_year)
+
     # db_maker.make_conf_db('icassp', min_year, max_year)
     # db_maker.make_conf_db('interspeech', min_year, max_year)
 
     # db_maker.make_conf_year_db('sigmetrics', 2018)
     # db_maker.fix_db(min_year, max_year)
     # print(db_maker.is_kr('Sungjin Im'))
-    db_maker.make_configuration(min_year, max_year)
+    # db_maker.make_configuration(min_year, max_year)
     # db_maker.make_all_db(min_year, max_year)
