@@ -45,26 +45,35 @@ def home():
 
 @app.route('/<name>')
 def main_page(name):
-    if name == 'backdoor':
-        return render_template('home_backdoor.html',
+    if name == 'women':
+        return render_template('home_women.html',
+                               area_table=area_table,
+                               years=range(min_year, max_year + 1))
+    elif name == 'sort':
+        return render_template('home.html',
                                area_table=area_table,
                                years=range(min_year, max_year + 1))
     else:
         return display(name)
 
 
-@app.route('/backdoor/<name>')
-def backdoor_page(name):
-    return display(name, is_backdoor=True)
+@app.route('/women/<name>')
+def women_page(name):
+    return display(name, is_women=True)
 
 
-def display(name, is_backdoor=False):
+@app.route('/sort/<name>')
+def sort_page(name):
+    return display(name, is_sort=True)
+
+
+def display(name, is_women=False, is_sort=False):
     fromyear = int(name[0:4])
     toyear = int(name[4:8])
     option = options[int(name[8])]
     option2 = options2[int(name[9])]
     option3 = options3[int(name[10])]
-    if is_backdoor:
+    if is_women:
         thresholds = [0, 30, 40, 50]
         woman_threshold = thresholds[int(name[11])]
         conf_list = sorted(name[12:].replace('-', ' ').lower().split('_')[1:-1])
@@ -85,7 +94,7 @@ def display(name, is_backdoor=False):
             temp = {}
             co_temp = {}
             for author, value in data[conf][year][option].items():
-                if is_backdoor and (author not in gender_dict or int(gender_dict[author]) < woman_threshold):
+                if is_women and (author not in gender_dict or int(gender_dict[author]) < woman_threshold):
                     continue
                 res = [value[0]]
                 for paper in value[1:]:
@@ -118,10 +127,10 @@ def display(name, is_backdoor=False):
     temp = temp[:option2]
     max_papers = -temp[0][0] if temp else 1
 
-    if is_backdoor:
+    if is_women:
         if 'korean' in option:
             temp.sort(key=lambda x: -int(gender_dict[x[1]]))
-    else:
+    elif not is_sort:
         temp = sorted([(x[1].split()[-1], x[1]) for x in temp])
 
     name_list = [x[1] for x in temp]
@@ -161,7 +170,7 @@ def display(name, is_backdoor=False):
                            data_dict=data_dict,
                            prob_dict=(
                                gender_dict
-                               if is_backdoor and 'korean' in option else
+                               if is_women and 'korean' in option else
                                prob_dict
                            ),
                            info_dict=info_dict,

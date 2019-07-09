@@ -131,7 +131,7 @@
         var s4 = document.getElementById("filter2").selectedIndex;
         var s5 = document.getElementById("filter3").selectedIndex;
 
-      	var new_location = "/"+s1+s2+s3+s4+s5+"_";
+      	var new_location = window.location+"/"+s1+s2+s3+s4+s5+"_";
 
         var area_table = {{ area_table|safe }};
 
@@ -146,6 +146,7 @@
       	  }
       	}
 
+      	console.log(window.location);
       	window.location = new_location;
       }
     </script>

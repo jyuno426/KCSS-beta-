@@ -132,7 +132,7 @@
         var s5 = document.getElementById("filter3").selectedIndex;
         var sW = document.getElementById("filterWomen").selectedIndex;
 
-      	var new_location = "/backdoor/"+s1+s2+s3+s4+s5+sW+"_";
+      	var new_location = window.location+"/"+s1+s2+s3+s4+s5+sW+"_";
 
         var area_table = {{ area_table|safe }};
 
