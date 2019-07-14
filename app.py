@@ -38,6 +38,7 @@ def main(mode='local'):
 
 @app.route('/')
 def home():
+    print('aaa')
     return render_template('home.html',
                            area_table=area_table,
                            years=range(min_year, max_year + 1))
