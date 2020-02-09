@@ -5,7 +5,8 @@
 
   ["Linguistics & Speech", ["ACL*", "EMNLP*", "NAACL*", "ICASSP", "INTERSPEECH"]],
 
-  ["Artificial Intelligence & Robotics", ["AAAI*", "IJCAI*", "ICRA*", "IROS*", "RSS*"]],
+  ["Artificial Intelligence", ["AAAI*", "IJCAI*"]],
+  ["Robotics", ["ICRA*", "IROS*", "RSS*"]],
 
   ["Security & Cryptography", ["CCS*", "IEEE S&P*", "USENIX Security*", "NDSS", "CRYPTO*", "EuroCrypt*"]],
   ["Operating Systems", ["OSDI*", "SOSP*", "EuroSys", "FAST", "USENIX ATC"]],
