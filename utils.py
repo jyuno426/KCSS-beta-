@@ -4,6 +4,8 @@ import numpy as np
 import unidecode
 import sys
 import os
+import json
+import requests
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -100,6 +102,16 @@ def restart_program():
     """
     python = sys.executable
     os.execl(python, python, * sys.argv)
+
+
+def webhook(message):
+    webhook_url = 'https://hooks.slack.com/services/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'
+    payload = {'text': message}
+    requests.post(
+        webhook_url,
+        data=json.dumps(payload),
+        headers={'Content-Type': 'application/json'}
+    )
 
 
 if __name__=='__main__':

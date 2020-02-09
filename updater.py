@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from utils import *
 from selenium import webdriver
+from utils import webhook
 
 dblp_url = 'https://dblp.org/db/conf/'
 
@@ -48,6 +49,7 @@ class Updater:
         with open(path, 'w') as f:
             json.dump(paper_list, f)
         print('success')
+        webhook(conf + "-" + year + "is saved")
 
     def save_author_url_dic(self):
         path = './data/author_url_dic.json'
