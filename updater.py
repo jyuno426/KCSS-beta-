@@ -84,7 +84,7 @@ class Updater:
         return conf2dblp
 
     def parse_data(self, rawdata):
-        data = rawdata.find('article', {'class': 'data'})
+        data = rawdata.find('cite', {'class': 'data'})
 
         author_list = []
         for elem in data.find_all('span', {'itemprop': 'author'}):
