@@ -1,3 +1,4 @@
+import traceback
 from updater import Updater
 from db_maker import DB_Maker
 from datetime import datetime
@@ -22,12 +23,14 @@ if __name__ == '__main__':
             for year in success_years:
                 while not my_db_maker.make_conf_year_db(conf, year):
                     pass
-            if len(success_years) == 0:
-                webhook(conf + " is already updated")
+            #if len(success_years) == 0:
+            #    webhook(conf + " is already updated")
 
         my_db_maker.make_configuration(1960, current_year)
         webhook("Update finished")
     except Exception as e:
         webhook('Error occurred while updating')
         webhook(str(e))
+        trace=traceback.format_exc()
+        webhook(str(trace))
 

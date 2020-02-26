@@ -221,6 +221,7 @@ class DB_Maker:
     def make_all_db(self, fromyear, toyear):
         conf_list = get_file('./data/conferences.txt')
         for conf in conf_list:
+            webhook("Make db of " + conf)
             self.make_conf_db(conf, fromyear, toyear)
 
     def fix_db(self, fromyear, toyear):
@@ -279,7 +280,7 @@ class DB_Maker:
 
 if __name__ == '__main__':
     db_maker = DB_Maker()
-    # db_maker.load_model()  # It takes some time
+    db_maker.load_model()  # It takes some time
 
     # db_maker.make_gender_dict(min_year, max_year)
 
@@ -287,8 +288,10 @@ if __name__ == '__main__':
     # db_maker.make_conf_db('interspeech', min_year, max_year)
 
     # db_maker.make_conf_year_db('sigmetrics', 2018)
-    db_maker.fix_db(min_year, max_year)
+    # db_maker.fix_db(min_year, max_year)
     # print(db_maker.is_kr('Sungjin Im'))
     # db_maker.make_configuration(min_year, max_year)
-    # db_maker.make_all_db(min_year, max_year)
+    db_maker.make_all_db(min_year, max_year)
+    webhook("Make gender dict")
+    db_maker.make_gender_dict(min_year, max_year)
     # print(db_maker.prob_kr('Sangwoo Mo'))
