@@ -3,6 +3,7 @@ from db_maker import DB_Maker
 from datetime import datetime
 from utils import webhook
 import json
+import traceback
 
 
 if __name__ == '__main__':
@@ -29,5 +30,6 @@ if __name__ == '__main__':
         webhook("Update finished")
     except Exception as e:
         webhook('Error occurred while updating')
-        webhook(str(e))
+        trace = traceback.format_exc()
+        webhook(str(trace))
 
