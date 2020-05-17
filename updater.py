@@ -49,7 +49,7 @@ class Updater:
         with open(path, 'w') as f:
             json.dump(paper_list, f)
         print('success')
-        webhook(conf + "-" + year + "is saved")
+        webhook(conf + "-" + str(year) + "is saved")
 
     def save_author_url_dic(self):
         path = './data/author_url_dic.json'
