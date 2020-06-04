@@ -1,0 +1,2748 @@
+Large Batch Optimization for Deep Learning: Training BERT in 76 minutes 
+Yang You, Jing Li, Sashank Reddi, Jonathan Hseu, Sanjiv Kumar, Srinadh Bhojanapalli, Xiaodan Song, James Demmel, Kurt Keutzer, Cho-Jui Hsieh
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+SELF: Learning to Filter Noisy Labels with Self-Ensembling 
+Duc Tam Nguyen, Chaithanya Kumar Mummadi, Thi Phuong Nhung Ngo, Thi Hoai Phuong Nguyen, Laura Beggel, Thomas Brox
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Reinforcement Learning Based Graph-to-Sequence Model for Natural Question Generation 
+Yu Chen, Lingfei Wu, Mohammed J. Zaki
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Sharing Knowledge in Multi-Task Deep Reinforcement Learning 
+Carlo D'Eramo, Davide Tateo, Andrea Bonarini, Marcello Restelli, Jan Peters
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+On the Weaknesses of Reinforcement Learning for Neural Machine Translation 
+Leshem Choshen, Lior Fox, Zohar Aizenbud, Omri Abend
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+StructPool: Structured Graph Pooling via Conditional Random Fields 
+Hao Yuan, Shuiwang Ji
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Learning deep graph matching with channel-independent embedding and Hungarian attention 
+Tianshu Yu, Runzhong Wang, Junchi Yan, Baoxin Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Graph inference learning for semi-supervised classification 
+Chunyan Xu, Zhen Cui, Xiaobin Hong, Tong Zhang, Jian Yang, Wei Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 4 Replies
+Show details
+SQIL: Imitation Learning via Reinforcement Learning with Sparse Rewards 
+Siddharth Reddy, Anca D. Dragan, Sergey Levine
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Neural Oblivious Decision Ensembles for Deep Learning on Tabular Data 
+Sergei Popov, Stanislav Morozov, Artem Babenko
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Mutual Mean-Teaching: Pseudo Label Refinery for Unsupervised Domain Adaptation on Person Re-identification 
+Yixiao Ge, Dapeng Chen, Hongsheng Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Automatically Discovering and Learning New Visual Categories with Ranking Statistics 
+Kai Han, Sylvestre-Alvise Rebuffi, Sebastien Ehrhardt, Andrea Vedaldi, Andrew Zisserman
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Maxmin Q-learning: Controlling the Estimation Bias of Q-learning 
+Qingfeng Lan, Yangchen Pan, Alona Fyshe, Martha White
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Federated Adversarial Domain Adaptation 
+Xingchao Peng, Zijun Huang, Yizhe Zhu, Kate Saenko
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Depth-Adaptive Transformer 
+Maha Elbayad, Jiatao Gu, Edouard Grave, Michael Auli
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+DeepHoyer: Learning Sparser Neural Network with Differentiable Scale-Invariant Sparsity Measures 
+Huanrui Yang, Wei Wen, Hai Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Evaluating The Search Phase of Neural Architecture Search 
+Kaicheng Yu, Christian Sciuto, Martin Jaggi, Claudiu Musat, Mathieu Salzmann
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Diverse Trajectory Forecasting with Determinantal Point Processes 
+Ye Yuan, Kris M. Kitani
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+ProxSGD: Training Structured Neural Networks under Regularization and Constraints 
+Yang Yang, Yaxiong Yuan, Avraam Chatzimichailidis, Ruud JG van Sloun, Lei Lei, Symeon Chatzinotas
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+LAMOL: LAnguage MOdeling for Lifelong Language Learning 
+Fan-Keng Sun*, Cheng-Hao Ho*, Hung-Yi Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Learning Expensive Coordination: An Event-Based Deep RL Approach 
+Zhenyu Shi*, Runsheng Yu*, Xinrun Wang*, Rundong Wang, Youzhi Zhang, Hanjiang Lai, Bo An
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Curvature Graph Network 
+Ze Ye, Kin Sum Liu, Tengfei Ma, Jie Gao, Chao Chen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Distance-Based Learning from Errors for Confidence Calibration 
+Chen Xing, Sercan Arik, Zizhao Zhang, Tomas Pfister
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Deep Learning of Determinantal Point Processes via Proper Spectral Sub-gradient 
+Tianshu Yu, Yikang Li, Baoxin Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+N-BEATS: Neural basis expansion analysis for interpretable time series forecasting 
+Boris N. Oreshkin, Dmitri Carpov, Nicolas Chapados, Yoshua Bengio
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Automated Relational Meta-learning 
+Huaxiu Yao, Xian Wu, Zhiqiang Tao, Yaliang Li, Bolin Ding, Ruirui Li, Zhenhui Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+To Relieve Your Headache of Training an MRF, Take AdVIL 
+Chongxuan Li, Chao Du, Kun Xu, Max Welling, Jun Zhu, Bo Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Linear Symmetric Quantization of Neural Networks for Low-precision Integer Hardware 
+Xiandong Zhao, Ying Wang, Xuyi Cai, Cheng Liu, Lei Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Weakly Supervised Clustering by Exploiting Unique Class Count 
+Mustafa Umit Oner, Hwee Kuan Lee, Wing-Kin Sung
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Scalable and Order-robust Continual Learning with Additive Parameter Decomposition 
+Jaehong Yoon, Saehoon Kim, Eunho Yang, Sung Ju Hwang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 20 Replies
+Show details
+Continual Learning with Adaptive Weights (CLAW) 
+Tameem Adel, Han Zhao, Richard E. Turner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Transferable Perturbations of Deep Feature Distributions 
+Nathan Inkawhich, Kevin Liang, Lawrence Carin, Yiran Chen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+A Learning-based Iterative Method for Solving Vehicle Routing Problems 
+Hao Lu, Xingwen Zhang, Shuang Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Poly-encoders: Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring 
+Samuel Humeau, Kurt Shuster, Marie-Anne Lachaux, Jason Weston
+26 Sep 2019 (modified: 26 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+AutoQ: Automated Kernel-Wise Neural Network Quantization 
+Qian Lou, Feng Guo, Minje Kim, Lantao Liu, Lei Jiang.
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Understanding Architectures Learnt by Cell-based Neural Architecture Search 
+Yao Shu, Wei Wang, Shaofeng Cai
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+SVQN: Sequential Variational Soft Q-Learning Networks 
+Shiyu Huang, Hang Su, Jun Zhu, Ting Chen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Ranking Policy Gradient 
+Kaixiang Lin, Jiayu Zhou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+On Mutual Information Maximization for Representation Learning 
+Michael Tschannen, Josip Djolonga, Paul K. Rubenstein, Sylvain Gelly, Mario Lucic
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Observational Overfitting in Reinforcement Learning 
+Xingyou Song, Yiding Jiang, Stephen Tu, Yilun Du, Behnam Neyshabur
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Enhancing Transformation-Based Defenses Against Adversarial Attacks with a Distribution Classifier 
+Connie Kou, Hwee Kuan Lee, Ee-Chien Chang, Teck Khim Ng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Additive Powers-of-Two Quantization: An Efficient Non-uniform Discretization for Neural Networks 
+Yuhang Li, Xin Dong, Wei Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Lazy-CFR: fast and near-optimal regret minimization for extensive games with imperfect information 
+Yichi Zhou, Tongzheng Ren, Jialian Li, Dong Yan, Jun Zhu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Knowledge Consistency between Neural Networks and Beyond 
+Ruofan Liang, Tianlin Li, Longfei Li, Jing Wang, Quanshi Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Image-guided Neural Object Rendering 
+Justus Thies, Michael Zollhöfer, Christian Theobalt, Marc Stamminger, Matthias Nießner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Implicit Bias of Gradient Descent based Adversarial Training on Separable Data 
+Yan Li, Ethan X.Fang, Huan Xu, Tuo Zhao
+26 Sep 2019 (modified: 25 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+TabFact: A Large-scale Dataset for Table-based Fact Verification 
+Wenhu Chen, Hongmin Wang, Jianshu Chen, Yunkai Zhang, Hong Wang, Shiyang Li, Xiyou Zhou, William Yang Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+ES-MAML: Simple Hessian-Free Meta Learning 
+Xingyou Song, Wenbo Gao, Yuxiang Yang, Krzysztof Choromanski, Aldo Pacchiano, Yunhao Tang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Neural Stored-program Memory 
+Hung Le, Truyen Tran, Svetha Venkatesh
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Hierarchical Foresight: Self-Supervised Learning of Long-Horizon Tasks via Visual Subgoal Generation 
+Suraj Nair, Chelsea Finn
+26 Sep 2019 (modified: 21 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Multi-agent Reinforcement Learning for Networked System Control 
+Tianshu Chu, Sandeep Chinchali, Sachin Katti
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+FSPool: Learning Set Representations with Featurewise Sort Pooling 
+Yan Zhang, Jonathon Hare, Adam Prügel-Bennett
+26 Sep 2019 (modified: 01 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Are Pre-trained Language Models Aware of Phrases? Simple but Strong Baselines for Grammar Induction 
+Taeuk Kim, Jihun Choi, Daniel Edmiston, Sang-goo Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Dynamically Pruned Message Passing Networks for Large-scale Knowledge Graph Reasoning 
+Xiaoran Xu, Wei Feng, Yunsheng Jiang, Xiaohui Xie, Zhiqing Sun, Zhi-Hong Deng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Mixup Inference: Better Exploiting Mixup to Defend Adversarial Attacks 
+Tianyu Pang*, Kun Xu*, Jun Zhu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Theory and Evaluation Metrics for Learning Disentangled Representations 
+Kien Do, Truyen Tran
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Measuring Compositional Generalization: A Comprehensive Method on Realistic Data 
+Daniel Keysers, Nathanael Schärli, Nathan Scales, Hylke Buisman, Daniel Furrer, Sergii Kashubin, Nikola Momchev, Danila Sinopalnikov, Lukasz Stafiniak, Tibor Tihon, Dmitry Tsarkov, Xiao Wang, Marc van Zee, Olivier Bousquet
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Rethinking Softmax Cross-Entropy Loss for Adversarial Robustness 
+Tianyu Pang, Kun Xu, Yinpeng Dong, Chao Du, Ning Chen, Jun Zhu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+The Implicit Bias of Depth: How Incremental Learning Drives Generalization 
+Daniel Gissin, Shai Shalev-Shwartz, Amit Daniely
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+The Variational Bandwidth Bottleneck: Stochastic Evaluation on an Information Budget 
+Anirudh Goyal, Yoshua Bengio, Matthew Botvinick, Sergey Levine
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Learning the Arrow of Time for Problems in Reinforcement Learning 
+Nasim Rahaman, Steffen Wolf, Anirudh Goyal, Roman Remme, Yoshua Bengio
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 20 Replies
+Show details
+Reinforcement Learning with Competitive Ensembles of Information-Constrained Primitives 
+Anirudh Goyal, Shagun Sodhani, Jonathan Binas, Xue Bin Peng, Sergey Levine, Yoshua Bengio
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Robust Local Features for Improving the Generalization of Adversarial Training 
+Chuanbiao Song, Kun He, Jiadong Lin, Liwei Wang, John E. Hopcroft
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Analysis of Video Feature Learning in Two-Stream CNNs on the Example of Zebrafish Swim Bout Classification 
+Bennet Breier, Arno Onken
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Learning Disentangled Representations for CounterFactual Regression 
+Negar Hassanpour, Russell Greiner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Exploration in Reinforcement Learning with Deep Covering Options 
+Yuu Jinnai, Jee Won Park, Marlos C. Machado, George Konidaris
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+AE-OT: A NEW GENERATIVE MODEL BASED ON EXTENDED SEMI-DISCRETE OPTIMAL TRANSPORT 
+Dongsheng An, Yang Guo, Na Lei, Zhongxuan Luo, Shing-Tung Yau, Xianfeng Gu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Logic and the 2-Simplicial Transformer 
+James Clift, Dmitry Doryn, Daniel Murfet, James Wallbridge
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Watch, Try, Learn: Meta-Learning from Demonstrations and Rewards 
+Allan Zhou, Eric Jang, Daniel Kappler, Alex Herzog, Mohi Khansari, Paul Wohlhart, Yunfei Bai, Mrinal Kalakrishnan, Sergey Levine, Chelsea Finn
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Fooling Detection Alone is Not Enough: Adversarial Attack against Multiple Object Tracking 
+Yunhan Jia, Yantao Lu, Junjie Shen, Qi Alfred Chen, Hao Chen, Zhenyu Zhong, Tao Wei
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+DivideMix: Learning with Noisy Labels as Semi-supervised Learning 
+Junnan Li, Richard Socher, Steven C.H. Hoi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Improving Adversarial Robustness Requires Revisiting Misclassified Examples 
+Yisen Wang, Difan Zou, Jinfeng Yi, James Bailey, Xingjun Ma, Quanquan Gu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+V-MPO: On-Policy Maximum a Posteriori Policy Optimization for Discrete and Continuous Control 
+H. Francis Song, Abbas Abdolmaleki, Jost Tobias Springenberg, Aidan Clark, Hubert Soyer, Jack W. Rae, Seb Noury, Arun Ahuja, Siqi Liu, Dhruva Tirumala, Nicolas Heess, Dan Belov, Martin Riedmiller, Matthew M. Botvinick
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Interpretable Complex-Valued Neural Networks for Privacy Protection 
+Liyao Xiang, Hao Zhang, Haotian Ma, Yifan Zhang, Jie Ren, Quanshi Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Accelerating SGD with momentum for over-parameterized learning 
+Chaoyue Liu, Mikhail Belkin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+A critical analysis of self-supervision, or what we can learn from a single image 
+Asano YM., Rupprecht C., Vedaldi A.
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Disentangling Factors of Variations Using Few Labels 
+Francesco Locatello, Michael Tschannen, Stefan Bauer, Gunnar Rätsch, Bernhard Schölkopf, Olivier Bachem
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Functional vs. parametric equivalence of ReLU networks 
+Mary Phuong, Christoph H. Lampert
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Input Complexity and Out-of-distribution Detection with Likelihood-based Generative Models 
+Joan Serrà, David Álvarez, Vicenç Gómez, Olga Slizovskaia, José F. Núñez, Jordi Luque
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+RTFM: Generalising to New Environment Dynamics via Reading 
+Victor Zhong, Tim Rocktäschel, Edward Grefenstette
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+What graph neural networks cannot learn: depth vs width 
+Andreas Loukas
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Progressive Memory Banks for Incremental Domain Adaptation 
+Nabiha Asghar, Lili Mou, Kira A. Selby, Kevin D. Pantasdo, Pascal Poupart, Xin Jiang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 4 Replies
+Show details
+Automated curriculum generation through setter-solver interactions 
+Sebastien Racaniere, Andrew Lampinen, Adam Santoro, David Reichert, Vlad Firoiu, Timothy Lillicrap
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+On Identifiability in Transformers 
+Gino Brunner, Yang Liu, Damian Pascual, Oliver Richter, Massimiliano Ciaramita, Roger Wattenhofer
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Exploring Model-based Planning with Policy Networks 
+Tingwu Wang, Jimmy Ba
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Learning Self-Correctable Policies and Value Functions from Demonstrations with Negative Sampling 
+Yuping Luo, Huazhe Xu, Tengyu Ma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Geometric Insights into the Convergence of Nonlinear TD Learning 
+David Brandfonbrener, Joan Bruna
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Few-shot Text Classification with Distributional Signatures 
+Yujia Bao, Menghua Wu, Shiyu Chang, Regina Barzilay
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Escaping Saddle Points Faster with Stochastic Momentum 
+Jun-Kun Wang, Chi-Heng Lin, Jacob Abernethy
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Adversarial Policies: Attacking Deep Reinforcement Learning 
+Adam Gleave, Michael Dennis, Cody Wild, Neel Kant, Sergey Levine, Stuart Russell
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+VideoFlow: A Conditional Flow-Based Model for Stochastic Video Generation 
+Manoj Kumar, Mohammad Babaeizadeh, Dumitru Erhan, Chelsea Finn, Sergey Levine, Laurent Dinh, Durk Kingma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+GLAD: Learning Sparse Graph Recovery 
+Harsh Shrivastava, Xinshi Chen, Binghong Chen, Guanghui Lan, Srinivas Aluru, Han Liu, Le Song
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Pruned Graph Scattering Transforms 
+Vassilis N. Ioannidis, Siheng Chen, Georgios B. Giannakis
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Pretrained Encyclopedia: Weakly Supervised Knowledge-Pretrained Language Model 
+Wenhan Xiong, Jingfei Du, William Yang Wang, Veselin Stoyanov
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Can gradient clipping mitigate label noise? 
+Aditya Krishna Menon, Ankit Singh Rawat, Sashank J. Reddi, Sanjiv Kumar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Editable Neural Networks 
+Anton Sinitsin, Vsevolod Plokhotnyuk, Dmitry Pyrkin, Sergei Popov, Artem Babenko
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+LEARNING EXECUTION THROUGH NEURAL CODE FUSION 
+Zhan Shi, Kevin Swersky, Daniel Tarlow, Parthasarathy Ranganathan, Milad Hashemi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+FasterSeg: Searching for Faster Real-time Semantic Segmentation 
+Wuyang Chen, Xinyu Gong, Xianming Liu, Qian Zhang, Yuan Li, Zhangyang Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Difference-Seeking Generative Adversarial Network--Unseen Sample Generation 
+Yi Lin Sung, Sung-Hsien Hsieh, Soo-Chang Pei, Chun-Shien Lu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Stochastic AUC Maximization with Deep Neural Networks 
+Mingrui Liu, Zhuoning Yuan, Yiming Ying, Tianbao Yang
+26 Sep 2019 (modified: 18 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Semantically-Guided Representation Learning for Self-Supervised Monocular Depth 
+Vitor Guizilini, Rui Hou, Jie Li, Rares Ambrus, Adrien Gaidon
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+MACER: Attack-free and Scalable Robust Training via Maximizing Certified Radius 
+Runtian Zhai, Chen Dan, Di He, Huan Zhang, Boqing Gong, Pradeep Ravikumar, Cho-Jui Hsieh, Liwei Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Detecting and Diagnosing Adversarial Images with Class-Conditional Capsule Reconstructions 
+Yao Qin, Nicholas Frosst, Sara Sabour, Colin Raffel, Garrison Cottrell, Geoffrey Hinton
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+GAT: Generative Adversarial Training for Adversarial Example Detection and Robust Classification 
+Xuwang Yin, Soheil Kolouri, Gustavo K Rohde
+26 Sep 2019 (modified: 09 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Variational Recurrent Models for Solving Partially Observable Control Tasks 
+Dongqi Han, Kenji Doya, Jun Tani
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Population-Guided Parallel Policy Search for Reinforcement Learning 
+Whiyoung Jung, Giseung Park, Youngchul Sung
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Compositional languages emerge in a neural iterated learning model 
+Yi Ren, Shangmin Guo, Matthieu Labeau, Shay B. Cohen, Simon Kirby
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 21 Replies
+Show details
+Black-Box Adversarial Attack with Transferable Model-based Embedding 
+Zhichao Huang, Tong Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+I Am Going MAD: Maximum Discrepancy Competition for Comparing Classifiers Adaptively 
+Haotao Wang, Tianlong Chen, Zhangyang Wang, Kede Ma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Mixout: Effective Regularization to Finetune Large-scale Pretrained Language Models 
+Cheolhyoung Lee, Kyunghyun Cho, Wanmo Kang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Q-learning with UCB Exploration is Sample Efficient for Infinite-Horizon MDP 
+Yuanhao Wang, Kefan Dong, Xiaoyu Chen, Liwei Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Deep Network Classification by Scattering and Homotopy Dictionary Learning 
+John Zarka, Louis Thiry, Tomas Angles, Stephane Mallat
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Data-Independent Neural Pruning via Coresets 
+Ben Mussay, Margarita Osadchy, Vladimir Braverman, Samson Zhou, Dan Feldman
+26 Sep 2019 (modified: 11 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Bounds on Over-Parameterization for Guaranteed Existence of Descent Paths in Shallow ReLU Networks 
+Arsalan Sharifnassab, Saber Salehkaleybar, S. Jamaloddin Golestani
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Novelty Detection Via Blurring 
+Sungik Choi, Sae-Young Chung
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Piecewise linear activations substantially shape the loss surfaces of neural networks 
+Fengxiang He, Bohan Wang, Dacheng Tao
+26 Sep 2019 (modified: 27 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 24 Replies
+Show details
+Relational State-Space Model for Stochastic Multi-Object Systems 
+Fan Yang, Ling Chen, Fan Zhou, Yusong Gao, Wei Cao
+26 Sep 2019 (modified: 27 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Learning Efficient Parameter Server Synchronization Policies for Distributed SGD 
+Rong Zhu, Sheng Yang, Andreas Pfadler, Zhengping Qian, Jingren Zhou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Action Semantics Network: Considering the Effects of Actions in Multiagent Systems 
+Weixun Wang, Tianpei Yang, Yong Liu, Jianye Hao, Xiaotian Hao, Yujing Hu, Yingfeng Chen, Changjie Fan, Yang Gao
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Vid2Game: Controllable Characters Extracted from Real-World Videos 
+Oran Gafni, Lior Wolf, Yaniv Taigman
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Self-Adversarial Learning with Comparative Discrimination for Text Generation 
+Wangchunshu Zhou, Tao Ge, Ke Xu, Furu Wei, Ming Zhou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Robust training with ensemble consensus 
+Jisoo Lee, Sae-Young Chung
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Identifying through Flows for Recovering Latent Representations 
+Shen Li, Bryan Hooi, Gim Hee Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Certified Robustness for Top-k Predictions against Adversarial Perturbations via Randomized Smoothing 
+Jinyuan Jia, Xiaoyu Cao, Binghui Wang, Neil Zhenqiang Gong
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Optimistic Exploration even with a Pessimistic Initialisation 
+Tabish Rashid, Bei Peng, Wendelin Boehmer, Shimon Whiteson
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+VL-BERT: Pre-training of Generic Visual-Linguistic Representations 
+Weijie Su, Xizhou Zhu, Yue Cao, Bin Li, Lewei Lu, Furu Wei, Jifeng Dai
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Deformable Kernels: Adapting Effective Receptive Fields for Object Deformation 
+Hang Gao, Xizhou Zhu, Stephen Lin, Jifeng Dai
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Ensemble Distribution Distillation 
+Andrey Malinin, Bruno Mlodozeniec, Mark Gales
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Gap-Aware Mitigation of Gradient Staleness 
+Saar Barkai, Ido Hakimi, Assaf Schuster
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Counterfactuals uncover the modular structure of deep generative models 
+Michel Besserve, Arash Mehrjou, Rémy Sun, Bernhard Schölkopf
+26 Sep 2019 (modified: 30 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Physics-as-Inverse-Graphics: Unsupervised Physical Parameter Estimation from Video 
+Miguel Jaques, Michael Burke, Timothy Hospedales
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+An Inductive Bias for Distances: Neural Nets that Respect the Triangle Inequality 
+Silviu Pitis, Harris Chan, Kiarash Jamali, Jimmy Ba
+26 Sep 2019 (modified: 13 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+A Constructive Prediction of the Generalization Error Across Scales 
+Jonathan S. Rosenfeld, Amir Rosenfeld, Yonatan Belinkov, Nir Shavit
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Scalable Neural Methods for Reasoning With a Symbolic Knowledge Base 
+William W. Cohen, Haitian Sun, R. Alex Hofer, Matthew Siegler
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+CLN2INV: Learning Loop Invariants with Continuous Logic Networks 
+Gabriel Ryan, Justin Wong, Jianan Yao, Ronghui Gu, Suman Jana
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+NAS evaluation is frustratingly hard 
+Antoine Yang, Pedro M. Esperança, Fabio M. Carlucci
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Efficient and Information-Preserving Future Frame Prediction and Beyond 
+Wei Yu, Yichao Lu, Steve Easterbrook, Sanja Fidler
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Order Learning and Its Application to Age Estimation 
+Kyungsun Lim, Nyeong-Ho Shin, Young-Yoon Lee, Chang-Su Kim
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+ReClor: A Reading Comprehension Dataset Requiring Logical Reasoning 
+Weihao Yu, Zihang Jiang, Yanfei Dong, Jiashi Feng
+26 Sep 2019 (modified: 26 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+AssembleNet: Searching for Multi-Stream Neural Connectivity in Video Architectures 
+Michael S. Ryoo, AJ Piergiovanni, Mingxing Tan, Anelia Angelova
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Adversarially Robust Representations with Smooth Encoders 
+Taylan Cemgil, Sumedh Ghaisas, Krishnamurthy (Dj) Dvijotham, Pushmeet Kohli
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+From Variational to Deterministic Autoencoders 
+Partha Ghosh, Mehdi S. M. Sajjadi, Antonio Vergari, Michael Black, Bernhard Scholkopf
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Computation Reallocation for Object Detection 
+Feng Liang, Chen Lin, Ronghao Guo, Ming Sun, Wei Wu, Junjie Yan, Wanli Ouyang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Finding and Visualizing Weaknesses of Deep Reinforcement Learning Agents 
+Christian Rupprecht, Cyril Ibrahim, Christopher J. Pal
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+A Fair Comparison of Graph Neural Networks for Graph Classification 
+Federico Errica, Marco Podda, Davide Bacciu, Alessio Micheli
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+Generalization bounds for deep convolutional neural networks 
+Philip M. Long, Hanie Sedghi
+26 Sep 2019 (modified: 08 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+SAdam: A Variant of Adam for Strongly Convex Functions 
+Guanghui Wang, Shiyin Lu, Quan Cheng, Wei-wei Tu, Lijun Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Continual Learning with Bayesian Neural Networks for Non-Stationary Data 
+Richard Kurle, Botond Cseke, Alexej Klushyn, Patrick van der Smagt, Stephan Günnemann
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Multiplicative Interactions and Where to Find Them 
+Siddhant M. Jayakumar, Wojciech M. Czarnecki, Jacob Menick, Jonathan Schwarz, Jack Rae, Simon Osindero, Yee Whye Teh, Tim Harley, Razvan Pascanu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+FEW-SHOT LEARNING ON GRAPHS VIA SUPER-CLASSES BASED ON GRAPH SPECTRAL MEASURES 
+Jatin Chauhan, Deepak Nathani, Manohar Kaul
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+On Computation and Generalization of Generative Adversarial Imitation Learning 
+Minshuo Chen, Yizhou Wang, Tianyi Liu, Zhuoran Yang, Xingguo Li, Zhaoran Wang, Tuo Zhao
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+A Target-Agnostic Attack on Deep Models: Exploiting Security Vulnerabilities of Transfer Learning 
+Shahbaz Rezaei, Xin Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Low-Resource Knowledge-Grounded Dialogue Generation 
+Xueliang Zhao, Wei Wu, Chongyang Tao, Can Xu, Dongyan Zhao, Rui Yan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Deep 3D Pan via local adaptive "t-shaped" convolutions with global and local adaptive dilations 
+Juan Luis Gonzalez Bello, Munchurl Kim
+26 Sep 2019 (modified: 21 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Tree-Structured Attention with Hierarchical Accumulation 
+Xuan-Phi Nguyen, Shafiq Joty, Steven Hoi, Richard Socher
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+The asymptotic spectrum of the Hessian of DNN throughout training 
+Arthur Jacot, Franck Gabriel, Clement Hongler
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Actor-Critic Provably Finds Nash Equilibria of Linear-Quadratic Mean-Field Games 
+Zuyue Fu, Zhuoran Yang, Yongxin Chen, Zhaoran Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 20 Replies
+Show details
+In Search for a SAT-friendly Binarized Neural Network Architecture 
+Nina Narodytska, Hongce Zhang, Aarti Gupta, Toby Walsh
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Generative Ratio Matching Networks 
+Akash Srivastava, Kai Xu, Michael U. Gutmann, Charles Sutton
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Learning to Represent Programs with Property Signatures 
+Augustus Odena, Charles Sutton
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+V4D: 4D Convolutional Neural Networks for Video-level Representation Learning 
+Shiwen Zhang, Sheng Guo, Weilin Huang, Matthew R. Scott, Limin Wang
+26 Sep 2019 (modified: 17 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Option Discovery using Deep Skill Chaining 
+Akhil Bagaria, George Konidaris
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Quantifying the Cost of Reliable Photo Authentication via High-Performance Learned Lossy Representations 
+Pawel Korus, Nasir Memon
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+On the Variance of the Adaptive Learning Rate and Beyond 
+Liyuan Liu, Haoming Jiang, Pengcheng He, Weizhu Chen, Xiaodong Liu, Jianfeng Gao, Jiawei Han
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Dynamical Distance Learning for Semi-Supervised and Unsupervised Skill Discovery 
+Kristian Hartikainen, Xinyang Geng, Tuomas Haarnoja, Sergey Levine
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+A Theoretical Analysis of the Number of Shots in Few-Shot Learning 
+Tianshi Cao, Marc T Law, Sanja Fidler
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Unsupervised Model Selection for Variational Disentangled Representation Learning 
+Sunny Duan, Loic Matthey, Andre Saraiva, Nick Watters, Chris Burgess, Alexander Lerchner, Irina Higgins
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 22 Replies
+Show details
+Feature Interaction Interpretability: A Case for Explaining Ad-Recommendation Systems via Neural Interaction Detection 
+Michael Tsang, Dehua Cheng, Hanpeng Liu, Xue Feng, Eric Zhou, Yan Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Understanding the Limitations of Variational Mutual Information Estimators 
+Jiaming Song, Stefano Ermon
+26 Sep 2019 (modified: 24 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 4 Replies
+Show details
+GENESIS: Generative Scene Inference and Sampling with Object-Centric Latent Representations 
+Martin Engelcke, Adam R. Kosiorek, Oiwi Parker Jones, Ingmar Posner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Language GANs Falling Short 
+Massimo Caccia, Lucas Caccia, William Fedus, Hugo Larochelle, Joelle Pineau, Laurent Charlin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Stochastic Conditional Generative Networks with Basis Decomposition 
+Ze Wang, Xiuyuan Cheng, Guillermo Sapiro, Qiang Qiu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+LEARNED STEP SIZE QUANTIZATION 
+Steven K. Esser, Jeffrey L. McKinstry, Deepika Bablani, Rathinakumar Appuswamy, Dharmendra S. Modha
+26 Sep 2019 (modified: 11 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+On the "steerability" of generative adversarial networks 
+Ali Jahanian*, Lucy Chai*, Phillip Isola
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Reinforced active learning for image segmentation 
+Arantxa Casanova, Pedro O. Pinheiro, Negar Rostamzadeh, Christopher J. Pal
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Sign Bits Are All You Need for Black-Box Attacks 
+Abdullah Al-Dujaili, Una-May O'Reilly
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Deep Semi-Supervised Anomaly Detection 
+Lukas Ruff, Robert A. Vandermeulen, Nico Görnitz, Alexander Binder, Emmanuel Müller, Klaus-Robert Müller, Marius Kloft
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Budgeted Training: Rethinking Deep Neural Network Training Under Resource Constraints 
+Mengtian Li, Ersin Yumer, Deva Ramanan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Minimizing FLOPs to Learn Efficient Sparse Representations 
+Biswajit Paria, Chih-Kuan Yeh, Ian E.H. Yen, Ning Xu, Pradeep Ravikumar, Barnabás Póczos
+26 Sep 2019 (modified: 13 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Reanalysis of Variance Reduced Temporal Difference Learning 
+Tengyu Xu, Zhe Wang, Yi Zhou, Yingbin Liang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Imitation Learning via Off-Policy Distribution Matching 
+Ilya Kostrikov, Ofir Nachum, Jonathan Tompson
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Rapid Learning or Feature Reuse? Towards Understanding the Effectiveness of MAML 
+Aniruddh Raghu, Maithra Raghu, Samy Bengio, Oriol Vinyals
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Augmenting Genetic Algorithms with Deep Neural Networks for Exploring the Chemical Space 
+AkshatKumar Nigam, Pascal Friederich, Mario Krenn, Alan Aspuru-Guzik
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Improved Sample Complexities for Deep Neural Networks and Robust Classification via an All-Layer Margin 
+Colin Wei, Tengyu Ma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
+Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+ReMixMatch: Semi-Supervised Learning with Distribution Matching and Augmentation Anchoring 
+David Berthelot, Nicholas Carlini, Ekin D. Cubuk, Alex Kurakin, Kihyuk Sohn, Han Zhang, Colin Raffel
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Adaptive Structural Fingerprints for Graph Attention Networks 
+Kai Zhang, Yaokang Zhu, Jun Wang, Jie Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+CAQL: Continuous Action Q-Learning 
+Moonkyung Ryu, Yinlam Chow, Ross Anderson, Christian Tjandraatmadja, Craig Boutilier
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Learning Heuristics for Quantified Boolean Formulas through Reinforcement Learning 
+Gil Lederman, Markus Rabe, Sanjit Seshia, Edward A. Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Pure and Spurious Critical Points: a Geometric Study of Linear Networks 
+Matthew Trager, Kathlén Kohn, Joan Bruna
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Neural Text Generation With Unlikelihood Training 
+Sean Welleck, Ilia Kulikov, Stephen Roller, Emily Dinan, Kyunghyun Cho, Jason Weston
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Semi-Supervised Generative Modeling for Controllable Speech Synthesis 
+Raza Habib, Soroosh Mariooryad, Matt Shannon, Eric Battenberg, RJ Skerry-Ryan, Daisy Stanton, David Kao, Tom Bagby
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Dynamic Time Lag Regression: Predicting What & When 
+Mandar Chandorkar, Cyril Furtlehner, Bala Poduval, Enrico Camporeale, Michele Sebag
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Scalable Model Compression by Entropy Penalized Reparameterization 
+Deniz Oktay, Johannes Ballé, Saurabh Singh, Abhinav Shrivastava
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+AMRL: Aggregated Memory For Reinforcement Learning 
+Jacob Beck, Kamil Ciosek, Sam Devlin, Sebastian Tschiatschek, Cheng Zhang, Katja Hofmann
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Efficient Riemannian Optimization on the Stiefel Manifold via the Cayley Transform 
+Jun Li, Fuxin Li, Sinisa Todorovic
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+Unpaired Point Cloud Completion on Real Scans using Adversarial Training 
+Xuelin Chen, Baoquan Chen, Niloy J. Mitra
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Adjustable Real-time Style Transfer 
+Mohammad Babaeizadeh, Golnaz Ghiasi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Stochastic Weight Averaging in Parallel: Large-Batch Training That Generalizes Well 
+Vipul Gupta, Santiago Akle Serrano, Dennis DeCoste
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Short and Sparse Deconvolution --- A Geometric Approach 
+Yenson Lau, Qing Qu, Han-Wen Kuo, Pengcheng Zhou, Yuqian Zhang, John Wright
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Selection via Proxy: Efficient Data Selection for Deep Learning 
+Cody Coleman, Christopher Yeh, Stephen Mussmann, Baharan Mirzasoleiman, Peter Bailis, Percy Liang, Jure Leskovec, Matei Zaharia
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Global Relational Models of Source Code 
+Vincent J. Hellendoorn, Charles Sutton, Rishabh Singh, Petros Maniatis, David Bieber
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Detecting Extrapolation with Local Ensembles 
+David Madras, James Atwood, Alexander D'Amour
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Learning to Link 
+Maria-Florina Balcan, Travis Dick, Manuel Lang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Adversarially robust transfer learning 
+Ali Shafahi, Parsa Saadatpanah, Chen Zhu, Amin Ghiasi, Christoph Studer, David Jacobs, Tom Goldstein
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Overlearning Reveals Sensitive Attributes 
+Congzheng Song, Vitaly Shmatikov
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Bridging Mode Connectivity in Loss Landscapes and Adversarial Robustness 
+Pu Zhao, Pin-Yu Chen, Payel Das, Karthikeyan Natesan Ramamurthy, Xue Lin
+26 Sep 2019 (modified: 29 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Differentially Private Meta-Learning 
+Jeffrey Li, Mikhail Khodak, Sebastian Caldas, Ameet Talwalkar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+One-Shot Pruning of Recurrent Neural Networks by Jacobian Spectrum Evaluation 
+Shunshi Zhang, Bradly C. Stadie
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Meta-Dataset: A Dataset of Datasets for Learning to Learn from Few Examples 
+Eleni Triantafillou, Tyler Zhu, Vincent Dumoulin, Pascal Lamblin, Utku Evci, Kelvin Xu, Ross Goroshin, Carles Gelada, Kevin Swersky, Pierre-Antoine Manzagol, Hugo Larochelle
+26 Sep 2019 (modified: 08 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Are Transformers universal approximators of sequence-to-sequence functions? 
+Chulhee Yun, Srinadh Bhojanapalli, Ankit Singh Rawat, Sashank Reddi, Sanjiv Kumar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Pre-training Tasks for Embedding-based Large-scale Retrieval 
+Wei-Cheng Chang, Felix X. Yu, Yin-Wen Chang, Yiming Yang, Sanjiv Kumar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Deep Imitative Models for Flexible Inference, Planning, and Control 
+Nicholas Rhinehart, Rowan McAllister, Sergey Levine
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+CM3: Cooperative Multi-goal Multi-stage Multi-agent Reinforcement Learning 
+Jiachen Yang, Alireza Nakhaei, David Isele, Kikuo Fujimura, Hongyuan Zha
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Robust And Interpretable Blind Image Denoising Via Bias-Free Convolutional Neural Networks 
+Sreyas Mohan, Zahra Kadkhodaie, Eero P. Simoncelli, Carlos Fernandez-Granda
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Towards Better Understanding of Adaptive Gradient Algorithms in Generative Adversarial Nets 
+Mingrui Liu, Youssef Mroueh, Jerret Ross, Wei Zhang, Xiaodong Cui, Payel Das, Tianbao Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+DeepV2D: Video to Depth with Differentiable Structure from Motion 
+Zachary Teed, Jia Deng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Learning Space Partitions for Nearest Neighbor Search 
+Yihe Dong, Piotr Indyk, Ilya Razenshteyn, Tal Wagner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Playing the lottery with rewards and multiple languages: lottery tickets in RL and NLP 
+Haonan Yu, Sergey Edunov, Yuandong Tian, Ari S. Morcos
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Sign-OPT: A Query-Efficient Hard-label Adversarial Attack 
+Minhao Cheng, Simranjit Singh, Patrick H. Chen, Pin-Yu Chen, Sijia Liu, Cho-Jui Hsieh
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+RaCT: Toward Amortized Ranking-Critical Training For Collaborative Filtering 
+Sam Lobel*, Chunyuan Li*, Jianfeng Gao, Lawrence Carin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Intrinsic Motivation for Encouraging Synergistic Behavior 
+Rohan Chitnis, Shubham Tulsiani, Saurabh Gupta, Abhinav Gupta
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Chameleon: Adaptive Code Optimization for Expedited Deep Neural Network Compilation 
+Byung Hoon Ahn, Prannoy Pilligundla, Amir Yazdanbakhsh, Hadi Esmaeilzadeh
+26 Sep 2019 (modified: 12 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Recurrent neural circuits for contour detection 
+Drew Linsley*, Junkyung Kim*, Alekh Ashok, Thomas Serre
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Locality and Compositionality in Zero-Shot Learning 
+Tristan Sylvain, Linda Petrini, Devon Hjelm
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Understanding Knowledge Distillation in Non-autoregressive Machine Translation 
+Chunting Zhou, Jiatao Gu, Graham Neubig
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Thieves on Sesame Street! Model Extraction of BERT-based APIs 
+Kalpesh Krishna, Gaurav Singh Tomar, Ankur P. Parikh, Nicolas Papernot, Mohit Iyyer
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Fast is better than free: Revisiting adversarial training 
+Eric Wong, Leslie Rice, J. Zico Kolter
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 51 Replies
+Show details
+DBA: Distributed Backdoor Attacks against Federated Learning 
+Chulin Xie, Keli Huang, Pin-Yu Chen, Bo Li
+26 Sep 2019 (modified: 03 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+DeFINE: Deep Factorized Input Token Embeddings for Neural Sequence Modeling 
+Sachin Mehta, Rik Koncel-Kedziorski, Mohammad Rastegari, Hannaneh Hajishirzi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 18 Replies
+Show details
+Sampling-Free Learning of Bayesian Quantized Neural Networks 
+Jiahao Su, Milan Cvitkovic, Furong Huang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Learning to solve the credit assignment problem 
+Benjamin James Lansdell, Prashanth Ravi Prakash, Konrad Paul Kording
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Four Things Everyone Should Know to Improve Batch Normalization 
+Cecilia Summers, Michael J. Dinneen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Pseudo-LiDAR++: Accurate Depth for 3D Object Detection in Autonomous Driving 
+Yurong You, Yan Wang, Wei-Lun Chao, Divyansh Garg, Geoff Pleiss, Bharath Hariharan, Mark Campbell, Kilian Q. Weinberger
+26 Sep 2019 (modified: 20 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+SlowMo: Improving Communication-Efficient Distributed SGD with Slow Momentum 
+Jianyu Wang, Vinayak Tantia, Nicolas Ballas, Michael Rabbat
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+MetaPix: Few-Shot Video Retargeting 
+Jessica Lee, Deva Ramanan, Rohit Girdhar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Learning to Learn by Zeroth-Order Oracle 
+Yangjun Ruan, Yuanhao Xiong, Sashank Reddi, Sanjiv Kumar, Cho-Jui Hsieh
+26 Sep 2019 (modified: 27 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+DD-PPO: Learning Near-Perfect PointGoal Navigators from 2.5 Billion Frames 
+Erik Wijmans, Abhishek Kadian, Ari Morcos, Stefan Lee, Irfan Essa, Devi Parikh, Manolis Savva, Dhruv Batra
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+PAC Confidence Sets for Deep Neural Networks via Calibrated Prediction 
+Sangdon Park, Osbert Bastani, Nikolai Matni, Insup Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Precision Gating: Improving Neural Network Efficiency with Dynamic Dual-Precision Activations 
+Yichi Zhang, Ritchie Zhao, Weizhe Hua, Nayun Xu, G. Edward Suh, Zhiru Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Oblique Decision Trees from Derivatives of ReLU Networks 
+Guang-He Lee, Tommi S. Jaakkola
+26 Sep 2019 (modified: 04 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Span Recovery for Deep Neural Networks with Applications to Input Obfuscation 
+Rajesh Jayaram, David P. Woodruff, Qiuyi Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Improving Neural Language Generation with Spectrum Control 
+Lingxiao Wang, Jing Huang, Kevin Huang, Ziniu Hu, Guangtao Wang, Quanquan Gu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Learn to Explain Efficiently via Neural Logic Inductive Learning 
+Yuan Yang, Le Song
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 18 Replies
+Show details
+Improved memory in recurrent neural networks with sequential non-normal dynamics 
+Emin Orhan, Xaq Pitkow
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Neural Module Networks for Reasoning over Text 
+Nitish Gupta, Kevin Lin, Dan Roth, Sameer Singh, Matt Gardner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Higher-Order Function Networks for Learning Composable 3D Object Representations 
+Eric Mitchell, Selim Engin, Volkan Isler, Daniel D Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Variational Hetero-Encoder Randomized GANs for Joint Image-Text Modeling 
+Hao Zhang, Bo Chen, Long Tian, Zhengjue Wang, Mingyuan Zhou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Towards Fast Adaptation of Neural Architectures with Meta Learning 
+Dongze Lian, Yin Zheng, Yintao Xu, Yanxiong Lu, Leyu Lin, Peilin Zhao, Junzhou Huang, Shenghua Gao
+26 Sep 2019 (modified: 24 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Graph Constrained Reinforcement Learning for Natural Language Action Spaces 
+Prithviraj Ammanabrolu, Matthew Hausknecht
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Prediction, Consistency, Curvature: Representation Learning for Locally-Linear Control 
+Nir Levine, Yinlam Chow, Rui Shu, Ang Li, Mohammad Ghavamzadeh, Hung Bui
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Augmenting Non-Collaborative Dialog Systems with Explicit Semantic and Strategic Dialog History 
+Yiheng Zhou, Yulia Tsvetkov, Alan W Black, Zhou Yu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+BERTScore: Evaluating Text Generation with BERT 
+Tianyi Zhang*, Varsha Kishore*, Felix Wu*, Kilian Q. Weinberger, Yoav Artzi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Neural Execution of Graph Algorithms 
+Petar Veličković, Rex Ying, Matilde Padovano, Raia Hadsell, Charles Blundell
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+On the Need for Topology-Aware Generative Models for Manifold-Based Defenses 
+Uyeong Jang, Susmit Jha, Somesh Jha
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+FSNet: Compression of Deep Convolutional Neural Networks by Filter Summary 
+Yingzhen Yang, Jiahui Yu, Nebojsa Jojic, Jun Huan, Thomas S. Huang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Capsules with Inverted Dot-Product Attention Routing 
+Yao-Hung Hubert Tsai, Nitish Srivastava, Hanlin Goh, Ruslan Salakhutdinov
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Composition-based Multi-Relational Graph Convolutional Networks 
+Shikhar Vashishth, Soumya Sanyal, Vikram Nitin, Partha Talukdar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Gradient-Based Neural DAG Learning 
+Sébastien Lachapelle, Philippe Brouillard, Tristan Deleu, Simon Lacoste-Julien
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+The Local Elasticity of Neural Networks 
+Hangfeng He, Weijie Su
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Composing Task-Agnostic Policies with Deep Reinforcement Learning 
+Ahmed H. Qureshi, Jacob J. Johnson, Yuzhe Qin, Taylor Henderson, Byron Boots, Michael C. Yip
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Convergence of Gradient Methods on Bilinear Zero-Sum Games 
+Guojun Zhang, Yaoliang Yu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Discovering Motor Programs by Recomposing Demonstrations 
+Tanmay Shankar, Shubham Tulsiani, Lerrel Pinto, Abhinav Gupta
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Learning from Explanations with Neural Execution Tree 
+Ziqi Wang*, Yujia Qin*, Wenxuan Zhou, Jun Yan, Qinyuan Ye, Leonardo Neves, Zhiyuan Liu, Xiang Ren
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Jelly Bean World: A Testbed for Never-Ending Learning 
+Emmanouil Antonios Platanios, Abulhair Saparov, Tom Mitchell
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Coherent Gradients: An Approach to Understanding Generalization in Gradient Descent-based Optimization 
+Satrajit Chatterjee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 26 Replies
+Show details
+Probabilistic Connection Importance Inference and Lossless Compression of Deep Neural Networks 
+Xin Xing, Long Sha, Pengyu Hong, Zuofeng Shang, Jun S. Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+MEMO: A Deep Network for Flexible Combination of Episodic Memories 
+Andrea Banino, Adrià Puigdomènech Badia, Raphael Köster, Martin J. Chadwick, Vinicius Zambaldi, Demis Hassabis, Caswell Barry, Matthew Botvinick, Dharshan Kumaran, Charles Blundell
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Economy Statistical Recurrent Units For Inferring Nonlinear Granger Causality 
+Saurabh Khanna, Vincent Y. F. Tan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Bayesian Meta Sampling for Fast Uncertainty Adaptation 
+Zhenyi Wang, Yang Zhao, Ping Yu, Ruiyi Zhang, Changyou Chen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Non-Autoregressive Dialog State Tracking 
+Hung Le, Richard Socher, Steven C.H. Hoi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Extreme Tensoring for Low-Memory Preconditioning 
+Xinyi Chen, Naman Agarwal, Elad Hazan, Cyril Zhang, Yi Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+RNNs Incrementally Evolving on an Equilibrium Manifold: A Panacea for Vanishing and Exploding Gradients? 
+Anil Kag, Ziming Zhang, Venkatesh Saligrama
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+The Early Phase of Neural Network Training 
+Jonathan Frankle, David J. Schwab, Ari S. Morcos
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+NeurQuRI: Neural Question Requirement Inspector for Answerability Prediction in Machine Reading Comprehension 
+Seohyun Back, Sai Chetan Chinthakindi, Akhil Kedia, Haejun Lee, Jaegul Choo
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization 
+Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun
+26 Sep 2019 (modified: 08 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Single Episode Policy Transfer in Reinforcement Learning 
+Jiachen Yang, Brenden Petersen, Hongyuan Zha, Daniel Faissol
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Generalization through Memorization: Nearest Neighbor Language Models 
+Urvashi Khandelwal, Omer Levy, Dan Jurafsky, Luke Zettlemoyer, Mike Lewis
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Transformer-XH: Multi-Evidence Reasoning with eXtra Hop Attention 
+Chen Zhao, Chenyan Xiong, Corby Rosset, Xia Song, Paul Bennett, Saurabh Tiwary
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Synthesizing Programmatic Policies that Inductively Generalize 
+Jeevana Priya Inala, Osbert Bastani, Zenna Tavares, Armando Solar-Lezama
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Decoding As Dynamic Programming For Recurrent Autoregressive Models 
+Najam Zaidi, Trevor Cohn, Gholamreza Haffari
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Deep Double Descent: Where Bigger Models and More Data Hurt 
+Preetum Nakkiran, Gal Kaplun, Yamini Bansal, Tristan Yang, Boaz Barak, Ilya Sutskever
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Intriguing Properties of Adversarial Training at Scale 
+Cihang Xie, Alan Yuille
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Shifted and Squeezed 8-bit Floating Point format for Low-Precision Training of Deep Neural Networks 
+Leopold Cambier, Anahita Bhiwandiwalla, Ting Gong, Oguz H. Elibol, Mehran Nekuii, Hanlin Tang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Distributed Bandit Learning: Near-Optimal Regret with Efficient Communication 
+Yuanhao Wang, Jiachen Hu, Xiaoyu Chen, Liwei Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Biologically inspired sleep algorithm for increased generalization and adversarial robustness in deep neural networks 
+Timothy Tadros, Giri Krishnan, Ramyaa Ramyaa, Maxim Bazhenov
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+A Closer Look at the Optimization Landscapes of Generative Adversarial Networks 
+Hugo Berard, Gauthier Gidel, Amjad Almahairi, Pascal Vincent, Simon Lacoste-Julien
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+On the Global Convergence of Training Deep Linear ResNets 
+Difan Zou, Philip M. Long, Quanquan Gu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Towards a Deep Network Architecture for Structured Smoothness 
+Haroun Habeeb, Oluwasanmi Koyejo
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Revisiting Self-Training for Neural Sequence Generation 
+Junxian He, Jiatao Gu, Jiajun Shen, Marc'Aurelio Ranzato
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Denoising and Regularization via Exploiting the Structural Bias of Convolutional Generators 
+Reinhard Heckel and Mahdi Soltanolkotabi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Variational Autoencoders for Highly Multivariate Spatial Point Processes Intensities 
+Baichuan Yuan, Xiaowei Wang, Jianxin Ma, Chang Zhou, Andrea L. Bertozzi, Hongxia Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Model-Augmented Actor-Critic: Backpropagating through Paths 
+Ignasi Clavera, Yao Fu, Pieter Abbeel
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+LambdaNet: Probabilistic Type Inference using Graph Neural Networks 
+Jiayi Wei, Maruth Goyal, Greg Durrett, Isil Dillig
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+From Inference to Generation: End-to-end Fully Self-supervised Generation of Human Face from Speech 
+Hyeong-Seok Choi, Changdae Park, Kyogu Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Learning from Unlabelled Videos Using Contrastive Predictive Neural 3D Mapping 
+Adam W. Harley, Shrinidhi K. Lakshmikanth, Fangyu Li, Xian Zhou, Hsiao-Yu Fish Tung, Katerina Fragkiadaki
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Decoupling Representation and Classifier for Long-Tailed Recognition 
+Bingyi Kang, Saining Xie, Marcus Rohrbach, Zhicheng Yan, Albert Gordo, Jiashi Feng, Yannis Kalantidis
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Robust Reinforcement Learning for Continuous Control with Model Misspecification 
+Daniel J. Mankowitz, Nir Levine, Rae Jeong, Abbas Abdolmaleki, Jost Tobias Springenberg, Yuanyuan Shi, Jackie Kay, Todd Hester, Timothy Mann, Martin Riedmiller
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Cross-lingual Alignment vs Joint Training: A Comparative Study and A Simple Unified Framework 
+Zirui Wang*, Jiateng Xie*, Ruochen Xu, Yiming Yang, Graham Neubig, Jaime G. Carbonell
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Training Recurrent Neural Networks Online by Learning Explicit State Variables 
+Somjit Nath, Vincent Liu, Alan Chan, Xin Li, Adam White, Martha White
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Uncertainty-guided Continual Learning with Bayesian Neural Networks 
+Sayna Ebrahimi, Mohamed Elhoseiny, Trevor Darrell, Marcus Rohrbach
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Curriculum Loss: Robust Learning and Generalization against Label Corruption 
+Yueming Lyu, Ivor W. Tsang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Picking Winning Tickets Before Training by Preserving Gradient Flow 
+Chaoqi Wang, Guodong Zhang, Roger Grosse
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Generative Models for Effective ML on Private, Decentralized Datasets 
+Sean Augenstein, H. Brendan McMahan, Daniel Ramage, Swaroop Ramaswamy, Peter Kairouz, Mingqing Chen, Rajiv Mathews, Blaise Aguera y Arcas
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Inductive representation learning on temporal graphs 
+da Xu, chuanwei ruan, evren korpeoglu, sushant kumar, kannan achan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+BatchEnsemble: an Alternative Approach to Efficient Ensemble and Lifelong Learning 
+Yeming Wen, Dustin Tran, Jimmy Ba
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Towards neural networks that provably know when they don't know 
+Alexander Meinke, Matthias Hein
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Iterative energy-based projection on a normal data manifold for anomaly localization 
+David Dehaene, Oriel Frigo, Sébastien Combrexelle, Pierre Eline
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Towards Stable and Efficient Training of Verifiably Robust Neural Networks 
+Huan Zhang, Hongge Chen, Chaowei Xiao, Sven Gowal, Robert Stanforth, Bo Li, Duane Boning, Cho-Jui Hsieh
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Frequency-based Search-control in Dyna 
+Yangchen Pan, Jincheng Mei, Amir-massoud Farahmand
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Learning representations for binary-classification without backpropagation 
+Mathias Lechner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Polylogarithmic width suffices for gradient descent to achieve arbitrarily small test error with shallow ReLU networks 
+Ziwei Ji, Matus Telgarsky
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Physics-aware Difference Graph Networks for Sparsely-Observed Dynamics 
+Sungyong Seo*, Chuizheng Meng*, Yan Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+HiLLoC: lossless image compression with hierarchical latent variable models 
+James Townsend, Thomas Bird, Julius Kunze, David Barber
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+IMPACT: Importance Weighted Asynchronous Architectures with Clipped Target Networks 
+Michael Luo, Jiahao Yao, Richard Liaw, Eric Liang, Ion Stoica
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+On Bonus Based Exploration Methods In The Arcade Learning Environment 
+Adrien Ali Taiga, William Fedus, Marlos C. Machado, Aaron Courville, Marc G. Bellemare
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Adaptive Correlated Monte Carlo for Contextual Categorical Sequence Generation 
+Xinjie Fan, Yizhe Zhang, Zhendong Wang, Mingyuan Zhou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Smoothness and Stability in GANs 
+Casey Chu, Kentaro Minami, Kenji Fukumizu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+SNOW: Subscribing to Knowledge via Channel Pooling for Transfer & Lifelong Learning of Convolutional Neural Networks 
+Chungkuk Yoo, Bumsoo Kang, Minsik Cho
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Empirical Studies on the Properties of Linear Regions in Deep Neural Networks 
+Xiao Zhang, Dongrui Wu
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Black-box Off-policy Estimation for Infinite-Horizon Reinforcement Learning 
+Ali Mousavi, Lihong Li, Qiang Liu, Denny Zhou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+PairNorm: Tackling Oversmoothing in GNNs 
+Lingxiao Zhao, Leman Akoglu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Unsupervised Clustering using Pseudo-semi-supervised Learning 
+Divam Gupta, Ramachandran Ramjee, Nipun Kwatra, Muthian Sivathanu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Simple and Effective Regularization Methods for Training on Noisily Labeled Data with Generalization Guarantee 
+Wei Hu, Zhiyuan Li, Dingli Yu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Controlling generative models with continuous factors of variations 
+Antoine Plumerault, Hervé Le Borgne, Céline Hudelot
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Symplectic ODE-Net: Learning Hamiltonian Dynamics with Control 
+Yaofeng Desmond Zhong, Biswadip Dey, Amit Chakraborty
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Understanding l4-based Dictionary Learning: Interpretation, Stability, and Robustness 
+Yuexiang Zhai, Hermish Mehta, Zhengyuan Zhou, Yi Ma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Quantum Algorithms for Deep Convolutional Neural Networks 
+Iordanis Kerenidis, Jonas Landman, Anupam Prakash
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Self-Supervised Learning of Appliance Usage 
+Chen-Yu Hsu, Abbas Zeitoun, Guang-He Lee, Dina Katabi, Tommi Jaakkola
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Deep Graph Matching Consensus 
+Matthias Fey, Jan E. Lenssen, Christopher Morris, Jonathan Masci, Nils M. Kriege
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Beyond Linearization: On Quadratic and Higher-Order Approximation of Wide Neural Networks 
+Yu Bai, Jason D. Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Dynamic Sparse Training: Find Efficient Sparse Network From Scratch With Trainable Masked Layers 
+Junjie LIU, Zhe XU, Runbin SHI, Ray C. C. Cheung, Hayden K.H. So
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Triple Wins: Boosting Accuracy, Robustness and Efficiency Together by Enabling Input-Adaptive Inference 
+Ting-Kuei Hu, Tianlong Chen, Haotao Wang, Zhangyang Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Neural Policy Gradient Methods: Global Optimality and Rates of Convergence 
+Lingxiao Wang, Qi Cai, Zhuoran Yang, Zhaoran Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Double Neural Counterfactual Regret Minimization 
+Hui Li, Kailiang Hu, Shaohua Zhang, Yuan Qi, Le Song
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+GraphAF: a Flow-based Autoregressive Model for Molecular Graph Generation 
+Chence Shi*, Minkai Xu*, Zhaocheng Zhu, Weinan Zhang, Ming Zhang, Jian Tang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 21 Replies
+Show details
+The Gambler's Problem and Beyond 
+Baoxiang Wang, Shuai Li, Jiajin Li, Siu On Chan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Multilingual Alignment of Contextual Word Representations 
+Steven Cao, Nikita Kitaev, Dan Klein
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+The Curious Case of Neural Text Degeneration 
+Ari Holtzman, Jan Buys, Li Du, Maxwell Forbes, Yejin Choi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Graph Convolutional Reinforcement Learning 
+Jiechuan Jiang, Chen Dun, Tiejun Huang, Zongqing Lu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 21 Replies
+Show details
+Meta-Learning Deep Energy-Based Memory Models 
+Sergey Bartunov, Jack Rae, Simon Osindero, Timothy Lillicrap
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Exploratory Not Explanatory: Counterfactual Analysis of Saliency Maps for Deep Reinforcement Learning 
+Akanksha Atrey, Kaleigh Clary, David Jensen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Fast Neural Network Adaptation via Parameter Remapping and Architecture Search 
+Jiemin Fang*, Yuzhu Sun*, Kangjian Peng*, Qian Zhang, Yuan Li, Wenyu Liu, Xinggang Wang
+26 Sep 2019 (modified: 28 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Guiding Program Synthesis by Learning to Generate Examples 
+Larissa Laich, Pavol Bielik, Martin Vechev
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+SNODE: Spectral Discretization of Neural ODEs for System Identification 
+Alessio Quaglino, Marco Gallieri, Jonathan Masci, Jan Koutník
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Generalized Convolutional Forest Networks for Domain Generalization and Visual Recognition 
+Jongbin Ryu, Gitaek Kwon, Ming-Hsuan Yang, Jongwoo Lim
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Once-for-All: Train One Network and Specialize it for Efficient Deployment 
+Han Cai, Chuang Gan, Tianzhe Wang, Zhekai Zhang, Song Han
+26 Sep 2019 (modified: 30 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Multi-Agent Interactions Modeling with Correlated Policies 
+Minghuan Liu, Ming Zhou, Weinan Zhang, Yuzheng Zhuang, Jun Wang, Wulong Liu, Yong Yu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+PCMC-Net: Feature-based Pairwise Choice Markov Chains 
+Alix Lhéritier
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Implementing Inductive bias for different navigation tasks through diverse RNN attrractors 
+Tie XU, Omri Barak
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Query2box: Reasoning over Knowledge Graphs in Vector Space Using Box Embeddings 
+Hongyu Ren*, Weihua Hu*, Jure Leskovec
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Rethinking the Hyperparameters for Fine-tuning 
+Hao Li, Pratik Chaudhari, Hao Yang, Michael Lam, Avinash Ravichandran, Rahul Bhotika, Stefano Soatto
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Plug and Play Language Models: A Simple Approach to Controlled Text Generation 
+Sumanth Dathathri, Andrea Madotto, Janice Lan, Jane Hung, Eric Frank, Piero Molino, Jason Yosinski, Rosanne Liu
+26 Sep 2019 (modified: 23 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 27 Replies
+Show details
+Provable Benefit of Orthogonal Initialization in Optimizing Deep Linear Networks 
+Wei Hu, Lechao Xiao, Jeffrey Pennington
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+RGBD-GAN: Unsupervised 3D Representation Learning From Natural Image Datasets via RGBD Image Synthesis 
+Atsuhiro Noguchi, Tatsuya Harada
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Towards Verified Robustness under Text Deletion Interventions 
+Johannes Welbl, Po-Sen Huang, Robert Stanforth, Sven Gowal, Krishnamurthy (Dj) Dvijotham, Martin Szummer, Pushmeet Kohli
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Jacobian Adversarially Regularized Networks for Robustness 
+Alvin Chan, Yi Tay, Yew Soon Ong, Jie Fu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Thinking While Moving: Deep Reinforcement Learning with Concurrent Control 
+Ted Xiao, Eric Jang, Dmitry Kalashnikov, Sergey Levine, Julian Ibarz, Karol Hausman, Alexander Herzog
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Evolutionary Population Curriculum for Scaling Multi-Agent Reinforcement Learning 
+Qian Long*, Zihan Zhou*, Abhinav Gupta, Fei Fang, Yi Wu†, Xiaolong Wang†
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators 
+Kevin Clark, Minh-Thang Luong, Quoc V. Le, Christopher D. Manning
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Environmental drivers of systematicity and generalization in a situated agent 
+Felix Hill, Andrew Lampinen, Rosalia Schneider, Stephen Clark, Matthew Botvinick, James L. McClelland, Adam Santoro
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 23 Replies
+Show details
+Abstract Diagrammatic Reasoning with Multiplex Graph Networks 
+Duo Wang, Mateja Jamnik, Pietro Lio
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+A Baseline for Few-Shot Image Classification 
+Guneet Singh Dhillon, Pratik Chaudhari, Avinash Ravichandran, Stefano Soatto
+26 Sep 2019 (modified: 23 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Learning to Retrieve Reasoning Paths over Wikipedia Graph for Question Answering 
+Akari Asai, Kazuma Hashimoto, Hannaneh Hajishirzi, Richard Socher, Caiming Xiong
+26 Sep 2019 (modified: 20 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 18 Replies
+Show details
+Padé Activation Units: End-to-end Learning of Flexible Activation Functions in Deep Networks 
+Alejandro Molina, Patrick Schramowski, Kristian Kersting
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+A FRAMEWORK FOR ROBUSTNESS CERTIFICATION OF SMOOTHED CLASSIFIERS USING F-DIVERGENCES 
+Krishnamurthy (Dj) Dvijotham, Jamie Hayes, Borja Balle, Zico Kolter, Chongli Qin, Andras Gyorgy, Kai Xiao, Sven Gowal, Pushmeet Kohli
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Contrastive Representation Distillation 
+Yonglong Tian, Dilip Krishnan, Phillip Isola
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Certified Defenses for Adversarial Patches 
+Ping-yeh Chiang*, Renkun Ni*, Ahmed Abdelkader, Chen Zhu, Christoph Studor, Tom Goldstein
+26 Sep 2019 (modified: 15 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Sample Efficient Policy Gradient Methods with Recursive Variance Reduction 
+Pan Xu, Felicia Gao, Quanquan Gu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Deep Symbolic Superoptimization Without Human Knowledge 
+Hui Shi, Yang Zhang, Xinyun Chen, Yuandong Tian, Jishen Zhao
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Explain Your Move: Understanding Agent Actions Using Specific and Relevant Feature Attribution 
+Nikaash Puri, Sukriti Verma, Piyush Gupta, Dhruv Kayastha, Shripad Deshmukh, Balaji Krishnamurthy, Sameer Singh
+26 Sep 2019 (modified: 04 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Universal Approximation with Certified Networks 
+Maximilian Baader, Matthew Mirman, Martin Vechev
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Measuring and Improving the Use of Graph Information in Graph Neural Networks 
+Yifan Hou, Jian Zhang, James Cheng, Kaili Ma, Richard T. B. Ma, Hongzhi Chen, Ming-Chang Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+State-only Imitation with Transition Dynamics Mismatch 
+Tanmay Gangwani, Jian Peng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Adversarial AutoAugment 
+Xinyu Zhang, Qiang Wang, Jian Zhang, Zhao Zhong
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Meta Dropout: Learning to Perturb Latent Features for Generalization 
+Hae Beom Lee, Taewook Nam, Eunho Yang, Sung Ju Hwang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Rényi Fair Inference 
+Sina Baharlouei, Maher Nouiehed, Ahmad Beirami, Meisam Razaviyayn
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Learning transport cost from subset correspondence 
+Ruishan Liu, Akshay Balsubramani, James Zou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+BlockSwap: Fisher-guided Block Substitution for Network Compression on a Budget 
+Jack Turner, Elliot J. Crowley, Michael O'Boyle, Amos Storkey, Gavin Gray
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Variance Reduction With Sparse Gradients 
+Melih Elibol, Lihua Lei, Michael I. Jordan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Abductive Commonsense Reasoning 
+Chandra Bhagavatula, Ronan Le Bras, Chaitanya Malaviya, Keisuke Sakaguchi, Ari Holtzman, Hannah Rashkin, Doug Downey, Wen-tau Yih, Yejin Choi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Discrepancy Ratio: Evaluating Model Performance When Even Experts Disagree on the Truth 
+Igor Lovchinsky, Alon Daks, Israel Malkin, Pouya Samangouei, Ardavan Saeedi, Yang Liu, Swami Sankaranarayanan, Tomer Gafner, Ben Sternlieb, Patrick Maher, Nathan Silberman
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Weakly Supervised Disentanglement with Guarantees 
+Rui Shu, Yining Chen, Abhishek Kumar, Stefano Ermon, Ben Poole
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Nesterov Accelerated Gradient and Scale Invariance for Adversarial Attacks 
+Jiadong Lin, Chuanbiao Song, Kun He, Liwei Wang, John E. Hopcroft
+26 Sep 2019 (modified: 01 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Fantastic Generalization Measures and Where to Find Them 
+Yiding Jiang*, Behnam Neyshabur*, Hossein Mobahi, Dilip Krishnan, Samy Bengio
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Robustness Verification for Transformers 
+Zhouxing Shi, Huan Zhang, Kai-Wei Chang, Minlie Huang, Cho-Jui Hsieh
+26 Sep 2019 (modified: 07 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Network Randomization: A Simple Technique for Generalization in Deep Reinforcement Learning 
+Kimin Lee, Kibok Lee, Jinwoo Shin, Honglak Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Tensor Decompositions for Temporal Knowledge Base Completion 
+Timothée Lacroix, Guillaume Obozinski, Nicolas Usunier
+26 Sep 2019 (modified: 08 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+On Universal Equivariant Set Networks 
+Nimrod Segol, Yaron Lipman
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Provable robustness against all adversarial $l_p$-perturbations for $p\geq 1$ 
+Francesco Croce, Matthias Hein
+26 Sep 2019 (modified: 03 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Don't Use Large Mini-batches, Use Local SGD 
+Tao Lin, Sebastian U. Stich, Kumar Kshitij Patel, Martin Jaggi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 18 Replies
+Show details
+Kernel of CycleGAN as a principal homogeneous space 
+Nikita Moriakov, Jonas Adler, Jonas Teuwen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Distributionally Robust Neural Networks 
+Shiori Sagawa*, Pang Wei Koh*, Tatsunori B. Hashimoto, Percy Liang
+26 Sep 2019 (modified: 02 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+On Solving Minimax Optimization Locally: A Follow-the-Ridge Approach 
+Yuanhao Wang*, Guodong Zhang*, Jimmy Ba
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 26 Replies
+Show details
+A Neural Dirichlet Process Mixture Model for Task-Free Continual Learning 
+Soochan Lee, Junsoo Ha, Dongsu Zhang, Gunhee Kim
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Hyper-SAGNN: a self-attention based graph neural network for hypergraphs 
+Ruochi Zhang, Yuesong Zou, Jian Ma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Neural Epitome Search for Architecture-Agnostic Network Compression 
+Daquan Zhou, Xiaojie Jin, Qibin Hou, Kaixin Wang, Jianchao Yang, Jiashi Feng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+On the Equivalence between Positional Node Embeddings and Structural Graph Representations 
+Balasubramaniam Srinivasan, Bruno Ribeiro
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Probability Calibration for Knowledge Graph Embedding Models 
+Pedro Tabacof, Luca Costabello
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Why Not to Use Zero Imputation? Correcting Sparsity Bias in Training Neural Networks 
+Joonyoung Yi, Juhyuk Lee, Kwang Joon Kim, Sung Ju Hwang, Eunho Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+DropEdge: Towards Deep Graph Convolutional Networks on Node Classification 
+Yu Rong, Wenbing Huang, Tingyang Xu, Junzhou Huang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 34 Replies
+Show details
+Masked Based Unsupervised Content Transfer 
+Ron Mokady, Sagie Benaim, Lior Wolf, Amit Bermano
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+U-GAT-IT: Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation 
+Junho Kim, Minjae Kim, Hyeonwoo Kang, Kwang Hee Lee
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Inductive and Unsupervised Representation Learning on Graph Structured Objects 
+Lichen Wang, Bo Zong, Qianqian Ma, Wei Cheng, Jingchao Ni, Wenchao Yu, Yanchi Liu, Dongjin Song, Haifeng Chen, Yun Fu
+26 Sep 2019 (modified: 25 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Batch-shaping for learning conditional channel gated networks 
+Babak Ehteshami Bejnordi, Tijmen Blankevoort, Max Welling
+26 Sep 2019 (modified: 03 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Learning Robust Representations via Multi-View Information Bottleneck 
+Marco Federici, Anjan Dutta, Patrick Forré, Nate Kushman, Zeynep Akata
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Deep probabilistic subsampling for task-adaptive compressed sensing 
+Iris A.M. Huijben, Bastiaan S. Veeling, Ruud J.G. van Sloun
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Robust anomaly detection and backdoor attack detection via differential privacy 
+Min Du, Ruoxi Jia, Dawn Song
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Learning to Guide Random Search 
+Ozan Sener, Vladlen Koltun
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Lagrangian Fluid Simulation with Continuous Convolutions 
+Benjamin Ummenhofer, Lukas Prantl, Nils Thuerey, Vladlen Koltun
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Reinforced Genetic Algorithm Learning for Optimizing Computation Graphs 
+Aditya Paliwal, Felix Gimeno, Vinod Nair, Yujia Li, Miles Lubin, Pushmeet Kohli, Oriol Vinyals
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Compressive Transformers for Long-Range Sequence Modelling 
+Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Chloe Hillier, Timothy P. Lillicrap
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+A Stochastic Derivative Free Optimization Method with Momentum 
+Eduard Gorbunov, Adel Bibi, Ozan Sener, El Houcine Bergou, Peter Richtarik
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Understanding and Improving Information Transfer in Multi-Task Learning 
+Sen Wu, Hongyang R. Zhang, Christopher Ré
+26 Sep 2019 (modified: 03 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Learning To Explore Using Active Neural SLAM 
+Devendra Singh Chaplot, Dhiraj Gandhi, Saurabh Gupta, Abhinav Gupta, Ruslan Salakhutdinov
+26 Sep 2019 (modified: 11 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+EMPIR: Ensembles of Mixed Precision Deep Networks for Increased Robustness Against Adversarial Attacks 
+Sanchari Sen, Balaraman Ravindran, Anand Raghunathan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Quantifying Point-Prediction Uncertainty in Neural Networks via Residual Estimation with an I/O Kernel 
+Xin Qiu, Elliot Meyerson, Risto Miikkulainen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+B-Spline CNNs on Lie groups 
+Erik J Bekkers
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Neural Outlier Rejection for Self-Supervised Keypoint Learning 
+Jiexiong Tang, Hanme Kim, Vitor Guizilini, Sudeep Pillai, Rares Ambrus
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Reducing Transformer Depth on Demand with Structured Dropout 
+Angela Fan, Edouard Grave, Armand Joulin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 18 Replies
+Show details
+Cross-Lingual Ability of Multilingual BERT: An Empirical Study 
+Karthikeyan K, Zihan Wang, Stephen Mayhew, Dan Roth
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+SPACE: Unsupervised Object-Oriented Scene Representation via Spatial Attention and Decomposition 
+Zhixuan Lin, Yi-Fu Wu, Skand Vishwanath Peri, Weihao Sun, Gautam Singh, Fei Deng, Jindong Jiang, Sungjin Ahn
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+RIDE: Rewarding Impact-Driven Exploration for Procedurally-Generated Environments 
+Roberta Raileanu, Tim Rocktäschel
+26 Sep 2019 (modified: 01 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Low-dimensional statistical manifold embedding of directed graphs 
+Thorben Funke, Tian Guo, Alen Lancic, Nino Antulov-Fantulin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Efficient Probabilistic Logic Reasoning with Graph Neural Networks 
+Yuyu Zhang, Xinshi Chen, Yuan Yang, Arun Ramamurthy, Bo Li, Yuan Qi, Le Song
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+GraphSAINT: Graph Sampling Based Inductive Learning Method 
+Hanqing Zeng, Hongkuan Zhou, Ajitesh Srivastava, Rajgopal Kannan, Viktor Prasanna
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+You Only Train Once: Loss-Conditional Training of Deep Networks 
+Alexey Dosovitskiy, Josip Djolonga
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Projection-Based Constrained Policy Optimization 
+Tsung-Yen Yang, Justinian Rosca, Karthik Narasimhan, Peter J. Ramadge
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Infinite-Horizon Differentiable Model Predictive Control 
+Sebastian East, Marco Gallieri, Jonathan Masci, Jan Koutnik, Mark Cannon
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Combining Q-Learning and Search with Amortized Value Estimates 
+Jessica B. Hamrick, Victor Bapst, Alvaro Sanchez-Gonzalez, Tobias Pfaff, Theophane Weber, Lars Buesing, Peter W. Battaglia
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators 
+Daniel Stoller, Sebastian Ewert, Simon Dixon
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Decentralized Deep Learning with Arbitrary Communication Compression 
+Anastasia Koloskova*, Tao Lin*, Sebastian U Stich, Martin Jaggi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Toward Evaluating Robustness of Deep Reinforcement Learning with Continuous Control 
+Tsui-Wei Weng, Krishnamurthy (Dj) Dvijotham*, Jonathan Uesato*, Kai Xiao*, Sven Gowal*, Robert Stanforth*, Pushmeet Kohli
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Gradient $\ell_1$ Regularization for Quantization Robustness 
+Milad Alizadeh, Arash Behboodi, Mart van Baalen, Christos Louizos, Tijmen Blankevoort, Max Welling
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+SpikeGrad: An ANN-equivalent Computation Model for Implementing Backpropagation with Spikes 
+Johannes C. Thiele, Olivier Bichler, Antoine Dupret
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+On the Relationship between Self-Attention and Convolutional Layers 
+Jean-Baptiste Cordonnier, Andreas Loukas, Martin Jaggi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Learning-Augmented Data Stream Algorithms 
+Tanqiu Jiang, Yi Li, Honghao Lin, Yisong Ruan, David P. Woodruff
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Structured Object-Aware Physics Prediction for Video Modeling and Planning 
+Jannik Kossen, Karl Stelzner, Marcel Hussing, Claas Voelcker, Kristian Kersting
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Incorporating BERT into Neural Machine Translation 
+Jinhua Zhu, Yingce Xia, Lijun Wu, Di He, Tao Qin, Wengang Zhou, Houqiang Li, Tieyan Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+MMA Training: Direct Input Space Margin Maximization through Adversarial Training 
+Gavin Weiguang Ding, Yash Sharma, Kry Yik Chau Lui, Ruitong Huang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Infinite-horizon Off-Policy Policy Evaluation with Multiple Behavior Policies 
+Xinyun Chen, Lu Wang, Yizhe Hang, Heng Ge, Hongyuan Zha
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+vq-wav2vec: Self-Supervised Learning of Discrete Speech Representations 
+Alexei Baevski, Steffen Schneider, Michael Auli
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Meta-learning curiosity algorithms 
+Ferran Alet*, Martin F. Schneider*, Tomas Lozano-Perez, Leslie Pack Kaelbling
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Making Efficient Use of Demonstrations to Solve Hard Exploration Problems 
+Caglar Gulcehre, Tom Le Paine, Bobak Shahriari, Misha Denil, Matt Hoffman, Hubert Soyer, Richard Tanburn, Steven Kapturowski, Neil Rabinowitz, Duncan Williams, Gabriel Barth-Maron, Ziyu Wang, Nando de Freitas, Worlds Team
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+VariBAD: A Very Good Method for Bayes-Adaptive Deep RL via Meta-Learning 
+Luisa Zintgraf, Kyriacos Shiarlis, Maximilian Igl, Sebastian Schulze, Yarin Gal, Katja Hofmann, Shimon Whiteson
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Lookahead: A Far-sighted Alternative of Magnitude-based Pruning 
+Sejun Park*, Jaeho Lee*, Sangwoo Mo, Jinwoo Shin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 18 Replies
+Show details
+Spike-based causal inference for weight alignment 
+Jordan Guerguiev, Konrad Kording, Blake Richards
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Empirical Bayes Transductive Meta-Learning with Synthetic Gradients 
+Shell Xu Hu, Pablo Garcia Moreno, Yang Xiao, Xi Shen, Guillaume Obozinski, Neil Lawrence, Andreas Damianou
+26 Sep 2019 (modified: 26 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Keep Doing What Worked: Behavior Modelling Priors for Offline Reinforcement Learning 
+Noah Siegel, Jost Tobias Springenberg, Felix Berkenkamp, Abbas Abdolmaleki, Michael Neunert, Thomas Lampe, Roland Hafner, Nicolas Heess, Martin Riedmiller
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Understanding the Limitations of Conditional Generative Models 
+Ethan Fetaya, Joern-Henrik Jacobsen, Will Grathwohl, Richard Zemel
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Demystifying Inter-Class Disentanglement 
+Aviv Gabbay, Yedid Hoshen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Mixed-curvature Variational Autoencoders 
+Ondrej Skopek, Octavian-Eugen Ganea, Gary Bécigneul
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+BinaryDuo: Reducing Gradient Mismatch in Binary Activation Network by Coupling Binary Activations 
+Hyungjun Kim, Kyungsu Kim, Jinseok Kim, Jae-Joon Kim
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Model-based reinforcement learning for biological sequence design 
+Christof Angermueller, David Dohan, David Belanger, Ramya Deshpande, Kevin Murphy, Lucy Colwell
+26 Sep 2019 (modified: 10 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+BayesOpt Adversarial Attack 
+Binxin Ru, Adam Cobb, Arno Blaas, Yarin Gal
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Meta Reinforcement Learning with Autonomous Inference of Subtask Dependencies 
+Sungryull Sohn, Hyunjae Woo, Jongwook Choi, Honglak Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Hypermodels for Exploration 
+Vikranth Dwaracherla, Xiuyuan Lu, Morteza Ibrahimi, Ian Osband, Zheng Wen, Benjamin Van Roy
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+RaPP: Novelty Detection with Reconstruction along Projection Pathway 
+Ki Hyun Kim, Sangwoo Shim, Yongsub Lim, Jongseob Jeon, Jeongwoo Choi, Byungchan Kim, Andre S. Yoon
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Dynamics-Aware Embeddings 
+William Whitney, Rajat Agarwal, Kyunghyun Cho, Abhinav Gupta
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Functional Regularisation for Continual Learning with Gaussian Processes 
+Michalis K. Titsias, Jonathan Schwarz, Alexander G. de G. Matthews, Razvan Pascanu, Yee Whye Teh
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+You CAN Teach an Old Dog New Tricks! On Training Knowledge Graph Embeddings 
+Daniel Ruffinelli, Samuel Broscheit, Rainer Gemulla
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 21 Replies
+Show details
+AdvectiveNet: An Eulerian-Lagrangian Fluidic Reservoir for Point Cloud Processing 
+Xingzhe He, Helen Lu Cao, Bo Zhu
+26 Sep 2019 (modified: 04 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Never Give Up: Learning Directed Exploration Strategies 
+Adrià Puigdomènech Badia, Pablo Sprechmann, Alex Vitvitskyi, Daniel Guo, Bilal Piot, Steven Kapturowski, Olivier Tieleman, Martin Arjovsky, Alexander Pritzel, Andrew Bolt, Charles Blundell
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Fair Resource Allocation in Federated Learning 
+Tian Li, Maziar Sanjabi, Ahmad Beirami, Virginia Smith
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Smooth markets: A basic mechanism for organizing gradient-based learners 
+David Balduzzi, Wojciech M. Czarnecki, Tom Anthony, Ian Gemp, Edward Hughes, Joel Leibo, Georgios Piliouras, Thore Graepel
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding 
+Wei Wang, Bin Bi, Ming Yan, Chen Wu, Jiangnan Xia, Zuyi Bao, Liwei Peng, Luo Si
+26 Sep 2019 (modified: 09 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Training binary neural networks with real-to-binary convolutions 
+Brais Martinez, Jing Yang, Adrian Bulat, Georgios Tzimiropoulos
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Permutation Equivariant Models for Compositional Generalization in Language 
+Jonathan Gordon, David Lopez-Paz, Marco Baroni, Diane Bouchacourt
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Continual learning with hypernetworks 
+Johannes von Oswald, Christian Henning, João Sacramento, Benjamin F. Grewe
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Phase Transitions for the Information Bottleneck in Representation Learning 
+Tailin Wu, Ian Fischer
+26 Sep 2019 (modified: 14 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Variational Template Machine for Data-to-Text Generation 
+Rong Ye, Wenxian Shi, Hao Zhou, Zhongyu Wei, Lei Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Memory-Based Graph Networks 
+Amir Hosein Khasahmadi, Kaveh Hassani, Parsa Moradi, Leo Lee, Quaid Morris
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty 
+Dan Hendrycks*, Norman Mu*, Ekin Dogus Cubuk, Barret Zoph, Justin Gilmer, Balaji Lakshminarayanan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 18 Replies
+Show details
+AtomNAS: Fine-Grained End-to-End Neural Architecture Search 
+Jieru Mei, Yingwei Li, Xiaochen Lian, Xiaojie Jin, Linjie Yang, Alan Yuille, Jianchao Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Residual Energy-Based Models for Text Generation 
+Yuntian Deng, Anton Bakhtin, Myle Ott, Arthur Szlam, Marc'Aurelio Ranzato
+26 Sep 2019 (modified: 23 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+A closer look at the approximation capabilities of neural networks 
+Kai Fong Ernest Chong
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Deep Audio Priors Emerge From Harmonic Convolutional Networks 
+Zhoutong Zhang, Yunyun Wang, Chuang Gan, Jiajun Wu, Joshua B. Tenenbaum, Antonio Torralba, William T. Freeman
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Expected Information Maximization: Using the I-Projection for Mixture Density Estimation 
+Philipp Becker, Oleg Arenz, Gerhard Neumann
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms 
+Yoshua Bengio, Tristan Deleu, Nasim Rahaman, Nan Rosemary Ke, Sebastien Lachapelle, Olexa Bilaniuk, Anirudh Goyal, Christopher Pal
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+On the interaction between supervision and self-play in emergent communication 
+Ryan Lowe*, Abhinav Gupta*, Jakob Foerster, Douwe Kiela, Joelle Pineau
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Dynamic Model Pruning with Feedback 
+Tao Lin, Sebastian U. Stich, Luis Barba, Daniil Dmitriev, Martin Jaggi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Latent Normalizing Flows for Many-to-Many Cross-Domain Mappings 
+Shweta Mahajan, Iryna Gurevych, Stefan Roth
+26 Sep 2019 (modified: 07 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Transferring Optimality Across Data Distributions via Homotopy Methods 
+Matilde Gargiani, Andrea Zanelli, Quoc Tran Dinh, Moritz Diehl, Frank Hutter
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Regularizing activations in neural networks via distribution matching with the Wasserstein metric 
+Taejong Joo, Donggu Kang, Byunghoon Kim
+26 Sep 2019 (modified: 27 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Mutual Information Gradient Estimation for Representation Learning 
+Liangjian Wen, Yiji Zhou, Lirong He, Mingyuan Zhou, Zenglin Xu
+26 Sep 2019 (modified: 13 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+Lite Transformer with Long-Short Range Attention 
+Zhanghao Wu*, Zhijian Liu*, Ji Lin, Yujun Lin, Song Han
+26 Sep 2019 (modified: 27 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+A Function Space View of Bounded Norm Infinite Width ReLU Nets: The Multivariate Case 
+Greg Ongie, Rebecca Willett, Daniel Soudry, Nathan Srebro
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Adversarial Lipschitz Regularization 
+Dávid Terjék
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Compositional Language Continual Learning 
+Yuanpeng Li, Liang Zhao, Kenneth Church, Mohamed Elhoseiny
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+End to End Trainable Active Contours via Differentiable Rendering 
+Shir Gur, Tal Shaharabany, Lior Wolf
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Provable Filter Pruning for Efficient Neural Networks 
+Lucas Liebenwein, Cenk Baykal, Harry Lang, Dan Feldman, Daniela Rus
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Effect of Activation Functions on the Training of Overparametrized Neural Nets 
+Abhishek Panigrahi, Abhishek Shetty, Navin Goyal
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Lipschitz constant estimation of Neural Networks via sparse polynomial optimization 
+Fabian Latorre, Paul Rolland, Volkan Cevher
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+State Alignment-based Imitation Learning 
+Fangchen Liu, Zhan Ling, Tongzhou Mu, Hao Su
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Learning to Group: A Bottom-Up Framework for 3D Part Discovery in Unseen Categories 
+Tiange Luo, Kaichun Mo, Zhiao Huang, Jiarui Xu, Siyu Hu, Liwei Wang, Hao Su
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Discriminative Particle Filter Reinforcement Learning for Complex Partial observations 
+Xiao Ma, Peter Karkus, David Hsu, Wee Sun Lee, Nan Ye
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Unrestricted Adversarial Examples via Semantic Manipulation 
+Anand Bhattad, Min Jin Chong, Kaizhao Liang, Bo Li, D. A. Forsyth
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Classification-Based Anomaly Detection for General Data 
+Liron Bergman, Yedid Hoshen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Scale-Equivariant Steerable Networks 
+Ivan Sosnovik, Michał Szmaja, Arnold Smeulders
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+On Generalization Error Bounds of Noisy Gradient Methods for Non-Convex Learning 
+Jian Li, Xuanyuan Luo, Mingda Qiao
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Consistency Regularization for Generative Adversarial Networks 
+Han Zhang, Zizhao Zhang, Augustus Odena, Honglak Lee
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Differentiable learning of numerical rules in knowledge graphs 
+Po-Wei Wang, Daria Stepanova, Csaba Domokos, J. Zico Kolter
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Learning to Move with Affordance Maps 
+William Qi, Ravi Teja Mullapudi, Saurabh Gupta, Deva Ramanan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Neural tangent kernels, transportation mappings, and universal approximation 
+Ziwei Ji, Matus Telgarsky, Ruicheng Xian
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+SCALOR: Generative World Models with Scalable Object Representations 
+Jindong Jiang*, Sepehr Janghorbani*, Gerard De Melo, Sungjin Ahn
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Prediction Poisoning: Towards Defenses Against DNN Model Stealing Attacks 
+Tribhuvanesh Orekondy, Bernt Schiele, Mario Fritz
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Domain Adaptive Multibranch Networks 
+Róger Bermúdez-Chacón, Mathieu Salzmann, Pascal Fua
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+DiffTaichi: Differentiable Programming for Physical Simulation 
+Yuanming Hu, Luke Anderson, Tzu-Mao Li, Qi Sun, Nathan Carr, Jonathan Ragan-Kelley, Fredo Durand
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Pitfalls of In-Domain Uncertainty Estimation and Ensembling in Deep Learning 
+Arsenii Ashukha, Alexander Lyzhov, Dmitry Molchanov, Dmitry Vetrov
+26 Sep 2019 (modified: 03 Jun 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Episodic Reinforcement Learning with Associative Memory 
+Guangxiang Zhu*, Zichuan Lin*, Guangwen Yang, Chongjie Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Sub-policy Adaptation for Hierarchical Reinforcement Learning 
+Alexander Li, Carlos Florensa, Ignasi Clavera, Pieter Abbeel
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Critical initialisation in continuous approximations of binary neural networks 
+George Stamatescu, Federica Gerace, Carlo Lucibello, Ian Fuss, Langford White
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Deep Orientation Uncertainty Learning based on a Bingham Loss 
+Igor Gilitschenski, Roshni Sahoo, Wilko Schwarting, Alexander Amini, Sertac Karaman, Daniela Rus
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Co-Attentive Equivariant Neural Networks: Focusing Equivariance On Transformations Co-Occurring in Data 
+David W. Romero, Mark Hoogendoorn
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Mixed Precision DNNs: All you need is a good parametrization 
+Stefan Uhlich, Lukas Mauch, Fabien Cardinaux, Kazuki Yoshiyama, Javier Alonso Garcia, Stephen Tiedemann, Thomas Kemp, Akira Nakamura
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Information Geometry of Orthogonal Initializations and Training 
+Piotr Aleksander Sokół, Il Memming Park
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Extreme Classification via Adversarial Softmax Approximation 
+Robert Bamler, Stephan Mandt
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Learning Nearly Decomposable Value Functions Via Communication Minimization 
+Tonghan Wang*, Jianhao Wang*, Chongyi Zheng, Chongjie Zhang
+26 Sep 2019 (modified: 30 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Robust Subspace Recovery Layer for Unsupervised Anomaly Detection 
+Chieh-Hsin Lai, Dongmian Zou, Gilad Lerman
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Learning to Coordinate Manipulation Skills via Skill Behavior Diversification 
+Youngwoon Lee, Jingyun Yang, Joseph J. Lim
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+NAS-Bench-1Shot1: Benchmarking and Dissecting One-shot Neural Architecture Search 
+Arber Zela, Julien Siems, Frank Hutter
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Conservative Uncertainty Estimation By Fitting Prior Networks 
+Kamil Ciosek, Vincent Fortuin, Ryota Tomioka, Katja Hofmann, Richard Turner
+26 Sep 2019 (modified: 17 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 22 Replies
+Show details
+Understanding Generalization in Recurrent Neural Networks 
+Zhuozhuo Tu, Fengxiang He, Dacheng Tao
+26 Sep 2019 (modified: 27 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+The Shape of Data: Intrinsic Distance for Data Distributions 
+Anton Tsitsulin, Marina Munkhoeva, Davide Mottin, Panagiotis Karras, Alex Bronstein, Ivan Oseledets, Emmanuel Mueller
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+How to 0wn the NAS in Your Spare Time 
+Sanghyun Hong, Michael Davinroy, Yiǧitcan Kaya, Dana Dachman-Soled, Tudor Dumitraş
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Enabling Deep Spiking Neural Networks with Hybrid Conversion and Spike Timing Dependent Backpropagation 
+Nitin Rathi, Gopalakrishnan Srinivasan, Priyadarshini Panda, Kaushik Roy
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+BREAKING CERTIFIED DEFENSES: SEMANTIC ADVERSARIAL EXAMPLES WITH SPOOFED ROBUSTNESS CERTIFICATES 
+Amin Ghiasi, Ali Shafahi, Tom Goldstein
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Query-efficient Meta Attack to Deep Neural Networks 
+Jiawei Du, Hu Zhang, Joey Tianyi Zhou, Yi Yang, Jiashi Feng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Massively Multilingual Sparse Word Representations 
+Gábor Berend
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Monotonic Multihead Attention 
+Xutai Ma, Juan Miguel Pino, James Cross, Liezl Puzon, Jiatao Gu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Gradients as Features for Deep Representation Learning 
+Fangzhou Mu, Yingyu Liang, Yin Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Pay Attention to Features, Transfer Learn Faster CNNs 
+Kafeng Wang, Xitong Gao, Yiren Zhao, Xingjian Li, Dejing Dou, Cheng-Zhong Xu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Program Guided Agent 
+Shao-Hua Sun, Te-Lin Wu, Joseph J. Lim
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 20 Replies
+Show details
+Sparse Coding with Gated Learned ISTA 
+Kailun Wu, Yiwen Guo, Ziang Li, Changshui Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Graph Neural Networks Exponentially Lose Expressive Power for Node Classification 
+Kenta Oono, Taiji Suzuki
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Multi-Scale Representation Learning for Spatial Feature Distributions using Grid Cells 
+Gengchen Mai, Krzysztof Janowicz, Bo Yan, Rui Zhu, Ling Cai, Ni Lao
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+InfoGraph: Unsupervised and Semi-supervised Graph-Level Representation Learning via Mutual Information Maximization 
+Fan-Yun Sun, Jordan Hoffman, Vikas Verma, Jian Tang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+On Robustness of Neural Ordinary Differential Equations 
+Hanshu YAN, Jiawei DU, Vincent TAN, Jiashi FENG
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 21 Replies
+Show details
+Defending Against Physically Realizable Attacks on Image Classification 
+Tong Wu, Liang Tong, Yevgeniy Vorobeychik
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Estimating Gradients for Discrete Random Variables by Sampling without Replacement 
+Wouter Kool, Herke van Hoof, Max Welling
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Learning to Control PDEs with Differentiable Physics 
+Philipp Holl, Nils Thuerey, Vladlen Koltun
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Intensity-Free Learning of Temporal Point Processes 
+Oleksandr Shchur, Marin Biloš, Stephan Günnemann
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+A Signal Propagation Perspective for Pruning Neural Networks at Initialization 
+Namhoon Lee, Thalaiyasingam Ajanthan, Stephen Gould, Philip H. S. Torr
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Skip Connections Matter: On the Transferability of Adversarial Examples Generated with ResNets 
+Dongxian Wu, Yisen Wang, Shu-Tao Xia, James Bailey, Xingjun Ma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+White Noise Analysis of Neural Networks 
+Ali Borji, Sikun Lin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Neural Machine Translation with Universal Visual Representation 
+Zhuosheng Zhang, Kehai Chen, Rui Wang, Masao Utiyama, Eiichiro Sumita, Zuchao Li, Hai Zhao
+26 Sep 2019 (modified: 30 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Tranquil Clouds: Neural Networks for Learning Temporally Coherent Features in Point Clouds 
+Lukas Prantl, Nuttapong Chentanez, Stefan Jeschke, Nils Thuerey
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+PC-DARTS: Partial Channel Connections for Memory-Efficient Architecture Search 
+Yuhui Xu, Lingxi Xie, Xiaopeng Zhang, Xin Chen, Guo-Jun Qi, Qi Tian, Hongkai Xiong
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Online and stochastic optimization beyond Lipschitz continuity: A Riemannian approach 
+Kimon Antonakopoulos, E. Veronica Belmega, Panayotis Mertikopoulos
+26 Sep 2019 (modified: 25 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Enhancing Adversarial Defense by k-Winners-Take-All 
+Chang Xiao, Peilin Zhong, Changxi Zheng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Encoding word order in complex embeddings 
+Benyou Wang, Donghao Zhao, Christina Lioma, Qiuchi Li, Peng Zhang, Jakob Grue Simonsen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+DDSP: Differentiable Digital Signal Processing 
+Jesse Engel, Lamtharn (Hanoi) Hantrakul, Chenjie Gu, Adam Roberts
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Cross-Domain Few-Shot Classification via Learned Feature-Wise Transformation 
+Hung-Yu Tseng, Hsin-Ying Lee, Jia-Bin Huang, Ming-Hsuan Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Ridge Regression: Structure, Cross-Validation, and Sketching 
+Sifan Liu, Edgar Dobriban
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Finite Depth and Width Corrections to the Neural Tangent Kernel 
+Boris Hanin, Mihai Nica
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Meta-Learning without Memorization 
+Mingzhang Yin, George Tucker, Mingyuan Zhou, Sergey Levine, Chelsea Finn
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Influence-Based Multi-Agent Exploration 
+Tonghan Wang*, Jianhao Wang*, Yi Wu, Chongjie Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+HOPPITY: LEARNING GRAPH TRANSFORMATIONS TO DETECT AND FIX BUGS IN PROGRAMS 
+Elizabeth Dinella, Hanjun Dai, Ziyang Li, Mayur Naik, Le Song, Ke Wang
+26 Sep 2019 (modified: 23 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Sliced Cramer Synaptic Consolidation for Preserving Deeply Learned Representations 
+Soheil Kolouri, Nicholas A. Ketz, Andrea Soltoggio, Praveen K. Pilly
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+How much Position Information Do Convolutional Neural Networks Encode? 
+Md Amirul Islam*, Sen Jia*, Neil D. B. Bruce
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Hamiltonian Generative Networks 
+Peter Toth, Danilo J. Rezende, Andrew Jaegle, Sébastien Racanière, Aleksandar Botev, Irina Higgins
+26 Sep 2019 (modified: 23 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+CoPhy: Counterfactual Learning of Physical Dynamics 
+Fabien Baradel, Natalia Neverova, Julien Mille, Greg Mori, Christian Wolf
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Estimating counterfactual treatment outcomes over time through adversarially balanced representations 
+Ioana Bica, Ahmed M Alaa, James Jordon, Mihaela van der Schaar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Gradientless Descent: High-Dimensional Zeroth-Order Optimization 
+Daniel Golovin, John Karro, Greg Kochanski, Chansoo Lee, Xingyou Song, Qiuyi Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Conditional Learning of Fair Representations 
+Han Zhao, Amanda Coston, Tameem Adel, Geoffrey J. Gordon
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Inductive Matrix Completion Based on Graph Neural Networks 
+Muhan Zhang, Yixin Chen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Duration-of-Stay Storage Assignment under Uncertainty 
+Michael Lingzhi Li, Elliott Wolf, Daniel Wintz
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 20 Replies
+Show details
+Emergence of functional and structural properties of the head direction system by optimization of recurrent neural networks 
+Christopher J. Cueva, Peter Y. Wang, Matthew Chin, Xue-Xin Wei
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Deep neuroethology of a virtual rodent 
+Josh Merel, Diego Aldarondo, Jesse Marshall, Yuval Tassa, Greg Wayne, Bence Olveczky
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Doubly Robust Bias Reduction in Infinite Horizon Off-Policy Estimation 
+Ziyang Tang*, Yihao Feng*, Lihong Li, Dengyong Zhou, Qiang Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Learning Compositional Koopman Operators for Model-Based Control 
+Yunzhu Li, Hao He, Jiajun Wu, Dina Katabi, Antonio Torralba
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+CLEVRER: Collision Events for Video Representation and Reasoning 
+Kexin Yi*, Chuang Gan*, Yunzhu Li, Pushmeet Kohli, Jiajun Wu, Antonio Torralba, Joshua B. Tenenbaum
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+The Logical Expressiveness of Graph Neural Networks 
+Pablo Barceló, Egor V. Kostylev, Mikael Monet, Jorge Pérez, Juan Reutter, Juan Pablo Silva
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+The Break-Even Point on Optimization Trajectories of Deep Neural Networks 
+Stanislaw Jastrzebski, Maciej Szymczak, Stanislav Fort, Devansh Arpit, Jacek Tabor, Kyunghyun Cho*, Krzysztof Geras*
+26 Sep 2019 (modified: 29 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+ALBERT: A Lite BERT for Self-supervised Learning of Language Representations 
+Zhenzhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, Radu Soricut
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 32 Replies
+Show details
+Disentangling neural mechanisms for perceptual grouping 
+Junkyung Kim*, Drew Linsley*, Kalpit Thakkar, Thomas Serre
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Learning to Plan in High Dimensions via Neural Exploration-Exploitation Trees 
+Binghong Chen, Bo Dai, Qinjie Lin, Guo Ye, Han Liu, Le Song
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Symplectic Recurrent Neural Networks 
+Zhengdao Chen, Jianyu Zhang, Martin Arjovsky, Léon Bottou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Asymptotics of Wide Networks from Feynman Diagrams 
+Ethan Dyer, Guy Gur-Ari
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Learning The Difference That Makes A Difference With Counterfactually-Augmented Data 
+Divyansh Kaushik, Eduard Hovy, Zachary Lipton
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Is a Good Representation Sufficient for Sample Efficient Reinforcement Learning? 
+Simon S. Du, Sham M. Kakade, Ruosong Wang, Lin F. Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Simplified Action Decoder for Deep Multi-Agent Reinforcement Learning 
+Hengyuan Hu, Jakob N Foerster
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Network Deconvolution 
+Chengxi Ye, Matthew Evanusa, Hua He, Anton Mitrokhin, Tom Goldstein, James A. Yorke, Cornelia Fermuller, Yiannis Aloimonos
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Neural Symbolic Reader: Scalable Integration of Distributed and Symbolic Representations for Reading Comprehension 
+Xinyun Chen, Chen Liang, Adams Wei Yu, Denny Zhou, Dawn Song, Quoc V. Le
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Real or Not Real, that is the Question 
+Yuanbo Xiangli*, Yubin Deng*, Bo Dai*, Chen Change Loy, Dahua Lin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Dream to Control: Learning Behaviors by Latent Imagination 
+Danijar Hafner, Timothy Lillicrap, Jimmy Ba, Mohammad Norouzi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+A Probabilistic Formulation of Unsupervised Text Style Transfer 
+Junxian He, Xinyi Wang, Graham Neubig, Taylor Berg-Kirkpatrick
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Emergent Tool Use From Multi-Agent Autocurricula 
+Bowen Baker, Ingmar Kanitscheider, Todor Markov, Yi Wu, Glenn Powell, Bob McGrew, Igor Mordatch
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search 
+Xuanyi Dong, Yi Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 22 Replies
+Show details
+Strategies for Pre-training Graph Neural Networks 
+Weihua Hu*, Bowen Liu*, Joseph Gomes, Marinka Zitnik, Percy Liang, Vijay Pande, Jure Leskovec
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Behaviour Suite for Reinforcement Learning 
+Ian Osband, Yotam Doron, Matteo Hessel, John Aslanides, Eren Sezener, Andre Saraiva, Katrina McKinney, Tor Lattimore, Csaba Szepesvari, Satinder Singh, Benjamin Van Roy, Richard Sutton, David Silver, Hado Van Hasselt
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+FreeLB: Enhanced Adversarial Training for Natural Language Understanding 
+Chen Zhu, Yu Cheng, Zhe Gan, Siqi Sun, Tom Goldstein, Jingjing Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Kernelized Wasserstein Natural Gradient 
+M Arbel, A Gretton, W Li, G Montufar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+And the Bit Goes Down: Revisiting the Quantization of Neural Networks 
+Pierre Stock, Armand Joulin, Rémi Gribonval, Benjamin Graham, Hervé Jégou
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+A Latent Morphology Model for Open-Vocabulary Neural Machine Translation 
+Duygu Ataman, Wilker Aziz, Alexandra Birch
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 5 Replies
+Show details
+Understanding Why Neural Networks Generalize Well Through GSNR of Parameters 
+Jinlong Liu, Yunzhi Bai, Guoqing Jiang, Ting Chen, Huayan Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Model Based Reinforcement Learning for Atari 
+Łukasz Kaiser, Mohammad Babaeizadeh, Piotr Miłos, Błażej Osiński, Roy H Campbell, Konrad Czechowski, Dumitru Erhan, Chelsea Finn, Piotr Kozakowski, Sergey Levine, Afroz Mohiuddin, Ryan Sepassi, George Tucker, Henryk Michalewski
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Disagreement-Regularized Imitation Learning 
+Kiante Brantley, Wen Sun, Mikael Henaff
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Stable Rank Normalization for Improved Generalization in Neural Networks and GANs 
+Amartya Sanyal, Philip H. Torr, Puneet K. Dokania
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Measuring the Reliability of Reinforcement Learning Algorithms 
+Stephanie C.Y. Chan, Samuel Fishman, Anoop Korattikara, John Canny, Sergio Guadarrama
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Sequential Latent Knowledge Selection for Knowledge-Grounded Dialogue 
+Byeongchang Kim, Jaewoo Ahn, Gunhee Kim
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Neural Tangents: Fast and Easy Infinite Neural Networks in Python 
+Roman Novak, Lechao Xiao, Jiri Hron, Jaehoon Lee, Alexander A. Alemi, Jascha Sohl-Dickstein, Samuel S. Schoenholz
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Self-labelling via simultaneous clustering and representation learning 
+Asano YM., Rupprecht C., Vedaldi A.
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+The intriguing role of module criticality in the generalization of deep networks 
+Niladri Chatterji, Behnam Neyshabur, Hanie Sedghi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Harnessing the Power of Infinitely Wide Deep Nets on Small-data Tasks 
+Sanjeev Arora, Simon S. Du, Zhiyuan Li, Ruslan Salakhutdinov, Ruosong Wang, Dingli Yu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Differentiation of Blackbox Combinatorial Solvers 
+Marin Vlastelica Pogančić, Anselm Paulus, Vit Musil, Georg Martius, Michal Rolinek
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Scaling Autoregressive Video Models 
+Dirk Weissenborn, Oscar Täckström, Jakob Uszkoreit
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+The Ingredients of Real World Robotic Reinforcement Learning 
+Henry Zhu, Justin Yu, Abhishek Gupta, Dhruv Shah, Kristian Hartikainen, Avi Singh, Vikash Kumar, Sergey Levine
+26 Sep 2019 (modified: 27 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Meta-Learning Acquisition Functions for Transfer Learning in Bayesian Optimization 
+Michael Volpp, Lukas P. Fröhlich, Kirsten Fischer, Andreas Doerr, Stefan Falkner, Frank Hutter, Christian Daniel
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Maximum Likelihood Constraint Inference for Inverse Reinforcement Learning 
+Dexter R.R. Scobee, S. Shankar Sastry
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Spectral Embedding of Regularized Block Models 
+Nathan De Lara, Thomas Bonald
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 4 Replies
+Show details
+Towards Hierarchical Importance Attribution: Explaining Compositional Semantics for Neural Sequence Models 
+Xisen Jin, Zhongyu Wei, Junyi Du, Xiangyang Xue, Xiang Ren
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+word2ket: Space-efficient Word Embeddings inspired by Quantum Entanglement 
+Aliakbar Panahi, Seyran Saeedi, Tom Arodz
+26 Sep 2019 (modified: 25 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+What Can Neural Networks Reason About? 
+Keyulu Xu, Jingling Li, Mozhi Zhang, Simon S. Du, Ken-ichi Kawarabayashi, Stefanie Jegelka
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Training individually fair ML models with sensitive subspace robustness 
+Mikhail Yurochkin, Amanda Bower, Yuekai Sun
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Learning from Rules Generalizing Labeled Exemplars 
+Abhijeet Awasthi, Sabyasachi Ghosh, Rasna Goyal, Sunita Sarawagi
+26 Sep 2019 (modified: 16 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Directional Message Passing for Molecular Graphs 
+Johannes Klicpera, Janek Groß, Stephan Günnemann
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Explanation by Progressive Exaggeration 
+Sumedha Singla, Brian Pollack, Junxiang Chen, Kayhan Batmanghelich
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Compression based bound for non-compressed network: unified generalization error analysis of large compressible deep neural network 
+Taiji Suzuki, Hiroshi Abe, Tomoaki Nishimura
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+At Stability's Edge: How to Adjust Hyperparameters to Preserve Minima Selection in Asynchronous Training of Neural Networks? 
+Niv Giladi, Mor Shpigel Nacson, Elad Hoffer, Daniel Soudry
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Disentanglement by Nonlinear ICA with General Incompressible-flow Networks (GIN) 
+Peter Sorrenson, Carsten Rother, Ullrich Köthe
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Kaleidoscope: An Efficient, Learnable Representation For All Structured Linear Maps 
+Tri Dao, Nimit Sohoni, Albert Gu, Matthew Eichhorn, Amit Blonder, Megan Leszczynski, Atri Rudra, Christopher Ré
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Improving Generalization in Meta Reinforcement Learning using Learned Objectives 
+Louis Kirsch, Sjoerd van Steenkiste, Juergen Schmidhuber
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Drawing Early-Bird Tickets: Toward More Efficient Training of Deep Networks 
+Haoran You, Chaojian Li, Pengfei Xu, Yonggan Fu, Yue Wang, Xiaohan Chen, Richard G. Baraniuk, Zhangyang Wang, Yingyan Lin
+26 Sep 2019 (modified: 19 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Truth or backpropaganda? An empirical investigation of deep learning theory 
+Micah Goldblum, Jonas Geiping, Avi Schwarzschild, Michael Moeller, Tom Goldstein
+26 Sep 2019 (modified: 28 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 15 Replies
+Show details
+Neural Arithmetic Units 
+Andreas Madsen, Alexander Rosenberg Johansen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+DeepSphere: a graph-based spherical CNN 
+Michaël Defferrard, Martino Milani, Frédérick Gusset, Nathanaël Perraudin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+SUMO: Unbiased Estimation of Log Marginal Probability for Latent Variable Models 
+Yucen Luo, Alex Beatson, Mohammad Norouzi, Jun Zhu, David Duvenaud, Ryan P. Adams, Ricky T. Q. Chen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Deep Learning For Symbolic Mathematics 
+Guillaume Lample, François Charton
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 30 Replies
+Show details
+Making Sense of Reinforcement Learning and Probabilistic Inference 
+Brendan O'Donoghue, Ian Osband, Catalin Ionescu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Unbiased Contrastive Divergence Algorithm for Training Energy-Based Latent Variable Models 
+Yixuan Qiu, Lingsong Zhang, Xiao Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+A Mutual Information Maximization Perspective of Language Representation Learning 
+Lingpeng Kong, Cyprien de Masson d'Autume, Lei Yu, Wang Ling, Zihang Dai, Dani Yogatama
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Energy-based models for atomic-resolution protein conformations 
+Yilun Du, Joshua Meier, Jerry Ma, Rob Fergus, Alexander Rives
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Depth-Width Trade-offs for ReLU Networks via Sharkovsky's Theorem 
+Vaggos Chatziafratis, Sai Ganesh Nagarajan, Ioannis Panageas, Xiao Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Generalization of Two-layer Neural Networks: An Asymptotic Viewpoint 
+Jimmy Ba, Murat Erdogdu, Taiji Suzuki, Denny Wu, Tianzong Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Reconstructing continuous distributions of 3D protein structure from cryo-EM images 
+Ellen D. Zhong, Tristan Bepler, Joseph H. Davis, Bonnie Berger
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+PROGRESSIVE LEARNING AND DISENTANGLEMENT OF HIERARCHICAL REPRESENTATIONS 
+Zhiyuan Li, Jaideep Vitthal Murkute, Prashnna Kumar Gyawali, Linwei Wang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+An Exponential Learning Rate Schedule for Deep Learning 
+Zhiyuan Li, Sanjeev Arora
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Geom-GCN: Geometric Graph Convolutional Networks 
+Hongbin Pei, Bingzhe Wei, Kevin Chen-Chuan Chang, Yu Lei, Bo Yang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 20 Replies
+Show details
+CATER: A diagnostic dataset for Compositional Actions & TEmporal Reasoning 
+Rohit Girdhar, Deva Ramanan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+BackPACK: Packing more into Backprop 
+Felix Dangel, Frederik Kunstner, Philipp Hennig
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+GenDICE: Generalized Offline Estimation of Stationary Values 
+Ruiyi Zhang*, Bo Dai*, Lihong Li, Dale Schuurmans
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Principled Weight Initialization for Hypernetworks 
+Oscar Chang, Lampros Flokas, Hod Lipson
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+On the Convergence of FedAvg on Non-IID Data 
+Xiang Li, Kaixuan Huang, Wenhao Yang, Shusen Wang, Zhihua Zhang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Data-dependent Gaussian Prior Objective for Language Generation 
+Zuchao Li, Rui Wang, Kehai Chen, Masso Utiyama, Eiichiro Sumita, Zhuosheng Zhang, Hai Zhao
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Contrastive Learning of Structured World Models 
+Thomas Kipf, Elise van der Pol, Max Welling
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Neural Network Branching for Neural Network Verification 
+Jingyue Lu, M. Pawan Kumar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Why Gradient Clipping Accelerates Training: A Theoretical Justification for Adaptivity 
+Jingzhao Zhang, Tianxing He, Suvrit Sra, Ali Jadbabaie
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Posterior sampling for multi-agent reinforcement learning: solving extensive games with imperfect information 
+Yichi Zhou, Jialian Li, Jun Zhu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Mogrifier LSTM 
+Gábor Melis, Tomáš Kočiský, Phil Blunsom
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Learning Hierarchical Discrete Linguistic Units from Visually-Grounded Speech 
+David Harwath*, Wei-Ning Hsu*, James Glass
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Mirror-Generative Neural Machine Translation 
+Zaixiang Zheng, Hao Zhou, Shujian Huang, Lei Li, Xin-Yu Dai, Jiajun Chen
+26 Sep 2019 (modified: 14 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Cyclical Stochastic Gradient MCMC for Bayesian Deep Learning 
+Ruqi Zhang, Chunyuan Li, Jianyi Zhang, Changyou Chen, Andrew Gordon Wilson
+26 Sep 2019 (modified: 01 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Your classifier is secretly an energy based model and you should treat it like one 
+Will Grathwohl, Kuan-Chieh Wang, Joern-Henrik Jacobsen, David Duvenaud, Mohammad Norouzi, Kevin Swersky
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 26 Replies
+Show details
+Dynamics-Aware Unsupervised Discovery of Skills 
+Archit Sharma, Shixiang Gu, Sergey Levine, Vikash Kumar, Karol Hausman
+26 Sep 2019 (modified: 17 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Optimal Strategies Against Generative Attacks 
+Roy Mor, Erez Peterfreund, Matan Gavish, Amir Globerson
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+GraphZoom: A Multi-level Spectral Approach for Accurate and Scalable Graph Embedding 
+Chenhui Deng, Zhiqiang Zhao, Yongyu Wang, Zhiru Zhang, Zhuo Feng
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Harnessing Structures for Value-Based Planning and Reinforcement Learning 
+Yuzhe Yang, Guo Zhang, Zhi Xu, Dina Katabi
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 12 Replies
+Show details
+Comparing Rewinding and Fine-tuning in Neural Network Pruning 
+Alex Renda, Jonathan Frankle, Michael Carbin
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Meta-Q-Learning 
+Rasool Fakoor, Pratik Chaudhari, Stefano Soatto, Alexander J. Smola
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+Mathematical Reasoning in Latent Space 
+Dennis Lee, Christian Szegedy, Markus Rabe, Sarah Loos, Kshitij Bansal
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+A Theory of Usable Information under Computational Constraints 
+Yilun Xu, Shengjia Zhao, Jiaming Song, Russell Stewart, Stefano Ermon
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 6 Replies
+Show details
+Geometric Analysis of Nonconvex Optimization Landscapes for Overcomplete Learning 
+Qing Qu, Yuexiang Zhai, Xiao Li, Yuqian Zhang, Zhihui Zhu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Deep Batch Active Learning by Diverse, Uncertain Gradient Lower Bounds 
+Jordan T. Ash, Chicheng Zhang, Akshay Krishnamurthy, John Langford, Alekh Agarwal
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Understanding and Robustifying Differentiable Architecture Search 
+Arber Zela, Thomas Elsken, Tonmoy Saikia, Yassine Marrakchi, Thomas Brox, Frank Hutter
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+A Closer Look at Deep Policy Gradients 
+Andrew Ilyas, Logan Engstrom, Shibani Santurkar, Dimitris Tsipras, Firdaus Janoos, Larry Rudolph, Aleksander Madry
+26 Sep 2019 (modified: 03 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Implementation Matters in Deep RL: A Case Study on PPO and TRPO 
+Logan Engstrom, Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Firdaus Janoos, Larry Rudolph, Aleksander Madry
+26 Sep 2019 (modified: 14 Apr 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 16 Replies
+Show details
+Fast Task Inference with Variational Intrinsic Successor Features 
+Steven Hansen, Will Dabney, Andre Barreto, David Warde-Farley, Tom Van de Wiele, Volodymyr Mnih
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Learning to Balance: Bayesian Meta-Learning for Imbalanced and Out-of-distribution Tasks 
+Hae Beom Lee, Hayeon Lee, Donghyun Na, Saehoon Kim, Minseop Park, Eunho Yang, Sung Ju Hwang
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+RNA Secondary Structure Prediction By Learning Unrolled Algorithms 
+Xinshi Chen, Yu Li, Ramzan Umarov, Xin Gao, Le Song
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+Watch the Unobserved: A Simple Approach to Parallelizing Monte Carlo Tree Search 
+Anji Liu, Jianshu Chen, Mingze Yu, Yu Zhai, Xuewen Zhou, Ji Liu
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Target-Embedding Autoencoders for Supervised Representation Learning 
+Daniel Jarrett, Mihaela van der Schaar
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 24 Replies
+Show details
+Reformer: The Efficient Transformer 
+Nikita Kitaev, Lukasz Kaiser, Anselm Levskaya
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 19 Replies
+Show details
+Rotation-invariant clustering of neuronal responses in primary visual cortex 
+Ivan Ustyuzhaninov, Santiago A. Cadena, Emmanouil Froudarakis, Paul G. Fahey, Edgar Y. Walker, Erick Cobos, Jacob Reimer, Fabian H. Sinz, Andreas S. Tolias, Matthias Bethge, Alexander S. Ecker
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Causal Discovery with Reinforcement Learning 
+Shengyu Zhu, Ignavier Ng, Zhitang Chen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems 
+Chris Reinke, Mayalen Etcheverry, Pierre-Yves Oudeyer
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 9 Replies
+Show details
+Restricting the Flow: Information Bottlenecks for Attribution 
+Karl Schulz, Leon Sixt, Federico Tombari, Tim Landgraf
+26 Sep 2019 (modified: 08 May 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+Building Deep Equivariant Capsule Networks 
+Sai Raam Venkataraman, S. Balasubramanian, R. Raghunatha Sarma
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details
+A Generalized Training Approach for Multiagent Learning 
+Paul Muller, Shayegan Omidshafiei, Mark Rowland, Karl Tuyls, Julien Perolat, Siqi Liu, Daniel Hennes, Luke Marris, Marc Lanctot, Edward Hughes, Zhe Wang, Guy Lever, Nicolas Heess, Thore Graepel, Remi Munos
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 14 Replies
+Show details
+High Fidelity Speech Synthesis with Adversarial Networks 
+Mikołaj Bińkowski, Jeff Donahue, Sander Dieleman, Aidan Clark, Erich Elsen, Norman Casagrande, Luis C. Cobo, Karen Simonyan
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+SEED RL: Scalable and Efficient Deep-RL with Accelerated Central Inference 
+Lasse Espeholt, Raphaël Marinier, Piotr Stanczyk, Ke Wang, Marcin Michalski‎
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 8 Replies
+Show details
+Meta-Learning with Warped Gradient Descent 
+Sebastian Flennerhag, Andrei A. Rusu, Razvan Pascanu, Francesco Visin, Hujun Yin, Raia Hadsell
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Convolutional Conditional Neural Processes 
+Jonathan Gordon, Wessel P. Bruinsma, Andrew Y. K. Foong, James Requeima, Yann Dubois, Richard E. Turner
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 11 Replies
+Show details
+Gradient Descent Maximizes the Margin of Homogeneous Neural Networks 
+Kaifeng Lyu, Jian Li
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 7 Replies
+Show details
+Adversarial Training and Provable Defenses: Bridging the Gap 
+Mislav Balunovic, Martin Vechev
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 17 Replies
+Show details
+Differentiable Reasoning over a Virtual Knowledge Base 
+Bhuwan Dhingra, Manzil Zaheer, Vidhisha Balachandran, Graham Neubig, Ruslan Salakhutdinov, William W. Cohen
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 10 Replies
+Show details
+Federated Learning with Matched Averaging 
+Hongyi Wang, Mikhail Yurochkin, Yuekai Sun, Dimitris Papailiopoulos, Yasaman Khazaeni
+26 Sep 2019 (modified: 11 Mar 2020) ICLR 2020 Conference Blind Submission Readers:  Everyone 13 Replies
+Show details

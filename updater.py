@@ -337,6 +337,30 @@ class Updater:
                 paper_list.append([title, author_list, 'http://openaccess.thecvf.com/CVPR2018.py', pages])
 
         self.save('cvpr', 2018, paper_list)
+    
+    def update_iclr2020(self):
+        paper_list = []
+        path = './data/ICLR/iclr2020.txt'
+        with open(path, 'r', encoding='utf-8') as f:
+            lines = [line.strip() for line in f.readlines()]
+            for i in range(len(lines)//4):
+                title = lines[4*i]
+                author_list = list(filter(None, [smooth(x) for x in lines[4*i+1].split(',')]))
+                pages = 0
+                paper_list.append([title, author_list, 'https://openreview.net/group?id=ICLR.cc/2020/Conference', pages])
+
+        self.save('iclr', 2020, paper_list)
+    
+    def update_icml2020(self):
+        path = './data/ICML/icml2020.json'
+        with open(path, 'r', encoding='utf-8') as f:
+            paper_list = json.load(f)
+            for i in range(len(paper_list)):
+                author_list = paper_list[i][1]
+                new_author_list = list(filter(None, [smooth(x) for x in author_list]))
+                paper_list[i][1] = new_author_list
+            
+            self.save('icml', 2020, paper_list)
 
     # def update_nips(self):
     #     paper_list = []
@@ -401,6 +425,7 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
+    updater.update_iclr2020()
     # updater.update_conf('icassp', 'icassp', 1950, 2019)
     # updater.update_conf('interspeech', 'interspeech', 1950, 2019)
     # updater.update_exceptions()

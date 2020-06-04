@@ -26,6 +26,10 @@ if __name__ == '__main__':
                     pass
             #if len(success_years) == 0:
             #    webhook(conf + " is already updated")
+        
+        # For manual update
+        # while not my_db_maker.make_conf_year_db('iclr', 2020):
+        #     pass
 
         my_db_maker.make_configuration(1960, current_year)
         webhook("Update finished")
