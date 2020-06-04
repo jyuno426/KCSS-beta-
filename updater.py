@@ -425,7 +425,8 @@ class Updater:
 if __name__ == '__main__':
     # pass
     updater = Updater()
-    updater.update_iclr2020()
+    updater.update_icml2020()
+    # updater.update_iclr2020()
     # updater.update_conf('icassp', 'icassp', 1950, 2019)
     # updater.update_conf('interspeech', 'interspeech', 1950, 2019)
     # updater.update_exceptions()
